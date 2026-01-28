@@ -39,6 +39,7 @@ Ta có:
 $$\int \frac{mx+n}{ax^2+bx+c} dx = \frac{1}{a} \int \frac{mx+n}{(x-x_1)(x-x_2)} dx = \frac{1}{a} \int \left( \frac{A}{x-x_1} + \frac{B}{x-x_2} \right) dx = \frac{1}{a} (A \ln|x-x_1| + B \ln|x-x_2|) + C$$
 
 **Tìm A, B nhanh bằng cách:**
+
 *   **Bước 1:** Nhập vào máy tính biểu thức: $\frac{mx+n}{\frac{d}{dx} ((x-x_1)(x-x_2))|_{x=X}}$
 *   **Bước 2:** Tìm $A$: [CALC] $x=x_1$.
 *   **Bước 3:** Tìm $B$: [CALC] $x=x_2$.
