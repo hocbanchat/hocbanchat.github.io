@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ - Học bản chất</title>
+    <meta name="description" content="Liên hệ với chúng tôi để được hỗ trợ">
+    <link rel="stylesheet" href="assets/css/modern-variables.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/auth.css">
+</head>
+
+<body>
+    <!-- Mobile Navigation Overlay -->
+    <div class="nav-mobile-overlay"></div>
+
+    <!-- Mobile Navigation Panel -->
+    <nav class="nav-mobile">
+        <div class="nav-mobile-header">
+            <h3>📚 Menu</h3>
+            <button class="nav-mobile-close">✕</button>
+        </div>
+        <div class="nav-mobile-links">
+            <a href="index.html">🏠 Trang chủ</a>
+            <a href="about.html">📖 Giới thiệu</a>
+            <a href="contact.html" class="active">📞 Liên hệ</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container-wide">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>📚 Học bản chất</h1>
+                    </a>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Trang chủ</a>
+                    <a href="about.html" class="nav-link">Giới thiệu</a>
+                    <a href="contact.html" class="nav-link active">Liên hệ</a>
+                </nav>
+                <div id="auth-container"></div>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Liên Hệ</h1>
+            <p class="page-subtitle">Chúng tôi luôn sẵn sàng hỗ trợ bạn</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="content-page">
+        <div class="container">
+            <div class="contact-layout">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="contact-block">
+                        <div class="contact-icon">📧</div>
+                        <h3>Email</h3>
+                        <p>support@hoconline.vn</p>
+                    </div>
+                    <div class="contact-block">
+                        <div class="contact-icon">📱</div>
+                        <h3>Điện thoại</h3>
+                        <p>0123.456.789</p>
+                    </div>
+                    <div class="contact-block">
+                        <div class="contact-icon">🏢</div>
+                        <h3>Địa chỉ</h3>
+                        <p>123 Đường ABC, Quận XYZ<br>TP. Hồ Chí Minh, Việt Nam</p>
+                    </div>
+                    <div class="contact-block">
+                        <div class="contact-icon">⏰</div>
+                        <h3>Giờ làm việc</h3>
+                        <p>Thứ 2 - Thứ 6: 8:00 - 17:00<br>Thứ 7: 8:00 - 12:00</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2>Gửi tin nhắn cho chúng tôi</h2>
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Họ và tên</label>
+                            <input type="text" id="name" class="form-control" placeholder="Nhập họ và tên của bạn"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email</label>
+                            <input type="email" id="email" class="form-control" placeholder="Nhập email của bạn"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="subject">Chủ đề</label>
+                            <select id="subject" class="form-control" required>
+                                <option value="">-- Chọn chủ đề --</option>
+                                <option value="support">Hỗ trợ kỹ thuật</option>
+                                <option value="feedback">Góp ý, phản hồi</option>
+                                <option value="content">Nội dung bài học</option>
+                                <option value="other">Khác</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="message">Nội dung</label>
+                            <textarea id="message" class="form-control" rows="5" placeholder="Nhập nội dung tin nhắn..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            📤 Gửi tin nhắn
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-wide">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>📚 Học bản chất</h3>
+                    <p>Nền tảng học tập trực tuyến hiện đại</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liên kết</h4>
+                    <ul>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="about.html">Giới thiệu</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Hỗ trợ</h4>
+                    <ul>
+                        <li><a href="guide.html">Hướng dẫn sử dụng</a></li>
+                        <li><a href="faq.html">Câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Học bản chất. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+
+    <script src="assets/js/firebase-config.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/mobile-menu.js"></script>
+    <script>
+        // Xử lý form liên hệ (demo)
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Cảm ơn bạn đã gửi tin nhắn! Chúng tôi sẽ phản hồi sớm nhất có thể.');
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,201 @@
+/* ===== MODAL THÔNG TIN HỌC SINH ===== */
+.student-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.student-modal {
+    background: var(--bg-card);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl);
+    max-width: 500px;
+    width: 90%;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-xl), 0 0 40px rgba(102, 126, 234, 0.3);
+    animation: slideInUp 0.4s ease-out;
+}
+
+.student-modal-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.student-modal-header h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+    background: var(--primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.student-modal-header p {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+.student-modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.875rem;
+}
+
+.form-group .required {
+    color: var(--error);
+}
+
+.form-group input {
+    padding: var(--spacing-md);
+    background: var(--bg-main);
+    border: 2px solid var(--border);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: all var(--transition-fast);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-solid);
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group input::placeholder {
+    color: var(--text-muted);
+}
+
+.form-actions {
+    margin-top: var(--spacing-md);
+}
+
+.privacy-note {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: var(--spacing-md);
+    margin-bottom: 0;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== SCORE SUBMISSION INDICATOR ===== */
+.score-submitted-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-md);
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid var(--success);
+    border-radius: var(--radius-md);
+    color: var(--success);
+    font-size: 0.875rem;
+    margin-top: var(--spacing-md);
+    animation: slideInRight 0.5s ease-out;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.score-submitted-badge::before {
+    content: '✓';
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* ===== STUDENT INFO DISPLAY ===== */
+.student-info-bar {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.student-info-details {
+    display: flex;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.student-info-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.student-info-item strong {
+    color: var(--text-primary);
+}
+
+.student-info-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .student-modal {
+        width: 95%;
+        padding: var(--spacing-md);
+    }
+
+    .student-modal-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .student-info-bar {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .student-info-details {
+        width: 100%;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+}

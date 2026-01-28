@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "question": "Tìm nguyên hàm của các hàm số sau:\na. $I_1 = \\int \\frac{x+1}{x-1} dx$\nb. $I_2 = \\int \\frac{2x-4}{x+3} dx$\nc. $I_3 = \\int \\frac{x^2+x+4}{x+3} dx$\nd. $I_4 = \\int \\frac{x^3+2x^2-x}{x+1} dx$",
+    "explanation": "**a.** $I_1 = \\int \\frac{x+1}{x-1} dx = \\int (1 + \\frac{2}{x-1}) dx = \\int 1 dx + 2 \\int \\frac{1}{x-1} dx = x + 2 \\ln|x-1| + C$.\n**b.** $I_2 = \\int \\frac{2x-4}{x+3} dx = \\int (2 - \\frac{10}{x+3}) dx = \\int 2 dx - 10 \\int \\frac{1}{x+3} dx = 2x - 10 \\ln|x+3| + C$.\n**c.** $I_3 = \\int \\frac{x^2+x+4}{x+3} dx = \\int (x-2 + \\frac{10}{x+3}) dx = \\int (x-2) dx + 10 \\int \\frac{1}{x+3} dx = \\frac{x^2}{2} - 2x + 10 \\ln|x+3| + C$.\n**d.** $I_4 = \\int \\frac{x^3+2x^2-x}{x+1} dx = \\int (x^2+x-2 + \\frac{2}{x+1}) dx = \\int (x^2+x-2) dx + 2 \\int \\frac{1}{x+1} dx = \\frac{x^3}{3} + \\frac{x^2}{2} - 2x + 2 \\ln|x+1| + C$."
+  },
+  {
+    "id": 2,
+    "question": "Tìm nguyên hàm của các hàm số sau:\na. $I_1 = \\int \\frac{3x-2}{(x-2)^2} dx$\nb. $I_2 = \\int \\frac{1-5x}{(3x-4)^2} dx$\nc. $I_3 = \\int \\frac{1}{x^2-2x-3} dx$\nd. $I_4 = \\int \\frac{2x+3}{x^2-3x-4} dx$\ne. $I_5 = \\int \\frac{2x+3}{2x^2-x-1} dx$\nf. $I_6 = \\int \\frac{x^2-5x}{x^2-5x+6} dx$",
+    "explanation": "**a.** $I_1 = \\int \\frac{3x-2}{(x-2)^2} dx = \\int (\\frac{3}{x-2} + \\frac{4}{(x-2)^2}) dx = 3 \\ln|x-2| - \\frac{4}{x-2} + C$.\n**b.** **Ta có:** $\\frac{1-5x}{(3x-4)^2} = \\frac{A}{3x-4} + \\frac{B}{(3x-4)^2} \\Rightarrow A(3x-4)+B = 1-5x \\Rightarrow A = -\\frac{5}{3}, B = -\\frac{17}{3}$.\n$I_2 = A \\int \\frac{dx}{3x-4} + B \\int \\frac{dx}{(3x-4)^2} = -\\frac{5}{9} \\ln|3x-4| + \\frac{17}{9} \\cdot \\frac{1}{3x-4} + C$.\n**c.** **Ta có:** $\\frac{1}{x^2-2x-3} = \\frac{1}{(x-3)(x+1)} = \\frac{A}{x-3} + \\frac{B}{x+1} \\Rightarrow A = \\frac{1}{4}, B = -\\frac{1}{4}$.\n$I_3 = \\frac{1}{4} \\ln|x-3| - \\frac{1}{4} \\ln|x+1| = \\frac{1}{4} \\ln|\\frac{x-3}{x+1}| + C$.\n**d.** **Ta có:** $\\frac{2x+3}{x^2-3x-4} = \\frac{2x+3}{(x-4)(x+1)} = \\frac{A}{x-4} + \\frac{B}{x+1} \\Rightarrow A+B=2, A-4B=3 \\Rightarrow A = \\frac{11}{5}, B = -\\frac{1}{5}$.\n$I_4 = \\frac{11}{5} \\ln|x-4| - \\frac{1}{5} \\ln|x+1| + C$.\n**e.** **Ta có:** $\\frac{2x+3}{2x^2-x-1} = \\frac{2x+3}{(2x+1)(x-1)} = \\frac{A}{2x+1} + \\frac{B}{x-1} \\Rightarrow A+2B=2, -A+B=3 \\Rightarrow A = -\\frac{4}{3}, B = \\frac{5}{3}$.\n$I_5 = A \\int \\frac{dx}{2x+1} + B \\int \\frac{dx}{x-1} = -\\frac{2}{3} \\ln|2x+1| + \\frac{5}{3} \\ln|x-1| + C$.\n**f.** **Ta có:** $\\frac{x^2-5x}{x^2-5x+6} = 1 - \\frac{6}{(x-2)(x-3)} = 1 + \\frac{6}{x-2} - \\frac{6}{x-3}$.\n$I_6 = \\int 1 dx + 6 \\int \\frac{dx}{x-2} - 6 \\int \\frac{dx}{x-3} = x + 6 \\ln|x-2| - 6 \\ln|x-3| + C = x + 6 \\ln|\\frac{x-2}{x-3}| + C$."
+  },
+  {
+    "id": 3,
+    "question": "Họ tất cả các nguyên hàm của hàm số $f(x) = \\frac{x+2}{x-1}$ trên khoảng $(1; +\\infty)$ là\nA. $x + 3 \\ln(x-1) + C$.\nB. $x - 3 \\ln(x-1) + C$.\nC. $x - \\frac{3}{(x-1)^2} + C$.\nD. $x + \\frac{3}{(x-1)^2} + C$.",
+    "explanation": "**Chọn A.**\nTa có $\\int f(x) dx = \\int \\frac{x+2}{x-1} dx = \\int (\\frac{x-1+3}{x-1}) dx = \\int (1 + \\frac{3}{x-1}) dx = x + 3 \\ln|x-1| + C$.\nMà $x \\in (1; +\\infty) \\Rightarrow \\int f(x) dx = x + 3 \\ln(x-1) + C$."
+  },
+  {
+    "id": 4,
+    "question": "Hàm số $f(x) = \\frac{x^4}{x^2-1}$ có một nguyên hàm là $F(x)$ thỏa mãn $F(0) = -\\frac{14}{3}$. Tính $e^{F(2)}$.\nA. $e^{F(2)} = \\frac{2\\sqrt{3}}{3}$.\nB. $e^{F(2)} = \\frac{\\sqrt{3}}{2}$.\nC. $e^{F(2)} = \\sqrt{3}$.\nD. $e^{F(2)} = \\frac{\\sqrt{3}}{3}$.",
+    "explanation": "**Chọn D.**\nChia đa thức: $\\frac{x^4}{x^2-1} = x^2+1 + \\frac{1}{x^2-1} = x^2+1 + \\frac{1}{2}(\\frac{1}{x-1}-\\frac{1}{x+1})$.\n**Suy ra** $F(x) = \\int f(x) dx = \\frac{x^3}{3} + x + \\frac{1}{2} \\ln|\\frac{x-1}{x+1}| + C$.\nVì $F(0) = -\\frac{14}{3}$ và $\\ln|\\frac{-1}{1}| = 0$ nên $C = -\\frac{14}{3}$.\nDo đó $F(2) = \\frac{8}{3} + 2 + \\frac{1}{2} \\ln\\frac{1}{3} - \\frac{14}{3} = \\frac{1}{2} \\ln\\frac{1}{3}$.\n**Suy ra** $e^{F(2)} = e^{\\frac{1}{2} \\ln\\frac{1}{3}} = \\sqrt{\\frac{1}{3}} = \\frac{\\sqrt{3}}{3}$."
+  },
+  {
+    "id": 5,
+    "question": "Hàm số $f(x) = \\frac{1}{x^2-5x+6}$ có một nguyên hàm là $F(x)$ thỏa mãn $F(4) = 1 - \\ln 2$. Phương trình $F(x) = 1$ có nghiệm $x = \\frac{a}{b}$, với $\\frac{a}{b}$ là phân số tối giản. Tìm $a+b$.\nA. $a+b = -2$\nB. $a+b = 5$\nC. $a+b = 7$\nD. $a+b = 9$",
+    "explanation": "**Chọn C.**\n$f(x) = \\frac{1}{x^2-5x+6} = \\frac{1}{(x-2)(x-3)} = \\frac{-1}{x-2} + \\frac{1}{x-3}$.\nDo đó $F(x) = \\ln|\\frac{x-3}{x-2}| + C$.\nTừ $F(4) = 1 - \\ln 2$ (vì $\\ln\\frac{1}{2} = -\\ln 2$) suy ra $C = 1$.\n$F(x) = 1 \\Leftrightarrow \\ln|\\frac{x-3}{x-2}| + 1 = 1 \\Leftrightarrow |\\frac{x-3}{x-2}| = 1 \\Leftrightarrow x = \\frac{5}{2}$.\n**Vậy** $x = \\frac{a}{b} = \\frac{5}{2} \\Rightarrow a+b=7$."
+  },
+  {
+    "id": 6,
+    "question": "Hàm số $f(x) = \\frac{5x+11}{x^2+3x-10}$ có một nguyên hàm $F(x)$ thỏa mãn $F(3) = 3 \\ln 8$. Tìm $e^{F(-6)}$.\nA. $e^{F(-6)} = 64$\nB. $e^{F(-6)} = 512$\nC. $e^{F(-6)} = 4096$\nD. $e^{F(-6)} = 32768$",
+    "explanation": "**Chọn C.**\n**Ta có:** $f(x) = \\frac{5x+11}{x^2+3x-10} = \\frac{5x+11}{(x-2)(x+5)} = \\frac{3}{x-2} + \\frac{2}{x+5}$.\n**Suy ra** $F(x) = 3 \\ln|x-2| + 2 \\ln|x+5| + C$.\n**Theo giả thiết** $F(3) = 3 \\ln 8$, ta có:\n$F(3) = 3 \\ln|3-2| + 2 \\ln|3+5| + C = 3 \\ln 1 + 2 \\ln 8 + C = 2 \\ln 8 + C$.\n$2 \\ln 8 + C = 3 \\ln 8 \\Rightarrow C = \\ln 8$.\n**Khi đó**: $F(-6) = 3 \\ln|-6-2| + 2 \\ln|-6+5| + \\ln 8 = 3 \\ln 8 + 2 \\ln 1 + \\ln 8 = 4 \\ln 8 = \\ln(8^4) = \\ln 4096$.\n**Vậy** $e^{F(-6)} = e^{\\ln 4096} = 4096$."
+  },
+  {
+    "id": 7,
+    "question": "Tìm một nguyên hàm $F(x)$ của hàm số $f(x) = \\frac{x^2}{x^2-7x+12}$ thỏa mãn $F(5) = 5$.\nA. $F(x) = x + 16 \\ln|x-4| - 9 \\ln|x-3| - 9 \\ln 2$\nB. $F(x) = x - 16 \\ln|x-4| + 9 \\ln|x-3| + 9 \\ln 2$\nC. $F(x) = x + 16 \\ln|x-4| - 9 \\ln|x-3| + 9 \\ln 2$\nD. $F(x) = x - 16 \\ln|x-4| + 9 \\ln|x-3| - 9 \\ln 2$",
+    "explanation": "**Chọn C.**\nPhân tích $x^2 - 7x + 12 = (x-3)(x-4)$, $x^2 = (x^2-7x+12) + (7x-12)$.\nDo đó $f(x) = \\frac{x^2}{x^2-7x+12} = 1 + \\frac{7x-12}{(x-3)(x-4)} = 1 + \\frac{A}{x-3} + \\frac{B}{x-4}$.\nMà $7x-12 = A(x-4) + B(x-3) \\Rightarrow A=-9, B=16$.\nVì thế $f(x) = 1 - \\frac{9}{x-3} + \\frac{16}{x-4}$.\nLấy nguyên hàm: $F(x) = x - 9 \\ln|x-3| + 16 \\ln|x-4| + C$.\n**Điều kiện** $F(5)=5$ cho $5 - 9 \\ln 2 + C = 5 \\Rightarrow C = 9 \\ln 2$.\n**Vậy** $F(x) = x + 16 \\ln|x-4| - 9 \\ln|x-3| + 9 \\ln 2$."
+  },
+  {
+    "id": 8,
+    "question": "Tìm một nguyên hàm $F(x)$ của hàm số $f(x) = -\\frac{x}{(x+1)^2}$, biết rằng đồ thị của hàm số $y=F(x)$ đi qua gốc tọa độ O.\nA. $F(x) = \\frac{x}{x+1} - \\ln|x+1|$\nB. $F(x) = \\frac{1}{2} - \\frac{x}{x+1} - \\ln|x+1|$\nC. $F(x) = -\\frac{1}{x+1} + \\ln|x+1| + 1$\nD. $F(x) = \\frac{x}{x+1} + \\ln|x+1|$",
+    "explanation": "**Chọn A.**\n$f(x) = -\\frac{x}{(x+1)^2} = -\\frac{x+1-1}{(x+1)^2} = -\\frac{1}{x+1} + \\frac{1}{(x+1)^2}$.\nDo đó $F(x) = \\int f(x) dx = -\\ln|x+1| - \\frac{1}{x+1} + C$.\nĐồ thị $y=F(x)$ đi qua gốc $O(0,0)$ nên $F(0)=0 \\Rightarrow -\\ln 1 - 1 + C = 0 \\Rightarrow C=1$.\n**Suy ra** $F(x) = -\\ln|x+1| - \\frac{1}{x+1} + 1 = \\frac{x}{x+1} - \\ln|x+1|$."
+  },
+  {
+    "id": 9,
+    "question": "Hàm số $f(x) = \\frac{1}{x^2(x+1)}$ có một nguyên hàm là $F(x)$ thỏa mãn $F(1) = \\ln 2$. Tính $F(-2)$.\nA. $F(-2) = \\frac{5}{2} - \\ln \\frac{1}{2}$\nB. $F(-2) = \\frac{5}{2} - \\ln 2$\nC. $F(-2) = \\frac{3}{2} - \\ln \\frac{1}{2}$\nD. $F(-2) = \\frac{3}{2} - \\ln 2$",
+    "explanation": "**Chọn D.**\n**Ta có:** $f(x) = \\frac{1}{x^2(x+1)} = \\frac{A}{x} + \\frac{B}{x^2} + \\frac{C}{x+1}$.\nGiải hệ $1 = (A+C)x^2 + (A+B)x + B$ cho $(A,B,C)$ được $A=-1, B=1, C=1$.\n**Vì vậy** $f(x) = -\\frac{1}{x} + \\frac{1}{x^2} + \\frac{1}{x+1}$.\nMột nguyên hàm là $F(x) = -\\ln|x| - \\frac{1}{x} + \\ln|x+1| + C$.\n**Điều kiện** $F(1)=\\ln 2$ cho $0 - 1 + \\ln 2 + C = \\ln 2 \\Rightarrow C=1$.\n**Suy ra** $F(-2) = -\\ln 2 - \\frac{1}{-2} + \\ln 1 + 1 = -\\ln 2 + \\frac{1}{2} + 1 = \\frac{3}{2} - \\ln 2$."
+  }
+]

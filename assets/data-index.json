@@ -1,0 +1,64 @@
+{
+    "courses": [
+        {
+            "id": "hoa-hoc-12",
+            "title": "Hóa học 12",
+            "description": "Chương trình Hóa học 12 - Bộ sách mới",
+            "thumbnail": "🧪",
+            "chapters": [
+                "Chương 1",
+                "Chương 2"
+            ],
+            "lessons": []
+        },
+        {
+            "id": "toan-12",
+            "title": "Toán 12",
+            "description": "Chương trình Toán 12 - Bộ sách mới",
+            "thumbnail": "📐",
+            "chapters": [
+                "Chương 1 - Hàm số",
+                "Chương 2 - Mẫu số liệu ghép nhóm",
+                "Chương 3 - Nguyên hàm tích phân"
+            ],
+            "lessons": [
+                {
+                    "path": "Chương 1 - Hàm số/Bài 1",
+                    "lecturePdf": "",
+                    "homeworkPdf": ""
+                },
+                {
+                    "path": "Chương 3 - Nguyên hàm tích phân/Bài 1 - Mở đầu về Nguyên hàm",
+                    "lecturePdf": "data/Toán 12/Chương 3 - Nguyên hàm tích phân/Bài 1 - Mở đầu về Nguyên hàm/tailieu/S1 Toán học 12 - Đại - Bài 2. Nguyên hàm của hàm hữu tỷ- File học - Đáp án .pdf",
+                    "homeworkPdf": "data/Toán 12/Chương 3 - Nguyên hàm tích phân/Bài 1 - Mở đầu về Nguyên hàm/tailieu/S1 Toán học 12 - Đại - Bài 2. Nguyên hàm của hàm hữu tỷ - BTVN - Đáp án.pdf"
+                },
+                {
+                    "path": "Chương 3 - Nguyên hàm tích phân/Bài 2 - Nguyên hàm phân thức",
+                    "lecturePdf": "data/Toán 12/Chương 3 - Nguyên hàm tích phân/Bài 2 - Nguyên hàm phân thức/tailieu/S1 Toán học 12 - Đại - Bài 2. Nguyên hàm của hàm hữu tỷ- File học - Đáp án .pdf",
+                    "homeworkPdf": "data/Toán 12/Chương 3 - Nguyên hàm tích phân/Bài 2 - Nguyên hàm phân thức/tailieu/S1 Toán học 12 - Đại - Bài 2. Nguyên hàm của hàm hữu tỷ - BTVN - Đáp án.pdf"
+                },
+                {
+                    "path": "Chương 3 - Nguyên hàm tích phân/Bài 3",
+                    "lecturePdf": "data/Toán 12/Chương 3 - Nguyên hàm tích phân/Bài 3/tailieu/S1 Toán học 12 - Đại - Bài 2. Nguyên hàm của hàm hữu tỷ- File học - Đáp án .pdf",
+                    "homeworkPdf": "data/Toán 12/Chương 3 - Nguyên hàm tích phân/Bài 3/tailieu/S1 Toán học 12 - Đại - Bài 2. Nguyên hàm của hàm hữu tỷ - BTVN - Đáp án.pdf"
+                },
+                {
+                    "path": "Chương 3 - Nguyên hàm tích phân/Bài 4",
+                    "lecturePdf": "data/Toán 12/Chương 3 - Nguyên hàm tích phân/Bài 4/tailieu/S1 Toán học 12 - Đại - Bài 2. Nguyên hàm của hàm hữu tỷ- File học - Đáp án .pdf",
+                    "homeworkPdf": "data/Toán 12/Chương 3 - Nguyên hàm tích phân/Bài 4/tailieu/S1 Toán học 12 - Đại - Bài 2. Nguyên hàm của hàm hữu tỷ - BTVN - Đáp án.pdf"
+                }
+            ]
+        },
+        {
+            "id": "vat-ly-12",
+            "title": "Vật lý 12",
+            "description": "Chương trình Vật lý 12 - Bộ sách mới",
+            "thumbnail": "⚛️",
+            "chapters": [
+                "Chương 1",
+                "Chương 2"
+            ],
+            "lessons": []
+        }
+    ]
+}

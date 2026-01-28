@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khóa Học - Học bản chất</title>
+    <meta name="description" content="Chi tiết khóa học và danh sách bài học">
+    <link rel="stylesheet" href="assets/css/modern-variables.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/auth.css">
+
+    <!-- MathJax for LaTeX rendering -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+
+<body>
+    <!-- Mobile Navigation Overlay -->
+    <div class="nav-mobile-overlay"></div>
+
+    <!-- Mobile Navigation Panel -->
+    <nav class="nav-mobile">
+        <div class="nav-mobile-header">
+            <h3>📚 Menu</h3>
+            <button class="nav-mobile-close">✕</button>
+        </div>
+        <div class="nav-mobile-links">
+            <a href="index.html">🏠 Trang chủ</a>
+            <a href="index.html#courses" class="active">📖 Khóa học</a>
+            <a href="#">📞 Liên hệ</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container-wide">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>📚 Học bản chất</h1>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Trang chủ</a>
+                    <a href="index.html#courses" class="nav-link">Khóa học</a>
+                    <a href="contact.html" class="nav-link">Liên hệ</a>
+                </nav>
+                <div id="auth-container"></div>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Course Header -->
+    <section class="course-header" style="padding: 24px 0;">
+        <div class="course-header-bg"></div>
+        <div class="container-wide">
+            <nav class="breadcrumb" style="margin-bottom: 12px;">
+                <a href="index.html">🏠 Trang chủ</a>
+                <span class="breadcrumb-separator">›</span>
+                <span id="course-breadcrumb" class="breadcrumb-current">Khóa học</span>
+            </nav>
+            <div id="course-info" class="course-info">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Đang tải thông tin khóa học...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lessons List -->
+    <section class="lessons-section" style="padding: 24px 0;">
+        <div class="container-wide">
+            <!-- Removed redundant "Danh Sách Bài Học" title -->
+            <div id="lessons-list" class="lessons-list">
+                <!-- Lessons will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-wide">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>📚 Học bản chất</h3>
+                    <p>Nền tảng học tập trực tuyến hiện đại</p>
+                </div>
+                <!-- ... other footer sections ... -->
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Học bản chất. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/markdown-parser.js"></script>
+    <script src="assets/js/folder-parser.js"></script>
+    <script src="assets/js/firebase-config.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/mobile-menu.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const courseId = getUrlParameter('id');
+            if (courseId) {
+                loadCourseDetails(courseId);
+            } else {
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</body>
+
+</html>

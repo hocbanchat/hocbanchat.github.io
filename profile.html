@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ sơ cá nhân - Học bản chất</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/modern-variables.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/auth.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <style>
+        /* Specific Profile Styles */
+        body {
+            background-color: #F8FAFC;
+        }
+
+        .profile-container {
+            max-width: 1280px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 30px;
+            min-height: calc(100vh - 200px);
+        }
+
+        /* Sidebar */
+        .profile-sidebar {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            height: fit-content;
+            position: sticky;
+            top: 90px;
+        }
+
+        .user-summary {
+            text-align: center;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #E2E8F0;
+            margin-bottom: 24px;
+        }
+
+        .user-avatar-large {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary-light);
+            margin-bottom: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .user-name-large {
+            font-weight: 700;
+            font-size: 1.125rem;
+            color: var(--text-dark);
+            margin-bottom: 4px;
+        }
+
+        .user-email-small {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        .sidebar-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            border-radius: 10px;
+            color: var(--text-muted);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .menu-item:hover {
+            background-color: #F1F5F9;
+            color: var(--primary);
+        }
+
+        .menu-item.active {
+            background-color: var(--primary-light);
+            color: white;
+            /* Changed from var(--primary) which is dark indigo */
+        }
+
+        .menu-icon {
+            font-size: 1.25rem;
+        }
+
+        /* Main Content */
+        .profile-content {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .content-header {
+            margin-bottom: 24px;
+        }
+
+        .content-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 32px;
+        }
+
+        .stat-box {
+            background: #F8FAFC;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #E2E8F0;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .stat-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .profile-container {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-sidebar {
+                position: static;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container-wide">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>📚 Học bản chất</h1>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Trang chủ</a>
+                    <a href="about.html" class="nav-link">Giới thiệu</a>
+                    <a href="contact.html" class="nav-link">Liên hệ</a>
+                </nav>
+                <div id="auth-container"></div>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="profile-container">
+        <!-- Sidebar -->
+        <aside class="profile-sidebar">
+            <div class="user-summary">
+                <img id="sidebar-avatar" src="assets/images/default-avatar.png" class="user-avatar-large"
+                    onerror="this.src='https://ui-avatars.com/api/?name=User&background=random'">
+                <h3 id="sidebar-name" class="user-name-large">...</h3>
+                <p id="sidebar-email" class="user-email-small">...</p>
+            </div>
+            <div class="sidebar-menu">
+                <div class="menu-item active" onclick="switchTab('overview', this)">
+                    <span class="menu-icon">📊</span> Tổng quan
+                </div>
+                <div class="menu-item" onclick="switchTab('courses', this)">
+                    <span class="menu-icon">📚</span> Khóa học của tôi
+                </div>
+                <div class="menu-item" onclick="switchTab('account', this)">
+                    <span class="menu-icon">👤</span> Thông tin tài khoản
+                </div>
+                <div class="menu-item" onclick="signOut(); return false;" style="color: #EF4444; margin-top: 12px;">
+                    <span class="menu-icon">🚪</span> Đăng xuất
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="profile-content">
+            <!-- TAB: OVERVIEW -->
+            <div id="tab-overview" class="tab-content">
+                <div class="content-header">
+                    <h2 class="content-title">Tổng quan học tập</h2>
+                    <p class="text-muted">Theo dõi tiến độ và kết quả học tập của bạn</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-icon" style="background: #eff6ff; color: #3b82f6;">📝</div>
+                        <div>
+                            <h4 style="margin:0; font-size:24px; font-weight:700;" id="stat-tests">0</h4>
+                            <span style="font-size:14px; color:#64748b;">Bài kiểm tra</span>
+                        </div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-icon" style="background: #fef3c7; color: #d97706;">⭐</div>
+                        <div>
+                            <h4 style="margin:0; font-size:24px; font-weight:700;" id="stat-score">0.0</h4>
+                            <span style="font-size:14px; color:#64748b;">Điểm trung bình</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 style="font-size:18px; font-weight:700; margin-bottom:16px;">Lịch sử hoạt động</h3>
+                <div class="table-container" style="overflow-x: auto;">
+                    <table style="width:100%; border-collapse: collapse;">
+                        <thead>
+                            <tr style="border-bottom: 2px solid #e2e8f0;">
+                                <th style="text-align:left; padding:12px; color:#64748b;">Bài học</th>
+                                <th style="text-align:left; padding:12px; color:#64748b;">Thời gian</th>
+                                <th style="text-align:center; padding:12px; color:#64748b;">Điểm số</th>
+                            </tr>
+                        </thead>
+                        <tbody id="history-list">
+                            <tr>
+                                <td colspan="3" style="padding:20px; text-align:center;">Đang tải...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- TAB: COURSES -->
+            <div id="tab-courses" class="tab-content" style="display: none;">
+                <div class="content-header">
+                    <h2 class="content-title">Khóa học của bạn</h2>
+                    <p class="text-muted">Danh sách các khóa học bạn đang tham gia</p>
+                </div>
+                <div id="my-courses-grid" class="courses-grid"
+                    style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+                    <!-- Reuse course card styling -->
+                    <div class="loading">Đang tải...</div>
+                </div>
+            </div>
+
+            <!-- TAB: ACCOUNT -->
+            <div id="tab-account" class="tab-content" style="display: none;">
+                <div class="content-header">
+                    <h2 class="content-title">Thông tin tài khoản</h2>
+                    <p class="text-muted">Quản lý thông tin cá nhân của bạn</p>
+                </div>
+
+                <form onsubmit="return false;" style="max-width: 500px;">
+                    <div style="margin-bottom: 20px;">
+                        <label style="display:block; margin-bottom:8px; font-weight:500;">Họ và tên</label>
+                        <input type="text" id="acc-name" class="form-control" readonly
+                            style="width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:8px; background:#f8fafc;">
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label style="display:block; margin-bottom:8px; font-weight:500;">Email</label>
+                        <input type="text" id="acc-email" class="form-control" readonly
+                            style="width:100%; padding:10px; border:1px solid #e2e8f0; border-radius:8px; background:#f8fafc;">
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-wide">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>📚 Học bản chất</h3>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Học bản chất. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/firebase-config.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/folder-parser.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/mobile-menu.js"></script>
+
+    <script>
+        // TAB SWITCHING LOGIC
+        function switchTab(tabId, btn) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
+            // Show target
+            const target = document.getElementById('tab-' + tabId);
+            if (target) target.style.display = 'block';
+
+            // Interaction
+            document.querySelectorAll('.menu-item').forEach(el => el.classList.remove('active'));
+            if (btn) {
+                btn.classList.add('active');
+            } else {
+                // Find button by onclick attribute if btn not provided
+                const foundBtn = document.querySelector(`.menu-item[onclick*="'${tabId}'"]`);
+                if (foundBtn) foundBtn.classList.add('active');
+            }
+        }
+
+        // Init Data
+        document.addEventListener('DOMContentLoaded', () => {
+            // Check URL Params for Tab
+            const urlParams = new URLSearchParams(window.location.search);
+            const tabParam = urlParams.get('tab');
+
+            // Wait for Auth
+            firebase.auth().onAuthStateChanged(async (user) => {
+                if (!user) {
+                    window.location.href = 'index.html';
+                    return;
+                }
+
+                if (tabParam) {
+                    switchTab(tabParam);
+                } else {
+                    // Default to overview if no tab param
+                    switchTab('overview');
+                }
+
+                // Update info
+                document.getElementById('sidebar-name').textContent = user.displayName || 'Người dùng';
+                document.getElementById('sidebar-email').textContent = user.email;
+                if (user.photoURL) {
+                    document.getElementById('sidebar-avatar').src = user.photoURL;
+                }
+
+                document.getElementById('acc-name').value = user.displayName;
+                document.getElementById('acc-email').value = user.email;
+
+                // Load Stats
+                const scores = await window.getUserScores();
+                document.getElementById('stat-tests').textContent = scores.length;
+                const avg = scores.length ? (scores.reduce((a, b) => a + parseFloat(b.score), 0) / scores.length).toFixed(1) : 0;
+                document.getElementById('stat-score').textContent = avg;
+
+                // Load History Render
+                const tbody = document.getElementById('history-list');
+                if (scores.length) {
+                    tbody.innerHTML = scores.slice(0, 10).map(s => `
+                        <tr style="border-bottom:1px solid #f1f5f9;">
+                            <td style="padding:12px;"><strong>${s.lessonName}</strong><br><small class="text-muted">${s.courseName}</small></td>
+                            <td style="padding:12px;">${s.timestamp?.toDate ? s.timestamp.toDate().toLocaleDateString('vi-VN') : 'N/A'}</td>
+                            <td style="padding:12px; text-align:center;"><span style="font-weight:bold; color:${s.score >= 8 ? 'green' : s.score >= 5 ? 'orange' : 'red'}">${parseFloat(s.score).toFixed(1)}</span></td>
+                        </tr>
+                    `).join('');
+                } else {
+                    tbody.innerHTML = '<tr><td colspan="3" style="padding:20px; text-align:center; color:#94a3b8;">Chưa có lịch sử làm bài</td></tr>';
+                }
+
+                // Load Courses
+                loadCoursesForProfile();
+            });
+        });
+
+        async function loadCoursesForProfile() {
+            let courses = await loadCoursesData();
+            if (!courses) return;
+            courses = Array.isArray(courses) ? courses : courses.courses;
+
+            const grid = document.getElementById('my-courses-grid');
+            grid.innerHTML = courses.map(c => `
+                <div class="course-card" onclick="window.location.href='course.html?id=${c.id}'">
+                    <div class="course-thumbnail" style="height:140px; background:#e0e7ff; display:flex; align-items:center; justify-content:center; font-size:40px;">
+                        <span>${c.thumbnail || '📚'}</span>
+                    </div>
+                    <div class="course-body" style="padding:16px;">
+                        <h3 class="course-title" style="font-size:16px; margin-bottom:8px;">${c.title}</h3>
+                        <p class="course-description" style="font-size:13px; color:#64748b; margin-bottom:12px;">${c.description}</p>
+                        <div class="course-meta">
+                             <span style="font-size:12px; color:var(--primary);">Tiếp tục học →</span>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+    </script>
+</body>
+
+</html>

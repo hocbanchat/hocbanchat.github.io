@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học bản chất - Nền Tảng Học Trực Tuyến</title>
+    <meta name="description"
+        content="Học bản chất - Nền tảng học trực tuyến với bài giảng video, lý thuyết, ví dụ và bài tập tự động chấm điểm">
+    <link rel="stylesheet" href="assets/css/modern-variables.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/auth.css">
+
+    <!-- MathJax for LaTeX rendering -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+
+<body>
+    <!-- Mobile Navigation Overlay -->
+    <div class="nav-mobile-overlay"></div>
+
+    <!-- Mobile Navigation Panel -->
+    <nav class="nav-mobile">
+        <div class="nav-mobile-header">
+            <h3>📚 Menu</h3>
+            <button class="nav-mobile-close">✕</button>
+        </div>
+        <div class="nav-mobile-links">
+            <a href="index.html" class="active">🏠 Trang chủ</a>
+            <a href="about.html">📖 Giới thiệu</a>
+            <a href="contact.html">📞 Liên hệ</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container-wide">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>📚 Học bản chất</h1>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link active">Trang chủ</a>
+                    <a href="about.html" class="nav-link">Giới thiệu</a>
+                    <a href="contact.html" class="nav-link">Liên hệ</a>
+                </nav>
+                <!-- Auth Container -->
+                <div id="auth-container"></div>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- LANDING PAGE CONTENT -->
+    <div id="landing-page-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <!-- Decorative Floating Shapes -->
+            <div class="hero-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+
+            <div class="container">
+                <div class="hero-content">
+                    <span class="hero-badge">🎓 Nền tảng học tập hàng đầu</span>
+                    <h2 class="hero-title">Học Tập Thông Minh<br><span class="text-gradient">Tiến Bộ Vượt Trội</span>
+                    </h2>
+                    <p class="hero-description">Khám phá các khóa học chất lượng cao với video bài giảng, lý thuyết chi
+                        tiết, ví dụ minh họa và bài tập tự động chấm điểm</p>
+                    <div class="hero-cta">
+                        <a href="#courses" class="btn btn-primary btn-large">
+                            🚀 Khám phá ngay
+                        </a>
+                        <a href="#features" class="btn btn-secondary btn-large">
+                            ✨ Tính năng
+                        </a>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Khóa học</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Bài học</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100+</span>
+                            <span class="stat-label">Bài tập</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features-section">
+            <div class="container-wide">
+                <h2 class="section-title">Tính Năng Nổi Bật</h2>
+                <p class="section-subtitle">Trải nghiệm học tập toàn diện với các công cụ hiện đại</p>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎬</div>
+                        <h3>Video Bài Giảng</h3>
+                        <p>Xem video chất lượng cao từ giảng viên, có thể xem lại bất cứ lúc nào</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📚</div>
+                        <h3>Lý Thuyết Chi Tiết</h3>
+                        <p>Nội dung lý thuyết được trình bày rõ ràng với công thức và ví dụ minh họa</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✍️</div>
+                        <h3>Bài Tập Tự Động</h3>
+                        <p>Làm bài tập trắc nghiệm và nhận kết quả ngay lập tức với lời giải chi tiết</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Theo Dõi Tiến Độ</h3>
+                        <p>Hệ thống lưu trữ kết quả và theo dõi quá trình học tập của bạn</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses" class="courses-section">
+            <div class="container-wide">
+                <h2 class="section-title">Khóa Học Nổi Bật</h2>
+                <p class="section-subtitle">Chọn khóa học phù hợp với bạn và bắt đầu hành trình học tập</p>
+
+                <div id="courses-grid" class="courses-grid">
+                    <!-- Courses will be loaded here by JavaScript -->
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        <p>Đang tải khóa học...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- DASHBOARD CONTAINER (Hidden by default) -->
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-wide">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>📚 Học bản chất</h3>
+                    <p>Nền tảng học tập trực tuyến hiện đại</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liên kết</h4>
+                    <ul>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="about.html">Giới thiệu</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Hỗ trợ</h4>
+                    <ul>
+                        <li><a href="guide.html">Hướng dẫn sử dụng</a></li>
+                        <li><a href="faq.html">Câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Học bản chất. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/markdown-parser.js"></script>
+    <script src="assets/js/folder-parser.js"></script>
+    <script src="assets/js/firebase-config.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/mobile-menu.js"></script>
+</body>
+
+</html>

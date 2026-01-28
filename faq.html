@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu hỏi thường gặp - Học bản chất</title>
+    <meta name="description" content="Giải đáp các câu hỏi thường gặp về nền tảng học trực tuyến">
+    <link rel="stylesheet" href="assets/css/modern-variables.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/auth.css">
+</head>
+
+<body>
+    <!-- Mobile Navigation Overlay -->
+    <div class="nav-mobile-overlay"></div>
+
+    <!-- Mobile Navigation Panel -->
+    <nav class="nav-mobile">
+        <div class="nav-mobile-header">
+            <h3>📚 Menu</h3>
+            <button class="nav-mobile-close">✕</button>
+        </div>
+        <div class="nav-mobile-links">
+            <a href="index.html">🏠 Trang chủ</a>
+            <a href="about.html">📖 Giới thiệu</a>
+            <a href="contact.html">📞 Liên hệ</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container-wide">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>📚 Học bản chất</h1>
+                    </a>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Trang chủ</a>
+                    <a href="about.html" class="nav-link">Giới thiệu</a>
+                    <a href="contact.html" class="nav-link">Liên hệ</a>
+                </nav>
+                <div id="auth-container"></div>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Câu Hỏi Thường Gặp</h1>
+            <p class="page-subtitle">Giải đáp những thắc mắc phổ biến của học sinh</p>
+        </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <section class="content-page">
+        <div class="container">
+            <div class="faq-list">
+                <!-- FAQ 1 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Nền tảng học tập này có miễn phí không?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Có, Học bản chất hoàn toàn miễn phí cho tất cả học sinh. Bạn có thể truy cập và học
+                            tất cả các khóa học, xem video bài giảng, và làm bài tập mà không phải trả bất kỳ chi phí
+                            nào.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Tôi cần đăng ký tài khoản để học không?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Không cần đăng ký! Bạn có thể bắt đầu học ngay lập tức. Chỉ cần mở trang web và
+                            chọn khóa học, bài học mà bạn muốn. Khi làm bài tập, bạn chỉ cần nhập họ tên và lớp.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Video bài giảng có xem lại được không?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Có, bạn có thể xem video bài giảng không giới hạn số lần. Bạn cũng có thể tua lại
+                            những phần khó hiểu và xem đi xem lại bất cứ khi nào cần.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Bài tập có lời giải chi tiết không?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Có, sau khi nộp bài, hệ thống sẽ chấm điểm tự động và hiển thị lời giải chi tiết
+                            cho tất cả các câu hỏi, bao gồm cả những câu bạn làm sai lẫn những câu bạn làm đúng.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Nội dung học có theo chương trình SGK không?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Có, nội dung được biên soạn theo sát chương trình sách giáo khoa lớp 12 và
+                            cập nhật theo đề thi tốt nghiệp THPT Quốc gia, giúp học sinh ôn tập hiệu quả.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Tôi có thể học trên điện thoại được không?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Có, website được thiết kế responsive và hoạt động tốt trên tất cả các thiết bị
+                            bao gồm máy tính, tablet và điện thoại di động.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 7 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Làm sao để tải tài liệu học tập?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Trong mỗi bài học, bạn sẽ thấy các nút "Tải bài giảng" và "Tải bài tập về nhà"
+                            ở thanh công cụ bên dưới video. Nhấn vào đó để tải file PDF về máy.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 8 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Kết quả bài tập có được lưu lại không?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Kết quả bài tập sẽ được gửi về Google Sheets để giáo viên theo dõi.
+                            Bạn cũng có thể chụp màn hình kết quả để lưu lại làm tư liệu học tập.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 9 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Tôi gặp lỗi kỹ thuật thì liên hệ ở đâu?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nếu gặp bất kỳ vấn đề kỹ thuật nào, vui lòng liên hệ với chúng tôi qua
+                            trang <a href="contact.html">Liên hệ</a> hoặc email: support@hoconline.vn</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 10 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Có thể đề xuất bài học mới được không?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Chúng tôi luôn hoan nghênh mọi đề xuất từ học sinh! Bạn có thể gửi góp ý qua
+                            trang Liên hệ với chủ đề "Góp ý, phản hồi". Chúng tôi sẽ xem xét và bổ sung nội dung phù
+                            hợp.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-wide">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>📚 Học bản chất</h3>
+                    <p>Nền tảng học tập trực tuyến hiện đại</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liên kết</h4>
+                    <ul>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="about.html">Giới thiệu</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Hỗ trợ</h4>
+                    <ul>
+                        <li><a href="guide.html">Hướng dẫn sử dụng</a></li>
+                        <li><a href="faq.html">Câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Học bản chất. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+
+    <script src="assets/js/firebase-config.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/mobile-menu.js"></script>
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isOpen = faqItem.classList.contains('open');
+
+                // Đóng tất cả các FAQ khác
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('open');
+                });
+
+                // Toggle FAQ hiện tại
+                if (!isOpen) {
+                    faqItem.classList.add('open');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
