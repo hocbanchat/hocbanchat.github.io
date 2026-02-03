@@ -1,214 +1,460 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html class="dark" lang="vi">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Học bản chất - Nền Tảng Học Trực Tuyến</title>
-    <meta name="description"
-        content="Học bản chất - Nền tảng học trực tuyến với bài giảng video, lý thuyết, ví dụ và bài tập tự động chấm điểm">
-    <link rel="stylesheet" href="assets/css/modern-variables.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <link rel="stylesheet" href="assets/css/auth.css">
-
-    <!-- MathJax for LaTeX rendering -->
-    <script>
-        MathJax = {
-            tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']],
-                displayMath: [['$$', '$$'], ['\\[', '\\]']],
-                processEscapes: true,
-                processEnvironments: true
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Học Bản Chất - Nền Tảng Học Trực Tuyến</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Noto+Sans:wght@300..800&display=swap"
+        rel="stylesheet" />
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Theme Config -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "surface-dark": "#1c1f27",
+                        "border-dark": "#282e39",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "Noto Sans", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
             },
-            options: {
-                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-            }
-        };
+        }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
 </head>
 
-<body>
-    <!-- Mobile Navigation Overlay -->
-    <div class="nav-mobile-overlay"></div>
-
-    <!-- Mobile Navigation Panel -->
-    <nav class="nav-mobile">
-        <div class="nav-mobile-header">
-            <h3>📚 Menu</h3>
-            <button class="nav-mobile-close">✕</button>
-        </div>
-        <div class="nav-mobile-links">
-            <a href="index.html" class="active">🏠 Trang chủ</a>
-            <a href="about.html">📖 Giới thiệu</a>
-            <a href="contact.html">📞 Liên hệ</a>
-        </div>
-    </nav>
-
-    <!-- Header -->
-    <header class="header">
-        <div class="container-wide">
-            <div class="header-content">
-                <div class="logo">
-                    <h1>📚 Học bản chất</h1>
-                </div>
-                <nav class="nav">
-                    <a href="index.html" class="nav-link active">Trang chủ</a>
-                    <a href="about.html" class="nav-link">Giới thiệu</a>
-                    <a href="contact.html" class="nav-link">Liên hệ</a>
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-[#111318] dark:text-white min-h-screen flex flex-col overflow-x-hidden">
+    <!-- Top Navigation Bar -->
+    <header
+        class="sticky top-0 z-50 w-full border-b border-solid border-b-[#282e39] bg-[#111318]/95 backdrop-blur px-4 lg:px-10 py-3">
+        <div class="mx-auto max-w-[1280px] flex items-center justify-between whitespace-nowrap">
+            <div class="flex items-center gap-8">
+                <a class="flex items-center gap-3 text-white hover:opacity-80 transition-opacity" href="index.html">
+                    <div class="size-8 text-primary flex items-center justify-center">
+                        <span class="material-symbols-outlined text-3xl">function</span>
+                    </div>
+                    <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Học Bản Chất</h2>
+                </a>
+                <nav class="hidden md:flex items-center gap-6">
+                    <a class="text-white/80 hover:text-white hover:text-primary transition-colors text-sm font-medium leading-normal"
+                        href="course.html?id=toan-12">Lớp 10</a>
+                    <a class="text-white/80 hover:text-white hover:text-primary transition-colors text-sm font-medium leading-normal"
+                        href="course.html?id=toan-12">Lớp 11</a>
+                    <a class="text-white/80 hover:text-white hover:text-primary transition-colors text-sm font-medium leading-normal"
+                        href="course.html?id=toan-12">Lớp 12</a>
+                    <a class="text-white/80 hover:text-white hover:text-primary transition-colors text-sm font-medium leading-normal"
+                        href="#">Luyện thi</a>
                 </nav>
-                <!-- Auth Container -->
-                <div id="auth-container"></div>
-                <button class="mobile-menu-btn" aria-label="Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+            </div>
+            <div class="flex items-center justify-end gap-4">
+                <!-- Thanh tìm kiếm -->
+                <div
+                    class="hidden lg:flex items-center rounded-lg bg-[#282e39] h-10 px-3 w-64 border border-transparent focus-within:border-primary transition-colors">
+                    <span class="material-symbols-outlined text-[#9da6b9]">search</span>
+                    <input
+                        class="bg-transparent border-none text-white text-sm w-full focus:ring-0 placeholder-[#9da6b9]"
+                        placeholder="Tìm kiếm bài học..." />
+                </div>
+
+                <!-- Nút đăng nhập (hiển thị khi chưa đăng nhập) -->
+                <button id="login-btn" onclick="signInWithGoogle()"
+                    class="flex items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary hover:bg-primary/90 transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em] shadow-lg shadow-primary/20">
+                    <span class="truncate">Đăng nhập</span>
+                </button>
+
+                <!-- Thông tin user (hiển thị khi đã đăng nhập) -->
+                <div id="user-info" class="hidden items-center gap-3">
+                    <a href="profile.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                        <span id="user-name" class="hidden sm:block text-sm font-medium text-white"></span>
+                        <img id="user-avatar" class="size-10 rounded-full ring-2 ring-primary/20 object-cover" src=""
+                            alt="Avatar" />
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-white">
+                    <span class="material-symbols-outlined">menu</span>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- LANDING PAGE CONTENT -->
-    <div id="landing-page-content">
-        <!-- Hero Section -->
-        <section class="hero">
-            <!-- Decorative Floating Shapes -->
-            <div class="hero-shapes">
-                <div class="shape shape-1"></div>
-                <div class="shape shape-2"></div>
-                <div class="shape shape-3"></div>
-            </div>
+    <!-- Mobile Navigation Panel -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-40 hidden"></div>
+    <nav id="mobile-menu"
+        class="fixed top-0 right-0 h-full w-64 bg-[#111318] z-50 transform translate-x-full transition-transform duration-300 flex flex-col p-6 gap-4 border-l border-[#282e39]">
+        <button id="mobile-menu-close" class="self-end text-white mb-4">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+        <a href="course.html?id=toan-12" class="text-white/80 hover:text-primary py-2 border-b border-[#282e39]">Lớp
+            10</a>
+        <a href="course.html?id=toan-12" class="text-white/80 hover:text-primary py-2 border-b border-[#282e39]">Lớp
+            11</a>
+        <a href="course.html?id=toan-12" class="text-white/80 hover:text-primary py-2 border-b border-[#282e39]">Lớp
+            12</a>
+        <a href="#" class="text-white/80 hover:text-primary py-2">Luyện thi</a>
+    </nav>
 
-            <div class="container">
-                <div class="hero-content">
-                    <span class="hero-badge">🎓 Nền tảng học tập hàng đầu</span>
-                    <h2 class="hero-title">Học Tập Thông Minh<br><span class="text-gradient">Tiến Bộ Vượt Trội</span>
-                    </h2>
-                    <p class="hero-description">Khám phá các khóa học chất lượng cao với video bài giảng, lý thuyết chi
-                        tiết, ví dụ minh họa và bài tập tự động chấm điểm</p>
-                    <div class="hero-cta">
-                        <a href="#courses" class="btn btn-primary btn-large">
-                            🚀 Khám phá ngay
-                        </a>
-                        <a href="#features" class="btn btn-secondary btn-large">
-                            ✨ Tính năng
-                        </a>
+    <!-- Hero Section -->
+    <div class="relative w-full bg-background-dark overflow-hidden">
+        <!-- Abstract Background Pattern -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none"
+            style="background-image: radial-gradient(#3b4354 1px, transparent 1px); background-size: 32px 32px;"></div>
+        <div class="relative mx-auto max-w-[1280px] px-4 md:px-10 py-12 md:py-20 lg:py-24">
+            <div class="flex flex-col lg:flex-row gap-10 items-center">
+                <!-- Text Content -->
+                <div class="flex flex-col gap-6 flex-1 text-center lg:text-left z-10">
+                    <div class="flex flex-col gap-4">
+                        <span
+                            class="w-fit mx-auto lg:mx-0 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold border border-primary/20 uppercase tracking-wider">
+                            Giáo dục miễn phí 100%
+                        </span>
+                        <h1
+                            class="text-white text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-[-0.033em]">
+                            Học bản chất <br />
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Hiểu
+                                vấn đề</span>
+                        </h1>
+                        <h2
+                            class="text-[#9da6b9] text-base sm:text-lg font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                            Nền tảng học toán trực tuyến chất lượng cao dành cho học sinh THPT. Hệ thống bài giảng được
+                            thiết kế logic, giúp bạn nắm vững kiến thức từ gốc rễ.
+                        </h2>
                     </div>
-
-                    <!-- Stats -->
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">3+</span>
-                            <span class="stat-label">Khóa học</span>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <button onclick="document.getElementById('courses').scrollIntoView({behavior: 'smooth'})"
+                            class="flex items-center justify-center rounded-lg h-12 px-8 bg-primary hover:bg-primary/90 text-white text-base font-bold shadow-lg shadow-primary/30 transition-all hover:translate-y-[-2px]">
+                            <span>Học ngay</span>
+                        </button>
+                        <button
+                            class="flex items-center justify-center rounded-lg h-12 px-8 bg-[#282e39] hover:bg-[#3b4354] text-white text-base font-medium transition-colors border border-[#3b4354]">
+                            <span>Tìm hiểu thêm</span>
+                        </button>
+                    </div>
+                    <!-- Trust Indicators -->
+                    <div
+                        class="flex items-center justify-center lg:justify-start gap-6 pt-4 text-[#9da6b9] text-sm font-medium">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-green-500 text-lg">check_circle</span>
+                            <span>Miễn phí trọn đời</span>
                         </div>
-                        <div class="stat-item">
-                            <span class="stat-number">50+</span>
-                            <span class="stat-label">Bài học</span>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-lg">groups</span>
+                            <span>10,000+ Học viên</span>
                         </div>
-                        <div class="stat-item">
-                            <span class="stat-number">100+</span>
-                            <span class="stat-label">Bài tập</span>
+                    </div>
+                </div>
+                <!-- Hero Image -->
+                <div class="flex-1 w-full max-w-[600px] lg:max-w-none relative z-10">
+                    <div
+                        class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl shadow-primary/20 border border-[#282e39] bg-surface-dark relative group">
+                        <!-- Decorative overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent z-10">
+                        </div>
+                        <div class="w-full h-full bg-cover bg-center transform transition-transform duration-700 group-hover:scale-105"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAA50pJjm1Viu8ycw_MmvTNG2yTtgbzKRnY2JoSfYENTzYxXeaLP6ul8GYa1MsU31FjtGYGmh0a6LbNrqy0FZiUnuDXz1vp4lHHNJqTH4yCsZA67YR8NdtgEIfrXyGASHrheZ4pa0ekVIFx4plO_nNULfkNFQI6cB0Wuov6-Kej7brCcumU-uCu85aiB4gD417_n2xv2gI9-9mj1o7hcC_ZIrzkvqwMg9IjZ4Hs0WM0ONVtex5GiV_8fCgBk3DI80lNhKtjrciXLIo');">
+                        </div>
+                        <!-- Floating Card Effect -->
+                        <div
+                            class="absolute bottom-6 left-6 right-6 z-20 bg-[#1c1f27]/90 backdrop-blur-md p-4 rounded-xl border border-[#3b4354] shadow-lg">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                                    <span class="material-symbols-outlined">play_circle</span>
+                                </div>
+                                <div>
+                                    <p class="text-white font-bold text-sm">Bài giảng mới nhất</p>
+                                    <p class="text-[#9da6b9] text-xs">Nguyên hàm - Tích phân - Toán 12</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Features Section -->
-        <section id="features" class="features-section">
-            <div class="container-wide">
-                <h2 class="section-title">Tính Năng Nổi Bật</h2>
-                <p class="section-subtitle">Trải nghiệm học tập toàn diện với các công cụ hiện đại</p>
-
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">🎬</div>
-                        <h3>Video Bài Giảng</h3>
-                        <p>Xem video chất lượng cao từ giảng viên, có thể xem lại bất cứ lúc nào</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">📚</div>
-                        <h3>Lý Thuyết Chi Tiết</h3>
-                        <p>Nội dung lý thuyết được trình bày rõ ràng với công thức và ví dụ minh họa</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">✍️</div>
-                        <h3>Bài Tập Tự Động</h3>
-                        <p>Làm bài tập trắc nghiệm và nhận kết quả ngay lập tức với lời giải chi tiết</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">📊</div>
-                        <h3>Theo Dõi Tiến Độ</h3>
-                        <p>Hệ thống lưu trữ kết quả và theo dõi quá trình học tập của bạn</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Courses Section -->
-        <section id="courses" class="courses-section">
-            <div class="container-wide">
-                <h2 class="section-title">Khóa Học Nổi Bật</h2>
-                <p class="section-subtitle">Chọn khóa học phù hợp với bạn và bắt đầu hành trình học tập</p>
-
-                <div id="courses-grid" class="courses-grid">
-                    <!-- Courses will be loaded here by JavaScript -->
-                    <div class="loading">
-                        <div class="spinner"></div>
-                        <p>Đang tải khóa học...</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div>
     </div>
 
-    <!-- DASHBOARD CONTAINER (Hidden by default) -->
-
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container-wide">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>📚 Học bản chất</h3>
-                    <p>Nền tảng học tập trực tuyến hiện đại</p>
+    <!-- Feature Section / Mission -->
+    <div class="w-full bg-[#111318] py-16">
+        <div class="mx-auto max-w-[1280px] px-4 md:px-10">
+            <div class="flex flex-col gap-10">
+                <div class="flex flex-col gap-4 text-center max-w-3xl mx-auto">
+                    <h2 class="text-primary font-bold tracking-wider uppercase text-sm">Vì sao chọn chúng tôi?</h2>
+                    <h1 class="text-white text-3xl md:text-4xl font-bold leading-tight">
+                        Cam kết chất lượng giáo dục <br class="hidden md:block" /> hoàn toàn miễn phí
+                    </h1>
+                    <p class="text-[#9da6b9] text-base leading-relaxed">
+                        Chúng tôi tin rằng giáo dục là quyền lợi của mọi người. Sứ mệnh của chúng tôi là xóa bỏ rào cản
+                        tài chính, mang tri thức đến với mọi học sinh Việt Nam.
+                    </p>
                 </div>
-                <div class="footer-section">
-                    <h4>Liên kết</h4>
-                    <ul>
-                        <li><a href="index.html">Trang chủ</a></li>
-                        <li><a href="about.html">Giới thiệu</a></li>
-                        <li><a href="contact.html">Liên hệ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Hỗ trợ</h4>
-                    <ul>
-                        <li><a href="guide.html">Hướng dẫn sử dụng</a></li>
-                        <li><a href="faq.html">Câu hỏi thường gặp</a></li>
-                    </ul>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Feature 1 -->
+                    <div
+                        class="group flex flex-col gap-4 rounded-xl border border-[#282e39] bg-[#1c1f27] p-6 hover:border-primary/50 transition-colors">
+                        <div
+                            class="size-12 rounded-lg bg-[#282e39] group-hover:bg-primary/20 flex items-center justify-center text-white group-hover:text-primary transition-colors">
+                            <span class="material-symbols-outlined text-3xl">savings</span>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <h2 class="text-white text-xl font-bold">100% Miễn Phí</h2>
+                            <p class="text-[#9da6b9] text-sm leading-relaxed">Không thu phí, không quảng cáo làm phiền.
+                                Mọi khóa học đều mở công khai cho cộng đồng.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div
+                        class="group flex flex-col gap-4 rounded-xl border border-[#282e39] bg-[#1c1f27] p-6 hover:border-primary/50 transition-colors">
+                        <div
+                            class="size-12 rounded-lg bg-[#282e39] group-hover:bg-primary/20 flex items-center justify-center text-white group-hover:text-primary transition-colors">
+                            <span class="material-symbols-outlined text-3xl">verified</span>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <h2 class="text-white text-xl font-bold">Chất Lượng Cao</h2>
+                            <p class="text-[#9da6b9] text-sm leading-relaxed">Bài giảng được biên soạn kỹ lưỡng bởi đội
+                                ngũ giáo viên giàu kinh nghiệm, bám sát chương trình bộ giáo dục.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div
+                        class="group flex flex-col gap-4 rounded-xl border border-[#282e39] bg-[#1c1f27] p-6 hover:border-primary/50 transition-colors">
+                        <div
+                            class="size-12 rounded-lg bg-[#282e39] group-hover:bg-primary/20 flex items-center justify-center text-white group-hover:text-primary transition-colors">
+                            <span class="material-symbols-outlined text-3xl">alt_route</span>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <h2 class="text-white text-xl font-bold">Lộ Trình Rõ Ràng</h2>
+                            <p class="text-[#9da6b9] text-sm leading-relaxed">Hệ thống bài học được sắp xếp khoa học từ
+                                cơ bản đến nâng cao, giúp học sinh dễ dàng theo dõi tiến độ.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Học bản chất. All rights reserved.</p>
+        </div>
+    </div>
+
+    <!-- Course Section -->
+    <div id="courses" class="w-full bg-[#0f1218] py-16 border-t border-[#282e39]">
+        <div class="mx-auto max-w-[1280px] px-4 md:px-10">
+            <div class="flex flex-col md:flex-row items-end justify-between gap-4 mb-10">
+                <div class="flex flex-col gap-2">
+                    <h2 class="text-white text-3xl font-bold leading-tight">Khám phá khóa học</h2>
+                    <p class="text-[#9da6b9]">Chọn lớp học phù hợp với trình độ của bạn</p>
+                </div>
+                <a class="text-primary font-bold text-sm hover:underline flex items-center gap-1" href="course.html">
+                    Xem tất cả khóa học <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+            </div>
+            <div id="courses-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Các khóa học sẽ được render bởi JavaScript -->
+            </div>
+
+            <!-- Exam Prep CTA -->
+            <div
+                class="mt-12 rounded-2xl bg-gradient-to-r from-[#1c1f27] to-[#13161c] border border-[#282e39] p-8 md:p-12 relative overflow-hidden">
+                <div
+                    class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
+                </div>
+                <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div class="flex flex-col gap-3 max-w-xl">
+                        <h3 class="text-white text-2xl font-bold">Luyện thi Đại học &amp; THPT Quốc Gia</h3>
+                        <p class="text-[#9da6b9]">Tổng hợp đề thi thử, chuyên đề nâng cao và bí kíp giải nhanh trắc
+                            nghiệm toán học.</p>
+                    </div>
+                    <button
+                        class="flex min-w-[160px] items-center justify-center rounded-lg h-12 px-6 bg-white text-[#111318] hover:bg-gray-100 text-base font-bold shadow-lg transition-colors whitespace-nowrap">
+                        Luyện đề ngay
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#0b0d11] border-t border-[#282e39] py-12 text-sm">
+        <div class="mx-auto max-w-[1280px] px-4 md:px-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-2 text-white">
+                        <div class="size-6 text-primary flex items-center justify-center">
+                            <span class="material-symbols-outlined">function</span>
+                        </div>
+                        <span class="font-bold text-lg">Học Bản Chất</span>
+                    </div>
+                    <p class="text-[#9da6b9] leading-relaxed">
+                        Nền tảng giáo dục toán học miễn phí hàng đầu cho học sinh THPT. Học mọi lúc, mọi nơi.
+                    </p>
+                    <div class="flex gap-4 mt-2">
+                        <a class="text-[#9da6b9] hover:text-white transition-colors" href="#">
+                            <span class="material-symbols-outlined">public</span>
+                        </a>
+                        <a class="text-[#9da6b9] hover:text-white transition-colors" href="#">
+                            <span class="material-symbols-outlined">smart_display</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h4 class="text-white font-bold">Chương trình học</h4>
+                    <ul class="flex flex-col gap-2 text-[#9da6b9]">
+                        <li><a class="hover:text-primary transition-colors" href="#">Toán Lớp 10</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Toán Lớp 11</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="course.html?id=toan-12">Toán Lớp
+                                12</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Luyện thi THPTQG</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h4 class="text-white font-bold">Hỗ trợ</h4>
+                    <ul class="flex flex-col gap-2 text-[#9da6b9]">
+                        <li><a class="hover:text-primary transition-colors" href="#">Trung tâm trợ giúp</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Điều khoản sử dụng</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Chính sách bảo mật</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h4 class="text-white font-bold">Đăng ký nhận tin</h4>
+                    <p class="text-[#9da6b9]">Nhận thông báo về các bài giảng mới nhất.</p>
+                    <div class="flex gap-2">
+                        <input
+                            class="bg-[#1c1f27] border border-[#282e39] rounded-lg px-3 py-2 text-white w-full focus:ring-1 focus:ring-primary focus:border-primary text-sm"
+                            placeholder="Email của bạn" type="email" />
+                        <button
+                            class="bg-primary hover:bg-primary/90 text-white rounded-lg px-3 py-2 transition-colors">
+                            <span class="material-symbols-outlined text-sm">send</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-[#282e39] text-center text-[#9da6b9] text-xs">
+                <p>© 2024 HocBanChat. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
-
-    <script src="assets/js/utils.js"></script>
-    <script src="assets/js/markdown-parser.js"></script>
-    <script src="assets/js/folder-parser.js"></script>
+    <!-- Scripts -->
     <script src="assets/js/firebase-config.js"></script>
     <script src="assets/js/auth.js"></script>
-    <script src="assets/js/app.js"></script>
-    <script src="assets/js/mobile-menu.js"></script>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+
+        function openMobileMenu() {
+            mobileMenu.classList.remove('translate-x-full');
+            mobileMenuOverlay.classList.remove('hidden');
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.add('translate-x-full');
+            mobileMenuOverlay.classList.add('hidden');
+        }
+
+        mobileMenuBtn?.addEventListener('click', openMobileMenu);
+        mobileMenuClose?.addEventListener('click', closeMobileMenu);
+        mobileMenuOverlay?.addEventListener('click', closeMobileMenu);
+
+        // Load và hiển thị danh sách khóa học
+        async function loadCourses() {
+            try {
+                const response = await fetch('assets/data-index.json');
+                const data = await response.json();
+                const container = document.getElementById('courses-container');
+
+                // Định nghĩa thông tin bổ sung cho mỗi khóa học
+                const courseExtras = {
+                    'toan-12': {
+                        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBuTv9WSxnt_V_UGRugRVUMthlaRD0FwEEJyt3wS5yWBTRzNpSoMFdD3ZDPjwRoHXXNvxGVM4MtPUlHz0KUx_AETHcp6Xm_hItuDQf22o-6urd9j61uSEuo6Ss8R0LH6EM4xevKpuypzg0qJjxVU_FCaJn7eDgBrv47RGtRiD1ZoBV0o6j4hY8dzCOqfxWq-L90kb365LgFcdm7psi8rW3aClv3jpPYx-OyrOZ6r8MP8WWqP79HPwu8pZtORpXz_rhBUenRglVQZtU',
+                        label: 'Lớp 12',
+                        labelColor: 'bg-purple-600',
+                        chapters: 3,
+                        lessons: 15
+                    },
+                    'hoa-hoc-12': {
+                        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBhcRvKYi6VazzUl3sNU3S3OXDaYcw7Kt-5UZ9Hy6ySfn8-EmWhtwDYPinWxVGq33W11_nl_CHqkBhcSd14074Bh-SVweUSPkksS_axmuqK1OwzPaxsQtRgXUxygJfNvdjQTZ2o0gb5IFjJ8G6p7H41QvfkwB3773QFcOtBC--CovU3JdNc8IoWfnl89KPWlVRfyEbI_jzYVdyRG7gAq4lizaepVuJyZ6oqjDQItPEbSlLhwV7BKVu7m7Z5bnQNQ-EPfbSBsPCA0H4',
+                        label: 'Lớp 12',
+                        labelColor: 'bg-green-600',
+                        chapters: 2,
+                        lessons: 10
+                    },
+                    'vat-ly-12': {
+                        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA6ohH8X79zdd6Dgj25ySxGXnjAR-fOMP6jQlTXBTMbsGF7PJcVQWL_YFt77FOmVOonMjF2l1x4ZXbdDIOrwkKEGvhxt49tqnXqNKN0HWwuoY9NWSTJNV_LcRFQSuvSQA2qmSqQoXgG0CDQE7nTAhQiKgBiamyi-iZSoKYTRd0Bb2uNT_MUkqRLl0gFrehidphb6VAJ46k4ulopRfKHAG2y4IyR3KHlRtx5zUepZ132MWB1FTmYNSAS0WEsSs4MELZp3e1HGMX8HLk',
+                        label: 'Lớp 12',
+                        labelColor: 'bg-blue-600',
+                        chapters: 2,
+                        lessons: 8
+                    }
+                };
+
+                container.innerHTML = data.courses.map(course => {
+                    const extras = courseExtras[course.id] || {
+                        image: '',
+                        label: 'Khóa học',
+                        labelColor: 'bg-gray-600',
+                        chapters: course.chapters?.length || 0,
+                        lessons: course.lessons?.length || 0
+                    };
+
+                    return `
+                        <div class="flex flex-col rounded-xl overflow-hidden bg-[#1c1f27] border border-[#282e39] hover:shadow-xl hover:shadow-primary/5 hover:border-primary/30 transition-all group">
+                            <div class="w-full aspect-video bg-cover bg-center relative" style="background-image: url('${extras.image}');">
+                                <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+                                <div class="absolute top-3 left-3 ${extras.labelColor} text-white text-xs font-bold px-2 py-1 rounded">${extras.label}</div>
+                            </div>
+                            <div class="p-5 flex flex-col gap-4 flex-1">
+                                <div class="flex-1">
+                                    <h3 class="text-white text-xl font-bold mb-2 group-hover:text-primary transition-colors">${course.title}</h3>
+                                    <p class="text-[#9da6b9] text-sm line-clamp-2">${course.description}</p>
+                                </div>
+                                <div class="flex items-center gap-4 text-[#9da6b9] text-xs border-t border-[#282e39] pt-4 mt-auto">
+                                    <div class="flex items-center gap-1">
+                                        <span class="material-symbols-outlined text-base">library_books</span>
+                                        <span>${extras.chapters} Chương</span>
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <span class="material-symbols-outlined text-base">play_lesson</span>
+                                        <span>${extras.lessons} Bài giảng</span>
+                                    </div>
+                                </div>
+                                <a href="course.html?id=${course.id}" 
+                                   class="w-full mt-2 rounded-lg h-10 bg-[#282e39] hover:bg-primary text-white text-sm font-bold transition-colors flex items-center justify-center">
+                                    Vào học ngay
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            } catch (error) {
+                console.error('Lỗi khi load danh sách khóa học:', error);
+            }
+        }
+
+        // Load courses khi trang load xong
+        document.addEventListener('DOMContentLoaded', loadCourses);
+    </script>
 </body>
 
 </html>

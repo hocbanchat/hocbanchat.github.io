@@ -1,0 +1,24 @@
+{
+  "name": "learning-platform",
+  "version": "1.0.0",
+  "description": "Một trang web học trực tuyến tĩnh (static) với đầy đủ tính năng: video bài giảng, lý thuyết, ví dụ minh họa và hệ thống chấm điểm trắc nghiệm tự động.",
+  "main": "google-apps-script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://hocbanchat@github.com/hocbanchat/hocbanchat.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/hocbanchat/hocbanchat.github.io/issues"
+  },
+  "homepage": "https://github.com/hocbanchat/hocbanchat.github.io#readme",
+  "dependencies": {
+    "uipro-cli": "^2.2.3"
+  }
+}

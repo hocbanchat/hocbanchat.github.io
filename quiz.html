@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html class="dark" lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Làm bài tập - Học Bản Chất</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "success": "#10b981",
+                        "error": "#f43f5e",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+    </style>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <!-- Marked.js và KaTeX cho Markdown và Math -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-100 min-h-screen flex flex-col overflow-hidden">
+    <!-- Top Navigation Bar -->
+    <header
+        class="h-16 bg-white dark:bg-[#151b2b] border-b border-gray-200 dark:border-gray-800 flex items-center justify-between px-6 shrink-0 z-20">
+        <div class="flex items-center gap-4">
+            <a href="index.html" class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-3xl">function</span>
+                <h1 class="font-bold text-lg hidden sm:block">Học Bản Chất</h1>
+            </a>
+            <div class="h-6 w-px bg-gray-300 dark:bg-gray-700 mx-2 hidden sm:block"></div>
+            <div class="flex flex-col justify-center">
+                <h2 id="quiz-title" class="text-sm font-semibold text-gray-900 dark:text-white leading-tight">Bài tập
+                    trắc nghiệm</h2>
+                <span id="quiz-subtitle" class="text-xs text-gray-500 dark:text-gray-400">Đang tải...</span>
+            </div>
+        </div>
+        <div class="flex items-center gap-6">
+            <!-- Progress Bar (Mini) -->
+            <div class="hidden md:flex flex-col w-48 gap-1">
+                <div class="flex justify-between text-xs text-gray-500 dark:text-gray-400">
+                    <span>Tiến độ</span>
+                    <span id="progress-text">0/0</span>
+                </div>
+                <div class="h-1.5 w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                    <div id="progress-bar" class="h-full bg-primary w-0 rounded-full transition-all"></div>
+                </div>
+            </div>
+            <!-- Timer -->
+            <div class="flex items-center gap-2 bg-primary/10 px-3 py-1.5 rounded-lg border border-primary/20">
+                <span class="material-symbols-outlined text-primary text-sm">timer</span>
+                <span id="timer" class="font-mono font-bold text-primary text-lg">00:00</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="flex flex-1 overflow-hidden relative">
+        <!-- Left Area: Question Content -->
+        <main
+            class="flex-1 overflow-y-auto custom-scrollbar p-4 md:p-8 flex justify-center bg-background-light dark:bg-background-dark">
+            <div class="w-full max-w-4xl flex flex-col gap-6 pb-20">
+                <!-- Question Card -->
+                <div id="question-card"
+                    class="bg-white dark:bg-[#1a2332] rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 overflow-hidden">
+                    <!-- Header -->
+                    <div
+                        class="px-6 py-4 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center bg-gray-50/50 dark:bg-[#1a2332]">
+                        <div class="flex items-center gap-3">
+                            <span id="question-number" class="text-primary font-bold text-lg">Câu 1</span>
+                        </div>
+                        <button id="bookmark-btn" class="text-gray-400 hover:text-yellow-500 transition-colors">
+                            <span class="material-symbols-outlined text-xl">bookmark_border</span>
+                        </button>
+                    </div>
+                    <!-- Content -->
+                    <div class="p-6 md:p-8">
+                        <div id="question-content"
+                            class="prose dark:prose-invert max-w-none text-gray-800 dark:text-gray-200 text-lg leading-relaxed mb-8">
+                            <!-- Nội dung câu hỏi sẽ được render ở đây -->
+                            <p>Đang tải câu hỏi...</p>
+                        </div>
+                        <!-- Answer Options -->
+                        <div id="options-container" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <!-- Options sẽ được render ở đây -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="flex justify-between items-center pt-2">
+                    <button id="prev-btn"
+                        class="flex items-center gap-2 px-6 py-3 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed">
+                        <span class="material-symbols-outlined text-xl">arrow_back</span>
+                        Câu trước
+                    </button>
+                    <button id="next-btn"
+                        class="flex items-center gap-2 px-8 py-3 rounded-lg bg-primary hover:bg-blue-600 text-white shadow-lg shadow-blue-500/20 transition-all transform hover:-translate-y-0.5 font-medium">
+                        Câu sau
+                        <span class="material-symbols-outlined text-xl">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar: Navigation Grid -->
+        <aside
+            class="w-80 bg-white dark:bg-[#151b2b] border-l border-gray-200 dark:border-gray-800 flex flex-col shrink-0 z-10 hidden lg:flex shadow-xl">
+            <!-- Sidebar Header -->
+            <div class="p-5 border-b border-gray-200 dark:border-gray-800">
+                <h3 class="font-bold text-gray-800 dark:text-white mb-4">Danh sách câu hỏi</h3>
+                <!-- Legend -->
+                <div class="flex flex-wrap gap-y-2 gap-x-4 text-xs text-gray-500 dark:text-gray-400">
+                    <div class="flex items-center gap-2">
+                        <div class="w-3 h-3 rounded bg-success"></div>
+                        <span>Đã làm</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-3 h-3 rounded bg-primary"></div>
+                        <span>Đang làm</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-3 h-3 rounded border border-gray-300 dark:border-gray-600"></div>
+                        <span>Chưa làm</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-3 h-3 rounded bg-yellow-500"></div>
+                        <span>Đánh dấu</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Grid -->
+            <div id="questions-grid" class="flex-1 overflow-y-auto custom-scrollbar p-5">
+                <div class="grid grid-cols-5 gap-3">
+                    <!-- Các nút số câu hỏi sẽ được render ở đây -->
+                </div>
+            </div>
+            <!-- Footer Action -->
+            <div class="p-5 border-t border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-[#1a2332]">
+                <button id="submit-btn"
+                    class="w-full py-3 px-4 bg-primary hover:bg-blue-600 text-white rounded-lg font-bold text-lg shadow-lg shadow-blue-500/25 transition-all transform active:scale-95 flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined">check_circle</span>
+                    Nộp bài
+                </button>
+                <p class="text-xs text-center mt-3 text-gray-500 dark:text-gray-400">
+                    Vui lòng kiểm tra kỹ trước khi nộp
+                </p>
+            </div>
+        </aside>
+
+        <!-- Mobile Toggle for Sidebar -->
+        <button id="sidebar-toggle"
+            class="lg:hidden fixed bottom-6 right-6 w-14 h-14 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center z-50">
+            <span class="material-symbols-outlined">grid_view</span>
+        </button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/firebase-config.js"></script>
+    <script src="assets/js/db.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script>
+        // State
+        let questions = [];
+        let currentIndex = 0;
+        let answers = {};      // { questionIndex: selectedOption }
+        let bookmarks = {};    // { questionIndex: true/false }
+        let startTime = Date.now();
+        let timerInterval = null;
+
+        // Lấy params từ URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const courseId = urlParams.get('course');
+        const lessonPath = urlParams.get('path');
+
+        // Load bài tập từ file baitap.json
+        async function loadQuiz() {
+            try {
+                // Load data-index để lấy thông tin khóa học
+                const indexResponse = await fetch('assets/data-index.json');
+                const indexData = await indexResponse.json();
+                const course = indexData.courses.find(c => c.id === courseId);
+
+                if (!course) {
+                    document.getElementById('question-content').innerHTML = '<p>Không tìm thấy khóa học</p>';
+                    return;
+                }
+
+                // Cập nhật tiêu đề
+                const pathParts = lessonPath.split('/');
+                const lessonName = pathParts[pathParts.length - 1];
+                document.getElementById('quiz-title').textContent = lessonName;
+                document.getElementById('quiz-subtitle').textContent = course.title;
+                document.title = `Bài tập - ${lessonName}`;
+
+                // Load bài tập
+                const quizPath = `data/${course.title}/${lessonPath}/baitap.json`;
+                const quizResponse = await fetch(quizPath);
+
+                if (!quizResponse.ok) {
+                    document.getElementById('question-content').innerHTML = '<p>Chưa có bài tập cho bài học này.</p>';
+                    return;
+                }
+
+                questions = await quizResponse.json();
+
+                if (questions.length === 0) {
+                    document.getElementById('question-content').innerHTML = '<p>Chưa có câu hỏi nào.</p>';
+                    return;
+                }
+
+                // Render UI
+                renderQuestionsGrid();
+                renderQuestion(0);
+                startTimer();
+                updateProgress();
+
+            } catch (error) {
+                console.error('Lỗi load bài tập:', error);
+                document.getElementById('question-content').innerHTML = '<p>Lỗi tải bài tập. Vui lòng thử lại.</p>';
+            }
+        }
+
+        // Render grid câu hỏi sidebar
+        function renderQuestionsGrid() {
+            const container = document.querySelector('#questions-grid > div');
+            container.innerHTML = questions.map((q, i) => `
+                <button onclick="goToQuestion(${i})" 
+                    id="grid-btn-${i}"
+                    class="aspect-square flex items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:border-primary hover:text-primary transition-colors font-medium">
+                    ${i + 1}
+                </button>
+            `).join('');
+        }
+
+        // Render câu hỏi hiện tại
+        function renderQuestion(index) {
+            currentIndex = index;
+            const q = questions[index];
+
+            document.getElementById('question-number').textContent = `Câu ${index + 1}`;
+            document.getElementById('question-content').innerHTML = marked.parse(q.question || q.content || '');
+
+            // Render KaTeX
+            renderMathInElement(document.getElementById('question-content'), {
+                delimiters: [
+                    { left: '$$', right: '$$', display: true },
+                    { left: '$', right: '$', display: false }
+                ]
+            });
+
+            // Render options
+            const optionsContainer = document.getElementById('options-container');
+            const options = q.options || q.choices || [];
+            const selectedAnswer = answers[index]; // Chữ cái A, B, C, D
+
+            optionsContainer.innerHTML = options.map((opt, i) => {
+                const optionLabel = String.fromCharCode(65 + i); // A, B, C, D
+                const isSelected = selectedAnswer === optionLabel;
+                const baseClass = isSelected
+                    ? 'border-2 border-primary bg-primary/5'
+                    : 'border border-gray-200 dark:border-gray-700 hover:border-primary/50 hover:bg-primary/5';
+
+                return `
+                    <label class="group relative flex items-center p-4 rounded-xl ${baseClass} cursor-pointer transition-all">
+                        <input type="radio" name="answer" value="${optionLabel}" 
+                            ${isSelected ? 'checked' : ''} 
+                            onchange="selectAnswer('${optionLabel}')"
+                            class="h-5 w-5 text-primary border-gray-300 dark:border-gray-600 focus:ring-primary bg-transparent" />
+                        <span class="ml-4 font-medium text-lg ${isSelected ? 'text-primary' : 'text-gray-700 dark:text-gray-300 group-hover:text-primary'}">
+                            ${opt}
+                        </span>
+                    </label>
+                `;
+            }).join('');
+
+            // Render KaTeX cho options
+            renderMathInElement(optionsContainer, {
+                delimiters: [
+                    { left: '$$', right: '$$', display: true },
+                    { left: '$', right: '$', display: false }
+                ]
+            });
+
+            // Update bookmark button
+            const bookmarkBtn = document.getElementById('bookmark-btn');
+            bookmarkBtn.innerHTML = bookmarks[index]
+                ? '<span class="material-symbols-outlined text-xl text-yellow-500">bookmark</span>'
+                : '<span class="material-symbols-outlined text-xl">bookmark_border</span>';
+
+            // Update grid highlight
+            updateGridHighlight();
+
+            // Update nav buttons
+            document.getElementById('prev-btn').disabled = index === 0;
+            document.getElementById('next-btn').textContent = index === questions.length - 1 ? 'Nộp bài' : '';
+            document.getElementById('next-btn').innerHTML = index === questions.length - 1
+                ? 'Nộp bài <span class="material-symbols-outlined text-xl">check_circle</span>'
+                : 'Câu sau <span class="material-symbols-outlined text-xl">arrow_forward</span>';
+        }
+
+        // Chọn đáp án (nhận chữ cái A, B, C, D)
+        function selectAnswer(optionLabel) {
+            answers[currentIndex] = optionLabel;
+            renderQuestion(currentIndex);
+            updateProgress();
+        }
+
+        // Toggle bookmark
+        document.getElementById('bookmark-btn').addEventListener('click', () => {
+            bookmarks[currentIndex] = !bookmarks[currentIndex];
+            renderQuestion(currentIndex);
+        });
+
+        // Navigation
+        document.getElementById('prev-btn').addEventListener('click', () => {
+            if (currentIndex > 0) goToQuestion(currentIndex - 1);
+        });
+
+        document.getElementById('next-btn').addEventListener('click', () => {
+            if (currentIndex < questions.length - 1) {
+                goToQuestion(currentIndex + 1);
+            } else {
+                submitQuiz();
+            }
+        });
+
+        function goToQuestion(index) {
+            renderQuestion(index);
+        }
+
+        // Update grid highlight
+        function updateGridHighlight() {
+            questions.forEach((_, i) => {
+                const btn = document.getElementById(`grid-btn-${i}`);
+                if (!btn) return;
+
+                btn.className = 'aspect-square flex items-center justify-center rounded-lg font-medium transition-all ';
+
+                if (i === currentIndex) {
+                    btn.className += 'bg-primary text-white ring-4 ring-primary/20 scale-105 shadow-lg';
+                } else if (answers[i] !== undefined) {
+                    btn.className += 'bg-success text-white hover:bg-success/90';
+                } else {
+                    btn.className += 'border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:border-primary hover:text-primary';
+                }
+
+                // Bookmark indicator
+                if (bookmarks[i]) {
+                    btn.innerHTML = `${i + 1}<div class="absolute -top-1 -right-1 w-2.5 h-2.5 bg-yellow-500 rounded-full border-2 border-white dark:border-[#151b2b]"></div>`;
+                    btn.style.position = 'relative';
+                } else {
+                    btn.textContent = i + 1;
+                }
+            });
+        }
+
+        // Update progress
+        function updateProgress() {
+            const answered = Object.keys(answers).length;
+            const total = questions.length;
+            const percent = total > 0 ? (answered / total) * 100 : 0;
+
+            document.getElementById('progress-text').textContent = `${answered}/${total}`;
+            document.getElementById('progress-bar').style.width = `${percent}%`;
+        }
+
+        // Timer
+        function startTimer() {
+            timerInterval = setInterval(() => {
+                const elapsed = Math.floor((Date.now() - startTime) / 1000);
+                const minutes = Math.floor(elapsed / 60).toString().padStart(2, '0');
+                const seconds = (elapsed % 60).toString().padStart(2, '0');
+                document.getElementById('timer').textContent = `${minutes}:${seconds}`;
+            }, 1000);
+        }
+
+        // Submit quiz
+        function submitQuiz() {
+            const unanswered = questions.length - Object.keys(answers).length;
+
+            if (unanswered > 0) {
+                if (!confirm(`Bạn còn ${unanswered} câu chưa trả lời. Bạn có chắc muốn nộp bài?`)) {
+                    return;
+                }
+            }
+
+            clearInterval(timerInterval);
+
+            // Tính điểm - so sánh chữ cái
+            let correct = 0;
+            questions.forEach((q, i) => {
+                const correctAnswer = q.answer || q.correctAnswer || 'A';
+                if (answers[i] === correctAnswer) {
+                    correct++;
+                }
+            });
+
+            const score = (correct / questions.length * 10).toFixed(1);
+            const elapsed = Math.floor((Date.now() - startTime) / 1000);
+
+            // Lưu kết quả vào localStorage (để hiện trang kết quả)
+            const result = {
+                courseId,
+                lessonPath,
+                questions,
+                answers,
+                correct,
+                total: questions.length,
+                score,
+                timeSpent: elapsed
+            };
+
+            localStorage.setItem('quizResult', JSON.stringify(result));
+
+            // [NEW] Lưu kết quả lên Firestore nếu đã đăng nhập
+            const user = firebase.auth().currentUser;
+            if (user && window.DB) {
+                // Hiển thị loading hoặc thông báo nhỏ?
+                // Ở đây mình chạy ngầm (await nhưng không block UI quá lâu vì chuyển trang ngay)
+                // Tuy nhiên để chắc chắn lưu thành công, nên chờ một chút hoặc xử lý ở Result page.
+                // Để đơn giản và nhanh, ta sẽ gọi DB lưu và chuyển trang luôn.
+                // Việc lưu Firestore mạng nhanh sẽ rất nhanh.
+
+                // Cập nhật text nút để user biết đang xử lý
+                const submitBtn = document.getElementById('submit-btn');
+                submitBtn.innerHTML = '<span class="material-symbols-outlined animate-spin">progress_activity</span> Đang lưu...';
+
+                window.DB.saveQuizResult(user.uid, result).then(() => {
+                    window.location.href = `result.html`;
+                }).catch(() => {
+                    // Fallback nếu lỗi mạng vẫn cho xem kết quả local
+                    window.location.href = `result.html`;
+                });
+            } else {
+                window.location.href = `result.html`;
+            }
+        }
+
+        document.getElementById('submit-btn').addEventListener('click', submitQuiz);
+
+        // Load khi trang load
+        document.addEventListener('DOMContentLoaded', loadQuiz);
+    </script>
+</body>
+
+</html>
