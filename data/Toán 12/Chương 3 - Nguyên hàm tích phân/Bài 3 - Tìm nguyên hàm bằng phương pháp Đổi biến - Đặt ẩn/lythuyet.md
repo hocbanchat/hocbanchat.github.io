@@ -1,7 +1,3 @@
-# BÀI 3: PHƯƠNG PHÁP ĐỔI BIẾN TÌM NGUYÊN HÀM
-
-## KIẾN THỨC CẦN NHỚ
-
 ### 1. Phương pháp
 *   **Bước 1:** Đặt $v(x) = t$.
 *   **Bước 2:** Vi phân hai vế: $d(v(x)) = d(t)$.

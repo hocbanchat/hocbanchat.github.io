@@ -1,7 +1,3 @@
-# BÀI 1. MỞ ĐẦU VỀ NGUYÊN HÀM
-
-## KIẾN THỨC CẦN NHỚ
-
 ### 1. Định nghĩa
 Hàm số $f(x)$ được gọi là **nguyên hàm** của $f(x)$ nếu $F'(x) = f(x)$.
 

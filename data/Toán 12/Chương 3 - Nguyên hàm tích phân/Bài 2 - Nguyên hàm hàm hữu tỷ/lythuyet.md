@@ -1,9 +1,3 @@
-Dưới đây là nội dung tài liệu được chuyển đổi sang định dạng Markdown theo yêu cầu của bạn.
-
-# BÀI 2. NGUYÊN HÀM CỦA HÀM HỮU TỶ
-
-## KIẾN THỨC CẦN NHỚ
-
 ### 1. Mẫu bậc nhất
 Khi bậc của tử **lớn hơn** hoặc **bằng** bậc của mẫu $\xrightarrow{PP}$ Chia đa thức.
 
