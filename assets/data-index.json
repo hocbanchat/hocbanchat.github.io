@@ -1,6 +1,70 @@
 {
     "courses": [
         {
+            "id": "1-ham-so",
+            "title": "1. Hàm số",
+            "description": "Chương trình 1. Hàm số - Bộ sách mới",
+            "thumbnail": "📚",
+            "chapters": [],
+            "lessons": []
+        },
+        {
+            "id": "2-mau-so-lieu-ghep-nhom",
+            "title": "2. Mẫu số liệu ghép nhóm",
+            "description": "Chương trình 2. Mẫu số liệu ghép nhóm - Bộ sách mới",
+            "thumbnail": "📚",
+            "chapters": [],
+            "lessons": []
+        },
+        {
+            "id": "4-xac-suat-thong-ke",
+            "title": "4. Xác suất thống kê",
+            "description": "Chương trình 4. Xác suất thống kê - Bộ sách mới",
+            "thumbnail": "📚",
+            "chapters": [],
+            "lessons": []
+        },
+        {
+            "id": "5-oxyz",
+            "title": "5. OXYZ",
+            "description": "Chương trình 5. OXYZ - Bộ sách mới",
+            "thumbnail": "📚",
+            "chapters": [],
+            "lessons": []
+        },
+        {
+            "id": "6-mu-logarit",
+            "title": "6. Mũ - Logarit",
+            "description": "Chương trình 6. Mũ - Logarit - Bộ sách mới",
+            "thumbnail": "📚",
+            "chapters": [],
+            "lessons": []
+        },
+        {
+            "id": "7-cap-so-cong-cap-so-nhan",
+            "title": "7. Cấp số cộng - Cấp số nhân",
+            "description": "Chương trình 7. Cấp số cộng - Cấp số nhân - Bộ sách mới",
+            "thumbnail": "📚",
+            "chapters": [],
+            "lessons": []
+        },
+        {
+            "id": "8-gioi-han-va-dao-ham",
+            "title": "8. Giới hạn và Đạo hàm",
+            "description": "Chương trình 8. Giới hạn và Đạo hàm - Bộ sách mới",
+            "thumbnail": "📚",
+            "chapters": [],
+            "lessons": []
+        },
+        {
+            "id": "9-chinh-phuc-toan-thuc-te",
+            "title": "9. Chinh phục toán thực tế",
+            "description": "Chương trình 9. Chinh phục toán thực tế - Bộ sách mới",
+            "thumbnail": "📚",
+            "chapters": [],
+            "lessons": []
+        },
+        {
             "id": "hoa-hoc-12",
             "title": "Hóa học 12",
             "description": "Chương trình Hóa học 12 - Bộ sách mới",
@@ -9,6 +73,14 @@
                 "Chương 1",
                 "Chương 2"
             ],
+            "lessons": []
+        },
+        {
+            "id": "nguyen-ham-tich-phan",
+            "title": "Nguyên hàm tích phân",
+            "description": "Chương trình Nguyên hàm tích phân - Bộ sách mới",
+            "thumbnail": "📚",
+            "chapters": [],
             "lessons": []
         },
         {
@@ -48,9 +120,9 @@
                     "homeworkPdf": "data/Toán 12/Chương 3 - Nguyên hàm tích phân/Bài 3 - Tìm nguyên hàm bằng phương pháp Đổi biên/tailieu/S1 Toán học 12 - Đại - Bài 2. Nguyên hàm của hàm hữu tỷ - BTVN - Đáp án.pdf"
                 },
                 {
-                    "path": "Chương 3 - Nguyên hàm tích phân/Bài 4",
-                    "lecturePdf": "data/Toán 12/Chương 3 - Nguyên hàm tích phân/Bài 4/tailieu/S1 Toán học 12 - Đại - Bài 2. Nguyên hàm của hàm hữu tỷ- File học - Đáp án .pdf",
-                    "homeworkPdf": "data/Toán 12/Chương 3 - Nguyên hàm tích phân/Bài 4/tailieu/S1 Toán học 12 - Đại - Bài 2. Nguyên hàm của hàm hữu tỷ - BTVN - Đáp án.pdf"
+                    "path": "Chương 3 - Nguyên hàm tích phân/Bài 5",
+                    "lecturePdf": "data/Toán 12/Chương 3 - Nguyên hàm tích phân/Bài 5/tailieu/S1 Toán học 12 - Đại - Bài 2. Nguyên hàm của hàm hữu tỷ- File học - Đáp án .pdf",
+                    "homeworkPdf": "data/Toán 12/Chương 3 - Nguyên hàm tích phân/Bài 5/tailieu/S1 Toán học 12 - Đại - Bài 2. Nguyên hàm của hàm hữu tỷ - BTVN - Đáp án.pdf"
                 }
             ]
         },
