@@ -381,7 +381,7 @@
         // Load và hiển thị danh sách khóa học
         async function loadCourses() {
             try {
-                const response = await fetch('assets/data-index.json');
+                const response = await fetch('assets/data-index.json?t=' + Date.now());
                 const data = await response.json();
                 const container = document.getElementById('courses-container');
 

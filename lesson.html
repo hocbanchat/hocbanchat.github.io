@@ -299,7 +299,7 @@
 
             try {
                 // Load data-index để lấy thông tin khóa học
-                const indexResponse = await fetch('assets/data-index.json');
+                const indexResponse = await fetch('assets/data-index.json?t=' + Date.now());
                 const indexData = await indexResponse.json();
                 const course = indexData.courses.find(c => c.id === courseId);
 

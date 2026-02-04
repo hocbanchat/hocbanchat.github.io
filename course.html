@@ -118,9 +118,14 @@
             </div>
         </div>
 
-        <!-- Chapters Container -->
-        <div id="chapters-container" class="flex flex-col gap-12">
-            <!-- Các chương sẽ được render bởi JavaScript -->
+        <!-- Course List Container (for All Courses view) -->
+        <div id="courses-list-container" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Courses list will be rendered here -->
+        </div>
+
+        <!-- Chapters Container (for Course Detail view) -->
+        <div id="chapters-container" class="hidden flex flex-col gap-12">
+            <!-- Chapters will be rendered here -->
         </div>
     </main>
 
@@ -179,19 +184,34 @@
         let courseData = null;
         let viewedLessons = [];
 
-        // Load và hiển thị chi tiết khóa học
+        // Load và hiển thị chi tiết khóa học hoặc danh sách khóa học
         async function loadCourseDetails() {
             try {
-                const response = await fetch('assets/data-index.json');
+                const response = await fetch('assets/data-index.json?t=' + Date.now());
                 const data = await response.json();
 
-                // Tìm khóa học theo ID
+                if (!courseId) {
+                    // MODE: XEM TẤT CẢ KHÓA HỌC
+                    document.getElementById('course-title').textContent = 'Danh sách khóa học';
+                    document.getElementById('course-description').textContent = 'Chọn khóa học bạn muốn tham gia.';
+                    document.getElementById('courses-list-container').classList.remove('hidden');
+                    document.getElementById('chapters-container').classList.add('hidden');
+
+                    renderCourseList(data.courses);
+                    return;
+                }
+
+                // MODE: XEM CHI TIẾT KHÓA HỌC
                 const course = data.courses.find(c => c.id === courseId);
 
                 if (!course) {
                     document.getElementById('course-title').textContent = 'Không tìm thấy khóa học';
                     return;
                 }
+
+                // Show detail view
+                document.getElementById('courses-list-container').classList.add('hidden');
+                document.getElementById('chapters-container').classList.remove('hidden');
 
                 // Cập nhật tiêu đề trang
                 document.title = `${course.title} - Học Bản Chất`;
@@ -220,50 +240,77 @@
                     }
                 });
 
-                // Render các chương và bài học
-                const container = document.getElementById('chapters-container');
-                container.innerHTML = course.chapters.map((chapter, index) => {
-                    const lessons = chapterMap[chapter] || [];
-                    const chapterNumber = index + 1;
-
-                    return `
-                        <section class="mb-8">
-                            <div class="flex items-center gap-3 mb-6">
-                                <div class="size-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary font-bold">${chapterNumber}</div>
-                                <h2 class="text-2xl font-bold text-[#111318] dark:text-white">${chapter}</h2>
-                                <div class="h-px bg-[#e5e7eb] dark:bg-[#282e39] flex-grow ml-4"></div>
-                            </div>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                                ${lessons.length > 0 ? lessons.map(lesson => {
-                        const isViewed = viewedLessons.includes(lesson.path);
-                        return `
-                                    <a class="group relative flex flex-col rounded-xl border border-[#e5e7eb] dark:border-[#3b4354] bg-white dark:bg-[#1c1f27] p-5 hover:border-primary dark:hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
-                                       href="lesson.html?course=${courseId}&path=${encodeURIComponent(lesson.path)}">
-                                        ${isViewed ? '<div class="absolute top-3 right-3"><span class="material-symbols-outlined text-green-500">check_circle</span></div>' : ''}
-                                        <div class="mb-4 size-12 rounded-lg ${isViewed ? 'bg-green-100 dark:bg-green-900/30' : 'bg-blue-50 dark:bg-blue-900/30'} flex items-center justify-center ${isViewed ? 'text-green-600' : 'text-primary'}">
-                                            <span class="material-symbols-outlined text-[28px]">${isViewed ? 'check_circle' : 'play_lesson'}</span>
-                                        </div>
-                                        <h3 class="text-lg font-bold mb-1 group-hover:text-primary transition-colors">${lesson.name}</h3>
-                                        <p class="text-sm text-gray-500 dark:text-[#9da6b9] mb-4 line-clamp-2">Bài học trong ${chapter}</p>
-                                        <div class="mt-auto pt-4 border-t border-[#e5e7eb] dark:border-[#282e39] flex justify-between items-center">
-                                            <span class="text-xs font-semibold px-2 py-1 rounded ${isViewed ? 'bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400' : 'bg-blue-100 dark:bg-blue-900/30 text-primary'}"> ${isViewed ? 'Đã hoàn thành' : 'Xem ngay'}</span>
-                                            <span class="material-symbols-outlined text-primary opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all">arrow_forward</span>
-                                        </div>
-                                    </a>
-                                `}).join('') : `
-                                    <div class="col-span-full text-center py-8 text-gray-500 dark:text-[#9da6b9]">
-                                        <span class="material-symbols-outlined text-4xl mb-2 block">hourglass_empty</span>
-                                        <p>Chưa có bài học. Đang cập nhật...</p>
-                                    </div>
-                                `}
-                            </div>
-                        </section>
-                    `;
-                }).join('');
+                // Lưu course data để reload khi có auth
+                courseData = course;
+                renderChapters(course);
 
             } catch (error) {
-                console.error('Lỗi khi load chi tiết khóa học:', error);
+                console.error('Lỗi khi load dữ liệu:', error);
             }
+        }
+
+        // Render danh sách khóa học (tương tự index.html)
+        function renderCourseList(courses) {
+            const container = document.getElementById('courses-list-container');
+
+            // Định nghĩa thông tin bổ sung cho mỗi khóa học
+            const courseExtras = {
+                'toan-12': {
+                    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBuTv9WSxnt_V_UGRugRVUMthlaRD0FwEEJyt3wS5yWBTRzNpSoMFdD3ZDPjwRoHXXNvxGVM4MtPUlHz0KUx_AETHcp6Xm_hItuDQf22o-6urd9j61uSEuo6Ss8R0LH6EM4xevKpuypzg0qJjxVU_FCaJn7eDgBrv47RGtRiD1ZoBV0o6j4hY8dzCOqfxWq-L90kb365LgFcdm7psi8rW3aClv3jpPYx-OyrOZ6r8MP8WWqP79HPwu8pZtORpXz_rhBUenRglVQZtU',
+                    label: 'Lớp 12',
+                    labelColor: 'bg-purple-600',
+                },
+                'hoa-hoc-12': {
+                    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBhcRvKYi6VazzUl3sNU3S3OXDaYcw7Kt-5UZ9Hy6ySfn8-EmWhtwDYPinWxVGq33W11_nl_CHqkBhcSd14074Bh-SVweUSPkksS_axmuqK1OwzPaxsQtRgXUxygJfNvdjQTZ2o0gb5IFjJ8G6p7H41QvfkwB3773QFcOtBC--CovU3JdNc8IoWfnl89KPWlVRfyEbI_jzYVdyRG7gAq4lizaepVuJyZ6oqjDQItPEbSlLhwV7BKVu7m7Z5bnQNQ-EPfbSBsPCA0H4',
+                    label: 'Lớp 12',
+                    labelColor: 'bg-green-600',
+                },
+                'vat-ly-12': {
+                    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA6ohH8X79zdd6Dgj25ySxGXnjAR-fOMP6jQlTXBTMbsGF7PJcVQWL_YFt77FOmVOonMjF2l1x4ZXbdDIOrwkKEGvhxt49tqnXqNKN0HWwuoY9NWSTJNV_LcRFQSuvSQA2qmSqQoXgG0CDQE7nTAhQiKgBiamyi-iZSoKYTRd0Bb2uNT_MUkqRLl0gFrehidphb6VAJ46k4ulopRfKHAG2y4IyR3KHlRtx5zUepZ132MWB1FTmYNSAS0WEsSs4MELZp3e1HGMX8HLk',
+                    label: 'Lớp 12',
+                    labelColor: 'bg-blue-600',
+                }
+            };
+
+            container.innerHTML = courses.map(course => {
+                const actualChapters = course.chapters?.length || 0;
+                const actualLessons = course.lessons?.length || 0;
+
+                const extras = courseExtras[course.id] || {
+                    image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600',
+                    label: 'Khóa học',
+                    labelColor: 'bg-gray-600'
+                };
+
+                return `
+                    <div class="flex flex-col rounded-xl overflow-hidden bg-[#1c1f27] border border-[#282e39] hover:shadow-xl hover:shadow-primary/5 hover:border-primary/30 transition-all group">
+                        <div class="w-full aspect-video bg-cover bg-center relative" style="background-image: url('${extras.image}');">
+                            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+                            <div class="absolute top-3 left-3 ${extras.labelColor} text-white text-xs font-bold px-2 py-1 rounded">${extras.label}</div>
+                        </div>
+                        <div class="p-5 flex flex-col gap-4 flex-1">
+                            <div class="flex-1">
+                                <h3 class="text-white text-xl font-bold mb-2 group-hover:text-primary transition-colors">${course.title}</h3>
+                                <p class="text-[#9da6b9] text-sm line-clamp-2">${course.description}</p>
+                            </div>
+                            <div class="flex items-center gap-4 text-[#9da6b9] text-xs border-t border-[#282e39] pt-4 mt-auto">
+                                <div class="flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-base">library_books</span>
+                                    <span>${actualChapters} Chương</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-base">play_lesson</span>
+                                    <span>${actualLessons} Bài giảng</span>
+                                </div>
+                            </div>
+                            <a href="course.html?id=${course.id}" 
+                               class="w-full mt-2 rounded-lg h-10 bg-[#282e39] hover:bg-primary text-white text-sm font-bold transition-colors flex items-center justify-center">
+                                Vào học ngay
+                            </a>
+                        </div>
+                    </div>
+                `;
+            }).join('');
         }
 
         // Load khi trang load xong
