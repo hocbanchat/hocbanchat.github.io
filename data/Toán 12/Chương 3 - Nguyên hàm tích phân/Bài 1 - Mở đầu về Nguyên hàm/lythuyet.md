@@ -1,45 +1,31 @@
-# BÀI 2: NGUYÊN HÀM CỦA HÀM HỮU TỶ
+# BÀI 1. MỞ ĐẦU VỀ NGUYÊN HÀM
 
-## I. KIẾN THỨC CẦN NHỚ
+## KIẾN THỨC CẦN NHỚ
 
-### 1. Mẫu bậc nhất
-Khi bậc của tử **lớn hơn hoặc bằng** bậc của mẫu $\longrightarrow$ Chia đa thức.
+### 1. Định nghĩa
+Hàm số $f(x)$ được gọi là **nguyên hàm** của $f(x)$ nếu $F'(x) = f(x)$.
 
-Xét $I = \int \frac{P(x)}{ax+b} dx$.
+### 2. Định lý
+$$ \int f(x)dx = F(x) + C $$
+$F(x)+C$ là họ nguyên hàm của hàm số $f(x)$.
 
-Phân tích: $\frac{P(x)}{ax+b} = g(x) + \frac{k}{ax+b}$.
+### 3. Tính chất của nguyên hàm
+Nếu $f(x)$ và $g(x)$ là hai hàm số liên tục trên $K$ thì:
 
-Khi đó:
-$$I = \int \frac{P(x)}{ax+b} dx = \int g(x) dx + k \int \frac{1}{ax+b} dx$$
+*   $\int f'(x)dx = f(x) + C$
+*   $\int k.f(x)dx = k.\int f(x)dx$, với $k$ là số thực khác 0
+*   $\int [f(x) \pm g(x)]dx = \int f(x)dx \pm \int g(x)dx$
 
-### 2. Mẫu có nhiều nghiệm đơn
-Khi bậc của tử **nhỏ hơn** bậc của mẫu.
+## BẢNG NGUYÊN HÀM CƠ BẢN
 
-Xét $I = \int \frac{mx+n}{ax^2+bx+c} dx$.
-
-*   **Trường hợp 1: Mẫu số có hai nghiệm phân biệt $x_1, x_2$.**
-    Phân tích:
-    $$\frac{mx+n}{ax^2+bx+c} = \frac{mx+n}{a(x-x_1)(x-x_2)} = \frac{1}{a} \left( \frac{A}{x-x_1} + \frac{B}{x-x_2} \right)$$
-    (Sử dụng phương pháp đồng nhất hệ số để tìm $A, B$).
-    $$\longrightarrow I = \frac{1}{a} (A \ln|x-x_1| + B \ln|x-x_2|) + C$$
-
-*   **Trường hợp 2: Mẫu số có nghiệm kép $x_0$.**
-    Phân tích:
-    $$\frac{mx+n}{ax^2+bx+c} = \frac{mx+n}{a(x-x_0)^2} = \frac{m(x-x_0)+p}{a(x-x_0)^2} = \frac{m}{a(x-x_0)} + \frac{p}{a(x-x_0)^2}$$
-
-*   **Trường hợp 3: Mẫu số vô nghiệm.**
-    Phân tích:
-    $$\frac{mx+n}{ax^2+bx+c} = \frac{k(2ax+b)}{ax^2+bx+c} + \frac{p}{ax^2+bx+c}$$
-    $$\frac{mx+n}{ax^2+bx+c} = \frac{k(2ax+b)}{ax^2+bx+c} + \frac{p}{a[(x-x_0)^2+q^2]}$$
-    Khi đó:
-    $$I = k \int \frac{d(ax^2+bx+c)}{ax^2+bx+c} + \frac{p}{a} \int \frac{1}{(x-x_0)^2+q^2} dx$$
-
-### 3. Bấm máy tính nguyên hàm hữu tỉ
-Ta có:
-$$\int \frac{mx+n}{ax^2+bx+c} dx = \frac{1}{a} \int \frac{mx+n}{(x-x_1)(x-x_2)} dx = \frac{1}{a} \int \left( \frac{A}{x-x_1} + \frac{B}{x-x_2} \right) dx = \frac{1}{a} (A \ln|x-x_1| + B \ln|x-x_2|) + C$$
-
-**Tìm A, B nhanh bằng cách:**
-
-*   **Bước 1:** Nhập vào máy tính biểu thức: $\frac{mx+n}{\frac{d}{dx} ((x-x_1)(x-x_2))|_{x=X}}$
-*   **Bước 2:** Tìm $A$: [CALC] $x=x_1$.
-*   **Bước 3:** Tìm $B$: [CALC] $x=x_2$.
+| Hàm cơ bản | Hàm hợp $(ax+b)$ | Hàm hợp tổng quát $(u)$ |
+| :--- | :--- | :--- |
+| $\int x^n dx = \frac{x^{n+1}}{n+1} + C$ | $\int (ax+b)^n dx = \frac{1}{a} \cdot \frac{(ax+b)^{n+1}}{n+1} + C$ | $\int u^n dx = \frac{u^{n+1}}{(n+1).u'} + C$ |
+| $\int \frac{1}{x^2} dx = -\frac{1}{x} + C$ | $\int \frac{1}{(ax+b)^2} dx = -\frac{1}{a} \cdot \frac{1}{ax+b} + C$ | |
+| $\int \frac{1}{x} dx = \ln|x| + C$ | $\int \frac{1}{ax+b} dx = \frac{1}{a} \ln|ax+b| + C$ | $\int \frac{1}{u} dx = \frac{\ln|u|}{u'} + C$ |
+| $\int e^x dx = e^x + C$ | $\int e^{ax+b} dx = \frac{1}{a} e^{ax+b} + C$ | $\int e^u dx = \frac{e^u}{u'} + C$ |
+| $\int a^x dx = \frac{a^x}{\ln a} + C$ | $\int a^{mx+n} dx = \frac{a^{mx+n}}{m.\ln a} + C$ | $\int a^u dx = \frac{a^u}{u'.\ln a} + C$ |
+| $\int \sin x dx = -\cos x + C$ | $\int \sin(ax+b) dx = -\frac{1}{a} \cos(ax+b) + C$ | $\int \sin u \ dx = -\frac{\cos u}{u'} + C$ |
+| $\int \cos x dx = \sin x + C$ | $\int \cos(ax+b) dx = \frac{1}{a} \sin(ax+b) + C$ | $\int \cos u \ dx = \frac{\sin u}{u'} + C$ |
+| $\int \frac{1}{\cos^2 x} dx = \tan x + C$ | $\int \frac{1}{\cos^2(ax+b)} dx = \frac{1}{a} \tan(ax+b) + C$ | $\int \frac{1}{\cos^2 u} dx = \frac{\tan u}{u'} + C$ |
+| $\int \frac{1}{\sin^2 x} dx = -\cot x + C$ | $\int \frac{1}{\sin^2(ax+b)} dx = -\frac{1}{a} \cot(ax+b) + C$ | $\int \frac{1}{\sin^2 u} dx = -\frac{\cot u}{u'} + C$ |

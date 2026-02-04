@@ -1,47 +1,127 @@
 [
   {
     "id": 1,
-    "question": "Tìm nguyên hàm của các hàm số sau:\na. $I_1 = \\int \\frac{x+1}{x-1} dx$\nb. $I_2 = \\int \\frac{2x-4}{x+3} dx$\nc. $I_3 = \\int \\frac{x^2+x+4}{x+3} dx$\nd. $I_4 = \\int \\frac{x^3+2x^2-x}{x+1} dx$",
-    "explanation": "**a.** $I_1 = \\int \\frac{x+1}{x-1} dx = \\int (1 + \\frac{2}{x-1}) dx = \\int 1 dx + 2 \\int \\frac{1}{x-1} dx = x + 2 \\ln|x-1| + C$.\n**b.** $I_2 = \\int \\frac{2x-4}{x+3} dx = \\int (2 - \\frac{10}{x+3}) dx = \\int 2 dx - 10 \\int \\frac{1}{x+3} dx = 2x - 10 \\ln|x+3| + C$.\n**c.** $I_3 = \\int \\frac{x^2+x+4}{x+3} dx = \\int (x-2 + \\frac{10}{x+3}) dx = \\int (x-2) dx + 10 \\int \\frac{1}{x+3} dx = \\frac{x^2}{2} - 2x + 10 \\ln|x+3| + C$.\n**d.** $I_4 = \\int \\frac{x^3+2x^2-x}{x+1} dx = \\int (x^2+x-2 + \\frac{2}{x+1}) dx = \\int (x^2+x-2) dx + 2 \\int \\frac{1}{x+1} dx = \\frac{x^3}{3} + \\frac{x^2}{2} - 2x + 2 \\ln|x+1| + C$."
+    "question": "Tìm nguyên hàm $F(x) = \\int \\pi^2 dx$.\\n**A.** $F(x) = \\pi^2 x + C$.\\n**B.** $F(x) = 2\\pi x + C$.\\n**C.** $F(x) = \\frac{\\pi^3}{3} + C$.\\n**D.** $F(x) = \\frac{\\pi^2 x^2}{2} + C$.",
+    "explanation": "**Chọn A**\\nTa có $\\int \\pi^2 dx = \\pi^2 x + C$ (vì $\\pi^2$ là một hằng số)."
   },
   {
     "id": 2,
-    "question": "Tìm nguyên hàm của các hàm số sau:\na. $I_1 = \\int \\frac{3x-2}{(x-2)^2} dx$\nb. $I_2 = \\int \\frac{1-5x}{(3x-4)^2} dx$\nc. $I_3 = \\int \\frac{1}{x^2-2x-3} dx$\nd. $I_4 = \\int \\frac{2x+3}{x^2-3x-4} dx$\ne. $I_5 = \\int \\frac{2x+3}{2x^2-x-1} dx$\nf. $I_6 = \\int \\frac{x^2-5x}{x^2-5x+6} dx$",
-    "explanation": "**a.** $I_1 = \\int \\frac{3x-2}{(x-2)^2} dx = \\int (\\frac{3}{x-2} + \\frac{4}{(x-2)^2}) dx = 3 \\ln|x-2| - \\frac{4}{x-2} + C$.\n**b.** **Ta có:** $\\frac{1-5x}{(3x-4)^2} = \\frac{A}{3x-4} + \\frac{B}{(3x-4)^2} \\Rightarrow A(3x-4)+B = 1-5x \\Rightarrow A = -\\frac{5}{3}, B = -\\frac{17}{3}$.\n$I_2 = A \\int \\frac{dx}{3x-4} + B \\int \\frac{dx}{(3x-4)^2} = -\\frac{5}{9} \\ln|3x-4| + \\frac{17}{9} \\cdot \\frac{1}{3x-4} + C$.\n**c.** **Ta có:** $\\frac{1}{x^2-2x-3} = \\frac{1}{(x-3)(x+1)} = \\frac{A}{x-3} + \\frac{B}{x+1} \\Rightarrow A = \\frac{1}{4}, B = -\\frac{1}{4}$.\n$I_3 = \\frac{1}{4} \\ln|x-3| - \\frac{1}{4} \\ln|x+1| = \\frac{1}{4} \\ln|\\frac{x-3}{x+1}| + C$.\n**d.** **Ta có:** $\\frac{2x+3}{x^2-3x-4} = \\frac{2x+3}{(x-4)(x+1)} = \\frac{A}{x-4} + \\frac{B}{x+1} \\Rightarrow A+B=2, A-4B=3 \\Rightarrow A = \\frac{11}{5}, B = -\\frac{1}{5}$.\n$I_4 = \\frac{11}{5} \\ln|x-4| - \\frac{1}{5} \\ln|x+1| + C$.\n**e.** **Ta có:** $\\frac{2x+3}{2x^2-x-1} = \\frac{2x+3}{(2x+1)(x-1)} = \\frac{A}{2x+1} + \\frac{B}{x-1} \\Rightarrow A+2B=2, -A+B=3 \\Rightarrow A = -\\frac{4}{3}, B = \\frac{5}{3}$.\n$I_5 = A \\int \\frac{dx}{2x+1} + B \\int \\frac{dx}{x-1} = -\\frac{2}{3} \\ln|2x+1| + \\frac{5}{3} \\ln|x-1| + C$.\n**f.** **Ta có:** $\\frac{x^2-5x}{x^2-5x+6} = 1 - \\frac{6}{(x-2)(x-3)} = 1 + \\frac{6}{x-2} - \\frac{6}{x-3}$.\n$I_6 = \\int 1 dx + 6 \\int \\frac{dx}{x-2} - 6 \\int \\frac{dx}{x-3} = x + 6 \\ln|x-2| - 6 \\ln|x-3| + C = x + 6 \\ln|\\frac{x-2}{x-3}| + C$."
+    "question": "Họ nguyên hàm của hàm số $f(x) = x^3$ là\\n**A.** $4x^4 + C$.\\n**B.** $3x^2 + C$.\\n**C.** $x^4 + C$.\\n**D.** $\\frac{1}{4}x^4 + C$.",
+    "explanation": "**Chọn D**\\nÁp dụng công thức nguyên hàm cơ bản: $\\int x^n dx = \\frac{x^{n+1}}{n+1} + C$.\\nTa có $F(x) = \\int x^3 dx = \\frac{1}{4}x^4 + C$."
   },
   {
     "id": 3,
-    "question": "Họ tất cả các nguyên hàm của hàm số $f(x) = \\frac{x+2}{x-1}$ trên khoảng $(1; +\\infty)$ là\nA. $x + 3 \\ln(x-1) + C$.\nB. $x - 3 \\ln(x-1) + C$.\nC. $x - \\frac{3}{(x-1)^2} + C$.\nD. $x + \\frac{3}{(x-1)^2} + C$.",
-    "explanation": "**Chọn A.**\nTa có $\\int f(x) dx = \\int \\frac{x+2}{x-1} dx = \\int (\\frac{x-1+3}{x-1}) dx = \\int (1 + \\frac{3}{x-1}) dx = x + 3 \\ln|x-1| + C$.\nMà $x \\in (1; +\\infty) \\Rightarrow \\int f(x) dx = x + 3 \\ln(x-1) + C$."
+    "question": "Tìm họ nguyên hàm của hàm số $f(x) = 3x^2 + 1$.\\n**A.** $x^3 + C$.\\n**B.** $\\frac{x^3}{3} + x + C$.\\n**C.** $6x + C$.\\n**D.** $x^3 + x + C$.",
+    "explanation": "**Chọn D**\\nTa có $F(x) = \\int (3x^2 + 1) dx = 3 \\cdot \\frac{x^3}{3} + x + C = x^3 + x + C$."
   },
   {
     "id": 4,
-    "question": "Hàm số $f(x) = \\frac{x^4}{x^2-1}$ có một nguyên hàm là $F(x)$ thỏa mãn $F(0) = -\\frac{14}{3}$. Tính $e^{F(2)}$.\nA. $e^{F(2)} = \\frac{2\\sqrt{3}}{3}$.\nB. $e^{F(2)} = \\frac{\\sqrt{3}}{2}$.\nC. $e^{F(2)} = \\sqrt{3}$.\nD. $e^{F(2)} = \\frac{\\sqrt{3}}{3}$.",
-    "explanation": "**Chọn D.**\nChia đa thức: $\\frac{x^4}{x^2-1} = x^2+1 + \\frac{1}{x^2-1} = x^2+1 + \\frac{1}{2}(\\frac{1}{x-1}-\\frac{1}{x+1})$.\n**Suy ra** $F(x) = \\int f(x) dx = \\frac{x^3}{3} + x + \\frac{1}{2} \\ln|\\frac{x-1}{x+1}| + C$.\nVì $F(0) = -\\frac{14}{3}$ và $\\ln|\\frac{-1}{1}| = 0$ nên $C = -\\frac{14}{3}$.\nDo đó $F(2) = \\frac{8}{3} + 2 + \\frac{1}{2} \\ln\\frac{1}{3} - \\frac{14}{3} = \\frac{1}{2} \\ln\\frac{1}{3}$.\n**Suy ra** $e^{F(2)} = e^{\\frac{1}{2} \\ln\\frac{1}{3}} = \\sqrt{\\frac{1}{3}} = \\frac{\\sqrt{3}}{3}$."
+    "question": "Nguyên hàm của hàm số $f(x) = 2x^3 - 9$ là\\n**A.** $\\frac{1}{2}x^4 - 9x + C$.\\n**B.** $4x^4 - 9x + C$.\\n**C.** $\\frac{1}{4}x^4 + C$.\\n**D.** $4x^3 - 9x + C$.",
+    "explanation": "**Chọn A**\\nTa có $F(x) = \\int (2x^3 - 9) dx = 2 \\cdot \\frac{x^4}{4} - 9x + C = \\frac{1}{2}x^4 - 9x + C$."
   },
   {
     "id": 5,
-    "question": "Hàm số $f(x) = \\frac{1}{x^2-5x+6}$ có một nguyên hàm là $F(x)$ thỏa mãn $F(4) = 1 - \\ln 2$. Phương trình $F(x) = 1$ có nghiệm $x = \\frac{a}{b}$, với $\\frac{a}{b}$ là phân số tối giản. Tìm $a+b$.\nA. $a+b = -2$\nB. $a+b = 5$\nC. $a+b = 7$\nD. $a+b = 9$",
-    "explanation": "**Chọn C.**\n$f(x) = \\frac{1}{x^2-5x+6} = \\frac{1}{(x-2)(x-3)} = \\frac{-1}{x-2} + \\frac{1}{x-3}$.\nDo đó $F(x) = \\ln|\\frac{x-3}{x-2}| + C$.\nTừ $F(4) = 1 - \\ln 2$ (vì $\\ln\\frac{1}{2} = -\\ln 2$) suy ra $C = 1$.\n$F(x) = 1 \\Leftrightarrow \\ln|\\frac{x-3}{x-2}| + 1 = 1 \\Leftrightarrow |\\frac{x-3}{x-2}| = 1 \\Leftrightarrow x = \\frac{5}{2}$.\n**Vậy** $x = \\frac{a}{b} = \\frac{5}{2} \\Rightarrow a+b=7$."
+    "question": "Nguyên hàm của hàm số $f(x) = x^3 + x$ là\\n**A.** $x^4 + x^2 + C$.\\n**B.** $3x^2 + 1 + C$.\\n**C.** $x^3 + x + C$.\\n**D.** $\\frac{1}{4}x^4 + \\frac{1}{2}x^2 + C$.",
+    "explanation": "**Chọn D**\\nTa có $F(x) = \\int (x^3 + x) dx = \\frac{1}{4}x^4 + \\frac{1}{2}x^2 + C$."
   },
   {
     "id": 6,
-    "question": "Hàm số $f(x) = \\frac{5x+11}{x^2+3x-10}$ có một nguyên hàm $F(x)$ thỏa mãn $F(3) = 3 \\ln 8$. Tìm $e^{F(-6)}$.\nA. $e^{F(-6)} = 64$\nB. $e^{F(-6)} = 512$\nC. $e^{F(-6)} = 4096$\nD. $e^{F(-6)} = 32768$",
-    "explanation": "**Chọn C.**\n**Ta có:** $f(x) = \\frac{5x+11}{x^2+3x-10} = \\frac{5x+11}{(x-2)(x+5)} = \\frac{3}{x-2} + \\frac{2}{x+5}$.\n**Suy ra** $F(x) = 3 \\ln|x-2| + 2 \\ln|x+5| + C$.\n**Theo giả thiết** $F(3) = 3 \\ln 8$, ta có:\n$F(3) = 3 \\ln|3-2| + 2 \\ln|3+5| + C = 3 \\ln 1 + 2 \\ln 8 + C = 2 \\ln 8 + C$.\n$2 \\ln 8 + C = 3 \\ln 8 \\Rightarrow C = \\ln 8$.\n**Khi đó**: $F(-6) = 3 \\ln|-6-2| + 2 \\ln|-6+5| + \\ln 8 = 3 \\ln 8 + 2 \\ln 1 + \\ln 8 = 4 \\ln 8 = \\ln(8^4) = \\ln 4096$.\n**Vậy** $e^{F(-6)} = e^{\\ln 4096} = 4096$."
+    "question": "Họ các nguyên hàm của hàm số $f(x) = 5x^4 - 6x^2 + 1$ là\\n**A.** $20x^3 - 12x + C$.\\n**B.** $x^5 - 2x^3 + x + C$.\\n**C.** $20x^5 - 12x^3 + x + C$.\\n**D.** $\\frac{x^4}{4} + 2x^2 - 2x + C$.",
+    "explanation": "**Chọn B**\\nTa có $F(x) = \\int (5x^4 - 6x^2 + 1) dx = 5\\frac{x^5}{5} - 6\\frac{x^3}{3} + x + C = x^5 - 2x^3 + x + C$."
   },
   {
     "id": 7,
-    "question": "Tìm một nguyên hàm $F(x)$ của hàm số $f(x) = \\frac{x^2}{x^2-7x+12}$ thỏa mãn $F(5) = 5$.\nA. $F(x) = x + 16 \\ln|x-4| - 9 \\ln|x-3| - 9 \\ln 2$\nB. $F(x) = x - 16 \\ln|x-4| + 9 \\ln|x-3| + 9 \\ln 2$\nC. $F(x) = x + 16 \\ln|x-4| - 9 \\ln|x-3| + 9 \\ln 2$\nD. $F(x) = x - 16 \\ln|x-4| + 9 \\ln|x-3| - 9 \\ln 2$",
-    "explanation": "**Chọn C.**\nPhân tích $x^2 - 7x + 12 = (x-3)(x-4)$, $x^2 = (x^2-7x+12) + (7x-12)$.\nDo đó $f(x) = \\frac{x^2}{x^2-7x+12} = 1 + \\frac{7x-12}{(x-3)(x-4)} = 1 + \\frac{A}{x-3} + \\frac{B}{x-4}$.\nMà $7x-12 = A(x-4) + B(x-3) \\Rightarrow A=-9, B=16$.\nVì thế $f(x) = 1 - \\frac{9}{x-3} + \\frac{16}{x-4}$.\nLấy nguyên hàm: $F(x) = x - 9 \\ln|x-3| + 16 \\ln|x-4| + C$.\n**Điều kiện** $F(5)=5$ cho $5 - 9 \\ln 2 + C = 5 \\Rightarrow C = 9 \\ln 2$.\n**Vậy** $F(x) = x + 16 \\ln|x-4| - 9 \\ln|x-3| + 9 \\ln 2$."
+    "question": "Nguyên hàm của hàm số $y = x^2 - 3x + \\frac{1}{x}$ là\\n**A.** $\\frac{x^3}{3} - \\frac{3x^2}{2} - \\ln|x| + C$.\\n**B.** $\\frac{x^3}{3} - \\frac{3x^2}{2} + \\frac{1}{x^2} + C$.\\n**C.** $\\frac{x^3}{3} - \\frac{3x^2}{2} + \\ln x + C$.\\n**D.** $\\frac{x^3}{3} - \\frac{3x^2}{2} + \\ln|x| + C$.",
+    "explanation": "**Chọn D**\\nTa có $F(x) = \\int \\left(x^2 - 3x + \\frac{1}{x}\\right) dx = \\frac{x^3}{3} - 3\\frac{x^2}{2} + \\ln|x| + C = \\frac{x^3}{3} - \\frac{3x^2}{2} + \\ln|x| + C$."
   },
   {
     "id": 8,
-    "question": "Tìm một nguyên hàm $F(x)$ của hàm số $f(x) = -\\frac{x}{(x+1)^2}$, biết rằng đồ thị của hàm số $y=F(x)$ đi qua gốc tọa độ O.\nA. $F(x) = \\frac{x}{x+1} - \\ln|x+1|$\nB. $F(x) = \\frac{1}{2} - \\frac{x}{x+1} - \\ln|x+1|$\nC. $F(x) = -\\frac{1}{x+1} + \\ln|x+1| + 1$\nD. $F(x) = \\frac{x}{x+1} + \\ln|x+1|$",
-    "explanation": "**Chọn A.**\n$f(x) = -\\frac{x}{(x+1)^2} = -\\frac{x+1-1}{(x+1)^2} = -\\frac{1}{x+1} + \\frac{1}{(x+1)^2}$.\nDo đó $F(x) = \\int f(x) dx = -\\ln|x+1| - \\frac{1}{x+1} + C$.\nĐồ thị $y=F(x)$ đi qua gốc $O(0,0)$ nên $F(0)=0 \\Rightarrow -\\ln 1 - 1 + C = 0 \\Rightarrow C=1$.\n**Suy ra** $F(x) = -\\ln|x+1| - \\frac{1}{x+1} + 1 = \\frac{x}{x+1} - \\ln|x+1|$."
+    "question": "Họ nguyên hàm của hàm số $f(x) = \\frac{1}{x^2} - x^2 - \\frac{1}{3}$ là\\n**A.** $\\frac{-x^4 + x^2 + 3}{3x} + C$.\\n**B.** $-\\frac{2}{x^2} - 2x + C$.\\n**C.** $\\frac{x^4 + x^2 - 3}{3x} + C$.\\n**D.** $-\\frac{x^3}{3} - \\frac{1}{x} - \\frac{x}{3} + C$.",
+    "explanation": "**Chọn D**\\nTa có $F(x) = \\int \\left(\\frac{1}{x^2} - x^2 - \\frac{1}{3}\\right) dx = -\\frac{1}{x} - \\frac{x^3}{3} - \\frac{1}{3}x + C$."
   },
   {
     "id": 9,
-    "question": "Hàm số $f(x) = \\frac{1}{x^2(x+1)}$ có một nguyên hàm là $F(x)$ thỏa mãn $F(1) = \\ln 2$. Tính $F(-2)$.\nA. $F(-2) = \\frac{5}{2} - \\ln \\frac{1}{2}$\nB. $F(-2) = \\frac{5}{2} - \\ln 2$\nC. $F(-2) = \\frac{3}{2} - \\ln \\frac{1}{2}$\nD. $F(-2) = \\frac{3}{2} - \\ln 2$",
-    "explanation": "**Chọn D.**\n**Ta có:** $f(x) = \\frac{1}{x^2(x+1)} = \\frac{A}{x} + \\frac{B}{x^2} + \\frac{C}{x+1}$.\nGiải hệ $1 = (A+C)x^2 + (A+B)x + B$ cho $(A,B,C)$ được $A=-1, B=1, C=1$.\n**Vì vậy** $f(x) = -\\frac{1}{x} + \\frac{1}{x^2} + \\frac{1}{x+1}$.\nMột nguyên hàm là $F(x) = -\\ln|x| - \\frac{1}{x} + \\ln|x+1| + C$.\n**Điều kiện** $F(1)=\\ln 2$ cho $0 - 1 + \\ln 2 + C = \\ln 2 \\Rightarrow C=1$.\n**Suy ra** $F(-2) = -\\ln 2 - \\frac{1}{-2} + \\ln 1 + 1 = -\\ln 2 + \\frac{1}{2} + 1 = \\frac{3}{2} - \\ln 2$."
+    "question": "Họ nguyên hàm của hàm số $f(x) = 3\\sqrt{x} + x^{2018}$ là\\n**A.** $\\sqrt{x} + \\frac{x^{2019}}{673} + C$.\\n**B.** $2\\sqrt{x^3} + \\frac{x^{2019}}{2019} + C$.\\n**C.** $\\frac{1}{\\sqrt{x}} + \\frac{x^{2019}}{673} + C$.\\n**D.** $\\frac{1}{2\\sqrt{x}} + 6054x^{2017} + C$.",
+    "explanation": "**Chọn B**\\nTa có $f(x) = 3x^{\\frac{1}{2}} + x^{2018}$.\\nSuy ra $F(x) = \\int \\left(3x^{\\frac{1}{2}} + x^{2018}\\right) dx = 3 \\cdot \\frac{x^{\\frac{3}{2}}}{\\frac{3}{2}} + \\frac{x^{2019}}{2019} + C = 2x^{\\frac{3}{2}} + \\frac{x^{2019}}{2019} + C = 2x\\sqrt{x} + \\frac{x^{2019}}{2019} + C$."
+  },
+  {
+    "id": 10,
+    "question": "Tìm nguyên hàm của hàm số $f(x) = x^2\\sqrt{x} + \\frac{1}{\\sqrt[3]{x^2}}$ trên khoảng $(0; +\\infty)$.\\n**A.** $\\frac{2}{7}\\sqrt{x^7} + 3\\sqrt[3]{x} + C$.\\n**B.** $\\frac{7}{2}\\sqrt{x^7} + \\frac{1}{3}\\sqrt[3]{x} + C$.\\n**C.** $\\frac{2}{5}\\sqrt{x^5} + 3\\sqrt[3]{x} + C$.\\n**D.** $\\frac{5}{2}\\sqrt{x^5} + \\frac{1}{3}\\sqrt[3]{x} + C$.",
+    "explanation": "**Chọn A**\\nTa viết lại $f(x) = x^2 \\cdot x^{\\frac{1}{2}} + x^{-\\frac{2}{3}} = x^{\\frac{5}{2}} + x^{-\\frac{2}{3}}$.\\n$F(x) = \\int \\left(x^{\\frac{5}{2}} + x^{-\\frac{2}{3}}\\right) dx = \\frac{x^{\\frac{7}{2}}}{\\frac{7}{2}} + \\frac{x^{\\frac{1}{3}}}{\\frac{1}{3}} + C = \\frac{2x^3\\sqrt{x}}{7} + 3\\sqrt[3]{x} + C = \\frac{2\\sqrt{x^7}}{7} + 3\\sqrt[3]{x} + C$."
+  },
+  {
+    "id": 11,
+    "question": "Tìm nguyên hàm của hàm số $f(x) = 2\\sin x$.\\n**A.** $\\int 2\\sin x dx = 2\\cos x + C$.\\n**B.** $\\int 2\\sin x dx = \\sin^2 x + C$.\\n**C.** $\\int 2\\sin x dx = \\sin 2x + C$.\\n**D.** $\\int 2\\sin x dx = -2\\cos x + C$.",
+    "explanation": "**Chọn D**\\nTa có $\\int 2\\sin x dx = 2 \\int \\sin x dx = -2\\cos x + C$."
+  },
+  {
+    "id": 12,
+    "question": "Tìm nguyên hàm $F(x)$ của hàm số $f(x) = \\sin x + \\cos x$ thỏa mãn $F\\left(\\frac{\\pi}{2}\\right) = 2$.\\n**A.** $F(x) = \\cos x - \\sin x + 3$.\\n**B.** $F(x) = -\\cos x + \\sin x + 3$.\\n**C.** $F(x) = -\\cos x + \\sin x - 1$.\\n**D.** $F(x) = -\\cos x + \\sin x + 1$.",
+    "explanation": "**Chọn D**\\nTa có $F(x) = \\int (\\sin x + \\cos x) dx = -\\cos x + \\sin x + C$.\\nMà $F\\left(\\frac{\\pi}{2}\\right) = 2 \\Rightarrow -\\cos\\left(\\frac{\\pi}{2}\\right) + \\sin\\left(\\frac{\\pi}{2}\\right) + C = 2 \\Rightarrow 0 + 1 + C = 2 \\Leftrightarrow C = 1$.\\nVậy $F(x) = -\\cos x + \\sin x + 1$."
+  },
+  {
+    "id": 13,
+    "question": "Tìm nguyên hàm của hàm số $f(x) = 7^x$.\\n**A.** $\\int 7^x dx = 7^x \\ln 7 + C$.\\n**B.** $\\int 7^x dx = 7^{x+1} + C$.\\n**C.** $\\int 7^x dx = \\frac{7^x}{\\ln 7} + C$.\\n**D.** $\\int 7^x dx = \\frac{7^{x+1}}{x+1} + C$.",
+    "explanation": "**Chọn C**\\nÁp dụng công thức $\\int a^x dx = \\frac{a^x}{\\ln a} + C$.\\nTa có $\\int 7^x dx = \\frac{7^x}{\\ln 7} + C$."
+  },
+  {
+    "id": 14,
+    "question": "Khẳng định nào đây sai?\\n**A.** $\\int \\cos x dx = -\\sin x + C$.\\n**B.** $\\int \\frac{1}{x} dx = \\ln|x| + C$.\\n**C.** $\\int 2x dx = x^2 + C$.\\n**D.** $\\int e^x dx = e^x + C$.",
+    "explanation": "**Chọn A**\\nSai vì $\\int \\cos x dx = \\sin x + C$.\\nCác ý còn lại:\\n$\\int \\frac{1}{x} dx = \\ln|x| + C$ (Đúng).\\n$\\int 2x dx = x^2 + C$ (Đúng).\\n$\\int e^x dx = e^x + C$ (Đúng)."
+  },
+  {
+    "id": 15,
+    "question": "Cho $F(x)$ là một nguyên hàm của hàm số $f(x) = e^x + 2x$ thỏa mãn $F(0) = \\frac{3}{2}$. Tìm $F(x)$.\\n**A.** $F(x) = e^x + x^2 + \\frac{3}{2}$.\\n**B.** $F(x) = 2e^x + x^2 - \\frac{1}{2}$.\\n**C.** $F(x) = e^x + x^2 + \\frac{5}{2}$.\\n**D.** $F(x) = e^x + x^2 + \\frac{1}{2}$.",
+    "explanation": "**Chọn D**\\nTa có $F(x) = \\int (e^x + 2x) dx = e^x + x^2 + C$.\\nMà $F(0) = \\frac{3}{2} \\Rightarrow e^0 + 0^2 + C = \\frac{3}{2} \\Rightarrow 1 + C = \\frac{3}{2} \\Leftrightarrow C = \\frac{1}{2}$.\\nVậy $F(x) = e^x + x^2 + \\frac{1}{2}$."
+  },
+  {
+    "id": 16,
+    "question": "Hàm số nào sau đây không phải là một nguyên hàm của hàm số $f(x) = (3x+1)^5$?\\n**A.** $F(x) = \\frac{(3x+1)^6}{18} + 8$.\\n**B.** $F(x) = \\frac{(3x+1)^6}{18} - 2$.\\n**C.** $F(x) = \\frac{(3x+1)^6}{18}$.\\n**D.** $F(x) = \\frac{(3x+1)^6}{6}$.",
+    "explanation": "**Chọn D**\\nTa có $\\int (3x+1)^5 dx = \\frac{1}{3} \\frac{(3x+1)^6}{6} + C = \\frac{(3x+1)^6}{18} + C$.\\nCác đáp án A, B, C đều có dạng này (với các hằng số C khác nhau).\\nĐáp án D sai về hệ số."
+  },
+  {
+    "id": 17,
+    "question": "Tìm nguyên hàm của hàm số $f(x) = \\frac{1}{5x-2}$.\\n**A.** $\\frac{1}{5}\\ln|5x-2| + C$.\\n**B.** $-\\frac{1}{2}\\ln|5x-2| + C$.\\n**C.** $5\\ln|5x-2| + C$.\\n**D.** $\\ln|5x-2| + C$.",
+    "explanation": "**Chọn A**\\nÁp dụng công thức $\\int \\frac{1}{ax+b} dx = \\frac{1}{a}\\ln|ax+b| + C$.\\nTa có $\\int \\frac{1}{5x-2} dx = \\frac{1}{5}\\ln|5x-2| + C$."
+  },
+  {
+    "id": 18,
+    "question": "Tìm nguyên hàm của hàm số $f(x) = 2^x + e^{3x+5}$.\\n**A.** $\\frac{2^x}{\\ln 2} + \\frac{e^{3x+5}}{3} + C$.\\n**B.** $\\frac{2^x}{\\ln 2} + e^x + C$.\\n**C.** $2^{x+1} + 3e^{3x+4} + C$.\\n**D.** $2^{x+1}\\ln x + \\frac{e^{3x+4}}{3} + C$.",
+    "explanation": "**Chọn A**\\nTa có $\\int (2^x + e^{3x+5}) dx = \\frac{2^x}{\\ln 2} + \\frac{1}{3}e^{3x+5} + C$."
+  },
+  {
+    "id": 19,
+    "question": "Tìm nguyên hàm của hàm số $f(x) = \\cos 3x$.\\n**A.** $\\int \\cos 3x dx = 3\\sin 3x + C$.\\n**B.** $\\int \\cos 3x dx = \\frac{\\sin 3x}{3} + C$.\\n**C.** $\\int \\cos 3x dx = \\sin 3x + C$.\\n**D.** $\\int \\cos 3x dx = \\cos 3x + C$.",
+    "explanation": "**Chọn B**\\nTa có $\\int \\cos 3x dx = \\frac{1}{3}\\sin 3x + C$."
+  },
+  {
+    "id": 20,
+    "question": "Tìm nguyên hàm của hàm số $f(x) = \\frac{1}{\\sqrt{x}} + e^{-2x}$.\\n**A.** $\\frac{\\sqrt{x}}{2} - \\frac{1}{2e^{2x}} + C$.\\n**B.** $\\frac{\\sqrt{x}}{2} + \\frac{1}{2e^{2x}} + C$.\\n**C.** $2\\sqrt{x} + \\frac{1}{2e^{2x}} + C$.\\n**D.** $2\\sqrt{x} - \\frac{1}{2e^{2x}} + C$.",
+    "explanation": "**Chọn D**\\nTa có $\\int \\left(\\frac{1}{\\sqrt{x}} + e^{-2x}\\right) dx = \\int (x^{-\\frac{1}{2}} + e^{-2x}) dx = \\frac{x^{\\frac{1}{2}}}{\\frac{1}{2}} + \\frac{e^{-2x}}{-2} + C = 2\\sqrt{x} - \\frac{1}{2e^{2x}} + C$."
+  },
+  {
+    "id": 21,
+    "question": "Tìm nguyên hàm của hàm số $f(x) = (2x+1)^{2019}$.\\n**A.** $\\frac{(2x+1)^{2020}}{2020} + C$.\\n**B.** $\\frac{(2x+1)^{2020}}{4040} + C$.\\n**C.** $\\frac{(2x+1)^{2020}}{1010} + C$.\\n**D.** $4038(2x+1)^{2018} + C$.",
+    "explanation": "**Chọn B**\\nTa có $\\int (2x+1)^{2019} dx = \\frac{1}{2} \\cdot \\frac{(2x+1)^{2020}}{2020} + C = \\frac{(2x+1)^{2020}}{4040} + C$."
+  },
+  {
+    "id": 22,
+    "question": "Cho $F(x)$ là một nguyên hàm của hàm số $f(x) = 2\\cos 3x - 3^{x-1}$ thỏa mãn $F(0) = 0$. Tìm $F(x)$.\\n**A.** $F(x) = \\frac{2\\sin 3x}{3} - \\frac{3^{x-1}}{\\ln 3} + \\frac{1}{3\\ln 3}$.\\n**B.** $F(x) = -\\frac{2\\sin 3x}{3} - \\frac{3^{x-1}}{\\ln 3} + \\frac{1}{3\\ln 3}$.\\n**C.** $F(x) = \\frac{2\\sin 3x}{3} - \\frac{3^x}{\\ln 3} + \\frac{1}{3\\ln 3}$.\\n**D.** $F(x) = -\\frac{2\\sin 3x}{3} - \\frac{3^x}{\\ln 3} + \\frac{1}{3\\ln 3}$.",
+    "explanation": "**Chọn A**\\nTa có $\\int (2\\cos 3x - 3^{x-1}) dx = \\frac{2\\sin 3x}{3} - \\frac{3^{x-1}}{\\ln 3} + C$.\\nMà $F(0) = 0 \\Rightarrow 0 - \\frac{3^{-1}}{\\ln 3} + C = 0 \\Leftrightarrow C = \\frac{1}{3\\ln 3}$.\\nVậy $F(x) = \\frac{2\\sin 3x}{3} - \\frac{3^{x-1}}{\\ln 3} + \\frac{1}{3\\ln 3}$."
+  },
+  {
+    "id": 23,
+    "question": "Biết $F(x)$ là một nguyên hàm của hàm số $f(x) = \\frac{1}{x-1}$ và $F(2) = 1$. Tính $F(3)$.\\n**A.** $F(3) = \\ln 2 - 1$.\\n**B.** $F(3) = \\ln 2 + 1$.\\n**C.** $F(3) = \\frac{1}{2}$.\\n**D.** $F(3) = \\frac{7}{4}$.",
+    "explanation": "**Chọn B**\\nTa có $\\int \\frac{1}{x-1} dx = \\ln|x-1| + C$.\\nMà $F(2) = 1 \\Rightarrow \\ln|1| + C = 1 \\Rightarrow C = 1$.\\nVậy $F(3) = \\ln|2| + 1 = \\ln 2 + 1$."
+  },
+  {
+    "id": 24,
+    "question": "Gọi $F(x)$ là một nguyên hàm của hàm số $f(x) = \\sqrt[3]{x-2}$ thỏa mãn $F(3) = \\frac{7}{4}$. Tính giá trị của biểu thức $T = 2^{\\log_{13}|F(10)|} + 3^{\\log_{13}|F(-6)|}$.\\n**A.** $T=2$.\\n**B.** $T=3$.\\n**C.** $T=5$.\\n**D.** $T=10$.",
+    "explanation": "**Chọn C**\\nTa có $\\int \\sqrt[3]{x-2} dx = \\int (x-2)^{\\frac{1}{3}} dx = \\frac{(x-2)^{\\frac{4}{3}}}{\\frac{4}{3}} + C = \\frac{3(x-2)\\sqrt[3]{x-2}}{4} + C$.\\nMà $F(3) = \\frac{7}{4} \\Rightarrow \\frac{3(1)(1)}{4} + C = \\frac{7}{4} \\Leftrightarrow \\frac{3}{4} + C = \\frac{7}{4} \\Leftrightarrow C = 1$.\\n$\\Rightarrow F(x) = \\frac{3(x-2)\\sqrt[3]{x-2}}{4} + 1$.\\nTính $F(10) = \\frac{3(8)\\sqrt[3]{8}}{4} + 1 = \\frac{24 \\cdot 2}{4} + 1 = 13$.\\nTính $F(-6) = \\frac{3(-8)\\sqrt[3]{-8}}{4} + 1 = \\frac{-24(-2)}{4} + 1 = 13$.\\n$\\Rightarrow T = 2^{\\log_{13}|13|} + 3^{\\log_{13}|13|} = 2^1 + 3^1 = 5$."
+  },
+  {
+    "id": 25,
+    "question": "Gọi $F(x)$ là một nguyên hàm của hàm số $f(x) = (x^2+1)^2$ thỏa mãn $F(1) = \\frac{28}{15}$. Tính giá trị của biểu thức $T = 5F(6) - 30F(4) + 18$.\\n**A.** $T=8526$.\\n**B.** $T=1000$.\\n**C.** $T=7544$.\\n**D.** $T=982$.",
+    "explanation": "**Chọn B**\\nTa có $\\int (x^2+1)^2 dx = \\int (x^4 + 2x^2 + 1) dx = \\frac{x^5}{5} + \\frac{2x^3}{3} + x + C$.\\nMà $F(1) = \\frac{28}{15} \\Rightarrow \\frac{1}{5} + \\frac{2}{3} + 1 + C = \\frac{28}{15} \\Leftrightarrow \\frac{3+10+15}{15} + C = \\frac{28}{15} \\Leftrightarrow \\frac{28}{15} + C = \\frac{28}{15} \\Leftrightarrow C = 0$.\\n$\\Rightarrow F(x) = \\frac{x^5}{5} + \\frac{2x^3}{3} + x$.\\n$\\Rightarrow T = 5F(6) - 30F(4) + 18 = 5 \\cdot \\frac{8526}{5} - 30 \\cdot \\frac{3772}{15} + 18 = 1000$."
   }
 ]

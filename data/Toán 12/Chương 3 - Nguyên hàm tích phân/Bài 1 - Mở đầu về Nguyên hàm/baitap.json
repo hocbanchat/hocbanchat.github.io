@@ -1,477 +1,482 @@
 [
   {
     "id": 1,
-    "question": "Tìm nguyên hàm $I = \\int \\frac{x+1}{x-1} dx$.",
+    "question": "Cho $f(x)$, $g(x)$ là các hàm số xác định và liên tục trên $\\mathbb{R}$. Trong các mệnh đề sau, mệnh đề nào **sai**?",
     "options": [
-      "A. $I = x + 2 \\ln|x-1| + C$",
-      "B. $I = x + 2 \\ln(x-1) + C$",
-      "C. $I = 2x + \\frac{1}{2} \\ln|x-1| + C$",
-      "D. $I = 2x + \\frac{1}{2} \\ln(x-1) + C$"
+      "A. $\\int f(x)g(x)dx = \\int f(x)dx . \\int g(x)dx$.",
+      "B. $\\int 2f(x)dx = 2\\int f(x)dx$.",
+      "C. $\\int [f(x) + g(x)]dx = \\int f(x)dx + \\int g(x)dx$.",
+      "D. $\\int [f(x) - g(x)]dx = \\int f(x)dx - \\int g(x)dx$."
     ],
     "answer": "A",
-    "explanation": "**Chọn A.**\n$I = \\int \\frac{x+1}{x-1} dx = \\int \\frac{x-1+2}{x-1} dx = \\int (1 + \\frac{2}{x-1}) dx = x + 2 \\ln|x-1| + C$."
+    "explanation": "**Chọn A.**\nNguyên hàm không có tính chất nguyên hàm của tích bằng tích các nguyên hàm.\nHoặc B, C, D đúng do đó là các tính chất cơ bản của nguyên hàm nên A sai."
   },
   {
     "id": 2,
-    "question": "Họ tất cả các nguyên hàm của hàm số $f(x) = \\frac{x+2}{x-1}$ trên khoảng $(1; +\\infty)$ là",
+    "question": "Trong các khẳng định sau, khẳng định nào **sai**?",
     "options": [
-      "A. $x + 3 \\ln(x-1) + C$",
-      "B. $x - 3 \\ln(x-1) + C$",
-      "C. $x - \\frac{3}{(x-1)^2} + C$",
-      "D. $x + \\frac{3}{(x-1)^2} + C$"
+      "A. $\\int dx = x + 2C$ ($C$ là hằng số).",
+      "B. $\\int x^n dx = \\frac{x^{n+1}}{n+1} + C$ ($C$ là hằng số, $n \\in \\mathbb{Z}$).",
+      "C. $\\int 0 dx = C$ ($C$ là hằng số).",
+      "D. $\\int e^x dx = e^x - C$ ($C$ là hằng số)."
     ],
-    "answer": "A",
-    "explanation": "**Chọn A.**\nTrên khoảng $(1; +\\infty)$ thì $x-1 > 0$ nên\n$\\int f(x) dx = \\int \\frac{x+2}{x-1} dx = \\int (1 + \\frac{3}{x-1}) dx = x + 3 \\ln|x-1| + C = x + 3 \\ln(x-1) + C$."
+    "answer": "B",
+    "explanation": "**Chọn B.**\nĐáp án B sai vì công thức trên chỉ đúng khi bổ sung thêm điều kiện $n \\neq -1$."
   },
   {
     "id": 3,
-    "question": "Tìm nguyên hàm $I = \\int \\frac{4x+1}{2x+3} dx$.",
+    "question": "Tìm nguyên hàm $F(x) = \\int \\pi^2 dx$.",
     "options": [
-      "A. $I = 2x - 5 \\ln|2x+3| + C$",
-      "B. $I = 2x - \\frac{5}{2} \\ln|2x+3| + C$",
-      "C. $I = x - \\frac{5}{2} \\ln|2x+3| + C$",
-      "D. $I = x - 5 \\ln|2x+3| + C$"
+      "A. $F(x) = \\pi^2 x + C$.",
+      "B. $F(x) = 2\\pi x + C$.",
+      "C. $F(x) = \\frac{\\pi^3}{3} + C$.",
+      "D. $F(x) = \\frac{\\pi^2 x^2}{2} + C$."
     ],
-    "answer": "B",
-    "explanation": "**Chọn B.**\n**Ta có:** $I = \\int \\frac{4x+1}{2x+3} dx = \\int \\frac{2(2x+3)-5}{2x+3} dx = \\int (2 - \\frac{5}{2x+3}) dx = 2x - \\frac{5}{2} \\ln|2x+3| + C$."
+    "answer": "A",
+    "explanation": "**Chọn A.**\nTa có $F(x) = \\int \\pi^2 dx = \\pi^2 x + C$ (vì $\\pi^2$ là hằng số)."
   },
   {
     "id": 4,
-    "question": "Tính nguyên hàm $I = \\int \\frac{3x^2+2x+1}{x+1} dx$.",
+    "question": "Tìm họ nguyên hàm của hàm số $f(x) = 3x^2 + 1$.",
     "options": [
-      "A. $I = \\frac{3}{2}x^2 + x + \\ln|x+1| + C$",
-      "B. $I = \\frac{3}{2}x^2 - x - 2 \\ln|x+1| + C$",
-      "C. $I = \\frac{3}{2}x^2 - 2x + \\ln|x+1| + C$",
-      "D. $I = \\frac{3}{2}x^2 - x + 2 \\ln|x+1| + C$"
+      "A. $x^3 + C$.",
+      "B. $\\frac{x^3}{3} + x + C$.",
+      "C. $6x + C$.",
+      "D. $x^3 + x + C$."
     ],
     "answer": "D",
-    "explanation": "**Chọn D.**\n**Ta có:** $\\frac{3x^2+2x+1}{x+1} = \\frac{3x(x+1)-(x+1)+2}{x+1} = 3x - 1 + \\frac{2}{x+1}$.\n**Khi đó** $I = \\frac{3}{2}x^2 - x + 2 \\ln|x+1| + C$."
+    "explanation": "**Chọn D.**\n$\\int (3x^2 + 1) dx = x^3 + x + C$."
   },
   {
     "id": 5,
-    "question": "Kết quả tính $\\int \\frac{1}{x(x+3)} dx$ bằng:",
+    "question": "Nguyên hàm của hàm số $f(x) = 2x^3 - 9$ là",
     "options": [
-      "A. $-\\frac{1}{3} \\ln|\\frac{x}{x+3}| + C$",
-      "B. $\\frac{1}{3} \\ln|\\frac{x}{x+3}| + C$",
-      "C. $\\frac{2}{3} \\ln|\\frac{x+3}{x}| + C$",
-      "D. $\\frac{2}{3} \\ln|\\frac{x}{x+3}| + C$"
+      "A. $\\frac{1}{2}x^4 - 9x + C$.",
+      "B. $4x^4 - 9x + C$.",
+      "C. $\\frac{1}{4}x^4 + C$.",
+      "D. $4x^3 - 9x + C$."
     ],
-    "answer": "B",
-    "explanation": "**Chọn B.**\n$\\frac{1}{x(x+3)} = \\frac{1}{3}(\\frac{1}{x} - \\frac{1}{x+3}) \\Rightarrow \\int \\frac{1}{x(x+3)} dx = \\frac{1}{3} \\ln|\\frac{x}{x+3}| + C$."
+    "answer": "A",
+    "explanation": "**Chọn A.**\n$\\int (2x^3 - 9) dx = 2.\\frac{x^4}{4} - 9x + C = \\frac{x^4}{2} - 9x + C$."
   },
   {
     "id": 6,
-    "question": "Họ nguyên hàm của hàm số $f(x) = \\frac{1}{x^2+x-2}$ là $F(x) = \\frac{a}{b} \\ln|\\frac{x-1}{x+2}| + C$. Tính $a.b$.",
+    "question": "Họ các nguyên hàm của hàm số $f(x) = 5x^4 - 6x^2 + 1$ là",
     "options": [
-      "A. 1",
-      "B. 2",
-      "C. 4",
-      "D. 3"
+      "A. $20x^3 - 12x + C$.",
+      "B. $x^5 - 2x^3 + x + C$.",
+      "C. $20x^5 - 12x^3 + x + C$.",
+      "D. $\\frac{x^5}{4} + 2x^2 - 2x + C$."
     ],
-    "answer": "D",
-    "explanation": "**Chọn D.**\n$\\int \\frac{1}{x^2+x-2} dx = \\int \\frac{1}{(x-1)(x+2)} dx = \\frac{1}{3} \\ln|\\frac{x-1}{x+2}| + C \\Rightarrow a=1, b=3 \\Rightarrow a.b=3$."
+    "answer": "B",
+    "explanation": "**Chọn B.**\nTa có $\\int (5x^4 - 6x^2 + 1) dx = x^5 - 2x^3 + x + C$."
   },
   {
     "id": 7,
-    "question": "Kết quả tính $\\int \\frac{1}{x(x-3)} dx$ bằng $\\frac{a}{b} \\ln|\\frac{x-3}{x}| + C$. Tính $b-a$.",
+    "question": "Họ nguyên hàm của hàm số $f(x) = 3x^2 + 2x + 5$ là",
     "options": [
-      "A. 1",
-      "B. 2",
-      "C. 3",
-      "D. 4"
+      "A. $F(x) = x^3 + x^2 + 5$.",
+      "B. $F(x) = x^3 + x + C$.",
+      "C. $F(x) = x^3 + x^2 + 5x + C$.",
+      "D. $F(x) = x^3 + x^2 + C$."
     ],
-    "answer": "B",
-    "explanation": "**Chọn B.**\n$\\int \\frac{1}{x(x-3)} dx = \\frac{1}{3} \\ln|\\frac{x-3}{x}| + C \\Rightarrow a=1, b=3 \\Rightarrow b-a=2$."
+    "answer": "C",
+    "explanation": "**Chọn C.**\nNguyên hàm của hàm số $f(x) = 3x^2 + 2x + 5$ là $F(x) = x^3 + x^2 + 5x + C$."
   },
   {
     "id": 8,
-    "question": "Kết quả tính $\\int \\frac{3}{x^2+3x} dx$ là",
+    "question": "Họ nguyên hàm của hàm số $f(x) = 3\\sqrt{x} + x^{2018}$ là",
     "options": [
-      "A. $\\ln|x| + \\ln|x+3| + C$",
-      "B. $\\ln|x| + \\ln|x+3| + C$",
-      "C. $\\ln|\\frac{x}{x+3}| + C$",
-      "D. $\\ln|\\frac{x+3}{x}| + C$"
+      "A. $\\sqrt{x} + \\frac{x^{2019}}{673} + C$.",
+      "B. $2\\sqrt{x^3} + \\frac{x^{2019}}{2019} + C$.",
+      "C. $\\frac{1}{\\sqrt{x}} + \\frac{x^{2019}}{673} + C$.",
+      "D. $\\frac{1}{2\\sqrt{x}} + 6054x^{2017} + C$."
     ],
-    "answer": "C",
-    "explanation": "**Chọn C.**\n$\\int \\frac{3}{x^2+3x} dx = \\int \\frac{3}{x(x+3)} dx = \\int (\\frac{1}{x} - \\frac{1}{x+3}) dx = \\ln|\\frac{x}{x+3}| + C$."
+    "answer": "B",
+    "explanation": "**Chọn B.**\nTa có: $\\int (3\\sqrt{x} + x^{2018}) dx = \\int (3x^{\\frac{1}{2}} + x^{2018}) dx = 3.\\frac{x^{\\frac{3}{2}}}{\\frac{3}{2}} + \\frac{x^{2019}}{2019} + C = 2\\sqrt{x^3} + \\frac{x^{2019}}{2019} + C$."
   },
   {
     "id": 9,
-    "question": "Tìm $\\int \\frac{dx}{x^2-3x+2}$ là:",
+    "question": "Nguyên hàm của hàm số $y = x^2 - 3x + \\frac{1}{x}$ là",
     "options": [
-      "A. $\\ln|\\frac{1}{x-2}| - \\ln|\\frac{1}{x-1}| + C$",
-      "B. $\\ln|\\frac{x-2}{x-1}| + C$",
-      "C. $\\ln|\\frac{x-1}{x-2}| + C$",
-      "D. $\\ln|(x-2)(x-1)| + C$"
+      "A. $\\frac{x^3}{3} - \\frac{3x^2}{2} - \\ln|x| + C$.",
+      "B. $\\frac{x^3}{3} - \\frac{3x^2}{2} + \\frac{1}{x^2} + C$.",
+      "C. $\\frac{x^3}{3} - \\frac{3x^2}{2} + \\ln x + C$.",
+      "D. $\\frac{x^3}{3} - \\frac{3x^2}{2} + \\ln|x| + C$."
     ],
-    "answer": "B",
-    "explanation": "**Chọn B.**\n$\\int \\frac{dx}{x^2-3x+2} = \\int \\frac{dx}{(x-2)(x-1)} = \\ln|\\frac{x-2}{x-1}| + C$."
+    "answer": "D",
+    "explanation": "**Chọn D.**\nÁp dụng công thức nguyên hàm ta có $\\int (x^2 - 3x + \\frac{1}{x}) dx = \\frac{x^3}{3} - \\frac{3x^2}{2} + \\ln|x| + C$."
   },
   {
     "id": 10,
-    "question": "Tính nguyên hàm $I = \\int \\frac{dx}{2x^2+x-1}$.",
+    "question": "Họ nguyên hàm của hàm số $f(x) = \\frac{1}{x^2} - x^2 - \\frac{1}{3}$ là",
     "options": [
-      "A. $I = \\frac{1}{3} \\ln|\\frac{2x-1}{x+1}| + C$",
-      "B. $I = \\ln|\\frac{2x-1}{x+1}| + C$",
-      "C. $I = \\frac{2}{3} \\ln|\\frac{2x-1}{x+1}| + C$",
-      "D. $I = \\frac{1}{3} \\ln\\frac{(2x-1)^2}{x+1} + C$"
+      "A. $\\frac{-x^4 + x^2 + 3}{3x} + C$.",
+      "B. $-\\frac{2}{x^3} - 2x + C$.",
+      "C. $\\frac{x^4 + x^2 - 3}{3x} + C$.",
+      "D. $-\\frac{x^3}{3} - \\frac{1}{x} - \\frac{x}{3} + C$."
     ],
-    "answer": "A",
-    "explanation": "**Chọn A.**\n**Ta có:** $I = \\int \\frac{dx}{2x^2+x-1} = \\int \\frac{dx}{(2x-1)(x+1)} = \\frac{1}{3} \\ln|\\frac{2x-1}{x+1}| + C$."
+    "answer": "D",
+    "explanation": "**Chọn D.**\nTa có $\\int (\\frac{1}{x^2} - x^2 - \\frac{1}{3}) dx = \\int (x^{-2} - x^2 - \\frac{1}{3}) dx = -\\frac{1}{x} - \\frac{x^3}{3} - \\frac{x}{3} + C$."
   },
   {
     "id": 11,
-    "question": "Nguyên hàm của hàm số $f(x) = \\frac{1}{x^2+4x-5}$ là:",
+    "question": "Họ nguyên hàm của hàm số $f(x) = 7x^6 + \\frac{1}{x} + \\frac{1}{x^2} - 2$ là",
     "options": [
-      "A. $\\frac{1}{6} \\ln|\\frac{x-1}{x+5}| + C$",
-      "B. $\\frac{1}{6} \\ln|\\frac{x+5}{x-1}| + C$",
-      "C. $\\frac{1}{6} \\ln|\\frac{x+1}{x-5}| + C$",
-      "D. $-\\frac{1}{6} \\ln|\\frac{x-1}{x+5}| + C$"
+      "A. $x^7 + \\ln|x| - \\frac{1}{x} - 2x$.",
+      "B. $x^7 + \\ln|x| + \\frac{1}{x} - 2x + C$.",
+      "C. $x^7 + \\ln x + \\frac{1}{x} - 2x + C$.",
+      "D. $x^7 + \\ln|x| - \\frac{1}{x} - 2x + C$."
     ],
-    "answer": "A",
-    "explanation": "**Chọn A.**\n$\\int \\frac{dx}{x^2+4x-5} = \\int \\frac{dx}{(x+5)(x-1)} = \\frac{1}{6} \\ln|\\frac{x-1}{x+5}| + C$."
+    "answer": "D",
+    "explanation": "**Chọn D.**\n$\\int f(x) dx = x^7 + \\ln|x| - \\frac{1}{x} - 2x + C$."
   },
   {
     "id": 12,
-    "question": "Tính nguyên hàm $I = \\int \\frac{x-5}{x^2-1} dx$.",
+    "question": "Nguyên hàm của $f(x) = x^3 - x^2 + 2\\sqrt{x}$ là",
     "options": [
-      "A. $I = \\frac{3}{2} \\ln|\\frac{x+1}{x-1}| + C$",
-      "B. $I = \\frac{3}{2} \\ln|\\frac{x-1}{x+1}| + C$",
-      "C. $I = \\ln|\\frac{(x+1)^3}{(x-1)^2}| + C$",
-      "D. $I = \\ln|\\frac{(x+1)^2}{(x-1)^3}| + C$"
+      "A. $\\frac{1}{4}x^4 - x^3 + \\frac{4}{3}\\sqrt{x^3} + C$.",
+      "B. $\\frac{1}{4}x^4 - \\frac{1}{3}x^3 + \\frac{4}{3}\\sqrt{x^3} + C$.",
+      "C. $\\frac{1}{4}x^4 - x^3 + \\frac{2}{3}\\sqrt{x^3} + C$.",
+      "D. $\\frac{1}{4}x^4 - \\frac{1}{3}x^3 + \\frac{2}{3}\\sqrt{x^3} + C$."
     ],
-    "answer": "C",
-    "explanation": "**Chọn C.**\n**Ta có:** $\\frac{x-5}{x^2-1} = \\frac{-2}{x-1} + \\frac{3}{x+1} \\Rightarrow I = -2 \\ln|x-1| + 3 \\ln|x+1| + C = \\ln|\\frac{(x+1)^3}{(x-1)^2}| + C$."
+    "answer": "B",
+    "explanation": "**Chọn B.**\nTa có: $\\int (x^3 - x^2 + 2\\sqrt{x}) dx = \\frac{1}{4}x^4 - \\frac{1}{3}x^3 + \\frac{4}{3}\\sqrt{x^3} + C$."
   },
   {
     "id": 13,
-    "question": "Họ nguyên hàm của hàm số $\\int \\frac{2x+3}{2x^2-x-1} dx$ là:",
+    "question": "$\\int (x^2 + 2x^3) dx$ có dạng $\\frac{a}{3}x^3 + \\frac{b}{4}x^4 + C$, trong đó $a, b$ là hai số nguyên. Tích $ab$ bằng",
     "options": [
-      "A. $\\frac{2}{3} \\ln|2x+1| + \\frac{5}{3} \\ln|x-1| + C$",
-      "B. $-\\frac{2}{3} \\ln|2x+1| + \\frac{5}{3} \\ln|x-1| + C$",
-      "C. $\\frac{2}{3} \\ln|2x+1| - \\frac{5}{3} \\ln|x-1| + C$",
-      "D. $-\\frac{1}{3} \\ln|2x+1| + \\frac{5}{3} \\ln|x-1| + C$"
+      "A. 2.",
+      "B. 1.",
+      "C. 9.",
+      "D. 7."
     ],
-    "answer": "B",
-    "explanation": "**Chọn B.**\n$\\frac{2x+3}{(2x+1)(x-1)} = \\frac{5}{3(x-1)} - \\frac{4}{3(2x+1)} \\Rightarrow I = \\frac{5}{3} \\ln|x-1| - \\frac{2}{3} \\ln|2x+1| + C$."
+    "answer": "A",
+    "explanation": "**Chọn A.**\nTheo đề, ta cần tìm $\\int (x^2 + 2x^3) dx$. Sau đó, ta xác định giá trị của $a$.\nTa có: $\\int (x^2 + 2x^3) dx = \\frac{1}{3}x^3 + \\frac{1}{2}x^4 + C$.\nSuy ra để $\\int (x^2 + x^3) dx$ có dạng $\\frac{a}{3}x^3 + \\frac{b}{4}x^4 + C$ thì $a = 1$, $b = 2$. Vậy $ab=2$."
   },
   {
     "id": 14,
-    "question": "Một nguyên hàm của hàm số $f(x) = \\frac{x}{1-x^2}$ là hàm số nào?",
+    "question": "Họ nguyên hàm của hàm số $f(x) = \\frac{2}{\\sqrt{x}} + \\frac{3}{x}$ là:",
     "options": [
-      "A. $\\frac{1}{2} \\ln|\\frac{x-1}{x+1}|$",
-      "B. $-\\frac{1}{2} \\ln|\\frac{x-1}{x+1}|$",
-      "C. $\\frac{1}{2} \\ln|x^2-1|$",
-      "D. $-\\frac{1}{2} \\ln|x^2-1|$"
+      "A. $4\\sqrt{x} + 3\\ln|x| + C$.",
+      "B. $2\\sqrt{x} + 3\\ln|x| + C$.",
+      "C. $(4\\sqrt{x})^{-1} + 3\\ln|x| + C$.",
+      "D. $16\\sqrt{x} - 3\\ln|x| + C$."
     ],
-    "answer": "D",
-    "explanation": "**Chọn D.**\n$F(x) = \\int \\frac{x}{1-x^2} dx = -\\frac{1}{2} \\int \\frac{1}{1-x^2} d(1-x^2) = -\\frac{1}{2} \\ln|1-x^2| + C = -\\frac{1}{2} \\ln|x^2-1| + C$."
+    "answer": "A",
+    "explanation": "**Chọn A.**\nTa có: $\\int (\\frac{2}{\\sqrt{x}} + \\frac{3}{x}) dx = 4\\sqrt{x} + 3\\ln|x| + C$."
   },
   {
     "id": 15,
-    "question": "Họ nguyên hàm của hàm số $f(x) = \\frac{7x-1}{x^2+x-2}$ là hàm số nào?",
+    "question": "Tìm nguyên hàm của hàm số $f(x) = 7^x$.",
     "options": [
-      "A. $-2 \\ln|x-1| - 5 \\ln|x+2| + C$",
-      "B. $-2 \\ln|x-1| + 5 \\ln|x+2| + C$",
-      "C. $2 \\ln|x-1| + 5 \\ln|x+2| + C$",
-      "D. $2 \\ln|x-1| - 5 \\ln|x+2| + C$"
+      "A. $\\int 7^x dx = 7^x \\ln 7 + C$.",
+      "B. $\\int 7^x dx = 7^{x+1} + C$.",
+      "C. $\\int 7^x dx = \\frac{7^x}{\\ln 7} + C$.",
+      "D. $\\int 7^x dx = \\frac{7^{x+1}}{x+1} + C$."
     ],
     "answer": "C",
-    "explanation": "**Chọn C.**\n$f(x) = \\frac{2}{x-1} + \\frac{5}{x+2} \\Rightarrow F(x) = 2 \\ln|x-1| + 5 \\ln|x+2| + C$."
+    "explanation": "**Chọn C.**\n$\\int 7^x dx = \\frac{7^x}{\\ln 7} + C$."
   },
   {
     "id": 16,
-    "question": "Họ nguyên hàm của hàm số $f(x) = \\frac{x+1}{x^2-3x+2}$ là hàm số nào?",
+    "question": "Tìm nguyên hàm của hàm số $f(x) = \\cos 3x$.",
     "options": [
-      "A. $3 \\ln|x-2| - 2 \\ln|x-1| + C$",
-      "B. $2 \\ln|x-2| - 3 \\ln|x-1| + C$",
-      "C. $3 \\ln|x-2| + 2 \\ln|x-1| + C$",
-      "D. $2 \\ln|x-2| + 3 \\ln|x-1| + C$"
+      "A. $\\int \\cos 3x dx = 3\\sin 3x + C$.",
+      "B. $\\int \\cos 3x dx = \\frac{\\sin 3x}{3} + C$.",
+      "C. $\\int \\cos 3x dx = \\sin 3x + C$.",
+      "D. $\\int \\cos 3x dx = \\cos 3x + C$."
     ],
-    "answer": "A",
-    "explanation": "**Chọn A.**\n$f(x) = \\frac{3}{x-2} - \\frac{2}{x-1} \\Rightarrow F(x) = 3 \\ln|x-2| - 2 \\ln|x-1| + C$."
+    "answer": "B",
+    "explanation": "**Chọn B.**\n$\\int \\cos 3x dx = \\frac{\\sin 3x}{3} + C$."
   },
   {
     "id": 17,
-    "question": "Tính nguyên hàm $I = \\int \\frac{2x+1}{(3x+2)^2} dx$.",
+    "question": "Tìm nguyên hàm của hàm số $f(x) = 2\\sin x$.",
     "options": [
-      "A. $I = \\frac{2}{3} \\ln|3x+2| - \\frac{5}{9} \\cdot \\frac{1}{3x+2} + C$",
-      "B. $I = \\frac{2}{3} \\ln|3x+2| + \\frac{1}{3} \\cdot \\frac{1}{3x+2} + C$",
-      "C. $I = \\frac{2}{3} \\ln|3x+2| + \\frac{1}{9} \\cdot \\frac{1}{3x+2} + C$",
-      "D. $I = \\frac{2}{9} \\ln|3x+2| + \\frac{1}{9} \\cdot \\frac{1}{3x+2} + C$"
+      "A. $\\int 2\\sin x dx = 2\\cos x + C$.",
+      "B. $\\int 2\\sin x dx = \\sin^2 x + C$.",
+      "C. $\\int 2\\sin x dx = \\sin 2x + C$.",
+      "D. $\\int 2\\sin x dx = -2\\cos x + C$."
     ],
     "answer": "D",
-    "explanation": "**Chọn D.**\n**Ta có:** $I = \\int \\frac{2x+1}{(3x+2)^2} dx = \\int (\\frac{2}{3(3x+2)} - \\frac{1}{3(3x+2)^2}) dx = \\frac{2}{9} \\ln|3x+2| + \\frac{1}{9(3x+2)} + C$."
+    "explanation": "**Chọn D.**\n$\\int 2\\sin x dx = -2\\cos x + C$."
   },
   {
     "id": 18,
-    "question": "Tính nguyên hàm $I = \\int \\frac{2x+3}{4x^2-4x+1} dx$.",
+    "question": "Họ nguyên hàm của hàm số $f(x) = 3x^2 + \\sin x$ là",
     "options": [
-      "A. $I = \\frac{2}{1-2x} - \\ln|2x-1| + C$",
-      "B. $I = \\frac{2}{2-4x} + 2 \\ln |2x-1| + C$",
-      "C. $I = \\frac{2}{2x-1} + \\frac{1}{2} \\ln|2x-1| + C$",
-      "D. $I = \\frac{2}{1-2x} + \\frac{1}{2} \\ln|2x-1| + C$"
+      "A. $x^3 + \\cos x + C$.",
+      "B. $x^3 + \\sin x + C$.",
+      "C. $x^3 - \\cos x + C$.",
+      "D. $3x^3 - \\sin x + C$."
     ],
-    "answer": "D",
-    "explanation": "**Chọn D.**\n$I = \\int \\frac{2x-1+4}{(2x-1)^2} dx = \\int (\\frac{1}{2x-1} + \\frac{4}{(2x-1)^2}) dx = \\frac{1}{2} \\ln|2x-1| - \\frac{2}{2x-1} + C = \\frac{1}{2} \\ln|2x-1| + \\frac{2}{1-2x} + C$."
+    "answer": "C",
+    "explanation": "**Chọn C.**\nHọ nguyên hàm của hàm số $f(x) = 3x^2 + \\sin x$ là $x^3 - \\cos x + C$."
   },
   {
     "id": 19,
-    "question": "Tìm nguyên hàm $I = \\int \\frac{2x^2+3x+4}{x+1} dx$.",
+    "question": "Tìm nguyên hàm $F(x)$ của hàm số $f(x) = \\sin x + \\cos x$ thỏa mãn $F(\\frac{\\pi}{2}) = 2$.",
     "options": [
-      "A. $I = x^2 - 3 \\ln|x+1| + C$",
-      "B. $I = x^2 + 3 \\ln|x+1| + C$",
-      "C. $I = x^2 + x - 3 \\ln|x+1| + C$",
-      "D. $I = x^2 + x + 3 \\ln|x+1| + C$"
+      "A. $F(x) = \\cos x - \\sin x + 3$.",
+      "B. $F(x) = -\\cos x + \\sin x + 3$.",
+      "C. $F(x) = -\\cos x + \\sin x - 1$.",
+      "D. $F(x) = -\\cos x + \\sin x + 1$."
     ],
     "answer": "D",
-    "explanation": "**Chọn D.**\n$\\frac{2x^2+3x+4}{x+1} = 2x+1+\\frac{3}{x+1} \\Rightarrow I = x^2+x+3 \\ln|x+1|+C$."
+    "explanation": "**Chọn D.**\n$F(x) = \\int (\\sin x + \\cos x) dx = -\\cos x + \\sin x + C$\n$\\Rightarrow F(\\frac{\\pi}{2}) = 1 + C = 2 \\Rightarrow C = 1$."
   },
   {
     "id": 20,
-    "question": "Tìm nguyên hàm $I = \\int \\frac{x^3}{x+1} dx$.",
+    "question": "Cho hàm số $y = f(x)$ thỏa mãn $f'(x) = 3 - 5\\sin x$ và $f(0) = 10$. Mệnh đề nào dưới đây đúng?",
     "options": [
-      "A. $I = \\frac{x^3}{3} + \\frac{x^2}{2} + x - \\ln|x+1| + C$",
-      "B. $I = \\frac{x^3}{3} + \\frac{x^2}{2} + x + \\ln|x+1| + C$",
-      "C. $I = \\frac{x^3}{3} - \\frac{x^2}{2} + x - \\ln|x+1| + C$",
-      "D. $I = \\frac{x^3}{3} - \\frac{x^2}{2} + x + \\ln|x+1| + C$"
+      "A. $f(x) = 3x + 5\\cos x + 5$.",
+      "B. $f(x) = 3x + 5\\cos x + 2$.",
+      "C. $f(x) = 3x - 5\\cos x + 2$.",
+      "D. $f(x) = 3x - 5\\cos x + 15$."
     ],
-    "answer": "C",
-    "explanation": "**Chọn C.**\n$\\frac{x^3}{x+1} = x^2-x+1-\\frac{1}{x+1} \\Rightarrow I = \\frac{x^3}{3}-\\frac{x^2}{2}+x-\\ln|x+1|+C$."
+    "answer": "A",
+    "explanation": "**Chọn A.**\n$f(x) = \\int (3 - 5\\sin x) dx = 3x + 5\\cos x + C \\Rightarrow f(0) = 5 + C = 10 \\Rightarrow C = 5$."
   },
   {
     "id": 21,
-    "question": "Tìm nguyên hàm $I = \\int \\frac{x^3+2x^2-x}{x+1} dx$.",
+    "question": "Cho $F(x)$ là một nguyên hàm của hàm số $f(x)=e^x + 2x$ thỏa mãn $F(0) = \\frac{3}{2}$. Tìm $F(x)$.",
     "options": [
-      "A. $\\frac{x^3}{3} - \\frac{x^2}{2} - 2x + 2 \\ln |x+1| + C$",
-      "B. $\\frac{x^3}{3} + \\frac{x^2}{2} - 2x + 2 \\ln |x+1| + C$",
-      "C. $\\frac{x^3}{3} - \\frac{x^2}{2} + 2x + 2 \\ln |x+1| + C$",
-      "D. $\\frac{x^3}{3} + \\frac{x^2}{2} - 2x - 2 \\ln |x+1| + C$"
+      "A. $F(x) = e^x + x^2 + \\frac{3}{2}$.",
+      "B. $F(x) = 2e^x + x^2 - \\frac{1}{2}$.",
+      "C. $F(x) = e^x + x^2 + \\frac{5}{2}$.",
+      "D. $F(x) = e^x + x^2 + \\frac{1}{2}$."
     ],
-    "answer": "B",
-    "explanation": "**Chọn B.**\n$\\frac{x^3+2x^2-x}{x+1} = x^2+x-2+\\frac{2}{x+1} \\Rightarrow I = \\frac{x^3}{3}+\\frac{x^2}{2}-2x+2\\ln|x+1|+C$."
+    "answer": "D",
+    "explanation": "**Chọn D.**\n$F(x) = \\int (e^x + 2x)dx = e^x + x^2 + C$.\nTheo đề bài, $F(0) = e^0 + 0^2 + C = 1 + C = \\frac{3}{2} \\Rightarrow C = \\frac{1}{2}$.\nVậy $F(x) = e^x + x^2 + \\frac{1}{2}$."
   },
   {
     "id": 22,
-    "question": "Tìm một nguyên hàm $F(x)$ của hàm số $f(x) = \\frac{x^2}{x^2+3x+2}$ thỏa mãn $F(1) = \\ln 2$.",
+    "question": "Biết $F(x)$ là một nguyên hàm của hàm số $f(x)=\\frac{1}{x-1}$ và $F(2)=1$. Tính $F(3)$.",
     "options": [
-      "A. $F(x) = x + \\ln|x+1| - 4 \\ln|x+2| + 4 \\ln 3 - 1$",
-      "B. $F(x) = x + \\ln|x+1| - 4 \\ln|x+2| + 4 \\ln 3 + 1$"
+      "A. $F(3) = \\ln 2 - 1$.",
+      "B. $F(3) = \\ln 2 + 1$.",
+      "C. $F(3) = \\frac{1}{2}$.",
+      "D. $F(3) = \\frac{7}{4}$."
     ],
-    "answer": "A",
-    "explanation": "**Chọn A.**\n$f(x) = 1 + \\frac{1}{x+1} - \\frac{4}{x+2} \\Rightarrow F(x) = x + \\ln|x+1| - 4 \\ln|x+2| + C$.\n$F(1) = 1 + \\ln 2 - 4 \\ln 3 + C = \\ln 2 \\Rightarrow C = 4 \\ln 3 - 1$."
+    "answer": "B",
+    "explanation": "**Chọn B.**\n$F(x) = \\int \\frac{1}{x-1} dx = \\ln|x-1| + C$.\nTheo đề bài, $F(2) = \\ln|2-1| + C = \\ln(1) + C = 1 \\Rightarrow C = 1$.\nVậy $F(x) = \\ln|x-1| + 1$. Do đó $F(3) = \\ln|3-1| + 1 = \\ln 2 + 1$."
   },
   {
     "id": 23,
-    "question": "Tìm một nguyên hàm của hàm số $f(x) = \\frac{x^2-5x}{x^2-5x+6}$ thỏa mãn $F(4) = 6 \\ln 2$.",
+    "question": "Tìm họ nguyên hàm của hàm số $f(x)=x+2^x$.",
     "options": [
-      "A. $F(x) = x - 6 \\ln |\\frac{x-3}{x-2}| - 4$",
-      "B. $F(x) = x - 6 \\ln |\\frac{x-3}{x-2}| + 4$",
-      "C. $F(x) = x - 6 \\ln |\\frac{x-2}{x-3}| + 4$",
-      "D. $F(x) = x - 6 \\ln |\\frac{x-2}{x-3}| - 4$"
+      "A. $\\int f(x)dx=1+\\frac{2^x}{\\ln 2}+ C$.",
+      "B. $\\int f(x)dx=\\frac{x^2}{2}+\\frac{2^x}{\\ln 2}+ C$.",
+      "C. $\\int f(x)dx=\\frac{x^2}{2}+2^x \\ln 2+ C$.",
+      "D. $\\int f(x)dx=\\frac{x^2}{2}+2^x+ C$."
     ],
-    "answer": "A",
-    "explanation": "**Chọn A.**\n$f(x) = 1 - \\frac{6}{(x-2)(x-3)} = 1 - 6(\\frac{1}{x-3} - \\frac{1}{x-2}) \\Rightarrow F(x) = x - 6 \\ln|x-3| + 6 \\ln|x-2| + C$.\n$F(4) = 4 - 0 + 6 \\ln 2 + C = 6 \\ln 2 \\Rightarrow C = -4$."
+    "answer": "B",
+    "explanation": "**Chọn B.**\nÁp dụng công thức nguyên hàm cơ bản: $\\int (x+2^x)dx = \\frac{x^2}{2} + \\frac{2^x}{\\ln 2} + C$."
   },
   {
     "id": 24,
-    "question": "Hàm số $f(x) = \\frac{5x+11}{x^2+3x-10}$ có một nguyên hàm $F(x)$ thỏa mãn $F(3) = 3 \\ln 8$. Tìm $e^{F(-6)}$.",
+    "question": "Hàm số $F(x)= 2\\sin x - 3\\cos x$ là một nguyên hàm của hàm số nào sau đây?",
     "options": [
-      "A. $e^{F(-6)} = 64$",
-      "B. $e^{F(-6)} = 512$",
-      "C. $e^{F(-6)} = 4096$",
-      "D. $e^{F(-6)} = 32768$"
+      "A. $f(x) = 2\\cos x + 3\\sin x$.",
+      "B. $f(x) = -2\\cos x + 3\\sin x$.",
+      "C. $f(x) = -2\\cos x - 3\\sin x$.",
+      "D. $f(x) = 2\\cos x - 3\\sin x$."
     ],
-    "answer": "C",
-    "explanation": "**Chọn C.**\n$f(x) = \\frac{3}{x-2} + \\frac{2}{x+5} \\Rightarrow F(x) = 3 \\ln|x-2| + 2 \\ln|x+5| + C$.\n$F(3) = 0 + 2 \\ln 8 + C = 3 \\ln 8 \\Rightarrow C = \\ln 8$.\n$F(-6) = 3 \\ln 8 + 0 + \\ln 8 = 4 \\ln 8 = \\ln 4096 \\Rightarrow e^{F(-6)} = 4096$."
+    "answer": "A",
+    "explanation": "**Chọn A.**\nĐể tìm $f(x)$, ta lấy đạo hàm của $F(x)$: $f(x) = F'(x) = (2\\sin x - 3\\cos x)' = 2\\cos x - 3(-\\sin x) = 2\\cos x + 3\\sin x$."
   },
   {
     "id": 25,
-    "question": "Hàm số $f(x) = \\frac{9x-10}{6x^2-11x+3}$ có một nguyên hàm là $F(x)$ thỏa mãn $F(1) = \\ln 2$. Gọi $x_1, x_2$ là hai nghiệm của phương trình $F(x) = \\ln|3x-1| + \\frac{1}{2} \\ln 3$. Tính $3^{x_1} + 3^{x_2}$.",
+    "question": "Tìm họ nguyên hàm của hàm số $f(x)=\\frac{1}{2}(x+\\sin \\frac{x}{2})$.",
     "options": [
-      "A. $3^{x_1} + 3^{x_2} = 28$",
-      "B. $3^{x_1} + 3^{x_2} = 4$",
-      "C. $3^{x_1} + 3^{x_2} = \\frac{730}{27}$",
-      "D. $3^{x_1} + 3^{x_2} = \\frac{82}{27}$"
+      "A. $\\int f(x)dx=\\frac{1}{4}x^2 - \\cos\\frac{x}{2} + C$.",
+      "B. $\\int f(x)dx=x^2 + \\frac{1}{2}\\cos\\frac{x}{2} + C$.",
+      "C. $\\int f(x)dx=\\frac{1}{4}x^2 - \\frac{1}{2}\\cos x + C$.",
+      "D. $\\int f(x)dx=\\frac{1}{4}x^2 - 2\\cos\\frac{x}{2} + C$."
     ],
     "answer": "A",
-    "explanation": "**Chọn A.**\n$f(x) = \\frac{3}{3x-1} + \\frac{1}{2x-3} \\Rightarrow F(x) = \\ln|3x-1| + \\frac{1}{2} \\ln|2x-3| + C$.\n$F(1) = \\ln 2 + 0 + C = \\ln 2 \\Rightarrow C = 0$.\n$F(x) = \\ln|3x-1| + \\frac{1}{2} \\ln 3 \\Rightarrow |2x-3| = 3 \\Rightarrow x=3, x=0 \\Rightarrow 3^3+3^0=28$."
+    "explanation": "**Chọn A.**\n$\\int \\frac{1}{2}(x+\\sin \\frac{x}{2})dx = \\frac{1}{2} \\int (x+\\sin \\frac{x}{2})dx = \\frac{1}{2} (\\frac{x^2}{2} - \\frac{\\cos(x/2)}{1/2}) + C = \\frac{1}{2}(\\frac{x^2}{2} - 2\\cos\\frac{x}{2}) + C = \\frac{1}{4}x^2 - \\cos\\frac{x}{2} + C$."
   },
   {
     "id": 26,
-    "question": "Tìm một nguyên hàm $F(x)$ của hàm số $f(x) = \\frac{x^2}{x^2-7x+12}$ thỏa mãn $F(5) = 5$.",
+    "question": "Hàm số $F(x)= 2\\sin x-3\\cos x$ là một nguyên hàm của hàm số nào sau đây?",
     "options": [
-      "A. $F(x) = x + 16 \\ln|x-4| - 9 \\ln|x-3| - 9 \\ln 2$",
-      "B. $F(x) = x - 16 \\ln|x-4| + 9 \\ln|x-3| + 9 \\ln 2$",
-      "C. $F(x) = x + 16 \\ln|x-4| - 9 \\ln|x-3| + 9 \\ln 2$",
-      "D. $F(x) = x - 16 \\ln|x-4| + 9 \\ln|x-3| - 9 \\ln 2$"
+      "A. $f(x) = 2\\cos x + 3\\sin x$.",
+      "B. $f(x) = -2\\cos x + 3\\sin x$.",
+      "C. $f(x) = -2\\cos x - 3\\sin x$.",
+      "D. $f(x) = 2\\cos x - 3\\sin x$."
     ],
-    "answer": "C",
-    "explanation": "**Chọn C.**\n$f(x) = 1 + \\frac{16}{x-4} - \\frac{9}{x-3} \\Rightarrow F(x) = x + 16 \\ln|x-4| - 9 \\ln|x-3| + C$.\n$F(5) = 5 + 0 - 9 \\ln 2 + C = 5 \\Rightarrow C = 9 \\ln 2$."
+    "answer": "A",
+    "explanation": "**Chọn A.**\n$F'(x) = (2\\sin x-3\\cos x)' = 2\\cos x + 3\\sin x$."
   },
   {
     "id": 27,
-    "question": "Tìm nguyên hàm của hàm số $f(x) = \\frac{1}{x^2+(a+b)x+ab}$.",
+    "question": "Cho $\\int f(x)dx = F(x)+C$. Với $a \\neq 0$, khẳng định nào sau đây đúng?",
     "options": [
-      "A. $\\int f(x) dx = \\ln|\\frac{x+b}{x+a}| + C$",
-      "B. $\\int f(x) dx = \\frac{1}{b-a} \\ln|\\frac{x+a}{x+b}| + C$",
-      "C. $\\int f(x) dx = \\ln|\\frac{x+a}{x+b}| + C$",
-      "D. $\\int f(x) dx = \\frac{1}{b-a} \\ln|\\frac{x+b}{x+a}| + C$"
+      "A. $\\int f(ax+b)dx = F(ax+b)+C$.",
+      "B. $\\int f(ax+b)dx = aF(ax+b)+C$.",
+      "C. $\\int f(ax+b)dx = \\frac{1}{ax+b}F(ax+b)+C$.",
+      "D. $\\int f(ax+b)dx = \\frac{1}{a}F(ax+b)+C$."
     ],
-    "answer": "B",
-    "explanation": "**Chọn B.**\n$\\frac{1}{(x+a)(x+b)} = \\frac{1}{b-a} (\\frac{1}{x+a} - \\frac{1}{x+b}) \\Rightarrow I = \\frac{1}{b-a} \\ln|\\frac{x+a}{x+b}| + C$."
+    "answer": "D",
+    "explanation": "**Chọn D.**\nĐây là tính chất của nguyên hàm của hàm hợp: $\\int f(ax+b)dx = \\frac{1}{a}F(ax+b)+C$."
   },
   {
     "id": 28,
-    "question": "Hàm số $f(x) = \\frac{x^4}{x^2-1}$ có một nguyên hàm là $F(x)$ thỏa mãn $F(0) = -\\frac{14}{3}$. Tính $e^{F(2)}$.",
+    "question": "Hàm số nào sau đây không phải là một nguyên hàm của hàm số $f(x)=(3x+1)^5$?",
     "options": [
-      "A. $e^{F(2)} = \\frac{2\\sqrt{3}}{3}$",
-      "B. $e^{F(2)} = \\frac{\\sqrt{3}}{2}$",
-      "C. $e^{F(2)} = \\sqrt{3}$",
-      "D. $e^{F(2)} = \\frac{\\sqrt{3}}{3}$"
+      "A. $F(x)=\\frac{(3x+1)^6}{18}+8$.",
+      "B. $F(x)=\\frac{(3x+1)^6}{18}-2$.",
+      "C. $F(x)=\\frac{(3x+1)^6}{18}$.",
+      "D. $F(x)=\\frac{(3x+1)^6}{6}$."
     ],
     "answer": "D",
-    "explanation": "**Chọn D.**\n$f(x) = x^2+1+\\frac{1}{2}(\\frac{1}{x-1}-\\frac{1}{x+1}) \\Rightarrow F(x) = \\frac{x^3}{3}+x+\\frac{1}{2}\\ln|\\frac{x-1}{x+1}|+C$.\n$F(0)=C=-14/3$. $F(2) = 8/3+2+1/2\\ln(1/3)-14/3 = 1/2\\ln(1/3) \\Rightarrow e^{F(2)}=\\sqrt{1/3}=\\sqrt{3}/3$."
+    "explanation": "**Chọn D.**\nTa có $\\int(3x+1)^5 dx = \\frac{(3x+1)^6}{3 \\cdot 6} + C' = \\frac{(3x+1)^6}{18} + C'$. Các đáp án A, B, C đều có dạng trên. Đáp án D sai hệ số."
   },
   {
     "id": 29,
-    "question": "Hàm số $f(x) = \\frac{2x-1}{x^2+x-2}$ có một nguyên hàm là $F(x)$ thỏa mãn $F(2) = \\frac{10 \\ln 2}{3}$. Tính $e^{F(-1)}$.",
+    "question": "Tìm họ nguyên hàm của hàm số $f(x)=\\frac{1}{2x+1}$.",
     "options": [
-      "A. $e^{F(-1)} = \\sqrt{2^5}$",
-      "B. $e^{F(-1)} = \\ln \\sqrt{2}$",
-      "C. $e^{F(-1)} = \\sqrt[3]{2}$",
-      "D. $e^{F(-1)} = \\sqrt[3]{4^5}$"
+      "A. $\\int f(x)dx = \\frac{1}{2}\\ln(2x+1)+C$.",
+      "B. $\\int f(x)dx = -\\frac{1}{(2x+1)^2}+C$.",
+      "C. $\\int f(x)dx = \\ln|2x+1|+C$.",
+      "D. $\\int f(x)dx = \\frac{1}{2}\\ln|2x+1|+C$."
     ],
-    "answer": "C",
-    "explanation": "**Chọn C.**\n$f(x) = \\frac{1}{3(x-1)} + \\frac{5}{3(x+2)} \\Rightarrow F(x) = \\frac{1}{3}\\ln|x-1| + \\frac{5}{3}\\ln|x+2| + C$.\n$F(2) = 0 + 5/3\\ln 4 + C = 10/3\\ln 2 \\Rightarrow C=0$.\n$F(-1) = 1/3\\ln|2| + 5/3\\ln|1| = 1/3\\ln 2 \\Rightarrow e^{F(-1)}=\\sqrt[3]{2}$."
+    "answer": "D",
+    "explanation": "**Chọn D.**\nSử dụng công thức nguyên hàm của hàm hợp: $\\int \\frac{1}{ax+b}dx = \\frac{1}{a}\\ln|ax+b|+C$. Ta có $\\int \\frac{1}{2x+1}dx = \\frac{1}{2}\\ln|2x+1|+C$."
   },
   {
     "id": 30,
-    "question": "Hàm số $y = \\frac{5x+3}{x^2+7x+12}$ có một nguyên hàm $F(x)$ thỏa mãn $F(-2) = 18 \\ln 2$. Tìm $F(-5)$.",
+    "question": "Tìm nguyên hàm $F(x)$ của hàm số $f(x)=e^x(1-3e^{-2x})$.",
     "options": [
-      "A. $F(-5) = -33 \\ln 2$",
-      "B. $F(-5) = -21 \\ln 2$",
-      "C. $F(-5) = -17 \\ln 2$",
-      "D. $F(-5) = -11 \\ln 2$"
+      "A. $F(x) = e^x - 3e^{-3x} + C$.",
+      "B. $F(x) = e^x + 3e^{-x} + C$.",
+      "C. $F(x) = e^x - 3e^{-x} + C$.",
+      "D. $F(x) = e^x + 3e^{-2x} + C$."
     ],
-    "answer": "D",
-    "explanation": "**Chọn D.**\n$y = \\frac{17}{x+4} - \\frac{12}{x+3} \\Rightarrow F(x) = 17\\ln|x+4|-12\\ln|x+3|+C$.\n$F(-2) = 17\\ln 2 + C = 18\\ln 2 \\Rightarrow C=\\ln 2$.\n$F(-5) = 17\\ln 1 - 12\\ln 2 + \\ln 2 = -11\\ln 2$."
+    "answer": "B",
+    "explanation": "**Chọn B.**\n$f(x) = e^x(1-3e^{-2x}) = e^x - 3e^{x-2x} = e^x - 3e^{-x}$.\n$\\Rightarrow \\int f(x)dx = \\int (e^x - 3e^{-x})dx = e^x - 3(\\frac{e^{-x}}{-1}) + C = e^x + 3e^{-x} + C$."
   },
   {
     "id": 31,
-    "question": "Tìm một nguyên hàm $F(x)$ của hàm số $f(x) = \\frac{-x^3+5x+2}{4-x^2}$ thỏa mãn $F(1) = \\frac{3}{2}$.",
+    "question": "Gọi $F(x)$ là một nguyên hàm của hàm số $f(x) = \\cos 5x \\cdot \\cos x$ thỏa mãn $F(\\frac{\\pi}{6}) = 0$. Tính $F(\\frac{\\pi}{3})$.",
     "options": [
-      "A. $F(x) = \\frac{x^3}{3} + \\ln|x-2| - 1$",
-      "B. $F(x) = \\frac{x^3}{3} - \\ln|x-2| - 1$",
-      "C. $F(x) = \\frac{x^2+2}{2} - \\ln|2-x|$",
-      "D. $F(x) = \\frac{x^2}{2} - \\ln|2-x|$"
+      "A. $F(\\frac{\\pi}{12}) = \\frac{\\sqrt{3}}{6}$.",
+      "B. $F(\\frac{\\pi}{6}) = 0$.",
+      "C. $F(\\frac{\\pi}{3}) = \\frac{\\sqrt{3}}{8}$.",
+      "D. $F(\\frac{\\pi}{3}) = \\frac{\\sqrt{3}}{6}$."
     ],
     "answer": "C",
-    "explanation": "**Chọn C.**\n$f(x) = x - \\frac{1}{x-2} \\Rightarrow F(x) = x^2/2 - \\ln|x-2| + C$.\n$F(1) = 1/2 + C = 3/2 \\Rightarrow C=1$.\n$F(x) = x^2/2+1 - \\ln|x-2| = (x^2+2)/2 - \\ln|2-x|$."
+    "explanation": "**Chọn C.**\nTa có $f(x) = \\cos 5x \\cos x = \\frac{1}{2}(\\cos 6x + \\cos 4x)$.\n$F(x) = \\int \\frac{1}{2}(\\cos 6x + \\cos 4x)dx = \\frac{1}{2}(\\frac{\\sin 6x}{6} + \\frac{\\sin 4x}{4}) + C$.\nTheo đề bài, $F(\\frac{\\pi}{6}) = 0 \\Leftrightarrow \\frac{1}{2}(\\frac{\\sin \\pi}{6} + \\frac{\\sin(2\\pi/3)}{4}) + C = 0 \\Leftrightarrow \\frac{1}{2}(0 + \\frac{\\sqrt{3}/2}{4}) + C = 0 \\Leftrightarrow \\frac{\\sqrt{3}}{16} + C = 0 \\Leftrightarrow C = -\\frac{\\sqrt{3}}{16}$.\nVậy $F(\\frac{\\pi}{3}) = \\frac{1}{2}(\\frac{\\sin 2\\pi}{6} + \\frac{\\sin(4\\pi/3)}{4}) - \\frac{\\sqrt{3}}{16} = \\frac{1}{2}(0 + \\frac{-\\sqrt{3}/2}{4}) - \\frac{\\sqrt{3}}{16} = -\\frac{\\sqrt{3}}{16} - \\frac{\\sqrt{3}}{16} = -\\frac{\\sqrt{3}}{8}$.\n(Lưu ý: Có thể có sai sót trong đề bài hoặc đáp án. Kết quả tính toán là $-\\frac{\\sqrt{3}}{8}$, trong khi đáp án C là $\\frac{\\sqrt{3}}{8}$)."
   },
   {
     "id": 32,
-    "question": "Hàm số $f(x) = \\frac{1}{x^2-5x+6}$ có một nguyên hàm là $F(x)$ thỏa mãn $F(4) = 1 - \\ln 2$. Phương trình $F(x) = 1$ có nghiệm $x = \\frac{a}{b}$, với $\\frac{a}{b}$ là phân số tối giản. Tìm $a+b$.",
+    "question": "Cho hàm số $f(x)$ thỏa mãn $f'(x)=1-4\\sin 2x$ và $f(0)=10$. Tính $f(\\frac{\\pi}{4})$.",
     "options": [
-      "A. $a+b = -2$",
-      "B. $a+b = 5$",
-      "C. $a+b = 7$",
-      "D. $a+b = 9$"
+      "A. $f(\\frac{\\pi}{4})=\\frac{\\pi}{4}+10$.",
+      "B. $f(\\frac{\\pi}{4})=\\frac{\\pi}{4}+12$.",
+      "C. $f(\\frac{\\pi}{4})=\\frac{\\pi}{4}+6$.",
+      "D. $f(\\frac{\\pi}{4})=\\frac{\\pi}{4}+8$."
     ],
-    "answer": "C",
-    "explanation": "**Chọn C.**\n$F(x) = \\ln|\\frac{x-3}{x-2}|+1$. $F(x)=1 \\Rightarrow x=5/2 \\Rightarrow a+b=7$."
+    "answer": "D",
+    "explanation": "**Chọn D.**\n$f(x) = \\int (1-4\\sin 2x)dx = x - 4(\\frac{-\\cos 2x}{2}) + C = x + 2\\cos 2x + C$.\nMà $f(0)=10 \\Rightarrow 0 + 2\\cos 0 + C = 10 \\Rightarrow 2+C=10 \\Rightarrow C=8$.\nVậy $f(x) = x + 2\\cos 2x + 8$. Do đó $f(\\frac{\\pi}{4}) = \\frac{\\pi}{4} + 2\\cos(\\frac{\\pi}{2}) + 8 = \\frac{\\pi}{4}+8$."
   },
   {
     "id": 33,
-    "question": "Tìm một nguyên hàm $F(x)$ của hàm số $f(x) = -\\frac{x}{(x+1)^2}$, biết rằng đồ thị của hàm số $y=F(x)$ đi qua gốc tọa độ O.",
+    "question": "Cho hàm số $f(x) = 2x+\\sin x + 2\\cos x$. Tìm nguyên hàm $F(x)$ của hàm số $f(x)$ thỏa mãn $F(0)=1$.",
     "options": [
-      "A. $F(x) = \\frac{x}{x+1} - \\ln|x+1|$"
+      "A. $F(x) = x^2 + \\cos x + 2\\sin x - 2$.",
+      "B. $F(x) = x^2 + \\cos x + 2\\sin x$.",
+      "C. $F(x) = x^2 - \\cos x + 2\\sin x$.",
+      "D. $F(x) = x^2 - \\cos x + 2\\sin x + 2$."
     ],
-    "answer": "A",
-    "explanation": "**Chọn A.**\n$f(x) = \\frac{1}{(x+1)^2} - \\frac{1}{x+1} \\Rightarrow F(x) = -\\frac{1}{x+1} - \\ln|x+1| + C$.\n$F(0)=-1+C=0 \\Rightarrow C=1$.\n$F(x) = 1 - \\frac{1}{x+1} - \\ln|x+1| = \\frac{x}{x+1} - \\ln|x+1|$."
+    "answer": "D",
+    "explanation": "**Chọn D.**\n$F(x) = \\int (2x+\\sin x+2\\cos x)dx = x^2 - \\cos x + 2\\sin x + C$.\n$F(0)=1 \\Rightarrow 0^2 - \\cos 0 + 2\\sin 0 + C = 1 \\Rightarrow -1+C=1 \\Rightarrow C=2$.\nVậy $F(x) = x^2 - \\cos x + 2\\sin x + 2$."
   },
   {
     "id": 34,
-    "question": "Hàm số $f(x) = \\frac{1}{x^2(x+1)}$ có một nguyên hàm là $F(x)$ thỏa mãn $F(1) = \\ln 2$. Tính $F(-2)$.",
+    "question": "Tìm nguyên hàm của hàm $f(x) = \\cos^2 x$.",
     "options": [
-      "A. $F(-2) = \\frac{5}{2} - \\ln \\frac{1}{2}$",
-      "B. $F(-2) = \\frac{5}{2} - \\ln 2$",
-      "C. $F(-2) = \\frac{3}{2} - \\ln \\frac{1}{2}$",
-      "D. $F(-2) = \\frac{3}{2} - \\ln 2$"
+      "A. $\\frac{x}{2} - \\frac{\\sin 2x}{4} + C$.",
+      "B. $\\frac{x}{2} - \\frac{\\cos 2x}{4} + C$.",
+      "C. $\\frac{x}{2} + \\frac{\\cos 2x}{4} + C$.",
+      "D. $\\frac{x}{2} + \\frac{\\sin 2x}{4} + C$."
     ],
     "answer": "D",
-    "explanation": "**Chọn D.**\n$F(x) = -1/x+\\ln|x+1|-\\ln|x|+C$. $F(1) = -1+\\ln 2+C = \\ln 2 \\Rightarrow C=1$.\n$F(-2) = 1/2+0-\\ln 2+1 = 3/2-\\ln 2$."
+    "explanation": "**Chọn D.**\nSử dụng công thức hạ bậc: $\\cos^2 x = \\frac{1+\\cos 2x}{2}$.\n$\\int \\cos^2 x dx = \\int \\frac{1+\\cos 2x}{2} dx = \\frac{1}{2}(x + \\frac{\\sin 2x}{2}) + C = \\frac{x}{2} + \\frac{\\sin 2x}{4} + C$."
   },
   {
     "id": 35,
-    "question": "Tìm một nguyên hàm $F(x)$ của hàm số $f(x) = \\frac{x-1}{x^2}$, biết đồ thị hàm số $y = F(x)$ đi qua điểm $M(e; 2+\\frac{1}{e})$.",
+    "question": "Biết $F(x)$ là một nguyên hàm của hàm $f(x) = 4^x$ thỏa mãn $F(1) = \\frac{3}{\\ln 2}$. Tìm $F(2)$.",
     "options": [
-      "A. $F(x) = \\ln x - \\frac{1}{x} + 2$",
-      "B. $F(x) = \\ln x + \\frac{1}{x} + 1$",
-      "C. $F(x) = \\ln x + \\frac{1}{x} - 2$",
-      "D. $F(x) = \\ln x - \\ln x^2 + 1$"
+      "A. $F(2)=\\frac{9}{\\ln 2}$.",
+      "B. $F(2)=\\frac{3}{\\ln 2}$.",
+      "C. $F(2)=\\frac{8}{\\ln 2}$.",
+      "D. $F(2)=\\frac{7}{\\ln 2}$."
     ],
-    "answer": "B",
-    "explanation": "**Chọn B.**\n$F(x) = \\ln|x|+1/x+C$. $F(e) = 1+1/e+C = 2+1/e \\Rightarrow C = 1$."
+    "answer": "C",
+    "explanation": "**Chọn C.**\nTa có $F(x) = \\int 4^x dx = \\frac{4^x}{\\ln 4} + C = \\frac{4^x}{2\\ln 2} + C$.\nTheo đề bài, $F(1) = \\frac{3}{\\ln 2} \\Leftrightarrow \\frac{4^1}{2\\ln 2} + C = \\frac{3}{\\ln 2} \\Leftrightarrow \\frac{2}{\\ln 2} + C = \\frac{3}{\\ln 2} \\Leftrightarrow C = \\frac{1}{\\ln 2}$.\nVậy $F(x) = \\frac{4^x}{2\\ln 2} + \\frac{1}{\\ln 2} = \\frac{4^x+2}{2\\ln 2}$.\nGiá trị của $F(2)$ là $F(2) = \\frac{4^2+2}{2\\ln 2} = \\frac{18}{2\\ln 2} = \\frac{9}{\\ln 2}$.\n(Lưu ý: Kết quả tính toán là $\\frac{9}{\\ln 2}$ (Đáp án A), nhưng đáp án của tài liệu là C. Có thể có sai sót trong đề bài, ví dụ nếu $F(1) = \\frac{2}{\\ln 2}$ thì $C=0$ và $F(2) = \\frac{8}{\\ln 2}$)."
   },
   {
     "id": 36,
-    "question": "Tìm một nguyên hàm $F(x)$ của hàm số $f(x) = \\frac{x^2+2x-1}{x^2+2x+1}$, biết rằng đồ thị hàm số $y=F(x)$ cắt trục hoành tại điểm có hoành độ bằng 1.",
+    "question": "Biết rằng $F(x)$ là một nguyên hàm của hàm $f(x) = e^{2x}$ thỏa mãn $F(0) = \\frac{3}{2}$. Tính $F(\\frac{1}{2})$.",
     "options": [
-      "A. $F(x) = x + \\frac{2}{x+1} - 2$",
-      "B. $F(x) = x + \\frac{2}{x+1} + 2$",
-      "C. $F(x) = x - 2 \\ln(x+1)^2$",
-      "D. $F(x) = x - \\frac{2}{x+1} + 2$"
+      "A. $F(\\frac{1}{2}) = \\frac{1}{2}e + 2$.",
+      "B. $F(\\frac{1}{2}) = \\frac{1}{2}e + 1$.",
+      "C. $F(\\frac{1}{2}) = 2e + \\frac{1}{2}$.",
+      "D. $F(\\frac{1}{2}) = 2e + 1$."
     ],
-    "answer": "A",
-    "explanation": "**Chọn A.**\n$f(x) = 1 - 2/(x+1)^2 \\Rightarrow F(x) = x + 2/(x+1) + C$. $F(1) = 1+2/2+C = 0 \\Rightarrow C=-2$."
+    "answer": "B",
+    "explanation": "**Chọn B.**\n$F(x) = \\int e^{2x}dx = \\frac{1}{2}e^{2x} + C$.\nMà $F(0) = \\frac{3}{2} \\Rightarrow \\frac{1}{2}e^0 + C = \\frac{3}{2} \\Rightarrow C=1$.\nDo đó $F(x) = \\frac{1}{2}e^{2x} + 1$. Suy ra $F(\\frac{1}{2}) = \\frac{1}{2}e^1 + 1 = \\frac{1}{2}e+1$."
   },
   {
     "id": 37,
-    "question": "Gọi $F(x)$ là một nguyên hàm của hàm số $f(x) = \\frac{x^3+3x^2+3x-1}{x^2+2x+1}$ và thỏa mãn $F(1) = \\frac{1}{3}$. Xác định hàm số $F(x)$.",
+    "question": "Biết một nguyên hàm của hàm số $y = f(x)$ là $F(x) = x^2+4x+1$. Tính giá trị của hàm số $y=f(x)$ tại $x=3$.",
     "options": [
-      "A. $F(x) = \\frac{x^2}{2} + x + \\frac{2}{x+1} + \\frac{13}{6}$",
-      "B. $F(x) = \\frac{x^2}{2} + x + \\frac{1}{x+1} + \\frac{11}{6}$",
-      "C. $F(x) = \\frac{x^2}{2} + x + \\frac{2}{x+1} - \\frac{13}{6}$",
-      "D. $F(x) = \\frac{x^2}{2} + x + \\frac{2}{x+1} - \\frac{11}{6}$"
+      "A. $f(3) = 6$.",
+      "B. $f(3) = 10$.",
+      "C. $f(3) = 22$.",
+      "D. $f(3) = 30$."
     ],
-    "answer": "C",
-    "explanation": "**Chọn C.**\n$f(x) = x+1-2/(x+1)^2 \\Rightarrow F(x) = x^2/2+x+2/(x+1)+C$. $F(1)=1/2+1+1+C=1/3 \\Rightarrow C=-13/6$."
+    "answer": "B",
+    "explanation": "**Chọn B.**\nTheo định nghĩa, $f(x) = F'(x)$.\n$f(x) = (x^2+4x+1)' = 2x+4$. Do đó $f(3)=2(3)+4=10$."
   },
   {
     "id": 38,
-    "question": "Tính nguyên hàm $I = \\int \\frac{dx}{x^3-x}$.",
+    "question": "Cho biết $F(x)$ là một nguyên hàm của hàm số $f(x)$. Tìm $I = \\int(3f(x)+1)dx$.",
     "options": [
-      "A. $I = \\ln |x^2-1| - \\frac{1}{2} \\ln|x| + C$",
-      "B. $I = \\frac{1}{2} \\ln |x^2-1| - 2 \\ln|x| + C$",
-      "C. $I = \\ln |x^2-1| - \\ln|x| + C$",
-      "D. $I = \\frac{1}{2} \\ln |x^2-1| - \\ln|x| + C$"
+      "A. $I = 3F(x)+1+C$.",
+      "B. $I = 3xF(x)+1+C$.",
+      "C. $I = 3xF(x)+x+C$.",
+      "D. $I = 3F(x)+x+C$."
     ],
     "answer": "D",
-    "explanation": "**Chọn D.**\n$I = \\int (\\frac{x}{x^2-1} - \\frac{1}{x}) dx = \\frac{1}{2}\\ln|x^2-1|-\\ln|x|+C$."
+    "explanation": "**Chọn D.**\nÁp dụng tính chất tuyến tính của nguyên hàm:\n$I = \\int(3f(x)+1)dx = 3\\int f(x)dx + \\int 1 dx = 3F(x)+x+C$."
   },
   {
     "id": 39,
-    "question": "Tính nguyên hàm $I = \\int \\frac{dx}{x^3-3x+2}$.",
+    "question": "Cho hàm số $f(x)$ xác định trên $\\mathbb{R} \\setminus \\{\\frac{1}{2}\\}$ thỏa mãn $f'(x) = \\frac{2}{2x-1}$, $f(0)=1$ và $f(1)=2$. Tính giá trị của biểu thức $P=f(-1)+f(3)$.",
     "options": [
-      "A. $I = \\frac{1}{3(x-1)} - \\frac{1}{9} \\ln|\\frac{x-1}{x+2}| + C$",
-      "B. $I = -\\frac{1}{3(x-1)} - \\frac{1}{9} \\ln|\\frac{x-1}{x+2}| + C$",
-      "C. $I = -\\frac{1}{3(x-1)} - \\frac{1}{3} \\ln|\\frac{x-1}{x+2}| + C$",
-      "D. $I = \\frac{1}{3(x-1)} - \\frac{1}{3} \\ln|\\frac{x-1}{x+2}| + C$"
+      "A. $P = 4+\\ln 15$.",
+      "B. $P = 2+\\ln 15$.",
+      "C. $P = 3+\\ln 15$.",
+      "D. $P = \\ln 15$."
     ],
-    "answer": "B",
-    "explanation": "**Chọn B.**\n$1/((x-1)^2(x+2)) = 1/(3(x-1)^2) - 1/(9(x-1)) + 1/(9(x+2)) \\Rightarrow I = -1/(3(x-1)) - 1/9\\ln|x-1| + 1/9\\ln|x+2| + C$."
+    "answer": "C",
+    "explanation": "**Chọn C.**\nTa có $f(x) = \\int \\frac{2}{2x-1} dx = \\ln|2x-1|+C$.\nDo hàm số không xác định tại $x=1/2$, ta xét hai khoảng:\n- Trên khoảng $(\\frac{1}{2}, +\\infty)$, $f(x)=\\ln(2x-1)+C_1$. Với $f(1)=2$, ta có $\\ln(1) + C_1 = 2 \\Rightarrow C_1=2$. Suy ra $f(3)=\\ln(5)+2$.\n- Trên khoảng $(-\\infty, \\frac{1}{2})$, $f(x)=\\ln(1-2x)+C_2$. Với $f(0)=1$, ta có $\\ln(1) + C_2 = 1 \\Rightarrow C_2=1$. Suy ra $f(-1)=\\ln(3)+1$.\nDo đó, $P=f(-1)+f(3) = (\\ln 3+1)+(\\ln 5+2) = 3+\\ln 15$."
   },
   {
     "id": 40,
-    "question": "Nếu $\\int \\frac{dx}{x^3+x^2-22x-40} = a \\ln|x-5| + b\\ln|x+2| + c\\ln|x+4|$ thì $a+b+c$ bằng:",
+    "question": "Giả sử $F(x)$ là một nguyên hàm của hàm số $f(x) = 4x-1$. Đồ thị hàm số $y=F(x)$ và $y=f(x)$ cắt nhau tại một điểm trên trục tung. Tìm tọa độ các điểm chung của hai đồ thị.",
     "options": [
-      "A. 0",
-      "B. 1",
-      "C. 1/7",
-      "D. 1/63"
+      "A. $(0;-1)$ và $(\\frac{5}{2}; \\frac{5}{2})$.",
+      "B. $(0;-1)$ và $(\\frac{5}{2}; 8)$.",
+      "C. $(0;-2)$ và $(\\frac{5}{2}; 14)$.",
+      "D. $(0;-1)$ và $(\\frac{5}{2}; 9)$."
     ],
-    "answer": "A",
-    "explanation": "**Chọn A.**\nDecomposition gives $a=1/63, b=-1/14, c=1/18 \\Rightarrow a+b+c=0$."
+    "answer": "D",
+    "explanation": "**Chọn D.**\n$F(x) = \\int (4x-1)dx = 2x^2 - x + C$.\nĐồ thị cắt nhau trên trục tung, tức tại $x=0$. Ta có $F(0) = C$ và $f(0) = -1$. Do đó $C=-1$.\nVậy $F(x)=2x^2-x-1$.\nPhương trình hoành độ giao điểm: $F(x)=f(x) \\Leftrightarrow 2x^2-x-1 = 4x-1 \\Leftrightarrow 2x^2-5x=0 \\Leftrightarrow x(2x-5)=0 \\Leftrightarrow x=0$ hoặc $x=\\frac{5}{2}$.\n- Với $x=0$, $y=f(0)=-1$. Ta có điểm $(0;-1)$.\n- Với $x=\\frac{5}{2}$, $y=f(\\frac{5}{2})=4(\\frac{5}{2})-1=9$. Ta có điểm $(\\frac{5}{2};9)$.\nVậy tọa độ các điểm chung là $(0;-1)$ và $(\\frac{5}{2};9)$."
   }
 ]
