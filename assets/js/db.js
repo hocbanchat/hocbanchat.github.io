@@ -118,18 +118,31 @@ const Database = {
      * @returns {Object|null} Thông tin chi tiết kết quả
      */
     async getQuizResultById(resultId) {
-        if (!db || !resultId) return null;
+        console.log("DB: getQuizResultById được gọi với ID:", resultId);
+        if (!db) {
+            console.error("DB: Firestore chưa khởi tạo");
+            return null;
+        }
+        if (!resultId) {
+            console.error("DB: Không có resultId");
+            return null;
+        }
         try {
+            console.log("DB: Đang lấy document từ collection results...");
             const doc = await db.collection('results').doc(resultId).get();
+            console.log("DB: Document exists?", doc.exists);
             if (doc.exists) {
-                return {
+                const data = {
                     id: doc.id,
                     ...doc.data()
                 };
+                console.log("DB: Dữ liệu result:", data);
+                return data;
             }
+            console.log("DB: Không tìm thấy document với ID:", resultId);
             return null;
         } catch (error) {
-            console.error("Error getting quiz result:", error);
+            console.error("DB: Lỗi khi lấy quiz result:", error);
             return null;
         }
     },

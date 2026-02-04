@@ -182,16 +182,21 @@
         const urlParams = new URLSearchParams(window.location.search);
         const resultId = urlParams.get('id');
 
+        console.log("Result page: ID từ URL =", resultId);
+
         // Biến lưu kết quả
         let result = null;
 
         // Khởi tạo
         async function init() {
+            console.log("Result page: Bắt đầu init...");
             if (resultId) {
                 // Load từ Firestore nếu có ID
+                console.log("Result page: Loading từ Firestore với ID:", resultId);
                 await loadResultFromFirestore(resultId);
             } else {
                 // Lấy từ localStorage (nếu vừa làm xong)
+                console.log("Result page: Loading từ localStorage");
                 result = JSON.parse(localStorage.getItem('quizResult') || '{}');
                 processResult();
             }
@@ -199,33 +204,50 @@
 
         // Load kết quả từ Firestore
         async function loadResultFromFirestore(id) {
-            // Chờ Firebase khởi tạo
-            const checkFirebase = setInterval(async () => {
-                if (typeof firebase !== 'undefined' && firebase.apps.length && window.DB) {
-                    clearInterval(checkFirebase);
+            console.log("Result page: Chờ Firebase khởi tạo...");
 
-                    const firestoreResult = await window.DB.getQuizResultById(id);
-                    if (firestoreResult) {
-                        // Chuyển đổi format từ Firestore sang format hiển thị
-                        result = {
-                            questions: firestoreResult.questions || [],
-                            answers: firestoreResult.answers || {},
-                            correct: firestoreResult.correctAnswers,
-                            total: firestoreResult.totalQuestions,
-                            score: firestoreResult.score,
-                            timeSpent: firestoreResult.timeSpent,
-                            courseId: firestoreResult.courseId,
-                            lessonPath: firestoreResult.lessonPath
-                        };
-                        processResult();
-                    } else {
+            let attempts = 0;
+            const maxAttempts = 50; // 5 giây
+
+            const checkFirebase = setInterval(async () => {
+                attempts++;
+
+                if (typeof firebase !== 'undefined' && firebase.apps && firebase.apps.length && window.DB) {
+                    clearInterval(checkFirebase);
+                    console.log("Result page: Firebase đã sẵn sàng, đang lấy dữ liệu...");
+
+                    try {
+                        const firestoreResult = await window.DB.getQuizResultById(id);
+                        console.log("Result page: Kết quả từ Firestore:", firestoreResult);
+
+                        if (firestoreResult) {
+                            // Chuyển đổi format từ Firestore sang format hiển thị
+                            result = {
+                                questions: firestoreResult.questions || [],
+                                answers: firestoreResult.answers || {},
+                                correct: firestoreResult.correctAnswers || 0,
+                                total: firestoreResult.totalQuestions || 0,
+                                score: firestoreResult.score || 0,
+                                timeSpent: firestoreResult.timeSpent || 0,
+                                courseId: firestoreResult.courseId || '',
+                                lessonPath: firestoreResult.lessonPath || ''
+                            };
+                            console.log("Result page: Đã chuyển đổi result:", result);
+                            processResult();
+                        } else {
+                            console.error("Result page: Không tìm thấy result với ID:", id);
+                            showNoDataError();
+                        }
+                    } catch (error) {
+                        console.error("Result page: Lỗi khi lấy dữ liệu:", error);
                         showNoDataError();
                     }
+                } else if (attempts >= maxAttempts) {
+                    clearInterval(checkFirebase);
+                    console.error("Result page: Timeout chờ Firebase");
+                    showNoDataError();
                 }
             }, 100);
-
-            // Timeout sau 5 giây
-            setTimeout(() => clearInterval(checkFirebase), 5000);
         }
 
         // Hiển thị lỗi không có dữ liệu

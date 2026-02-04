@@ -460,8 +460,11 @@
                             activityList.innerHTML = activities.map(act => {
                                 const date = act.timestamp ? new Date(act.timestamp.seconds * 1000).toLocaleDateString('vi-VN') : 'Vừa xong';
                                 const lessonName = act.lessonPath ? act.lessonPath.split('/').pop() : 'Bài tập';
-                                const scoreNum = parseFloat(act.score);
-                                const scoreColor = scoreNum >= 8 ? 'text-green-500' : scoreNum >= 5 ? 'text-yellow-500' : 'text-red-500';
+                                const scoreNum = act.score !== undefined && act.score !== null ? parseFloat(act.score) : null;
+                                const scoreText = scoreNum !== null && !isNaN(scoreNum) ? `${scoreNum.toFixed(1)}/10` : 'Chưa có điểm';
+                                const scoreColor = scoreNum !== null && !isNaN(scoreNum)
+                                    ? (scoreNum >= 8 ? 'text-green-500' : scoreNum >= 5 ? 'text-yellow-500' : 'text-red-500')
+                                    : 'text-gray-400';
 
                                 return `
                                     <a href="result.html?id=${act.id}" 
@@ -471,7 +474,7 @@
                                         </div>
                                         <div class="flex-1 min-w-0">
                                             <h4 class="font-bold text-gray-900 dark:text-white truncate">${lessonName}</h4>
-                                            <p class="text-xs text-gray-500 truncate">Điểm: <span class="font-bold ${scoreColor}">${act.score}/10</span> • ${act.correctAnswers || 0}/${act.totalQuestions || 0} câu đúng</p>
+                                            <p class="text-xs text-gray-500 truncate">Điểm: <span class="font-bold ${scoreColor}">${scoreText}</span> • ${act.correctAnswers || 0}/${act.totalQuestions || 0} câu đúng</p>
                                         </div>
                                         <div class="flex flex-col items-end">
                                             <span class="text-xs text-gray-400 font-medium whitespace-nowrap">${date}</span>
