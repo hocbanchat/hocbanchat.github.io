@@ -169,22 +169,93 @@
         <p>© 2024 HocBanChat. Nền tảng học toán trực tuyến miễn phí.</p>
     </footer>
 
+    <!-- Firebase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="assets/js/firebase-config.js"></script>
+    <script src="assets/js/db.js"></script>
+
     <!-- Scripts -->
     <script>
-        // Lấy kết quả từ localStorage
-        const result = JSON.parse(localStorage.getItem('quizResult') || '{}');
+        // Lấy tham số từ URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const resultId = urlParams.get('id');
 
-        if (!result.questions || result.questions.length === 0) {
+        // Biến lưu kết quả
+        let result = null;
+
+        // Khởi tạo
+        async function init() {
+            if (resultId) {
+                // Load từ Firestore nếu có ID
+                await loadResultFromFirestore(resultId);
+            } else {
+                // Lấy từ localStorage (nếu vừa làm xong)
+                result = JSON.parse(localStorage.getItem('quizResult') || '{}');
+                processResult();
+            }
+        }
+
+        // Load kết quả từ Firestore
+        async function loadResultFromFirestore(id) {
+            // Chờ Firebase khởi tạo
+            const checkFirebase = setInterval(async () => {
+                if (typeof firebase !== 'undefined' && firebase.apps.length && window.DB) {
+                    clearInterval(checkFirebase);
+
+                    const firestoreResult = await window.DB.getQuizResultById(id);
+                    if (firestoreResult) {
+                        // Chuyển đổi format từ Firestore sang format hiển thị
+                        result = {
+                            questions: firestoreResult.questions || [],
+                            answers: firestoreResult.answers || {},
+                            correct: firestoreResult.correctAnswers,
+                            total: firestoreResult.totalQuestions,
+                            score: firestoreResult.score,
+                            timeSpent: firestoreResult.timeSpent,
+                            courseId: firestoreResult.courseId,
+                            lessonPath: firestoreResult.lessonPath
+                        };
+                        processResult();
+                    } else {
+                        showNoDataError();
+                    }
+                }
+            }, 100);
+
+            // Timeout sau 5 giây
+            setTimeout(() => clearInterval(checkFirebase), 5000);
+        }
+
+        // Hiển thị lỗi không có dữ liệu
+        function showNoDataError() {
             document.getElementById('results-container').innerHTML = `
                 <div class="text-center py-12 text-text-secondary">
                     <span class="material-symbols-outlined text-5xl mb-4 block">quiz</span>
-                    <p>Không có dữ liệu kết quả. Vui lòng làm bài tập trước.</p>
-                    <a href="index.html" class="inline-block mt-4 px-6 py-3 bg-primary text-white rounded-lg font-bold">Về trang chủ</a>
+                    <p>Không tìm thấy dữ liệu kết quả. Có thể đã bị xóa hoặc không tồn tại.</p>
+                    <a href="profile.html" class="inline-block mt-4 px-6 py-3 bg-primary text-white rounded-lg font-bold">Về hồ sơ</a>
                 </div>
             `;
-        } else {
-            renderResults();
         }
+
+        // Xử lý và hiển thị kết quả
+        function processResult() {
+            if (!result || !result.questions || result.questions.length === 0) {
+                document.getElementById('results-container').innerHTML = `
+                    <div class="text-center py-12 text-text-secondary">
+                        <span class="material-symbols-outlined text-5xl mb-4 block">quiz</span>
+                        <p>Không có dữ liệu kết quả. Vui lòng làm bài tập trước.</p>
+                        <a href="index.html" class="inline-block mt-4 px-6 py-3 bg-primary text-white rounded-lg font-bold">Về trang chủ</a>
+                    </div>
+                `;
+            } else {
+                renderResults();
+            }
+        }
+
+        // Khởi động
+        init();
 
         function renderResults() {
             const { questions, answers, correct, total, score, timeSpent, courseId, lessonPath } = result;
@@ -220,10 +291,20 @@
             // Render questions map
             const mapContainer = document.getElementById('questions-map');
             mapContainer.innerHTML = questions.map((q, i) => {
-                const correctAnswer = q.answer || q.correctAnswer || 0;
+                // Hỗ trợ cả format chữ cái và số cho đáp án đúng
+                const correctAnswer = q.answer || q.correctAnswer || 'A';
                 const userAnswer = answers[i];
-                const isCorrect = userAnswer === correctAnswer;
-                const isUnanswered = userAnswer === undefined;
+
+                // So sánh: convert về cùng format (chữ cái)
+                const userAnswerLetter = typeof userAnswer === 'number'
+                    ? String.fromCharCode(65 + userAnswer)
+                    : userAnswer;
+                const correctAnswerLetter = typeof correctAnswer === 'number'
+                    ? String.fromCharCode(65 + correctAnswer)
+                    : correctAnswer;
+
+                const isCorrect = userAnswerLetter === correctAnswerLetter;
+                const isUnanswered = userAnswer === undefined || userAnswer === null;
 
                 let bgClass = 'bg-success';
                 if (isUnanswered) bgClass = 'bg-gray-400';
@@ -247,11 +328,21 @@
             // Render detailed results
             const container = document.getElementById('results-container');
             container.innerHTML = questions.map((q, i) => {
-                const correctAnswer = q.answer || q.correctAnswer || 0;
+                // Hỗ trợ cả format chữ cái và số
+                const correctAnswer = q.answer || q.correctAnswer || 'A';
                 const userAnswer = answers[i];
-                const isCorrect = userAnswer === correctAnswer;
-                const isUnanswered = userAnswer === undefined;
                 const options = q.options || q.choices || [];
+
+                // Convert về chữ cái để so sánh
+                const userAnswerLetter = typeof userAnswer === 'number'
+                    ? String.fromCharCode(65 + userAnswer)
+                    : userAnswer;
+                const correctAnswerLetter = typeof correctAnswer === 'number'
+                    ? String.fromCharCode(65 + correctAnswer)
+                    : correctAnswer;
+
+                const isCorrect = userAnswerLetter === correctAnswerLetter;
+                const isUnanswered = userAnswer === undefined || userAnswer === null;
 
                 // Determine card border color
                 let borderClass = 'border-success';
@@ -290,9 +381,9 @@
                         <!-- Options -->
                         <div class="p-4 md:p-6 grid grid-cols-1 md:grid-cols-2 gap-3">
                             ${options.map((opt, optIdx) => {
-                    const optionLabel = String.fromCharCode(65 + optIdx);
-                    const isUserChoice = userAnswer === optIdx;
-                    const isCorrectOption = correctAnswer === optIdx;
+                    const optionLabel = String.fromCharCode(65 + optIdx); // A, B, C, D
+                    const isUserChoice = userAnswerLetter === optionLabel;
+                    const isCorrectOption = correctAnswerLetter === optionLabel;
 
                     let optClass = 'border-gray-200 dark:border-border-dark bg-gray-50 dark:bg-[#1c2333]';
                     let optIcon = '';

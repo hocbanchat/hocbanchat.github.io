@@ -70,17 +70,17 @@ const Database = {
     // === LEARNING ACTIVITY ===
 
     /**
-     * Lưu kết quả bài kiểm tra
+     * Lưu kết quả bài kiểm tra (bao gồm cả câu hỏi và đáp án để xem lại)
      */
     async saveQuizResult(uid, result) {
-        if (!db) return;
+        if (!db) return null;
 
         try {
             const batch = db.batch();
 
             // 1. Lưu vào collection 'results' (lịch sử chi tiết)
             const resultRef = db.collection('results').doc();
-            batch.set(resultRef, {
+            const resultData = {
                 uid: uid,
                 courseId: result.courseId,
                 lessonPath: result.lessonPath,
@@ -88,8 +88,12 @@ const Database = {
                 totalQuestions: result.total,
                 correctAnswers: result.correct,
                 timeSpent: result.timeSpent, // seconds
-                timestamp: firebase.firestore.FieldValue.serverTimestamp()
-            });
+                timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+                // Lưu thêm questions và answers để có thể xem lại
+                questions: result.questions || [],
+                answers: result.answers || {}
+            };
+            batch.set(resultRef, resultData);
 
             // 2. Update user stats
             const userRef = db.collection('users').doc(uid);
@@ -100,11 +104,33 @@ const Database = {
             });
 
             await batch.commit();
-            console.log("Quiz result saved to Firestore");
-            return true;
+            console.log("Quiz result saved to Firestore với ID:", resultRef.id);
+            return resultRef.id; // Trả về ID để có thể dùng link xem lại
         } catch (error) {
             console.error("Error saving quiz result:", error);
-            return false;
+            return null;
+        }
+    },
+
+    /**
+     * Lấy chi tiết kết quả quiz theo ID để xem lại
+     * @param {string} resultId - ID của kết quả quiz
+     * @returns {Object|null} Thông tin chi tiết kết quả
+     */
+    async getQuizResultById(resultId) {
+        if (!db || !resultId) return null;
+        try {
+            const doc = await db.collection('results').doc(resultId).get();
+            if (doc.exists) {
+                return {
+                    id: doc.id,
+                    ...doc.data()
+                };
+            }
+            return null;
+        } catch (error) {
+            console.error("Error getting quiz result:", error);
+            return null;
         }
     },
 

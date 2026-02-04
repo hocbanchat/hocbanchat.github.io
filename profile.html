@@ -272,7 +272,7 @@
                         </div>
 
                         <!-- Empty State Placeholder -->
-                        <div
+                        <div id="activity-empty-state"
                             class="bg-white dark:bg-card-dark p-8 rounded-2xl border border-dashed border-gray-200 dark:border-gray-700 text-center flex flex-col items-center justify-center gap-4">
                             <div
                                 class="w-16 h-16 bg-gray-100 dark:bg-[#282e39] rounded-full flex items-center justify-center text-gray-400">
@@ -284,6 +284,10 @@
                             </div>
                             <a href="course.html?id=toan-12" class="text-sm font-bold text-primary hover:underline">Khám
                                 phá khóa học</a>
+                        </div>
+                        <!-- Activity List Container (ẩn mặc định) -->
+                        <div id="activity-list"
+                            class="hidden bg-white dark:bg-card-dark rounded-2xl border border-gray-100 dark:border-gray-800 overflow-hidden flex flex-col">
                         </div>
                     </div>
                 </div>
@@ -435,42 +439,41 @@
                         }
                     }
 
-                    // 5. Lấy Hoạt động gần đây
+                    // 5. Lấy Hoạt động gần đây (bài quiz đã làm)
                     const activities = await window.DB.getRecentActivity(user.uid);
                     if (activities.length > 0) {
-                        const activityContainer = document.querySelector('#tab-overview .flex-col.gap-4 .bg-white.dark\\:bg-card-dark'); // Target empty state div
+                        const emptyState = document.getElementById('activity-empty-state');
+                        const activityList = document.getElementById('activity-list');
 
-                        // Thay thế Empty state bằng list activity
-                        if (activityContainer) {
-                            // Tạo HTML list
-                            const listHtml = activities.map(act => {
+                        if (emptyState && activityList) {
+                            // Ẩn empty state, hiện activity list
+                            emptyState.classList.add('hidden');
+                            activityList.classList.remove('hidden');
+
+                            // Tạo HTML list với link xem lại kết quả
+                            activityList.innerHTML = activities.map(act => {
                                 const date = act.timestamp ? new Date(act.timestamp.seconds * 1000).toLocaleDateString('vi-VN') : 'Vừa xong';
+                                const lessonName = act.lessonPath ? act.lessonPath.split('/').pop() : 'Bài tập';
+                                const scoreNum = parseFloat(act.score);
+                                const scoreColor = scoreNum >= 8 ? 'text-green-500' : scoreNum >= 5 ? 'text-yellow-500' : 'text-red-500';
+
                                 return `
-                                    <div class="flex items-center gap-4 p-4 border-b border-gray-100 dark:border-gray-800 last:border-0 hover:bg-gray-50 dark:hover:bg-[#282e39] transition-colors rounded-xl">
+                                    <a href="result.html?id=${act.id}" 
+                                       class="flex items-center gap-4 p-4 border-b border-gray-100 dark:border-gray-800 last:border-0 hover:bg-gray-50 dark:hover:bg-[#282e39] transition-colors">
                                         <div class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 shrink-0">
                                             <span class="material-symbols-outlined">assignment_turned_in</span>
                                         </div>
                                         <div class="flex-1 min-w-0">
-                                            <h4 class="font-bold text-gray-900 dark:text-white truncate">Bài tập trắc nghiệm</h4>
-                                            <p class="text-xs text-gray-500 truncate">Khóa học Toán 12 • Điểm: ${act.score}/10</p>
+                                            <h4 class="font-bold text-gray-900 dark:text-white truncate">${lessonName}</h4>
+                                            <p class="text-xs text-gray-500 truncate">Điểm: <span class="font-bold ${scoreColor}">${act.score}/10</span> • ${act.correctAnswers}/${act.totalQuestions} câu đúng</p>
                                         </div>
-                                        <span class="text-xs text-gray-400 font-medium whitespace-nowrap">${date}</span>
-                                    </div>
+                                        <div class="flex flex-col items-end">
+                                            <span class="text-xs text-gray-400 font-medium whitespace-nowrap">${date}</span>
+                                            <span class="text-xs text-primary font-medium">Xem lại →</span>
+                                        </div>
+                                    </a>
                                 `;
                             }).join('');
-
-                            // Re-render container (giữ tiêu đề cha, thay ruột)
-                            // Cách đơn giản: replace luôn cái div placeholder
-                            const parent = activityContainer.parentElement; // div flex-col gap-4
-
-                            // Xóa placeholder cũ
-                            activityContainer.remove();
-
-                            // Thêm container mới
-                            const newList = document.createElement('div');
-                            newList.className = "bg-white dark:bg-card-dark rounded-2xl border border-gray-100 dark:border-gray-800 overflow-hidden flex flex-col";
-                            newList.innerHTML = listHtml;
-                            parent.appendChild(newList);
                         }
                     }
 
