@@ -428,15 +428,16 @@
                     // Chọn ảnh dựa trên index để cố định ảnh cho mỗi khóa học (tránh load lại đổi ảnh)
                     const randomImage = randomImages[index % randomImages.length];
 
-                    const extras = courseExtras[course.id] || {
-                        image: randomImage,
-                        label: 'Khóa học',
-                        labelColor: 'bg-slate-600'
-                    };
+                    // Chọn ảnh: Ưu tiên ảnh từ Admin Tool -> Ảnh từ extras -> Ảnh ngẫu nhiên
+                    let courseImage = course.thumbnail;
+
+                    if (!courseImage || courseImage === '📚') {
+                        courseImage = extras.image || randomImage;
+                    }
 
                     return `
                         <div class="flex flex-col rounded-xl overflow-hidden bg-[#1c1f27] border border-[#282e39] hover:shadow-xl hover:shadow-primary/5 hover:border-primary/30 transition-all group">
-                            <div class="w-full aspect-video bg-cover bg-center relative" style="background-image: url('${extras.image}');">
+                            <div class="w-full aspect-video bg-cover bg-center relative" style="background-image: url('${courseImage}');">
                                 <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
                                 <div class="absolute top-3 left-3 ${extras.labelColor} text-white text-xs font-bold px-2 py-1 rounded">${extras.label}</div>
                             </div>

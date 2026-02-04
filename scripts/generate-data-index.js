@@ -187,11 +187,28 @@ function scanDataFolder() {
 
             const { chapters, lessons } = scanCourseFolder(coursePath, courseName);
 
-            courses.push({
-                id: slugify(courseName),
+            // Đọc thông tin từ info.json nếu có
+            let courseInfo = {
                 title: courseName,
                 description: `Chương trình ${courseName} - Bộ sách mới`,
-                thumbnail: COURSE_ICONS[courseName] || '📚',
+                thumbnail: COURSE_ICONS[courseName] || '📚'
+            };
+
+            const infoPath = path.join(coursePath, 'info.json');
+            if (fs.existsSync(infoPath)) {
+                try {
+                    const info = JSON.parse(fs.readFileSync(infoPath, 'utf8'));
+                    courseInfo = { ...courseInfo, ...info };
+                } catch (e) {
+                    console.warn(`⚠️ Lỗi đọc info.json của ${courseName}:`, e.message);
+                }
+            }
+
+            courses.push({
+                id: slugify(courseName),
+                title: courseInfo.title,
+                description: courseInfo.description,
+                thumbnail: courseInfo.thumbnail,
                 chapters: chapters,
                 lessons: lessons
             });
