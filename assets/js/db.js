@@ -128,6 +128,116 @@ const Database = {
             console.error("Error getting activity:", error);
             return [];
         }
+    },
+
+    // === PROGRESS TRACKING ===
+
+    /**
+     * Đánh dấu bài học đã xem
+     * @param {string} uid - User ID
+     * @param {string} courseId - ID khóa học
+     * @param {string} lessonPath - Đường dẫn bài học (vd: "Chương 1/Bài 1")
+     */
+    async markLessonAsViewed(uid, courseId, lessonPath) {
+        if (!db || !uid) return false;
+
+        try {
+            // Tạo document ID unique từ courseId + lessonPath
+            const docId = `${uid}_${courseId}_${lessonPath.replace(/\//g, '_')}`;
+
+            await db.collection('progress').doc(docId).set({
+                uid: uid,
+                courseId: courseId,
+                lessonPath: lessonPath,
+                viewedAt: firebase.firestore.FieldValue.serverTimestamp(),
+                completed: true
+            }, { merge: true });
+
+            console.log("Progress: Đã đánh dấu bài học đã xem:", lessonPath);
+            return true;
+        } catch (error) {
+            console.error("Error marking lesson as viewed:", error);
+            return false;
+        }
+    },
+
+    /**
+     * Lấy danh sách bài học đã xem của người dùng trong 1 khóa học
+     * @param {string} uid - User ID
+     * @param {string} courseId - ID khóa học
+     * @returns {Array} Danh sách lessonPath đã xem
+     */
+    async getViewedLessons(uid, courseId) {
+        if (!db || !uid) return [];
+
+        try {
+            const snapshot = await db.collection('progress')
+                .where('uid', '==', uid)
+                .where('courseId', '==', courseId)
+                .where('completed', '==', true)
+                .get();
+
+            return snapshot.docs.map(doc => doc.data().lessonPath);
+        } catch (error) {
+            console.error("Error getting viewed lessons:", error);
+            return [];
+        }
+    },
+
+    /**
+     * Lấy tiến độ học tập tổng quan của người dùng
+     * @param {string} uid - User ID
+     * @returns {Object} Thống kê tiến độ theo từng khóa học
+     */
+    async getLearningProgress(uid) {
+        if (!db || !uid) return {};
+
+        try {
+            const snapshot = await db.collection('progress')
+                .where('uid', '==', uid)
+                .where('completed', '==', true)
+                .get();
+
+            // Nhóm theo courseId
+            const progressMap = {};
+            snapshot.docs.forEach(doc => {
+                const data = doc.data();
+                if (!progressMap[data.courseId]) {
+                    progressMap[data.courseId] = [];
+                }
+                progressMap[data.courseId].push(data.lessonPath);
+            });
+
+            return progressMap;
+        } catch (error) {
+            console.error("Error getting learning progress:", error);
+            return {};
+        }
+    },
+
+    /**
+     * Lấy danh sách bài học gần nhất đã xem
+     * @param {string} uid - User ID
+     * @param {number} limit - Số lượng bài tối đa
+     */
+    async getRecentViewedLessons(uid, limit = 5) {
+        if (!db || !uid) return [];
+
+        try {
+            const snapshot = await db.collection('progress')
+                .where('uid', '==', uid)
+                .orderBy('viewedAt', 'desc')
+                .limit(limit)
+                .get();
+
+            return snapshot.docs.map(doc => ({
+                id: doc.id,
+                ...doc.data()
+            }));
+        } catch (error) {
+            console.error("Error getting recent viewed lessons:", error);
+            return [];
+        }
     }
 };
 

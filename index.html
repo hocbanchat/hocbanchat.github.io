@@ -69,12 +69,12 @@
             </div>
             <div class="flex items-center justify-end gap-4">
                 <!-- Thanh tìm kiếm -->
-                <div
-                    class="hidden lg:flex items-center rounded-lg bg-[#282e39] h-10 px-3 w-64 border border-transparent focus-within:border-primary transition-colors">
+                <div id="search-container"
+                    class="hidden lg:flex items-center rounded-lg bg-[#282e39] h-10 px-3 w-64 border border-transparent focus-within:border-primary transition-colors relative">
                     <span class="material-symbols-outlined text-[#9da6b9]">search</span>
-                    <input
+                    <input id="search-input"
                         class="bg-transparent border-none text-white text-sm w-full focus:ring-0 placeholder-[#9da6b9]"
-                        placeholder="Tìm kiếm bài học..." />
+                        placeholder="Tìm kiếm bài học..." autocomplete="off" />
                 </div>
 
                 <!-- Nút đăng nhập (hiển thị khi chưa đăng nhập) -->
@@ -355,6 +355,7 @@
 
     <!-- Scripts -->
     <script src="assets/js/firebase-config.js"></script>
+    <script src="assets/js/search.js"></script>
     <script src="assets/js/auth.js"></script>
     <script>
         // Mobile menu toggle
@@ -410,12 +411,14 @@
                 };
 
                 container.innerHTML = data.courses.map(course => {
+                    // Lấy số liệu thực từ data
+                    const actualChapters = course.chapters?.length || 0;
+                    const actualLessons = course.lessons?.length || 0;
+
                     const extras = courseExtras[course.id] || {
-                        image: '',
+                        image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600',
                         label: 'Khóa học',
-                        labelColor: 'bg-gray-600',
-                        chapters: course.chapters?.length || 0,
-                        lessons: course.lessons?.length || 0
+                        labelColor: 'bg-gray-600'
                     };
 
                     return `
@@ -432,11 +435,11 @@
                                 <div class="flex items-center gap-4 text-[#9da6b9] text-xs border-t border-[#282e39] pt-4 mt-auto">
                                     <div class="flex items-center gap-1">
                                         <span class="material-symbols-outlined text-base">library_books</span>
-                                        <span>${extras.chapters} Chương</span>
+                                        <span>${actualChapters} Chương</span>
                                     </div>
                                     <div class="flex items-center gap-1">
                                         <span class="material-symbols-outlined text-base">play_lesson</span>
-                                        <span>${extras.lessons} Bài giảng</span>
+                                        <span>${actualLessons} Bài giảng</span>
                                     </div>
                                 </div>
                                 <a href="course.html?id=${course.id}" 
