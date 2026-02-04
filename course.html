@@ -272,14 +272,27 @@
                 }
             };
 
-            container.innerHTML = courses.map(course => {
+            // Danh sách ảnh ngẫu nhiên
+            const randomImages = [
+                'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600', // Math/Abstract
+                'https://images.unsplash.com/photo-1509228468518-180dd4864904?w=600', // Math objects
+                'https://images.unsplash.com/photo-1620503374955-c90b8441f26e?w=600', // Blue abstract
+                'https://images.unsplash.com/photo-1509228468518-180dd4864904?w=600', // Math board
+                'https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?w=600', // Lens/Focus
+                'https://images.unsplash.com/photo-1518133910546-b6c2fb7d79e3?w=600', // Geometry
+            ];
+
+            container.innerHTML = courses.map((course, index) => {
                 const actualChapters = course.chapters?.length || 0;
                 const actualLessons = course.lessons?.length || 0;
 
+                // Chọn ảnh dựa trên index
+                const randomImage = randomImages[index % randomImages.length];
+
                 const extras = courseExtras[course.id] || {
-                    image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600',
+                    image: randomImage,
                     label: 'Khóa học',
-                    labelColor: 'bg-gray-600'
+                    labelColor: 'bg-slate-600'
                 };
 
                 return `
