@@ -174,6 +174,16 @@
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
     <script src="assets/js/firebase-config.js"></script>
+
+    <!-- Khởi tạo Firebase -->
+    <script>
+        // Khởi tạo Firebase App
+        if (!firebase.apps.length) {
+            firebase.initializeApp(window.firebaseConfig);
+            console.log("Result page: Firebase đã được khởi tạo");
+        }
+    </script>
+
     <script src="assets/js/db.js"></script>
 
     <!-- Scripts -->

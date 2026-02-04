@@ -1,0 +1,26 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Cho phép user đọc/ghi document của chính họ trong collection 'users'
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // Cho phép user đọc/ghi kết quả quiz của chính họ
+    match /results/{resultId} {
+      // Cho phép đọc nếu đã đăng nhập và là chủ sở hữu (uid khớp)
+      allow read: if request.auth != null && resource.data.uid == request.auth.uid;
+      // Cho phép tạo mới nếu đã đăng nhập và uid trong document khớp với user
+      allow create: if request.auth != null && request.resource.data.uid == request.auth.uid;
+      // Không cho phép update/delete
+      allow update, delete: if false;
+    }
+    
+    // Cho phép user đọc/ghi tiến trình học tập của chính họ
+    match /progress/{progressId} {
+      allow read, write: if request.auth != null && resource.data.uid == request.auth.uid;
+      allow create: if request.auth != null && request.resource.data.uid == request.auth.uid;
+    }
+  }
+}
