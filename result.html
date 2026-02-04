@@ -263,17 +263,69 @@
 
         // Xử lý và hiển thị kết quả
         function processResult() {
-            if (!result || !result.questions || result.questions.length === 0) {
+            console.log("Result page: processResult với data:", result);
+
+            // Nếu hoàn toàn không có data
+            if (!result) {
+                showNoDataError();
+                return;
+            }
+
+            // Nếu có questions đầy đủ -> render chi tiết
+            if (result.questions && result.questions.length > 0) {
+                renderResults();
+                return;
+            }
+
+            // Nếu có dữ liệu cơ bản (điểm, thời gian) nhưng không có questions chi tiết
+            // Hiển thị summary thay vì lỗi
+            if (result.score !== undefined || result.correct !== undefined) {
+                console.log("Result page: Hiển thị summary (không có questions chi tiết)");
+
+                // Update header stats
+                document.getElementById('score').textContent = result.score || 0;
+                document.getElementById('correct-count').textContent = result.correct || 0;
+                document.getElementById('wrong-count').textContent = (result.total || 0) - (result.correct || 0);
+                document.getElementById('unanswered-count').textContent = 0;
+
+                // Time spent
+                const timeSpent = result.timeSpent || 0;
+                const minutes = Math.floor(timeSpent / 60);
+                const seconds = timeSpent % 60;
+                document.getElementById('time-spent').textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+
+                // Update title based on score
+                const scoreNum = parseFloat(result.score) || 0;
+                let title = 'Kết quả bài làm';
+                if (scoreNum >= 9) title = '🎉 Xuất sắc!';
+                else if (scoreNum >= 7) title = '👍 Tốt lắm!';
+                else if (scoreNum >= 5) title = '📚 Cần cố gắng thêm';
+                else title = '💪 Hãy thử lại nhé!';
+                document.getElementById('result-title').textContent = title;
+
+                // Update action buttons
+                if (result.courseId && result.lessonPath) {
+                    document.getElementById('retry-btn').href = `quiz.html?course=${result.courseId}&path=${encodeURIComponent(result.lessonPath)}`;
+                    document.getElementById('back-to-lesson-btn').href = `lesson.html?course=${result.courseId}&path=${encodeURIComponent(result.lessonPath)}`;
+                } else {
+                    document.getElementById('retry-btn').href = 'index.html';
+                    document.getElementById('back-to-lesson-btn').href = 'index.html';
+                }
+
+                // Hiển thị thông báo không có chi tiết
                 document.getElementById('results-container').innerHTML = `
-                    <div class="text-center py-12 text-text-secondary">
-                        <span class="material-symbols-outlined text-5xl mb-4 block">quiz</span>
-                        <p>Không có dữ liệu kết quả. Vui lòng làm bài tập trước.</p>
-                        <a href="index.html" class="inline-block mt-4 px-6 py-3 bg-primary text-white rounded-lg font-bold">Về trang chủ</a>
+                    <div class="text-center py-12 bg-white dark:bg-card-dark rounded-xl border border-gray-200 dark:border-border-dark">
+                        <span class="material-symbols-outlined text-5xl mb-4 block text-gray-400">history</span>
+                        <p class="text-gray-600 dark:text-gray-400 mb-2">Bài làm này được lưu trước đây.</p>
+                        <p class="text-sm text-gray-500">Chi tiết câu hỏi không còn khả dụng.</p>
+                        <a href="profile.html" class="inline-block mt-4 px-6 py-3 bg-primary text-white rounded-lg font-bold">Về hồ sơ</a>
                     </div>
                 `;
-            } else {
-                renderResults();
+                return;
             }
+
+            // Không có gì cả
+            showNoDataError();
         }
 
         // Khởi động
