@@ -440,10 +440,16 @@
                     }
 
                     // 5. Lấy Hoạt động gần đây (bài quiz đã làm)
+                    console.log("Profile: Đang lấy hoạt động gần đây...");
                     const activities = await window.DB.getRecentActivity(user.uid);
-                    if (activities.length > 0) {
+                    console.log("Profile: Kết quả activities:", activities);
+
+                    if (activities && activities.length > 0) {
                         const emptyState = document.getElementById('activity-empty-state');
                         const activityList = document.getElementById('activity-list');
+
+                        console.log("Profile: emptyState element:", emptyState);
+                        console.log("Profile: activityList element:", activityList);
 
                         if (emptyState && activityList) {
                             // Ẩn empty state, hiện activity list
@@ -465,7 +471,7 @@
                                         </div>
                                         <div class="flex-1 min-w-0">
                                             <h4 class="font-bold text-gray-900 dark:text-white truncate">${lessonName}</h4>
-                                            <p class="text-xs text-gray-500 truncate">Điểm: <span class="font-bold ${scoreColor}">${act.score}/10</span> • ${act.correctAnswers}/${act.totalQuestions} câu đúng</p>
+                                            <p class="text-xs text-gray-500 truncate">Điểm: <span class="font-bold ${scoreColor}">${act.score}/10</span> • ${act.correctAnswers || 0}/${act.totalQuestions || 0} câu đúng</p>
                                         </div>
                                         <div class="flex flex-col items-end">
                                             <span class="text-xs text-gray-400 font-medium whitespace-nowrap">${date}</span>
@@ -474,7 +480,13 @@
                                     </a>
                                 `;
                             }).join('');
+
+                            console.log("Profile: Đã render", activities.length, "hoạt động");
+                        } else {
+                            console.error("Profile: Không tìm thấy elements activity-empty-state hoặc activity-list");
                         }
+                    } else {
+                        console.log("Profile: Không có hoạt động nào");
                     }
 
                     // 6. Lấy bài học gần đây đã xem

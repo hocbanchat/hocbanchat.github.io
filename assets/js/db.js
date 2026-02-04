@@ -138,20 +138,53 @@ const Database = {
      * Lấy lịch sử hoạt động gần đây
      */
     async getRecentActivity(uid, limit = 5) {
-        if (!db) return [];
-        try {
-            const snapshot = await db.collection('results')
-                .where('uid', '==', uid)
-                .orderBy('timestamp', 'desc')
-                .limit(limit)
-                .get();
+        if (!db) {
+            console.log("DB: Firestore chưa khởi tạo");
+            return [];
+        }
+        if (!uid) {
+            console.log("DB: Không có uid");
+            return [];
+        }
 
-            return snapshot.docs.map(doc => ({
+        try {
+            console.log("DB: Đang lấy hoạt động gần đây cho user:", uid);
+
+            // Query với orderBy (cần composite index)
+            let snapshot;
+            try {
+                snapshot = await db.collection('results')
+                    .where('uid', '==', uid)
+                    .orderBy('timestamp', 'desc')
+                    .limit(limit)
+                    .get();
+            } catch (indexError) {
+                // Fallback: Nếu bị lỗi index, query không dùng orderBy
+                console.warn("DB: Cần tạo composite index, dùng fallback query:", indexError.message);
+                snapshot = await db.collection('results')
+                    .where('uid', '==', uid)
+                    .limit(limit)
+                    .get();
+            }
+
+            console.log("DB: Tìm thấy", snapshot.docs.length, "kết quả");
+
+            const results = snapshot.docs.map(doc => ({
                 id: doc.id,
                 ...doc.data()
             }));
+
+            // Sort thủ công nếu dùng fallback
+            results.sort((a, b) => {
+                const timeA = a.timestamp?.seconds || 0;
+                const timeB = b.timestamp?.seconds || 0;
+                return timeB - timeA;
+            });
+
+            console.log("DB: Hoạt động gần đây:", results);
+            return results;
         } catch (error) {
-            console.error("Error getting activity:", error);
+            console.error("DB: Lỗi khi lấy hoạt động:", error);
             return [];
         }
     },
