@@ -1,1 +1,122 @@
-[]
+[
+  {
+    "id": 1,
+    "question": "Ví dụ 1: Cho $f(x)$ là một nguyên hàm của hàm số $f(x)$. Khi đó hiệu số $F(1) - F(2)$ bằng\\nA. $\\int_{1}^{2} f(x) dx$.\\nB. $\\int_{2}^{1} -f(x) dx$.\\nC. $\\int_{1}^{2} -F(x) dx$.\\nD. $\\int_{1}^{2} -F(x) dx$.",
+    "explanation": "Chọn **B**\\nTa có công thức Newton-Leibniz: $\\int_{a}^{b} f(x)dx = F(b) - F(a)$.\\nDo đó: $F(1) - F(2) = -(F(2) - F(1)) = -\\int_{1}^{2} f(x)dx = \\int_{2}^{1} f(x)dx$.\\nQuan sát các đáp án, đáp án B viết là $\\int_{2}^{1} -f(x)dx$ (có lẽ đề bài gốc hoặc đáp án có chút nhầm lẫn về dấu hoặc thứ tự cận trong hiển thị, nhưng dựa trên lời giải của ảnh: $-\\int_{1}^{2} f(x)dx = \\int_{1}^{2} -f(x)dx$ là không đúng, mà $= \\int_{2}^{1} f(x)dx$).\\nTuy nhiên, theo lời giải trong ảnh: $F(1)-F(2) = -(F(2)-F(1)) = -\\int_{1}^{2} f(x)dx = \\int_{1}^{2} -f(x)dx$. Vậy đáp án đúng khớp với biến đổi là B (nếu B là $\\int_{1}^{2} -f(x)dx$) hoặc D."
+  },
+  {
+    "id": 2,
+    "question": "Ví dụ 2: Cho $\\int_{0}^{1} f(x)dx = 2$ và $\\int_{0}^{1} g(x)dx = 5$. Khi đó $\\int_{0}^{1} [f(x) - 2g(x)] dx$ bằng\\nA. -3.\\nB. 12.\\nC. -8.\\nD. 1.",
+    "explanation": "Chọn **C**\\nÁp dụng tính chất tuyến tính của tích phân:\\n$\\int_{0}^{1} [f(x) - 2g(x)] dx = \\int_{0}^{1} f(x)dx - 2\\int_{0}^{1} g(x)dx$\\nThay số: $= 2 - 2(5) = 2 - 10 = -8$."
+  },
+  {
+    "id": 3,
+    "question": "Ví dụ 3: Nếu $\\int_{0}^{1} f(x)dx = 4$ thì $\\int_{0}^{1} 2f(x)dx$ bằng\\nA. 16.\\nB. 4.\\nC. 2.\\nD. 8.",
+    "explanation": "Chọn **D**\\nTa có: $\\int_{0}^{1} 2f(x)dx = 2\\int_{0}^{1} f(x)dx = 2 \\cdot 4 = 8$."
+  },
+  {
+    "id": 4,
+    "question": "Ví dụ 4: Biết $\\int_{1}^{3} f(x)dx = 3$. Giá trị của $\\int_{1}^{3} 2f(x)dx$ bằng\\nA. 5.\\nB. 9.\\nC. 6.\\nD. $\\frac{3}{2}$.",
+    "explanation": "Chọn **C**\\nTa có: $\\int_{1}^{3} 2f(x)dx = 2\\int_{1}^{3} f(x)dx = 2 \\cdot 3 = 6$."
+  },
+  {
+    "id": 5,
+    "question": "Ví dụ 5: Nếu $\\int_{1}^{2} f(x)dx = -2$ và $\\int_{2}^{3} f(x)dx = 1$ thì $\\int_{1}^{3} f(x)dx$ bằng\\nA. -3.\\nB. -1.\\nC. 1.\\nD. 3.",
+    "explanation": "Chọn **B**\\nÁp dụng tính chất cộng cận của tích phân:\\n$\\int_{1}^{3} f(x)dx = \\int_{1}^{2} f(x)dx + \\int_{2}^{3} f(x)dx = -2 + 1 = -1$."
+  },
+  {
+    "id": 6,
+    "question": "Ví dụ 6: Cho hàm số $f(x)$ xác định liên tục trên $[0;4]$ thỏa mãn $\\int_{0}^{4} f(x)dx = 5$ và $\\int_{0}^{3} f(x)dx = 3$. Tính tích phân $I = \\int_{3}^{4} f(x)dx$.\\nA. $I=8$.\\nB. $I=-1$.\\nC. $I=2$.\\nD. $I=2$.",
+    "explanation": "Chọn **C**\\nTa có: $\\int_{0}^{4} f(x)dx = \\int_{0}^{3} f(x)dx + \\int_{3}^{4} f(x)dx$\\n$\\Rightarrow 5 = 3 + \\int_{3}^{4} f(x)dx$\\n$\\Rightarrow \\int_{3}^{4} f(x)dx = 5 - 3 = 2$."
+  },
+  {
+    "id": 7,
+    "question": "Ví dụ 7: Cho các tích phân $\\int_{-3}^{2} f(x)dx = 2$; $\\int_{-3}^{5} f(t)dt = 4$. Tính $\\int_{2}^{5} f(y)dy$.\\nA. $I=2$.\\nB. $I=6$.\\nC. $I=-2$.\\nD. $I=-6$.",
+    "explanation": "Chọn **A**\\nTích phân không phụ thuộc vào biến số: $\\int_{2}^{5} f(y)dy = \\int_{2}^{5} f(x)dx$.\\nTa có: $\\int_{-3}^{5} f(x)dx = \\int_{-3}^{2} f(x)dx + \\int_{2}^{5} f(x)dx$\\n$\\Rightarrow 4 = 2 + \\int_{2}^{5} f(x)dx$\\n$\\Rightarrow \\int_{2}^{5} f(x)dx = 4 - 2 = 2$."
+  },
+  {
+    "id": 8,
+    "question": "Ví dụ 8: Biết $F(x) = x^2$ là một nguyên hàm của hàm số $f(x)$ trên $\\mathbb{R}$. Giá trị của $\\int_{1}^{2} [2 + f(x)] dx$ bằng\\nA. 5.\\nB. 3.\\nC. $\\frac{13}{3}$.\\nD. $\\frac{7}{3}$.",
+    "explanation": "Chọn **A**\\n$\\int_{1}^{2} [2 + f(x)] dx = [2x + F(x)]_{1}^{2} = (4 + F(2)) - (2 + F(1))$\\nThay $F(x) = x^2$ vào:\\n$= (4 + 2^2) - (2 + 1^2) = (4 + 4) - (2 + 1) = 8 - 3 = 5$."
+  },
+  {
+    "id": 9,
+    "question": "Ví dụ 9: Cho $\\int_{-1}^{2} f(x)dx = 2$ và $\\int_{-1}^{2} g(x)dx = -1$. Tính $I = \\int_{-1}^{2} [x + 2f(x) - 3g(x)] dx$.\\nA. $I=\\frac{11}{2}$.\\nB. $I=\\frac{17}{2}$.\\nC. $I=\\frac{5}{2}$.\\nD. $I=\\frac{7}{2}$.",
+    "explanation": "Chọn **B**\\n$I = \\int_{-1}^{2} x dx + 2\\int_{-1}^{2} f(x)dx - 3\\int_{-1}^{2} g(x)dx$\\nTính $\\int_{-1}^{2} x dx = \\left[ \\frac{x^2}{2} \\right]_{-1}^{2} = \\frac{4}{2} - \\frac{1}{2} = \\frac{3}{2}$.\\nVậy $I = \\frac{3}{2} + 2(2) - 3(-1) = \\frac{3}{2} + 4 + 3 = \\frac{3}{2} + 7 = \\frac{17}{2}$."
+  },
+  {
+    "id": 10,
+    "question": "Ví dụ 10: Cho hàm số $f(x)$ có đạo hàm trên đoạn $[1;2]$, $f(1)=1$ và $f(2)=2$. Tính $I = \\int_{1}^{2} f'(x)dx$.\\nA. $I=1$.\\nB. $I=-1$.\\nC. $I=3$.\\nD. $I=2$.",
+    "explanation": "Chọn **A**\\nTheo định nghĩa tích phân: $I = \\int_{1}^{2} f'(x)dx = f(x) \\Big|_{1}^{2} = f(2) - f(1) = 2 - 1 = 1$."
+  },
+  {
+    "id": 11,
+    "question": "Ví dụ 11: $\\int_{1}^{2} \\frac{1}{2x+3} dx$ bằng\\nA. $2\\ln\\frac{7}{5}$.\\nB. $\\frac{1}{2}\\ln 35$.\\nC. $\\ln\\frac{7}{5}$.\\nD. $\\frac{1}{2}\\ln\\frac{7}{5}$.",
+    "explanation": "Chọn **D**\\n$\\int_{1}^{2} \\frac{1}{2x+3} dx = \\frac{1}{2} \\ln|2x+3| \\Big|_{1}^{2} = \\frac{1}{2} (\\ln 7 - \\ln 5) = \\frac{1}{2} \\ln\\frac{7}{5}$."
+  },
+  {
+    "id": 12,
+    "question": "Ví dụ 12: Cho $\\int_{0}^{1} \\frac{x}{(x+2)^2} dx = a + b\\ln 2 + c\\ln 3$ với $a, b, c$ là các số hữu tỷ. Giá trị của $3a + b + c$ bằng\\nA. -2.\\nB. -1.\\nC. 2.\\nD. 1.",
+    "explanation": "Chọn **B**\\nĐặt $u = x+2 \\Rightarrow du = dx$. Đổi cận: $x=0 \\Rightarrow u=2; x=1 \\Rightarrow u=3$.\\nKhi đó $x = u-2$.\\n$\\int_{0}^{1} \\frac{x}{(x+2)^2} dx = \\int_{2}^{3} \\frac{u-2}{u^2} du = \\int_{2}^{3} (\\frac{1}{u} - \\frac{2}{u^2}) du = \\left[ \\ln|u| + \\frac{2}{u} \\right]_{2}^{3}$\\n$= (\\ln 3 + \\frac{2}{3}) - (\\ln 2 + 1) = -\\frac{1}{3} - \\ln 2 + \\ln 3$.\\nSuy ra $a = -\\frac{1}{3}, b = -1, c = 1$.\\nVậy $3a + b + c = 3(-\\frac{1}{3}) + (-1) + 1 = -1 - 1 + 1 = -1$."
+  },
+  {
+    "id": 13,
+    "question": "Ví dụ 13: $\\int_{1}^{2} e^{3x-1} dx$ bằng\\nA. $\\frac{1}{3}(e^5 - e^2)$.\\nB. $\\frac{1}{3} e^5 - e^2$.\\nC. $e^5 - e^2$.\\nD. $\\frac{1}{3}(e^5 + e^2)$.",
+    "explanation": "Chọn **A**\\n$\\int_{1}^{2} e^{3x-1} dx = \\frac{1}{3} e^{3x-1} \\Big|_{1}^{2} = \\frac{1}{3} (e^{3(2)-1} - e^{3(1)-1}) = \\frac{1}{3} (e^5 - e^2)$."
+  },
+  {
+    "id": 14,
+    "question": "Ví dụ 14: Tích phân $I = \\int_{0}^{2018} 2^x dx$ bằng\\nA. $2^{2018} - 1$.\\nB. $\\frac{2^{2018} - 1}{\\ln 2}$.\\nC. $\\frac{2^{2018}}{\\ln 2}$.\\nD. $2^{2018}$.",
+    "explanation": "Chọn **B**\\n$I = \\int_{0}^{2018} 2^x dx = \\left[ \\frac{2^x}{\\ln 2} \\right]_{0}^{2018} = \\frac{2^{2018} - 2^0}{\\ln 2} = \\frac{2^{2018} - 1}{\\ln 2}$."
+  },
+  {
+    "id": 15,
+    "question": "Ví dụ 15: Có bao nhiêu số $m \\in (0; 2017)$ thỏa mãn $\\int_{0}^{m} \\cos 2x dx = 0$?\\nA. 643.\\nB. 1284.\\nC. 1285.\\nD. 642.",
+    "explanation": "Chọn **B**\\n$\\int_{0}^{m} \\cos 2x dx = \\left[ \\frac{1}{2} \\sin 2x \\right]_{0}^{m} = \\frac{1}{2} \\sin(2m) - 0 = \\frac{1}{2} \\sin(2m)$.\\nĐề bài cho tích phân bằng 0 $\\Rightarrow \\sin(2m) = 0 \\Rightarrow 2m = k\\pi \\Rightarrow m = \\frac{k\\pi}{2} (k \\in \\mathbb{Z})$.\\nVì $0 < m < 2017 \\Rightarrow 0 < \\frac{k\\pi}{2} < 2017 \\Rightarrow 0 < k < \\frac{4034}{\\pi} \\approx 1284,07$.\\nVậy $k \\in \\{1, 2, ..., 1284\\}$. Có 1284 giá trị nguyên của $k$, tương ứng với 1284 giá trị của $m$."
+  },
+  {
+    "id": 16,
+    "question": "Ví dụ 16: Biết $\\int_{\\pi/3}^{\\pi/2} \\cos x dx = a + b\\sqrt{3}$, với $a$ và $b$ là các số hữu tỉ. Tính $a - 4b$.\\nA. $a - 4b = \\frac{9}{2}$.\\nB. $a - 4b = 3$.\\nC. $a - 4b = -\\frac{1}{2}$.\\nD. $a - 4b = \\frac{1}{2}$.",
+    "explanation": "Chọn **B**\\n$\\int_{\\pi/3}^{\\pi/2} \\cos x dx = \\sin x \\Big|_{\\pi/3}^{\\pi/2} = \\sin(\\frac{\\pi}{2}) - \\sin(\\frac{\\pi}{3}) = 1 - \\frac{\\sqrt{3}}{2} = 1 - \\frac{1}{2}\\sqrt{3}$.\\nSuy ra $a = 1, b = -\\frac{1}{2}$.\\nVậy $a - 4b = 1 - 4(-\\frac{1}{2}) = 1 + 2 = 3$."
+  },
+  {
+    "id": 17,
+    "question": "Ví dụ 17: Có hai giá trị của số thực $a$ là $a_1, a_2 (a_1 < a_2)$ thỏa mãn $\\int_{1}^{a} (2x-3) dx = 0$. Hãy tính $T = 2^{a_1} + 2^{a_2} + \\log_4 (a_1 a_2)$.\\nA. $T = \\frac{13}{2}$.\\nB. $T = 14$.\\nC. $T = 20$.\\nD. $T = 56$.",
+    "explanation": "Chọn **A**\\n$\\int_{1}^{a} (2x-3) dx = (x^2 - 3x) \\Big|_{1}^{a} = (a^2 - 3a) - (1 - 3) = a^2 - 3a + 2$.\\nĐể tích phân bằng 0 thì $a^2 - 3a + 2 = 0 \\Rightarrow a = 1$ hoặc $a = 2$.\\nVì $a_1 < a_2$ nên $a_1 = 1, a_2 = 2$.\\n$T = 2^1 + 2^2 + \\log_4 (1 \\cdot 2) = 2 + 4 + \\log_{2^2} 2 = 6 + \\frac{1}{2} = \\frac{13}{2}$."
+  },
+  {
+    "id": 18,
+    "question": "Ví dụ 18: Cho $\\int_{0}^{1} (\\frac{1}{x+1} - \\frac{1}{x+2}) dx = a\\ln 2 + b\\ln 3$ với $a, b$ là các số nguyên. Mệnh đề nào dưới đây đúng?\\nA. $a + b = -2$.\\nB. $a + 2b = 0$.\\nC. $a + b = 2$.\\nD. $a - 2b = 0$.",
+    "explanation": "Chọn **B**\\n$\\int_{0}^{1} (\\frac{1}{x+1} - \\frac{1}{x+2}) dx = [\\ln|x+1| - \\ln|x+2|]_{0}^{1} = [\\ln \\frac{x+1}{x+2}]_{0}^{1}$\\n$= \\ln \\frac{2}{3} - \\ln \\frac{1}{2} = (\\ln 2 - \\ln 3) - (\\ln 1 - \\ln 2) = 2\\ln 2 - \\ln 3$.\\nSuy ra $a = 2, b = -1$.\\nKiểm tra các phương án:\\nA. $2 + (-1) = 1 \\neq -2$\\nB. $2 + 2(-1) = 0$ (Đúng)\\nC. $2 + (-1) = 1 \\neq 2$\\nD. $2 - 2(-1) = 4 \\neq 0$."
+  },
+  {
+    "id": 19,
+    "question": "Ví dụ 19: Biết rằng $\\int_{2}^{3} \\frac{x}{x^2-1} dx = a\\ln 2 - b\\ln 3$, trong đó $a, b \\in \\mathbb{Q}$. Tính giá trị của biểu thức $S = 4ab + a + b$.\\nA. $S = 5$.\\nB. $S = 6$.\\nC. $S = \\frac{5}{2}$.\\nD. $S = \\frac{7}{2}$.",
+    "explanation": "Chọn **A**\\nĐặt $u = x^2 - 1 \\Rightarrow du = 2x dx \\Rightarrow x dx = \\frac{1}{2} du$.\\nĐổi cận: $x=2 \\Rightarrow u=3; x=3 \\Rightarrow u=8$.\\n$\\int_{2}^{3} \\frac{x}{x^2-1} dx = \\int_{3}^{8} \\frac{1}{2u} du = \\frac{1}{2} \\ln|u| \\Big|_{3}^{8} = \\frac{1}{2} (\\ln 8 - \\ln 3) = \\frac{1}{2} (3\\ln 2 - \\ln 3) = \\frac{3}{2} \\ln 2 - \\frac{1}{2} \\ln 3$.\\nSuy ra $a = \\frac{3}{2}, b = \\frac{1}{2}$.\\n$S = 4(\\frac{3}{2})(\\frac{1}{2}) + \\frac{3}{2} + \\frac{1}{2} = 3 + 2 = 5$."
+  },
+  {
+    "id": 20,
+    "question": "Ví dụ 20: Biết $I = \\int_{3}^{4} \\frac{1}{x^2+x} dx = a\\ln 2 + b\\ln 3 + c\\ln 5$ với $a, b, c$ là các số nguyên. Tính $S = a + b + c$.\\nA. $S = 6$.\\nB. $S = 2$.\\nC. $S = -2$.\\nD. $S = 0$.",
+    "explanation": "Chọn **B**\\nTa có $\\frac{1}{x^2+x} = \\frac{1}{x(x+1)} = \\frac{1}{x} - \\frac{1}{x+1}$.\\n$I = \\int_{3}^{4} (\\frac{1}{x} - \\frac{1}{x+1}) dx = [\\ln|x| - \\ln|x+1|]_{3}^{4} = [\\ln \\frac{x}{x+1}]_{3}^{4}$\\n$= \\ln \\frac{4}{5} - \\ln \\frac{3}{4} = \\ln 4 - \\ln 5 - \\ln 3 + \\ln 4 = 2\\ln 4 - \\ln 3 - \\ln 5 = 4\\ln 2 - \\ln 3 - \\ln 5$.\\nSuy ra $a = 4, b = -1, c = -1$.\\n$S = a + b + c = 4 - 1 - 1 = 2$."
+  },
+  {
+    "id": 21,
+    "question": "Ví dụ 21: Biết $\\int_{0}^{1} \\frac{3x-1}{x^2+6x+9} dx = 3\\ln \\frac{a}{b} - \\frac{5}{6}$ trong đó $a, b$ là hai số nguyên dương và $\\frac{a}{b}$ là phân số tối giản. Khẳng định nào sau đây là đúng?\\nA. $a + b = 2c$.\\nB. $a - b = 4c$.\\nC. $a - b = 5c$.\\nD. $a^2 + b^2 = c^2$.",
+    "explanation": "Chọn **D**\\nTa có $\\frac{3x-1}{x^2+6x+9} = \\frac{3x-1}{(x+3)^2} = \\frac{3(x+3)-10}{(x+3)^2} = \\frac{3}{x+3} - \\frac{10}{(x+3)^2}$.\\n$\\int_{0}^{1} (\\frac{3}{x+3} - \\frac{10}{(x+3)^2}) dx = [3\\ln|x+3| + \\frac{10}{x+3}]_{0}^{1}$\\n$= (3\\ln 4 + \\frac{10}{4}) - (3\\ln 3 + \\frac{10}{3}) = 3(\\ln 4 - \\ln 3) + (\\frac{5}{2} - \\frac{10}{3})$\\n$= 3\\ln \\frac{4}{3} - \\frac{5}{6}$.\\nSuy ra $a = 4, b = 3$. Trong đề bài có xuất hiện $c$ ở các đáp án nhưng không định nghĩa $c$. Tuy nhiên, nhìn vào dạng đề bài thường gặp, có thể $c$ liên quan đến hằng số tự do hoặc một giá trị khác. Nhưng quan sát đáp án D: $a^2 + b^2 = c^2$, với $a=4, b=3$ thì $4^2+3^2=16+9=25=5^2$. Vậy nếu $c=5$ thì D đúng. Kiểm tra lại đề bài ảnh 7, có đoạn \"$c=5 \\Rightarrow a^2+b^2=c^2$\" trong lời giải. Có lẽ đề gốc là \"... - \\frac{c}{6}\" hoặc tương tự. Dựa vào lời giải trong ảnh, ta thấy $c=5$ được suy ra từ số hạng tự do, nên $D$ là đáp án đúng."
+  },
+  {
+    "id": 22,
+    "question": "Ví dụ 22: Biết $\\int_{0}^{1} (\\frac{x-1}{x+2})^2 dx = a + b\\ln 2 + c\\ln 3 (a, b, c \\in \\mathbb{Q})$. Đẳng thức nào sau đây đúng?\\nA. $2(a+b+c) = 7$.\\nB. $2(a+b-c) = 7$.\\nC. $2(a+b-c) = 5$.\\nD. $2(a+b+c) = 5$.",
+    "explanation": "Chọn **D** (Lưu ý: Lời giải trong ảnh chọn D nhưng kết luận $2(a+b+c)=5$, trong khi đáp án D trong ảnh là $2(a+b+c)=5$. Ảnh 8 khoanh D. Ta sẽ giải chi tiết)\\nTa có $(\\frac{x-1}{x+2})^2 = (1 - \\frac{3}{x+2})^2 = 1 - \\frac{6}{x+2} + \\frac{9}{(x+2)^2}$.\\n$\\int_{0}^{1} (1 - \\frac{6}{x+2} + \\frac{9}{(x+2)^2}) dx = [x - 6\\ln|x+2| - \\frac{9}{x+2}]_{0}^{1}$\\n$= (1 - 6\\ln 3 - \\frac{9}{3}) - (0 - 6\\ln 2 - \\frac{9}{2}) = 1 - 6\\ln 3 - 3 + 6\\ln 2 + 4,5$\\n$= 2,5 + 6\\ln 2 - 6\\ln 3 = \\frac{5}{2} + 6\\ln 2 - 6\\ln 3$.\\nSuy ra $a = \\frac{5}{2}, b = 6, c = -6$.\\nTính $2(a+b+c) = 2(\\frac{5}{2} + 6 - 6) = 2(\\frac{5}{2}) = 5$.\\nVậy đáp án đúng là $2(a+b+c)=5$, tương ứng với đáp án D trong ảnh."
+  },
+  {
+    "id": 23,
+    "question": "Ví dụ 23: Cho hàm số $f(x) = a\\sin(\\pi x) + b$ biết rằng $f'(1) = 2, \\int_{0}^{2} f(x)dx = 4$. Tính giá trị biểu thức $P = a\\pi + b$.\\nA. 2.\\nB. -1.\\nC. 1.\\nD. 0.",
+    "explanation": "Chọn **D**\\nTa có $f'(x) = a\\pi\\cos(\\pi x)$.\\n$f'(1) = a\\pi\\cos(\\pi) = -a\\pi$. Theo đề bài $f'(1) = 2 \\Rightarrow -a\\pi = 2 \\Rightarrow a = -\\frac{2}{\\pi}$.\\n$\\int_{0}^{2} (a\\sin(\\pi x) + b) dx = [-\\frac{a}{\\pi}\\cos(\\pi x) + bx]_{0}^{2}$\\n$= (-\\frac{a}{\\pi}\\cos(2\\pi) + 2b) - (-\\frac{a}{\\pi}\\cos 0 + 0) = (-\\frac{a}{\\pi} + 2b) - (-\\frac{a}{\\pi}) = 2b$.\\nTheo đề bài tích phân bằng 4 $\\Rightarrow 2b = 4 \\Rightarrow b = 2$.\\nVậy $P = a\\pi + b = (-\\frac{2}{\\pi})\\pi + 2 = -2 + 2 = 0$."
+  },
+  {
+    "id": 24,
+    "question": "Ví dụ 24: Cho $a, b, c$ là các số nguyên thỏa mãn $\\int_{\\pi/6}^{\\pi/4} \\frac{1-\\sin^3 x}{\\sin^2 x} dx = \\frac{a\\sqrt{3} + b\\sqrt{2} - c}{2}$. Hãy tính $T = 2a^2 + 3b^3 - abc$.\\nA. $T = -16$.\\nB. $T = -12$.\\nC. $T = 3$.\\nD. $T = 12$.",
+    "explanation": "Chọn **C**\\n$\\int_{\\pi/6}^{\\pi/4} (\\frac{1}{\\sin^2 x} - \\sin x) dx = [-\\cot x + \\cos x]_{\\pi/6}^{\\pi/4}$\\n$= (-\\cot \\frac{\\pi}{4} + \\cos \\frac{\\pi}{4}) - (-\\cot \\frac{\\pi}{6} + \\cos \\frac{\\pi}{6})$\\n$= (-1 + \\frac{\\sqrt{2}}{2}) - (-\\sqrt{3} + \\frac{\\sqrt{3}}{2}) = -1 + \\frac{\\sqrt{2}}{2} + \\frac{\\sqrt{3}}{2} = \\frac{\\sqrt{3} + \\sqrt{2} - 2}{2}$.\\nSo sánh với $\\frac{a\\sqrt{3} + b\\sqrt{2} - c}{2}$, ta có $a = 1, b = 1, c = 2$.\\n$T = 2(1)^2 + 3(1)^3 - 1\\cdot 1\\cdot 2 = 2 + 3 - 2 = 3$."
+  }
+]
