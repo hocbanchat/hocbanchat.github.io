@@ -237,6 +237,13 @@
                 `;
             }).join('');
 
+            // Xử lý xuống dòng với \n và render markdown
+            function processAndRenderMarkdown(text) {
+                if (!text) return '';
+                const processed = text.replace(/\\n/g, '\n');
+                return marked.parse(processed, { breaks: true });
+            }
+
             // Render detailed results
             const container = document.getElementById('results-container');
             container.innerHTML = questions.map((q, i) => {
@@ -278,7 +285,7 @@
                         </div>
                         <!-- Question Content -->
                         <div class="p-4 md:p-6 border-b border-gray-100 dark:border-border-dark">
-                            <div class="prose dark:prose-invert max-w-none question-content">${marked.parse(q.question || q.content || '')}</div>
+                            <div class="prose dark:prose-invert max-w-none question-content">${processAndRenderMarkdown(q.question || q.content || '')}</div>
                         </div>
                         <!-- Options -->
                         <div class="p-4 md:p-6 grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -298,10 +305,13 @@
                         optIcon = '<span class="material-symbols-outlined text-error text-lg">cancel</span>';
                     }
 
+                    // Xử lý \n trong option text
+                    const optionText = opt.replace(/\\n/g, '\n');
+
                     return `
                                     <div class="flex items-center gap-3 p-3 rounded-lg border ${optClass}">
                                         <span class="font-bold text-gray-500 dark:text-gray-400">${optionLabel}.</span>
-                                        <span class="flex-1 option-content">${opt}</span>
+                                        <span class="flex-1 option-content">${optionText}</span>
                                         ${optIcon}
                                     </div>
                                 `;
@@ -314,7 +324,7 @@
                                     <span class="material-symbols-outlined text-primary mt-0.5">lightbulb</span>
                                     <div>
                                         <p class="font-bold text-primary mb-2">Giải thích:</p>
-                                        <div class="prose dark:prose-invert max-w-none text-gray-700 dark:text-gray-300 explanation-content">${marked.parse(q.explanation)}</div>
+                                        <div class="prose dark:prose-invert max-w-none text-gray-700 dark:text-gray-300 explanation-content">${processAndRenderMarkdown(q.explanation)}</div>
                                     </div>
                                 </div>
                             </div>

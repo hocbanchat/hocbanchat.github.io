@@ -270,13 +270,20 @@
             `).join('');
         }
 
+        // Xử lý xuống dòng với \n và render markdown
+        function processAndRenderMarkdown(text) {
+            if (!text) return '';
+            const processed = text.replace(/\\n/g, '\n');
+            return marked.parse(processed, { breaks: true });
+        }
+
         // Render câu hỏi hiện tại
         function renderQuestion(index) {
             currentIndex = index;
             const q = questions[index];
 
             document.getElementById('question-number').textContent = `Câu ${index + 1}`;
-            document.getElementById('question-content').innerHTML = marked.parse(q.question || q.content || '');
+            document.getElementById('question-content').innerHTML = processAndRenderMarkdown(q.question || q.content || '');
 
             // Render KaTeX
             renderMathInElement(document.getElementById('question-content'), {
@@ -298,6 +305,9 @@
                     ? 'border-2 border-primary bg-primary/5'
                     : 'border border-gray-200 dark:border-gray-700 hover:border-primary/50 hover:bg-primary/5';
 
+                // Xử lý \n trong option
+                const optionText = opt.replace(/\\n/g, '\n');
+
                 return `
                     <label class="group relative flex items-center p-4 rounded-xl ${baseClass} cursor-pointer transition-all">
                         <input type="radio" name="answer" value="${optionLabel}" 
@@ -305,7 +315,7 @@
                             onchange="selectAnswer('${optionLabel}')"
                             class="h-5 w-5 text-primary border-gray-300 dark:border-gray-600 focus:ring-primary bg-transparent" />
                         <span class="ml-4 font-medium text-lg ${isSelected ? 'text-primary' : 'text-gray-700 dark:text-gray-300 group-hover:text-primary'}">
-                            ${opt}
+                            ${optionText}
                         </span>
                     </label>
                 `;

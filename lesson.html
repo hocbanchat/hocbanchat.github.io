@@ -384,7 +384,7 @@
                     const theoryResponse = await fetch(`${lessonFolder}/lythuyet.md`);
                     if (theoryResponse.ok) {
                         const theoryText = await theoryResponse.text();
-                        document.getElementById('theory-content').innerHTML = marked.parse(theoryText);
+                        document.getElementById('theory-content').innerHTML = processAndRenderMarkdown(theoryText);
                         renderMath(document.getElementById('theory-content'));
                     }
                 } catch (e) {
@@ -398,7 +398,7 @@
                     if (examplesResponse.ok) {
                         const examplesText = await examplesResponse.text();
                         document.getElementById('examples-section').classList.remove('hidden');
-                        document.getElementById('examples-content').innerHTML = marked.parse(examplesText);
+                        document.getElementById('examples-content').innerHTML = processAndRenderMarkdown(examplesText);
                         renderMath(document.getElementById('examples-content'));
                     } else {
                         // Nếu không có md, thử load json
@@ -412,11 +412,11 @@
                                     examplesHtml += `
                                         <div class="mb-6 p-4 bg-black/20 rounded-lg border border-surface-border">
                                             <div class="font-bold text-white mb-2">Ví dụ ${ex.id || index + 1}:</div>
-                                            <div class="mb-3 example-content text-gray-300 leading-relaxed">${marked.parse(ex.question || '', { breaks: true })}</div>
+                                            <div class="mb-3 example-content text-gray-300 leading-relaxed">${processAndRenderMarkdown(ex.question || '')}</div>
                                             <details class="group">
                                                 <summary class="cursor-pointer text-primary font-medium hover:underline select-none">Xem lời giải</summary>
                                                 <div class="mt-3 pt-3 border-t border-white/10 example-content text-gray-300 leading-relaxed">
-                                                    ${marked.parse(ex.explanation || '', { breaks: true })}
+                                                    ${processAndRenderMarkdown(ex.explanation || '')}
                                                 </div>
                                             </details>
                                         </div>
@@ -516,6 +516,14 @@
                     throwOnError: false
                 });
             }
+        }
+
+        // Xử lý xuống dòng với \n và render markdown
+        function processAndRenderMarkdown(text) {
+            if (!text) return '';
+            // Chuyển \n literal thành line break thực
+            const processed = text.replace(/\\n/g, '\n');
+            return marked.parse(processed, { breaks: true });
         }
 
         // Load khi trang load xong
