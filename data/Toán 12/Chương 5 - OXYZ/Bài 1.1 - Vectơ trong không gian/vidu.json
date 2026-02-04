@@ -1,1 +1,52 @@
-[]
+[
+  {
+    "id": 1,
+    "question": "Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình bình hành. Chứng minh rằng $\\vec{SA} + \\vec{SC} = \\vec{SB} + \\vec{SD}$.",
+    "explanation": "**Cách 1:** Vì đáy $ABCD$ là hình bình hành nên ta có $\\vec{BA} = \\vec{CD}$, suy ra:\\n$\\vec{SB} + \\vec{BA} + \\vec{SC} = \\vec{SB} + \\vec{SC} + \\vec{CD} \\Rightarrow \\vec{SA} + \\vec{SC} = \\vec{SB} + \\vec{SD}$ (điều phải chứng minh).\\n**Cách 2:** Gọi $O$ là giao điểm của $AC$ và $BD \\Rightarrow O$ là trung điểm của $AC$ và $BD$.\\nKhi đó, theo tính chất trung điểm, ta có:\\n$\\begin{cases} \\vec{SA} + \\vec{SC} = 2\\vec{SO} \\\\ \\vec{SB} + \\vec{SD} = 2\\vec{SO} \\end{cases} \\Rightarrow \\vec{SA} + \\vec{SC} = \\vec{SB} + \\vec{SD}$ (điều phải chứng minh)."
+  },
+  {
+    "id": 2,
+    "question": "Cho hình hộp $ABCD.A'B'C'D'$ với tâm $O$. Chứng minh:\\na. $\\vec{AB} + \\vec{DD'} + \\vec{C'D'} = \\vec{CC'}$\\nb. $\\vec{AB} + \\vec{CD'} - \\vec{CC'} = \\vec{0}$\\nc. $\\vec{BC} - \\vec{CC'} + \\vec{DC} = \\vec{A'C}$\\nd. $\\vec{OA} + \\vec{OB} + \\vec{OC} + \\vec{OD} + \\vec{OA'} + \\vec{OB'} + \\vec{OC'} + \\vec{OD'} = \\vec{0}$",
+    "explanation": "**a.** Ta có: $\\vec{AB} + \\vec{DD'} + \\vec{C'D'} = \\vec{DC} + \\vec{CD} + \\vec{DD'} = \\vec{0} + \\vec{DD'} = \\vec{DD'}$. Vì $DD'CC'$ là hình bình hành nên $\\vec{DD'} = \\vec{CC'}$. Vậy $\\vec{AB} + \\vec{DD'} + \\vec{C'D'} = \\vec{CC'}$.\\n**b.** Ta có: $\\vec{AB} + \\vec{CD'} - \\vec{CC'} = \\vec{AB} + (\\vec{CD'} + \\vec{C'C}) = \\vec{AB} + \\vec{C'D'}$.\\nMà $\\vec{C'D'} = \\vec{BA}$ (hai vectơ đối nhau trong hình hộp), nên $\\vec{AB} + \\vec{BA} = \\vec{0}$.\\n**c.** Ta có: $\\vec{BC} - \\vec{CC'} + \\vec{DC} = \\vec{BC} + \\vec{C'C} + \\vec{DC} = (\\vec{BC} + \\vec{CD}) + \\vec{C'C} = \\vec{BD} + \\vec{C'C}$.\\nTrong hình hộp, $\\vec{BD} = \\vec{B'D'}$, do đó $\\vec{BC} - \\vec{CC'} + \\vec{DC} = -(\\vec{CB} + \\vec{CC'} + \\vec{CD}) = -(\\vec{CA} + \\vec{CC'}) = -\\vec{CA'} = \\vec{A'C}$.\\n**d.** Vì $O$ là tâm hình hộp nên $O$ là trung điểm của các đường chéo $AC', BD', CA', DB'$. Khi đó:\\n$\\vec{OA} + \\vec{OC'} = \\vec{0}$; $\\vec{OB} + \\vec{OD'} = \\vec{0}$; $\\vec{OC} + \\vec{OA'} = \\vec{0}$; $\\vec{OD} + \\vec{OB'} = \\vec{0}$.\\nCộng vế theo vế ta được: $\\vec{OA} + \\vec{OB} + \\vec{OC} + \\vec{OD} + \\vec{OA'} + \\vec{OB'} + \\vec{OC'} + \\vec{OD'} = \\vec{0}$."
+  },
+  {
+    "id": 3,
+    "question": "Cho tứ diện $ABCD$. Gọi $M, N$ lần lượt là trung điểm của $AB$ và $CD$. Chứng minh:\\na. $\\vec{MN} = \\frac{1}{2}(\\vec{AD} + \\vec{BC}) = \\frac{1}{2}(\\vec{AC} + \\vec{BD})$\\nb. Điểm $G$ là trọng tâm của tứ diện $\\Leftrightarrow \\vec{GA} + \\vec{GB} + \\vec{GC} + \\vec{GD} = \\vec{0}$",
+    "explanation": "**a.** Sử dụng quy tắc ba điểm, ta có:\\n$\\vec{MN} = \\vec{MA} + \\vec{AD} + \\vec{DN}$ (1)\\n$\\vec{MN} = \\vec{MB} + \\vec{BC} + \\vec{CN}$ (2)\\nCộng (1) và (2) vế theo vế, ta có: $2\\vec{MN} = (\\vec{MA} + \\vec{MB}) + \\vec{AD} + \\vec{BC} + (\\vec{DN} + \\vec{CN})$.\\nVì $M, N$ lần lượt là trung điểm của $AB, CD$ nên $\\vec{MA} + \\vec{MB} = \\vec{0}$ và $\\vec{DN} + \\vec{CN} = \\vec{0}$.\\n$\\Rightarrow 2\\vec{MN} = \\vec{AD} + \\vec{BC} \\Leftrightarrow \\vec{MN} = \\frac{1}{2}(\\vec{AD} + \\vec{BC})$.\\nHoàn toàn tương tự, bằng cách chèn điểm $A, C$ và $B, D$, ta chứng minh được: $\\vec{MN} = \\frac{1}{2}(\\vec{AC} + \\vec{BD})$.\\n**b.** Theo tính chất trung điểm, ta có $\\vec{GA} + \\vec{GB} = 2\\vec{GM}$ và $\\vec{GC} + \\vec{GD} = 2\\vec{GN}$.\\nKhi đó: $\\vec{GA} + \\vec{GB} + \\vec{GC} + \\vec{GD} = \\vec{0} \\Leftrightarrow 2\\vec{GM} + 2\\vec{GN} = \\vec{0} \\Leftrightarrow \\vec{GM} + \\vec{GN} = \\vec{0}$.\\nĐiều này tương đương với $G$ là trung điểm của đoạn thẳng $MN$, tức là $G$ là trọng tâm của tứ diện $ABCD$."
+  },
+  {
+    "id": 4,
+    "question": "Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình chữ nhật. Chứng minh: $SA^2 + SC^2 = SB^2 + SD^2$.",
+    "explanation": "Gọi $O$ là tâm của hình chữ nhật $ABCD$. Ta có $OA = OB = OC = OD$.\\nSử dụng hệ thức vectơ, ta có:\\n$\\vec{SA}^2 = (\\vec{SO} + \\vec{OA})^2 = SO^2 + OA^2 + 2\\vec{SO} \\cdot \\vec{OA}$.\\n$\\vec{SC}^2 = (\\vec{SO} + \\vec{OC})^2 = SO^2 + OC^2 + 2\\vec{SO} \\cdot \\vec{OC}$.\\nCộng hai vế ta được: $SA^2 + SC^2 = 2SO^2 + OA^2 + OC^2 + 2\\vec{SO} \\cdot (\\vec{OA} + \\vec{OC})$.\\nVì $O$ là trung điểm $AC$ nên $\\vec{OA} + \\vec{OC} = \\vec{0}$, suy ra $SA^2 + SC^2 = 2SO^2 + OA^2 + OC^2$.\\nHoàn toàn tương tự, ta có: $SB^2 + SD^2 = 2SO^2 + OB^2 + OD^2$.\\nVì $OA = OB = OC = OD$ nên $OA^2 + OC^2 = OB^2 + OD^2$.\\nVậy $SA^2 + SC^2 = SB^2 + SD^2$."
+  },
+  {
+    "id": 5,
+    "question": "Cho hình chóp $S.ABC$. Trên cạnh $SA$, lấy điểm $M$ sao cho $SM = 2AM$. Trên cạnh $BC$, lấy điểm $N$ sao cho $CN = 2BN$. Hãy phân tích vectơ $\\vec{MN}$ theo các vectơ $\\vec{SA}, \\vec{BC}, \\vec{AB}$.",
+    "explanation": "Ta có: $\\vec{MN} = \\vec{MS} + \\vec{SA} + \\vec{AB} + \\vec{BN}$.\\nTheo giả thiết: $SM = 2AM \\Rightarrow \\vec{MS} = \\frac{2}{3}\\vec{AS} = -\\frac{2}{3}\\vec{SA}$.\\n$CN = 2BN \\Rightarrow \\vec{BN} = \\frac{1}{3}\\vec{BC}$.\\nThay vào biểu thức trên ta được:\\n$\\vec{MN} = -\\frac{2}{3}\\vec{SA} + \\vec{SA} + \\vec{AB} + \\frac{1}{3}\\vec{BC} = \\frac{1}{3}\\vec{SA} + \\vec{AB} + \\frac{1}{3}\\vec{BC}$."
+  },
+  {
+    "id": 6,
+    "question": "Cho tứ diện $ABCD$. Gọi $M$ là trung điểm của $BC$. Đặt $\\vec{AB} = \\vec{a}, \\vec{AC} = \\vec{b}$ và $\\vec{AD} = \\vec{c}$. Hãy phân tích vectơ $\\vec{DM}$ theo các vectơ $\\vec{a}, \\vec{b}, \\vec{c}$.",
+    "explanation": "Vì $M$ là trung điểm của $BC$ nên ta có: $\\vec{DM} = \\frac{1}{2}(\\vec{DB} + \\vec{DC})$.\\nChèn điểm $A$ vào các vectơ $\\vec{DB}$ và $\\vec{DC}$:\\n$\\vec{DB} = \\vec{DA} + \\vec{AB} = -\\vec{c} + \\vec{a}$.\\n$\\vec{DC} = \\vec{DA} + \\vec{AC} = -\\vec{c} + \\vec{b}$.\\nKhi đó: $\\vec{DM} = \\frac{1}{2}((-\\vec{c} + \\vec{a}) + (-\\vec{c} + \\vec{b})) = \\frac{1}{2}(\\vec{a} + \\vec{b} - 2\\vec{c})$."
+  },
+  {
+    "id": 7,
+    "question": "Cho tứ diện $ABCD$, gọi $M, N, I$ lần lượt là trung điểm của $AC, BD, MN$. Đặt $\\vec{AB} = \\vec{a}, \\vec{AC} = \\vec{b}$ và $\\vec{AD} = \\vec{c}$. Hãy phân tích vectơ $\\vec{AI}$ theo các vectơ $\\vec{a}, \\vec{b}, \\vec{c}$.",
+    "explanation": "Vì $I$ là trung điểm của $MN$ nên: $\\vec{AI} = \\frac{1}{2}(\\vec{AM} + \\vec{AN})$.\\nTa có:\\n$M$ là trung điểm $AC \\Rightarrow \\vec{AM} = \\frac{1}{2}\\vec{AC} = \\frac{1}{2}\\vec{b}$.\\n$N$ là trung điểm $BD \\Rightarrow \\vec{AN} = \\frac{1}{2}(\\vec{AB} + \\vec{AD}) = \\frac{1}{2}(\\vec{a} + \\vec{c})$.\\nSuy ra: $\\vec{AI} = \\frac{1}{2}\\left(\\frac{1}{2}\\vec{b} + \\frac{1}{2}(\\vec{a} + \\vec{c})\\right) = \\frac{\\vec{a} + \\vec{b} + \\vec{c}}{4}$."
+  },
+  {
+    "id": 8,
+    "question": "Cho hình hộp $ABCD.A'B'C'D'$. Đặt $\\vec{AB} = \\vec{a}; \\vec{AD} = \\vec{b}; \\vec{AA'} = \\vec{c}$. Hãy phân tích các véctơ $\\vec{AC'}, \\vec{BD'}, \\vec{CA'}, \\vec{DB'}, \\vec{BC'}, \\vec{A'D}$ theo các vectơ $\\vec{a}, \\vec{b}, \\vec{c}$.",
+    "explanation": "Sử dụng quy tắc hình hộp và quy tắc chèn điểm:\\n- $\\vec{AC'} = \\vec{AB} + \\vec{AD} + \\vec{AA'} = \\vec{a} + \\vec{b} + \\vec{c}$.\\n- $\\vec{BD'} = \\vec{BA} + \\vec{AD} + \\vec{DD'} = -\\vec{a} + \\vec{b} + \\vec{c}$.\\n- $\\vec{CA'} = \\vec{CB} + \\vec{CD} + \\vec{CC'} = -\\vec{b} - \\vec{a} + \\vec{c} = -\\vec{a} - \\vec{b} + \\vec{c}$.\\n- $\\vec{DB'} = \\vec{DA} + \\vec{AB} + \\vec{AA'} = -\\vec{b} + \\vec{a} + \\vec{c} = \\vec{a} - \\vec{b} + \\vec{c}$.\\n- $\\vec{BC'} = \\vec{BB'} + \\vec{B'C'} = \\vec{AA'} + \\vec{AD} = \\vec{c} + \\vec{b} = \\vec{b} + \\vec{c}$.\\n- $\\vec{A'D} = \\vec{A'A} + \\vec{AD} = -\\vec{c} + \\vec{b} = \\vec{b} - \\vec{c}$."
+  },
+  {
+    "id": 9,
+    "question": "Cho hình hộp $ABCD.A'B'C'D'$, $M$ là trung điểm của $AB$. Ta có $\\vec{D'M} = m \\cdot \\vec{AA'} + n \\cdot \\vec{AB} + p \\cdot \\vec{AD}$. Tính giá trị biểu thức $T = m \\cdot n \\cdot p$.",
+    "explanation": "Ta phân tích vectơ $\\vec{D'M}$ như sau:\\n$\\vec{D'M} = \\vec{D'D} + \\vec{DA} + \\vec{AM}$.\\nTrong đó:\\n$\\vec{D'D} = -\\vec{AA'}$\\n$\\vec{DA} = -\\vec{AD}$\\n$\\vec{AM} = \\frac{1}{2}\\vec{AB}$.\\nSuy ra: $\\vec{D'M} = -1\\vec{AA'} + \\frac{1}{2}\\vec{AB} - 1\\vec{AD}$.\\nĐối chiếu với giả thiết $\\vec{D'M} = m \\cdot \\vec{AA'} + n \\cdot \\vec{AB} + p \\cdot \\vec{AD}$, ta được:\\n$m = -1; n = \\frac{1}{2}; p = -1$.\\nVậy $T = m \\cdot n \\cdot p = (-1) \\cdot \\frac{1}{2} \\cdot (-1) = \\frac{1}{2}$."
+  },
+  {
+    "id": 10,
+    "question": "Cho hình lăng trụ $ABC.A'B'C'$. Đặt $\\vec{AA'} = \\vec{a}; \\vec{AB} = \\vec{b}; \\vec{AC} = \\vec{c}$.\\na) Hãy phân tích các vectơ $\\vec{B'C}$ và $\\vec{BC'}$ theo các vectơ $\\vec{a}, \\vec{b}, \\vec{c}$.\\nb) Gọi $G'$ là trọng tâm của tam giác $A'B'C'$. Phân tích vectơ $\\vec{AG'}$ theo các vectơ $\\vec{a}, \\vec{b}, \\vec{c}$.",
+    "explanation": "**a.** Ta có:\\n$\\vec{B'C} = \\vec{B'B} + \\vec{BC} = -\\vec{AA'} + (\\vec{AC} - \\vec{AB}) = -\\vec{a} + \\vec{c} - \\vec{b} = -\\vec{a} - \\vec{b} + \\vec{c}$.\\n$\\vec{BC'} = \\vec{BB'} + \\vec{B'C'} = \\vec{AA'} + \\vec{AC} - \\vec{AB} = \\vec{a} - \\vec{b} + \\vec{c}$.\\n**b.** Vì $G'$ là trọng tâm tam giác $A'B'C'$ nên ta có:\\n$\\vec{AG'} = \\frac{1}{3}(\\vec{AA'} + \\vec{AB'} + \\vec{AC'})$.\\nMà $\\vec{AB'} = \\vec{AA'} + \\vec{AB} = \\vec{a} + \\vec{b}$ và $\\vec{AC'} = \\vec{AA'} + \\vec{AC} = \\vec{a} + \\vec{c}$.\\nSuy ra: $\\vec{AG'} = \\frac{1}{3}(\\vec{a} + (\\vec{a} + \\vec{b}) + (\\vec{a} + \\vec{c})) = \\frac{1}{3}(3\\vec{a} + \\vec{b} + \\vec{c}) = \\vec{a} + \\frac{1}{3}\\vec{b} + \\frac{1}{3}\\vec{c}$."
+  }
+]

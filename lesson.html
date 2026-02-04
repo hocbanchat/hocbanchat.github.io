@@ -94,6 +94,70 @@
         .example-content strong {
             color: white;
         }
+
+        /* CSS cho bảng trong nội dung markdown */
+        .math-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .math-content table th,
+        .math-content table td {
+            border: 1px solid #3b4354;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            color: #d1d5db;
+        }
+
+        .math-content table th {
+            background-color: #1c2333;
+            color: white;
+            font-weight: 600;
+        }
+
+        .math-content table tr:nth-child(even) {
+            background-color: rgba(28, 35, 51, 0.5);
+        }
+
+        .math-content table tr:hover {
+            background-color: rgba(19, 91, 236, 0.1);
+        }
+
+        /* Responsive table */
+        .math-content .table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* Heading styles trong math-content */
+        .math-content h1,
+        .math-content h2 {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #135bec;
+        }
+
+        .math-content h3 {
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .math-content h4 {
+            color: #e5e7eb;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
     </style>
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
@@ -161,8 +225,11 @@
                     <span id="user-name" class="text-sm font-bold text-white"></span>
                     <span class="text-xs text-text-secondary">Học viên</span>
                 </div>
-                <img id="user-avatar" class="size-10 rounded-full ring-2 ring-surface-border object-cover" src=""
-                    alt="Avatar" />
+                <a href="profile.html" class="block hover:opacity-80 transition-opacity" title="Xem hồ sơ">
+                    <img id="user-avatar"
+                        class="size-10 rounded-full ring-2 ring-surface-border object-cover cursor-pointer hover:ring-primary transition-all"
+                        src="" alt="Avatar" />
+                </a>
             </div>
         </div>
     </header>
@@ -381,22 +448,25 @@
                     `;
                 }
 
-                // Load lý thuyết
+                // Load lý thuyết (thêm cache-busting để tránh lỗi không hiển thị)
                 try {
-                    const theoryResponse = await fetch(`${lessonFolder}/lythuyet.md`);
+                    const theoryResponse = await fetch(`${lessonFolder}/lythuyet.md?t=${Date.now()}`);
                     if (theoryResponse.ok) {
                         const theoryText = await theoryResponse.text();
                         document.getElementById('theory-content').innerHTML = processAndRenderMarkdown(theoryText);
                         renderMath(document.getElementById('theory-content'));
+                    } else {
+                        document.getElementById('theory-content').innerHTML = '<p class="text-text-secondary">Chưa có nội dung lý thuyết.</p>';
                     }
                 } catch (e) {
+                    console.log('Không thể load lý thuyết:', e);
                     document.getElementById('theory-content').innerHTML = '<p class="text-text-secondary">Chưa có nội dung lý thuyết.</p>';
                 }
 
-                // Load ví dụ (Supports md and json)
+                // Load ví dụ (Supports md and json) - thêm cache-busting
                 try {
                     // Ưu tiên load Markdown trước
-                    const examplesResponse = await fetch(`${lessonFolder}/vidu.md`);
+                    const examplesResponse = await fetch(`${lessonFolder}/vidu.md?t=${Date.now()}`);
                     if (examplesResponse.ok) {
                         const examplesText = await examplesResponse.text();
                         document.getElementById('examples-section').classList.remove('hidden');
@@ -543,7 +613,15 @@
             if (!text) return '';
             // Chuyển \n literal thành line break thực
             const processed = text.replace(/\\n/g, '\n');
-            return marked.parse(processed, { breaks: true });
+
+            // Cấu hình marked để hỗ trợ bảng và GFM (GitHub Flavored Markdown)
+            marked.setOptions({
+                breaks: true,
+                gfm: true, // Hỗ trợ bảng, strikethrough, etc.
+                headerIds: false
+            });
+
+            return marked.parse(processed);
         }
 
         // Biến lưu course data để dùng lại khi cập nhật sidebar

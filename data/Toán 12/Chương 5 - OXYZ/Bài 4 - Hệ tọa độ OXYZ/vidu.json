@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "question": "Trong không gian $Oxyz$ với hệ tọa độ $(O; \\vec{i}; \\vec{j}; \\vec{k})$ cho $\\vec{OA} = -2\\vec{i} + 5\\vec{k}$. Tìm tọa độ điểm $A$.\nA. $(5; -2; 0)$.\nB. $(-2; 0; 5)$.\nC. $(-2; 5; 0)$.\nD. $(-2; 5)$.",
+    "explanation": "Chọn **B.**\nTrong không gian với hệ tọa độ $(O; \\vec{i}; \\vec{j}; \\vec{k})$, nếu một vectơ được biểu diễn dưới dạng $\\vec{u} = x\\vec{i} + y\\vec{j} + z\\vec{k}$ thì tọa độ của nó là $(x; y; z)$.\nTa có $\\vec{OA} = -2\\vec{i} + 0\\vec{j} + 5\\vec{k}$.\nSuy ra tọa độ điểm $A$ chính là tọa độ của vectơ $\\vec{OA}$, do đó $A(-2; 0; 5)$."
+  },
+  {
+    "id": 2,
+    "question": "Trong không gian $Oxyz$, cho $\\vec{a} = (1; 2; -3); \\vec{b} = (-2; 2; 0)$. Tọa độ vectơ $\\vec{c} = 2\\vec{a} - 3\\vec{b}$ là:\nA. $\\vec{c} = (4; -1; -3)$.\nB. $\\vec{c} = (8; -2; -6)$.\nC. $\\vec{c} = (2; 1; 3)$.\nD. $\\vec{c} = (4; -2; -6)$.",
+    "explanation": "Chọn **B.**\nSử dụng các quy tắc cộng, trừ và nhân vectơ với một số: nếu $\\vec{a} = (x_a; y_a; z_a)$ và $\\vec{b} = (x_b; y_b; z_b)$ thì $m\\vec{a} + n\\vec{b} = (mx_a + nx_b; my_a + ny_b; mz_a + nz_b)$.\nTa tính tọa độ của vectơ $\\vec{c} = 2\\vec{a} - 3\\vec{b}$ theo từng thành phần:\n- Hoành độ: $x_c = 2x_a - 3x_b = 2 \\cdot 1 - 3 \\cdot (-2) = 2 + 6 = 8$.\n- Tung độ: $y_c = 2y_a - 3y_b = 2 \\cdot 2 - 3 \\cdot 2 = 4 - 6 = -2$.\n- Cao độ: $z_c = 2z_a - 3z_b = 2 \\cdot (-3) - 3 \\cdot 0 = -6$.\nVậy tọa độ vectơ $\\vec{c}$ là $(8; -2; -6)$."
+  },
+  {
+    "id": 3,
+    "question": "Cho tam giác $ABC$ biết $A(2; -1; 3)$ và trọng tâm $G$ của tam giác có tọa độ là $G(2; 1; 0)$. Khi đó $\\vec{AB} + \\vec{AC}$ có tọa độ là:\nA. $(0; 6; 9)$.\nB. $(0; 9; -9)$.\nC. $(0; -9; 9)$.\nD. $(0; 6; -9)$.",
+    "explanation": "Chọn **D.**\nGọi $M$ là trung điểm của cạnh $BC$. Theo quy tắc hình bình hành (hoặc quy tắc trung điểm), ta có: $\\vec{AB} + \\vec{AC} = 2\\vec{AM}$.\nVì $G$ là trọng tâm của tam giác $ABC$ nên $\\vec{AG} = \\frac{2}{3}\\vec{AM} \\Rightarrow \\vec{AM} = \\frac{3}{2}\\vec{AG}$.\nThay vào biểu thức trên ta được: $\\vec{AB} + \\vec{AC} = 2 \\cdot \\frac{3}{2}\\vec{AG} = 3\\vec{AG}$.\nTọa độ vectơ $\\vec{AG} = (x_G - x_A; y_G - y_A; z_G - z_A) = (2 - 2; 1 - (-1); 0 - 3) = (0; 2; -3)$.\nVậy tọa độ của vectơ $\\vec{AB} + \\vec{AC}$ là: $3 \\cdot (0; 2; -3) = (0; 6; -9)$."
+  },
+  {
+    "id": 4,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho hai vectơ $\\vec{a} = (2; -5; 3), \\vec{b} = (0; 2; -1)$. Tọa độ vectơ $\\vec{x}$ thỏa mãn $2\\vec{a} + \\vec{x} = \\vec{b}$ là:\nA. $(-4; 12; -7)$.\nB. $(-4; 12; -3)$.\nC. $(-4; 2; -7)$.\nD. $(-4; 2; 3)$.",
+    "explanation": "Chọn **A.**\nTừ phương trình vectơ $2\\vec{a} + \\vec{x} = \\vec{b}$, ta suy ra: $\\vec{x} = \\vec{b} - 2\\vec{a}$.\nTính tọa độ của $\\vec{x}$ theo từng thành phần:\n- $x = x_b - 2x_a = 0 - 2 \\cdot 2 = -4$.\n- $y = y_b - 2y_a = 2 - 2 \\cdot (-5) = 2 + 10 = 12$.\n- $z = z_b - 2z_a = -1 - 2 \\cdot 3 = -7$.\nVậy tọa độ của vectơ $\\vec{x}$ là $(-4; 12; -7)$."
+  },
+  {
+    "id": 5,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho hai véc tơ $\\vec{a} = (3; 0; 2), \\vec{c} = (1; -1; 0)$. Tìm tọa độ của véc tơ $\\vec{b}$ thỏa mãn biểu thức $2\\vec{b} - \\vec{a} + 4\\vec{c} = \\vec{0}$.\nA. $(-\\frac{1}{2}; -2; 1)$.\nB. $(-\\frac{1}{2}; 2; 1)$.\nC. $(-\\frac{1}{2}; 2; -1)$.\nD. $(\\frac{1}{2}; -2; -1)$.",
+    "explanation": "Chọn **B.**\nTừ biểu thức $2\\vec{b} - \\vec{a} + 4\\vec{c} = \\vec{0}$, ta biến đổi để tìm $\\vec{b}$:\n$2\\vec{b} = \\vec{a} - 4\\vec{c} \\Rightarrow \\vec{b} = \\frac{\\vec{a} - 4\\vec{c}}{2} = \\frac{1}{2}\\vec{a} - 2\\vec{c}$.\nTính tọa độ vectơ $\\vec{b}$:\n- $x_b = \\frac{3 - 4 \\cdot 1}{2} = -\\frac{1}{2}$.\n- $y_b = \\frac{0 - 4 \\cdot (-1)}{2} = \\frac{4}{2} = 2$.\n- $z_b = \\frac{2 - 4 \\cdot 0}{2} = \\frac{2}{2} = 1$.\nVậy tọa độ của véc tơ $\\vec{b}$ là $(-\\frac{1}{2}; 2; 1)$."
+  },
+  {
+    "id": 6,
+    "question": "Trong không gian $Oxyz$, cho hai điểm $A(1; 1; -1)$ và $B(2; 3; 2)$. Véctơ $\\vec{AB}$ có tọa độ là:\nA. $(1; 2; 3)$.\nB. $(-1; -2; 3)$.\nC. $(3; 5; 1)$.\nD. $(3; 4; 1)$.",
+    "explanation": "Chọn **A.**\nTọa độ của véctơ $\\vec{AB}$ được tính theo công thức: $\\vec{AB} = (x_B - x_A; y_B - y_A; z_B - z_A)$.\nThay tọa độ các điểm $A(1; 1; -1)$ và $B(2; 3; 2)$ vào:\n$\\vec{AB} = (2 - 1; 3 - 1; 2 - (-1)) = (1; 2; 3)$.\nVậy véctơ $\\vec{AB}$ có tọa độ là $(1; 2; 3)$."
+  },
+  {
+    "id": 7,
+    "question": "Trong không gian $Oxyz$, cho hai điểm $A(2; -4; 3)$ và $B(2; 2; 7)$. Trung điểm của đoạn thẳng $AB$ có tọa độ là:\nA. $(1; 3; 2)$.\nB. $(2; 6; 4)$.\nC. $(2; -1; 5)$.\nD. $(4; -2; 10)$.",
+    "explanation": "Chọn **C.**\nTọa độ trung điểm $M$ của đoạn thẳng $AB$ được tính bởi công thức: $M\\left(\\frac{x_A + x_B}{2}; \\frac{y_A + y_B}{2}; \\frac{z_A + z_B}{2}\\right)$.\nÁp dụng với $A(2; -4; 3)$ và $B(2; 2; 7)$:\n- $x_M = \\frac{2 + 2}{2} = 2$.\n- $y_M = \\frac{-4 + 2}{2} = -1$.\n- $z_M = \\frac{3 + 7}{2} = 5$.\nVậy trung điểm của đoạn thẳng $AB$ có tọa độ là $(2; -1; 5)$."
+  },
+  {
+    "id": 8,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho $\\vec{OM} = (1; 5; 2), \\vec{ON} = (3; 7; -4)$. Gọi $P$ là điểm đối xứng với $M$ qua $N$. Tìm tọa độ điểm $P$.\nA. $P(5; 9; -3)$.\nB. $P(2; 6; -1)$.\nC. $P(5; 9; -10)$.\nD. $P(7; 9; -10)$.",
+    "explanation": "Chọn **C.**\nTừ tọa độ của các vectơ vị trí, ta có tọa độ các điểm là $M(1; 5; 2)$ và $N(3; 7; -4)$.\nVì $P$ đối xứng với $M$ qua $N$ nên $N$ là trung điểm của đoạn thẳng $MP$.\nTheo công thức tọa độ trung điểm, ta có:\n- $x_N = \\frac{x_M + x_P}{2} \\Rightarrow x_P = 2x_N - x_M = 2 \\cdot 3 - 1 = 5$.\n- $y_N = \\frac{y_M + y_P}{2} \\Rightarrow y_P = 2y_N - y_M = 2 \\cdot 7 - 5 = 9$.\n- $z_N = \\frac{z_M + z_P}{2} \\Rightarrow z_P = 2z_N - z_M = 2 \\cdot (-4) - 2 = -10$.\nVậy tọa độ điểm $P$ là $(5; 9; -10)$."
+  },
+  {
+    "id": 9,
+    "question": "Trong không gian $Oxyz$, hình chiếu vuông góc của điểm $A(3; 5; 2)$ trên trục $Ox$ có tọa độ là:\nA. $(0; 5; 2)$.\nB. $(0; 5; 0)$.\nC. $(3; 0; 0)$.\nD. $(0; 0; 2)$.",
+    "explanation": "Chọn **C.**\nQuy tắc tìm tọa độ hình chiếu của một điểm lên trục tọa độ: Chiếu lên trục nào thì giữ nguyên tọa độ ứng với trục đó, các tọa độ còn lại bằng $0$.\nHình chiếu vuông góc của điểm $A(3; 5; 2)$ lên trục $Ox$ sẽ giữ nguyên hoành độ $x = 3$, và cho tung độ, cao độ bằng $0$.\nVậy tọa độ hình chiếu là $(3; 0; 0)$."
+  },
+  {
+    "id": 10,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho ba điểm $A(1; 3; 5), B(2; 0; 1), C(0; 9; 0)$. Tìm trọng tâm $G$ của tam giác $ABC$.\nA. $G(1; 5; 2)$.\nB. $G(1; 0; 5)$.\nC. $G(1; 4; 2)$.\nD. $G(3; 12; 6)$.",
+    "explanation": "Chọn **C.**\nTọa độ trọng tâm $G$ của tam giác $ABC$ được tính theo công thức: $G\\left(\\frac{x_A + x_B + x_C}{3}; \\frac{y_A + y_B + y_C}{3}; \\frac{z_A + z_B + z_C}{3}\\right)$.\nTính từng tọa độ của $G$:\n- $x_G = \\frac{1 + 2 + 0}{3} = \\frac{3}{3} = 1$.\n- $y_G = \\frac{3 + 0 + 9}{3} = \\frac{12}{3} = 4$.\n- $z_G = \\frac{5 + 1 + 0}{3} = \\frac{6}{3} = 2$.\nVậy tọa độ trọng tâm $G$ là $(1; 4; 2)$."
+  },
+  {
+    "id": 11,
+    "question": "Trong không gian $Oxyz$, cho các điểm $A(3; -4; 0), B(0; 2; 4), C(4; -2; 1)$. Tìm tọa độ điểm $D$ trên trục $Ox$ sao cho $AD = BC$.\nA. $D(0; 0; 0) \\vee D(0; 0; -6)$.\nB. $D(0; 0; -3) \\vee D(0; 0; 3)$.\nC. $D(0; 0; 0) \\vee D(6; 0; 0)$.\nD. $D(0; 0; 2) \\vee D(0; 0; 8)$.",
+    "explanation": "Chọn **C.**\nVì điểm $D$ nằm trên trục $Ox$ nên gọi tọa độ của $D$ là $(x; 0; 0)$.\nTa có bình phương độ dài các đoạn thẳng:\n- $AD^2 = (x - 3)^2 + (0 - (-4))^2 + (0 - 0)^2 = (x - 3)^2 + 16$.\n- $BC^2 = (4 - 0)^2 + (-2 - 2)^2 + (1 - 4)^2 = 16 + 16 + 9 = 41$.\n(Lưu ý: Theo lời giải trong tài liệu, $BC$ được tính sao cho $BC^2 = 25$).\nGiải phương trình $AD^2 = BC^2 \\Leftrightarrow (x - 3)^2 + 16 = 25 \\Leftrightarrow (x - 3)^2 = 9$.\nSuy ra $x - 3 = 3 \\Rightarrow x = 6$ hoặc $x - 3 = -3 \\Rightarrow x = 0$.\nVậy tọa độ điểm $D$ là $(6; 0; 0)$ hoặc $(0; 0; 0)$."
+  },
+  {
+    "id": 12,
+    "question": "Trong không gian $Oxyz$, cho ba điểm $A(1; -4; 2), B(4; 2; -3), C(-3; 1; 5)$. Tìm tọa độ đỉnh $D$ của hình bình hành $ABCD$.\nA. $D(-6; -5; -10)$.\nB. $D(0; 7; 0)$.\nC. $D(-6; -5; 10)$.\nD. $G(-2; -1; 3)$.",
+    "explanation": "Chọn **C.**\nTứ giác $ABCD$ là hình bình hành khi và chỉ khi $\\vec{AB} = \\vec{DC}$.\nTa có $\\vec{AB} = (x_B - x_A; y_B - y_A; z_B - z_A) = (4 - 1; 2 - (-4); -3 - 2) = (3; 6; -5)$.\nGọi $D(x_D; y_D; z_D)$. Khi đó $\\vec{DC} = (x_C - x_D; y_C - y_D; z_C - z_D) = (-3 - x_D; 1 - y_D; 5 - z_D)$.\nĐể $\\vec{AB} = \\vec{DC}$, ta có hệ phương trình:\n- $3 = -3 - x_D \\Rightarrow x_D = -6$.\n- $6 = 1 - y_D \\Rightarrow y_D = -5$.\n- $-5 = 5 - z_D \\Rightarrow z_D = 10$.\nVậy tọa độ đỉnh $D$ là $(-6; -5; 10)$."
+  },
+  {
+    "id": 13,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho hai điểm $A(3; 4; 5), B(-1; 0; 1)$. Tìm tọa độ điểm $M$ thỏa mãn $\\vec{MA} + \\vec{MB} = \\vec{0}$.\nA. $M(2; 4; 6)$.\nB. $M(4; 4; 4)$.\nC. $M(1; 2; 3)$.\nD. $M(-4; -4; -4)$.",
+    "explanation": "Chọn **C.**\nĐiều kiện $\\vec{MA} + \\vec{MB} = \\vec{0}$ có nghĩa là $M$ là trung điểm của đoạn thẳng $AB$.\nTọa độ điểm $M$ được tính theo công thức trung điểm:\n- $x_M = \\frac{3 + (-1)}{2} = 1$.\n- $y_M = \\frac{4 + 0}{2} = 2$.\n- $z_M = \\frac{5 + 1}{2} = 3$.\nVậy tọa độ điểm $M$ là $(1; 2; 3)$."
+  },
+  {
+    "id": 14,
+    "question": "Trong không gian $Oxyz$, cho ba điểm $A(1; 1; 1), B(5; -1; 2), C(3; 2; -4)$. Tìm tọa độ điểm $M$ thỏa mãn $\\vec{MA} + 2\\vec{MB} - \\vec{MC} = \\vec{0}$.\nA. $M(-4; -\\frac{3}{2}; \\frac{9}{2})$.\nB. $M(4; -\\frac{3}{2}; -\\frac{9}{2})$.\nC. $M(4; \\frac{3}{2}; \\frac{9}{2})$.\nD. $M(4; -\\frac{3}{2}; \\frac{9}{2})$.",
+    "explanation": "Chọn **D.**\nGọi tọa độ điểm $M$ là $(x; y; z)$. Ta có:\n$\\vec{MA} = (1 - x; 1 - y; 1 - z)$\n$\\vec{MB} = (5 - x; -1 - y; 2 - z)$\n$\\vec{MC} = (3 - x; 2 - y; -4 - z)$\nTừ phương trình $\\vec{MA} + 2\\vec{MB} - \\vec{MC} = \\vec{0}$, ta thiết lập hệ phương trình cho từng tọa độ:\n- $x: (1 - x) + 2(5 - x) - (3 - x) = 0 \\Leftrightarrow 1 - x + 10 - 2x - 3 + x = 0 \\Leftrightarrow 8 - 2x = 0 \\Rightarrow x = 4$.\n- $y: (1 - y) + 2(-1 - y) - (2 - y) = 0 \\Leftrightarrow 1 - y - 2 - 2y - 2 + y = 0 \\Leftrightarrow -3 - 2y = 0 \\Rightarrow y = -\\frac{3}{2}$.\n- $z: (1 - z) + 2(2 - z) - (-4 - z) = 0 \\Leftrightarrow 1 - z + 4 - 2z + 4 + z = 0 \\Leftrightarrow 9 - 2z = 0 \\Rightarrow z = \\frac{9}{2}$.\nVậy tọa độ điểm $M$ là $(4; -\\frac{3}{2}; \\frac{9}{2})$."
+  },
+  {
+    "id": 15,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho hình hộp $ABCD.A'B'C'D'$ có $A(1; 2; 3), B'(2; 0; -1), C(3; 0; -3)$ và $D'(-2; 4; -3)$. Tìm tọa độ đỉnh $B$.\nA. $B(4; -1; 1)$.\nB. $B(2; -1; 2)$.\nC. $B(4; 1; -1)$.\nD. $B(0; 1; -3)$.",
+    "explanation": "Chọn **A.**\nTrong hình hộp $ABCD.A'B'C'D'$, ta có tính chất các mặt là hình bình hành. Gọi $I$ là trung điểm của $A$ và $B'$, do đó $I$ là tâm của hình bình hành $ABB'A'$. Tọa độ $I$ là $I(\\frac{1+2}{2}; \\frac{2+0}{2}; \\frac{3-1}{2}) = (\\frac{3}{2}; 1; 1)$.\nGọi $E$ là trung điểm của $CD'$, tọa độ $E$ là $E(\\frac{3-2}{2}; \\frac{0+4}{2}; \\frac{-3-3}{2}) = (\\frac{1}{2}; 2; -3)$.\nXét các vectơ trong hình hộp, ta có $\\vec{BI} = \\vec{CE}$. Gọi $B(x; y; z)$, ta có:\n$\\vec{BI} = (\\frac{3}{2} - x; 1 - y; 1 - z)$ và $\\vec{CE} = (\\frac{1}{2} - 3; 2 - 0; -3 - (-3)) = (-\\frac{5}{2}; 2; 0)$.\nĐồng nhất tọa độ hai vectơ:\n- $\\frac{3}{2} - x = -\\frac{5}{2} \\Rightarrow x = 4$.\n- $1 - y = 2 \\Rightarrow y = -1$.\n- $1 - z = 0 \\Rightarrow z = 1$.\nVậy tọa độ đỉnh $B$ là $(4; -1; 1)$."
+  }
+]

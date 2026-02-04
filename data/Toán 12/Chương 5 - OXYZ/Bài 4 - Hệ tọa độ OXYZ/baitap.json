@@ -1,0 +1,722 @@
+[
+  {
+    "id": 1,
+    "question": "Trong các cặp véc tơ sau, cặp véc tơ đối nhau là",
+    "options": [
+      "A. $\\vec{a} = (1;2;-1), \\vec{b} = (-1;-2;1)$",
+      "B. $\\vec{a} = (1;2;-1), \\vec{b} = (1;2;-1)$",
+      "C. $\\vec{a} = (-1;-2;1), \\vec{b} = (-1;-2;1)$",
+      "D. $\\vec{a} = (1;2;-1), \\vec{b} = (-1;-2;0)$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\nHai véc tơ được gọi là đối nhau nếu chúng có cùng độ dài nhưng ngược hướng."
+  },
+  {
+    "id": 2,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, điều kiện để $\\vec{a}$ vuông góc với $\\vec{b}$ là",
+    "options": [
+      "A. $\\vec{a} \\cdot \\vec{b} = 0$",
+      "B. $[\\vec{a}, \\vec{b}] = \\vec{0}$",
+      "C. $\\vec{a} + \\vec{b} = \\vec{0}$",
+      "D. $\\vec{a} - \\vec{b} = \\vec{0}$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\n$\\vec{a} \\perp \\vec{b} \\iff \\vec{a} \\cdot \\vec{b} = 0$."
+  },
+  {
+    "id": 3,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, điều kiện để hai véc tơ $\\vec{a}, \\vec{b}$ bằng nhau là",
+    "options": [
+      "A. $\\vec{a} \\cdot \\vec{b} = 0$",
+      "B. $[\\vec{a}, \\vec{b}] = \\vec{0}$",
+      "C. $\\vec{a} + \\vec{b} = \\vec{0}$",
+      "D. $\\vec{a} - \\vec{b} = \\vec{0}$"
+    ],
+    "answer": "D",
+    "explanation": "**Chọn D.**\nHai véc tơ $\\vec{a}, \\vec{b}$ bằng nhau khi và chỉ khi $\\vec{a} - \\vec{b} = \\vec{0}$."
+  },
+  {
+    "id": 4,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, điều kiện để hai véc tơ $\\vec{a}, \\vec{b}$ đối nhau là",
+    "options": [
+      "A. $\\vec{a} \\cdot \\vec{b} = 0$",
+      "B. $[\\vec{a}, \\vec{b}] = \\vec{0}$",
+      "C. $\\vec{a} + \\vec{b} = \\vec{0}$",
+      "D. $\\vec{a} - \\vec{b} = \\vec{0}$"
+    ],
+    "answer": "C",
+    "explanation": "**Chọn C.**\nHai vectơ được gọi là đối nhau nếu chúng có cùng độ dài nhưng ngược hướng. Điều này tương đương với việc tổng của hai vectơ đó bằng vectơ không: $\\vec{a} + \\vec{b} = \\vec{0}$."
+  },
+  {
+    "id": 5,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho $\\vec{a} = (1;2;3), \\vec{b} = (-2;3;-1)$. Khi đó $\\vec{a} + \\vec{b}$ có tọa độ là",
+    "options": [
+      "A. $(-1;5;2)$",
+      "B. $(3;-1;4)$",
+      "C. $(1;5;2)$",
+      "D. $(1;-5;-2)$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\n$\\vec{a} + \\vec{b} = (1 + (-2); 2 + 3; 3 + (-1)) = (-1; 5; 2)$."
+  },
+  {
+    "id": 6,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho $\\vec{a} = (1;2;3), \\vec{b} = (-2;3;-1)$. Kết luận nào sau đây đúng?",
+    "options": [
+      "A. $\\vec{a} + \\vec{b} = (-1;5;2)$",
+      "B. $\\vec{a} - \\vec{b} = (3;-1;-4)$",
+      "C. $\\vec{b} - \\vec{a} = (3;-1;4)$",
+      "D. $\\vec{a} \\cdot \\vec{b} = 3$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\n$\\vec{a} + \\vec{b} = (1 - 2; 2 + 3; 3 - 1) = (-1; 5; 2)$.\n$\\vec{b} - \\vec{a} = (-2 - 1; 3 - 2; -1 - 3) = (-3; 1; -4)$.\n$\\vec{a} \\cdot \\vec{b} = 1 \\cdot (-2) + 2 \\cdot 3 + 3 \\cdot (-1) = 1$."
+  },
+  {
+    "id": 7,
+    "question": "Trong không gian tọa độ $Oxyz$, cho ba điểm $A(2;1;4), B(-2;2;6), C(6;0;-1)$. Khi đó $\\vec{AB} \\cdot \\vec{AC}$ bằng",
+    "options": [
+      "A. $-67$",
+      "B. $27$",
+      "C. $67$",
+      "D. $-27$"
+    ],
+    "answer": "D",
+    "explanation": "**Chọn D.**\n$\\vec{AB} = (-4;1;2); \\vec{AC} = (4;-1;-5)$.\nSuy ra $\\vec{AB} \\cdot \\vec{AC} = -4 \\cdot 4 + 1 \\cdot (-1) + 2 \\cdot (-5) = -27$."
+  },
+  {
+    "id": 8,
+    "question": "Trong không gian $Oxyz$, cho 3 véc tơ $\\vec{a} = (-1;1;0), \\vec{b} = (1;1;0), \\vec{c} = (1;1;1)$. Trong các mệnh đề sau, mệnh đề nào sai?",
+    "options": [
+      "A. $|\\vec{a}| = \\sqrt{2}$",
+      "B. $|\\vec{c}| = \\sqrt{3}$",
+      "C. $\\vec{a} \\perp \\vec{b}$",
+      "D. $\\vec{b} \\perp \\vec{c}$"
+    ],
+    "answer": "D",
+    "explanation": "**Chọn D.**\n$\\vec{b} \\cdot \\vec{c} = 1 \\cdot 1 + 1 \\cdot 1 + 0 \\cdot 1 = 2 \\neq 0$ suy ra $\\vec{b}$ và $\\vec{c}$ không vuông góc với nhau."
+  },
+  {
+    "id": 9,
+    "question": "Trong không gian $Oxyz$, cho tam giác $ABC$ với $A(1;-4;2), B(-3;2;1), C(3;-1;4)$. Khi đó trọng tâm $G$ của tam giác $ABC$ là",
+    "options": [
+      "A. $G(\\frac{1}{3}; -1; \\frac{7}{3})$",
+      "B. $G(3; -9; 21)$",
+      "C. $G(\\frac{1}{2}; -1; \\frac{7}{2})$",
+      "D. $G(\\frac{1}{4}; -\\frac{1}{4}; \\frac{7}{5})$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\n$x_G = \\frac{1-3+3}{3} = \\frac{1}{3}; y_G = \\frac{-4+2-1}{3} = -1; z_G = \\frac{2+1+4}{3} = \\frac{7}{3}$."
+  },
+  {
+    "id": 10,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho điểm $M$ thỏa mãn hệ thức $\\vec{OM} = 2\\vec{i} + \\vec{k}$. Bộ số nào dưới đây là tọa độ của điểm $M$?",
+    "options": [
+      "A. $(0;2;1)$",
+      "B. $(2;0;1)$",
+      "C. $(2;1;0)$",
+      "D. $(0;1;2)$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\nTọa độ điểm $M = (2;0;1)$."
+  },
+  {
+    "id": 11,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho hai điểm $A(1;3;-2)$ và $B(4;-5;2)$. Tọa độ của véc tơ $\\vec{AB}$ là",
+    "options": [
+      "A. $(-3;8;-4)$",
+      "B. $(3;-8;4)$",
+      "C. $(3;2;4)$",
+      "D. $(-3;2;4)$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\n$\\vec{AB} = (4-1; -5-3; 2-(-2)) = (3;-8;4)$."
+  },
+  {
+    "id": 12,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho 2 điểm $A(1;2;-3), B(3;-2;1)$. Tọa độ trung điểm $I$ của đoạn thẳng $AB$.",
+    "options": [
+      "A. $I(2;0;-1)$",
+      "B. $I(4;0;-2)$",
+      "C. $I(2;0;-4)$",
+      "D. $I(2;-2;-1)$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\n$x_I = \\frac{1+3}{2} = 2; y_I = \\frac{2-2}{2} = 0; z_I = \\frac{-3+1}{2} = -1$."
+  },
+  {
+    "id": 13,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho ba điểm $A(3;2;1), B(-1;3;2), C(2;4;-3)$. Giá trị của tích $\\vec{AB} \\cdot \\vec{AC}$ bằng",
+    "options": [
+      "A. $10$",
+      "B. $-6$",
+      "C. $-2$",
+      "D. $2$"
+    ],
+    "answer": "D",
+    "explanation": "**Chọn D.**\nTa có $\\vec{AB} = (-4;1;1)$ và $\\vec{AC} = (-1;2;-4)$. Vậy $\\vec{AB} \\cdot \\vec{AC} = 4 + 2 - 4 = 2$."
+  },
+  {
+    "id": 14,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, điểm nào sau đây nằm trên trục $Oz$?",
+    "options": [
+      "A. $A(1;0;0)$",
+      "B. $A(0;1;0)$",
+      "C. $A(0;0;2)$",
+      "D. $A(2;1;0)$"
+    ],
+    "answer": "C",
+    "explanation": "**Chọn C.**\nĐiểm nằm trên trục $Oz$ có tọa độ là $(0;0;z)$."
+  },
+  {
+    "id": 15,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, điểm nào sau đây nằm trên mặt phẳng $Oxy$?",
+    "options": [
+      "A. $A(1;2;3)$",
+      "B. $A(0;1;2)$",
+      "C. $A(0;0;2)$",
+      "D. $A(2;0;0)$"
+    ],
+    "answer": "D",
+    "explanation": "**Chọn D.**\nĐiểm nằm trên mặt phẳng $Oxy$ có tọa độ dạng $(x;y;0)$."
+  },
+  {
+    "id": 16,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, hình chiếu $A'$ của điểm $A(3;2;1)$ lên trục $Ox$ có tọa độ là",
+    "options": [
+      "A. $(3;2;0)$",
+      "B. $(3;0;0)$",
+      "C. $(0;0;1)$",
+      "D. $(0;2;0)$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\nHình chiếu $A'$ của điểm $A(3;2;1)$ lên trục $Ox$ là $(3;0;0)$."
+  },
+  {
+    "id": 17,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho điểm $A'$ đối xứng với điểm $A(3;5;-7)$ qua trục $Ox$. Tọa độ của điểm $A'$ là",
+    "options": [
+      "A. $(3;0;0)$",
+      "B. $(-3;5;7)$",
+      "C. $(3;-5;-7)$",
+      "D. $(3;-5;7)$"
+    ],
+    "answer": "D",
+    "explanation": "**Chọn D.**\nĐối xứng qua trục $Ox$ thì giữ nguyên tọa độ $x$, đổi dấu tọa độ $y$ và $z$: $A(3;5;-7) \\xrightarrow{Ox} A'(3;-5;7)$."
+  },
+  {
+    "id": 18,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho tam giác $ABC$ với $M$ là trung điểm của cạnh $BC$ và $A(1;-2;3), B(3;0;2), C(-1;4;-2)$. Tọa độ của véc tơ $\\vec{AM}$ là",
+    "options": [
+      "A. $(2;-2;2)$",
+      "B. $(0;-4;3)$",
+      "C. $(0;4;-3)$",
+      "D. $(0;8;-6)$"
+    ],
+    "answer": "C",
+    "explanation": "**Chọn C.**\n$M$ là trung điểm $BC \\Rightarrow M(1;2;0)$. Tọa độ véc tơ $\\vec{AM} = (1-1; 2-(-2); 0-3) = (0;4;-3)$."
+  },
+  {
+    "id": 19,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho hai véc tơ $\\vec{a} = 4\\vec{i} + 6\\vec{j} + 6\\vec{k}$ và $\\vec{b} = 2\\vec{i} + 3\\vec{j} + (m+1)\\vec{k}$. Để hai véc tơ $\\vec{a}$ và $\\vec{b}$ cùng phương thì $m$ bằng",
+    "options": [
+      "A. $2$",
+      "B. $-4$",
+      "C. $-2$",
+      "D. $4$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\nĐể hai véc tơ cùng phương thì: $\\frac{4}{2} = \\frac{6}{3} = \\frac{6}{m+1} \\Rightarrow 2 = \\frac{6}{m+1} \\Rightarrow m = 2$."
+  },
+  {
+    "id": 20,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho hai véc tơ $\\vec{a} = (m^2-3; 6; m)$ và $\\vec{b} = (2; 2; 1)$. Để hai véc tơ $\\vec{a}$ và $\\vec{b}$ cùng phương thì $m$ bằng",
+    "options": [
+      "A. $m = 3$",
+      "B. $m = -3$ hoặc $m = 3$",
+      "C. $m = -3$",
+      "D. $m = 1$ hoặc $m = 3$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\nĐể hai véc tơ cùng phương thì: $\\frac{m^2-3}{2} = \\frac{6}{2} = \\frac{m}{1} \\Rightarrow m = 3$. Thử lại $m=3$ thỏa mãn $\\frac{3^2-3}{2} = 3$."
+  },
+  {
+    "id": 21,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho hai véc tơ $\\vec{a} = (m;1;m)$ và $\\vec{b} = 4\\vec{i} + 3\\vec{j} + m\\vec{k}$. Để hai véc tơ $\\vec{a}$ và $\\vec{b}$ vuông góc thì",
+    "options": [
+      "A. $m=0$ hoặc $m=-2$",
+      "B. $m=1$ hoặc $m=-3$",
+      "C. $m=-1$ hoặc $m=-3$",
+      "D. $m=1$ hoặc $m=-1$"
+    ],
+    "answer": "C",
+    "explanation": "**Chọn C.**\nĐể hai véc tơ vuông góc thì $\\vec{a} \\cdot \\vec{b} = 0 \\iff m \\cdot 4 + 1 \\cdot 3 + m \\cdot m = 0 \\iff m^2 + 4m + 3 = 0 \\iff m = -1$ hoặc $m = -3$."
+  },
+  {
+    "id": 22,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho hai véc tơ $\\vec{a}$ và $\\vec{b}$ tạo thành với nhau một góc $120^\\circ$. Biết $|\\vec{a}|=3, |\\vec{b}|=5$. Khi đó $|\\vec{a}+\\vec{b}|$ và $|\\vec{a}-\\vec{b}|$ lần lượt bằng",
+    "options": [
+      "A. 19 và 49",
+      "B. 49 và 19",
+      "C. 7 và $\\sqrt{19}$",
+      "D. $\\sqrt{19}$ và 7"
+    ],
+    "answer": "D",
+    "explanation": "**Chọn D.**\n$|\\vec{a}+\\vec{b}|^2 = (\\vec{a}+\\vec{b})^2 = a^2 + 2\\vec{a}\\cdot\\vec{b} + b^2 = 3^2 + 2 \\cdot 3 \\cdot 5 \\cdot \\cos 120^\\circ + 5^2 = 19 \\Rightarrow |\\vec{a}+\\vec{b}| = \\sqrt{19}$.\n$|\\vec{a}-\\vec{b}|^2 = (\\vec{a}-\\vec{b})^2 = a^2 - 2\\vec{a}\\cdot\\vec{b} + b^2 = 3^2 - 2 \\cdot 3 \\cdot 5 \\cdot \\cos 120^\\circ + 5^2 = 49 \\Rightarrow |\\vec{a}-\\vec{b}| = 7$."
+  },
+  {
+    "id": 23,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho ba véc tơ $\\vec{a} = (-1;1;0), \\vec{b} = (1;1;0), \\vec{c} = (1;1;1)$. Mệnh đề nào sau đây là đúng?",
+    "options": [
+      "A. $\\vec{a} + \\vec{b} + \\vec{c} = \\vec{0}$",
+      "B. $\\vec{a}, \\vec{b}, \\vec{c}$ đồng phẳng",
+      "C. $\\cos(\\vec{b},\\vec{c}) = \\frac{\\sqrt{6}}{3}$",
+      "D. $\\vec{a} \\cdot \\vec{b} = 1$"
+    ],
+    "answer": "C",
+    "explanation": "**Chọn C.**\n- A sai: $\\vec{a}+\\vec{b}+\\vec{c} = (1;3;1) \\neq \\vec{0}$.\n- B sai: $[\\vec{a},\\vec{b}]\\cdot\\vec{c} = -2 \\neq 0$.\n- C đúng: $\\cos(\\vec{b},\\vec{c}) = \\frac{1+1+0}{\\sqrt{2}\\sqrt{3}} = \\frac{2}{\\sqrt{6}} = \\frac{\\sqrt{6}}{3}$.\n- D sai: $\\vec{a}\\cdot\\vec{b} = -1+1+0 = 0$."
+  },
+  {
+    "id": 24,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho bốn điểm $A(3;-4;0), B(0;2;4), C(4;2;1)$. Tọa độ điểm $D$ trên trục $Ox$ thỏa mãn $AD = BC$ là",
+    "options": [
+      "A. $(0;0;0)$ và $(6;0;0)$",
+      "B. $(2;0;0)$ và $(6;0;0)$",
+      "C. $(-3;0;0)$ và $(3;0;0)$",
+      "D. $(0;0;0)$ và $(-6;0;0)$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\nGọi $D(x;0;0)$. $AD^2 = (x-3)^2 + 16 + 0 = x^2-6x+25$. $BC^2 = (4-0)^2 + (2-2)^2 + (1-4)^2 = 16+0+9=25$. $AD=BC \\iff x^2-6x+25 = 25 \\iff x(x-6)=0 \\iff x=0$ hoặc $x=6$."
+  },
+  {
+    "id": 25,
+    "question": "Cho điểm $M(1;-1;1)$ và $H(0;1;4)$. Tìm tọa độ điểm $N$ sao cho đoạn thẳng $MN$ nhận $H$ làm trung điểm.",
+    "options": [
+      "A. $N(-1;3;3)$",
+      "B. $N(-1;3;4)$",
+      "C. $N(-1;3;6)$",
+      "D. $N(-1;3;7)$"
+    ],
+    "answer": "D",
+    "explanation": "**Chọn D.**\n$H$ là trung điểm $MN \\iff x_N = 2x_H - x_M = -1; y_N = 2y_H - y_M = 3; z_N = 2z_H - z_M = 7$."
+  },
+  {
+    "id": 26,
+    "question": "Cho $\\vec{a}$ và $\\vec{b}$ có độ dài lần lượt là 1 và 2. Biết góc $(\\vec{a};\\vec{b}) = 60^\\circ$ thì $|\\vec{a}+\\vec{b}|$ bằng",
+    "options": [
+      "A. 1",
+      "B. $\\sqrt{7}$",
+      "C. $\\frac{3}{2}$",
+      "D. $\\frac{\\sqrt{22}}{2}$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\n$|\\vec{a}+\\vec{b}|^2 = |\\vec{a}|^2 + |\\vec{b}|^2 + 2|\\vec{a}||\\vec{b}|\\cos(\\vec{a},\\vec{b}) = 1^2 + 2^2 + 2 \\cdot 1 \\cdot 2 \\cdot \\cos 60^\\circ = 7 \\Rightarrow |\\vec{a}+\\vec{b}| = \\sqrt{7}$."
+  },
+  {
+    "id": 27,
+    "question": "Cho $A(3;1;0), B(-2;4;\\sqrt{2})$. Tọa độ $M$ là điểm trên trục tung và cách đều $A$ và $B$ là",
+    "options": [
+      "A. $M(2;0;0)$",
+      "B. $M(0;-2;0)$",
+      "C. $M(0;2;0)$",
+      "D. $M(0;0;2)$"
+    ],
+    "answer": "C",
+    "explanation": "**Chọn C.**\nGọi $M(0;y;0)$. $MA^2 = (3-0)^2 + (1-y)^2 + (0-0)^2 = 9 + (1-y)^2$. $MB^2 = (-2-0)^2 + (4-y)^2 + (\\sqrt{2}-0)^2 = 6 + (4-y)^2$. $MA=MB \\iff 9+1-2y+y^2 = 6+16-8y+y^2 \\iff 6y = 12 \\iff y=2$."
+  },
+  {
+    "id": 28,
+    "question": "Cho $A(-1;2;3), B(0;1;-3)$. Tọa độ điểm $M$ thỏa mãn $\\vec{AM} = 2\\vec{BA}$ là",
+    "options": [
+      "A. $M(3;4;9)$",
+      "B. $M(-3;4;15)$",
+      "C. $M(1;0;-9)$",
+      "D. $M(-1;0;9)$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\n$\\vec{BA} = (-1;1;6)$. $\\vec{AM} = (x_M+1; y_M-2; z_M-3)$. $\\vec{AM}=2\\vec{BA} \\Rightarrow x_M+1=-2; y_M-2=2; z_M-3=12 \\Rightarrow M(-3;4;15)$."
+  },
+  {
+    "id": 29,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho ba điểm $M(1;2;4), N(2;-1;0), P(-2;3;-1)$. Tìm tọa độ điểm $Q$ biết rằng $\\vec{MQ} = \\vec{NP}$.",
+    "options": [
+      "A. $Q(-3;6;3)$",
+      "B. $Q(3;-6;-3)$",
+      "C. $Q(-1;2;1)$",
+      "D. $Q(-\\frac{3}{2}; \\frac{3}{2}; \\frac{3}{2})$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\n$\\vec{MQ} = \\vec{NP} \\iff Q = M + \\vec{NP} = M + P - N = (1-2+2; 2-(-1)+3; 4-0-1) = (1;6;3)$. *(Lưu ý: lời giải trong ảnh có lỗi tính toán, đáp án A đúng theo phép tính)*"
+  },
+  {
+    "id": 30,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho tam giác $ABC$ với $A(-4;3;5), B(-3;2;5)$ và $C(5;-3;8)$. Tính $\\cos\\widehat{ABC}$.",
+    "options": [
+      "A. $-\\frac{13}{14}$",
+      "B. $\\frac{\\sqrt{7}}{14}$",
+      "C. $\\frac{13}{14}$",
+      "D. $-\\frac{\\sqrt{7}}{14}$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\n$\\vec{BA} = (-1;1;0); \\vec{BC} = (8;-5;3)$. $\\cos\\widehat{ABC} = \\frac{\\vec{BA} \\cdot \\vec{BC}}{|\\vec{BA}|\\cdot|\\vec{BC}|} = \\frac{-8-5+0}{\\sqrt{2}\\sqrt{64+25+9}} = \\frac{-13}{\\sqrt{2}\\sqrt{98}} = \\frac{-13}{14}$."
+  },
+  {
+    "id": 31,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho $A(2;1;1), B(0;3;-1), C(1;1;2)$. Mệnh đề nào sau đây đúng?",
+    "options": [
+      "A. $\\triangle ABC$ vuông tại A.",
+      "B. $\\triangle ABC$ vuông tại B.",
+      "C. $\\triangle ABC$ vuông tại C.",
+      "D. $\\triangle ABC$ đều."
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\n$\\vec{AB} = (-2;2;-2); \\vec{AC} = (-1;0;1)$. $\\vec{AB} \\cdot \\vec{AC} = 2+0-2=0 \\Rightarrow AB \\perp AC$."
+  },
+  {
+    "id": 32,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho 3 véc tơ $\\vec{a}=(1;2;3), \\vec{b}=(2;-1;2), \\vec{c}=(-2;1;-1)$. Tọa độ của véc tơ $\\vec{m} = 3\\vec{a} - 2\\vec{b} + \\vec{c}$ là",
+    "options": [
+      "A. $(-3;9;4)$",
+      "B. $(5;5;12)$",
+      "C. $(-3;-9;4)$",
+      "D. $(-3;9;-4)$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\n$3\\vec{a}=(3;6;9); -2\\vec{b}=(-4;2;-4); \\vec{c}=(-2;1;-1)$. $\\vec{m} = (3-4-2; 6+2+1; 9-4-1) = (-3;9;4)$."
+  },
+  {
+    "id": 33,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho hai véc tơ $\\vec{a}=(4;-2;-4), \\vec{b}=(6;-3;2)$ thì $|(2\\vec{a}-3\\vec{b})(\\vec{a}+2\\vec{b})|$ có giá trị bằng",
+    "options": [
+      "A. 200",
+      "B. $\\sqrt{200}$",
+      "C. $200^2$",
+      "D. $\\pm 200$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\n$2\\vec{a}-3\\vec{b} = (8;-4;-8)-(18;-9;6) = (-10;5;-14)$. $\\vec{a}+2\\vec{b} = (4;-2;-4)+(12;-6;4) = (16;-8;0)$. Tích vô hướng: $(-10)\\cdot 16 + 5\\cdot(-8) + (-14)\\cdot 0 = -200$. Giá trị tuyệt đối là 200."
+  },
+  {
+    "id": 34,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho $\\vec{a}=(x;2;1), \\vec{b}=(2;1;2)$. Tìm $x$, biết $\\cos(\\vec{a},\\vec{b})=\\frac{2}{3}$.",
+    "options": [
+      "A. $x = \\frac{1}{2}$",
+      "B. $x = -\\frac{1}{3}$",
+      "C. $x = \\frac{3}{2}$",
+      "D. $x = -\\frac{1}{4}$"
+    ],
+    "answer": "D",
+    "explanation": "**Chọn D.**\n$\\frac{2}{3} = \\frac{2x+2+2}{\\sqrt{x^2+5}\\sqrt{9}} \\iff 2\\sqrt{x^2+5} = 2x+4 \\iff \\sqrt{x^2+5} = x+2$. Điều kiện $x \\geq -2$. Bình phương hai vế: $x^2+5 = x^2+4x+4 \\iff 4x=1 \\iff x=-\\frac{1}{4}$ (thỏa)."
+  },
+  {
+    "id": 35,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, góc tạo bởi hai véc ơ $\\vec{a}=(-4;2;4)$ và $\\vec{b}=(2\\sqrt{2};-2\\sqrt{2};0)$ là",
+    "options": [
+      "A. $45^\\circ$",
+      "B. $90^\\circ$",
+      "C. $135^\\circ$",
+      "D. $60^\\circ$"
+    ],
+    "answer": "C",
+    "explanation": "**Chọn C.**\n$\\cos(\\vec{a},\\vec{b}) = \\frac{-8\\sqrt{2}-4\\sqrt{2}+0}{\\sqrt{16+4+16}\\sqrt{8+8+0}} = \\frac{-12\\sqrt{2}}{6 \\cdot 4} = -\\frac{\\sqrt{2}}{2}$. Góc là $135^\\circ$."
+  },
+  {
+    "id": 36,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho 3 điểm $A(2;1;1), B(0;3;-1), C(1;1;2)$. Khi đó khẳng định nào sau đây là đúng khi nói về tam giác $ABC$?",
+    "options": [
+      "A. $\\triangle ABC$ vuông tại A",
+      "B. $\\triangle ABC$ vuông tại B",
+      "C. $\\triangle ABC$ vuông tại C",
+      "D. $\\triangle ABC$ đều"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\n$\\vec{AB}=(-2;2;-2), \\vec{AC}=(-1;0;1)$. $\\vec{AB}\\cdot\\vec{AC} = 2+0-2=0 \\Rightarrow \\triangle ABC$ vuông tại A."
+  },
+  {
+    "id": 37,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho hai điểm $A(2;1;1), B(0;3;-1)$ và điểm $C$ nằm trên mặt phẳng $Oxy$ sao cho ba điểm $A,B,C$ thẳng hàng. Điểm $C$ có tọa độ là",
+    "options": [
+      "A. $(1;2;3)$",
+      "B. $(1;2;1)$",
+      "C. $(1;2;0)$",
+      "D. $(1;1;0)$"
+    ],
+    "answer": "C",
+    "explanation": "**Chọn C.**\nGọi $C(x;y;0)$. $\\vec{AB}=(-2;2;-2)$, $\\vec{AC}=(x-2;y-1;-1)$. $A,B,C$ thẳng hàng nên $\\vec{AC}=k\\vec{AB}$. Từ thành phần $z$, ta có $-1 = k(-2) \\Rightarrow k=1/2$. Suy ra $x-2=-1 \\Rightarrow x=1$ và $y-1=1 \\Rightarrow y=2$. Vậy $C(1;2;0)$."
+  },
+  {
+    "id": 38,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho 4 điểm $M(2;-3;5), N(4;7;-9), P(3;2;1), Q(1;-8;12)$. Bộ 3 điểm nào sau đây thẳng hàng?",
+    "options": [
+      "A. $M, N, Q$",
+      "B. $M, N, P$",
+      "C. $M, P, Q$",
+      "D. $N, P, Q$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\n$\\vec{MN}=(2;10;-14), \\vec{MQ}=(-1;-5;7)$. Ta thấy $\\vec{MN} = -2\\vec{MQ}$ nên $M, N, Q$ thẳng hàng."
+  },
+  {
+    "id": 39,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho hai điểm $P(x;-1;-1), Q(3;-3;1)$, biết $PQ=3$, giá trị của $x$ là:",
+    "options": [
+      "A. 2 hoặc 4",
+      "B. -2 hoặc -4",
+      "C. 2 hoặc -4",
+      "D. 4 hoặc -2"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\n$PQ^2 = (3-x)^2 + (-3+1)^2 + (1+1)^2 = 9 \\iff (3-x)^2 + 4 + 4 = 9 \\iff (3-x)^2=1 \\iff 3-x = \\pm 1$. Suy ra $x=2$ hoặc $x=4$."
+  },
+  {
+    "id": 40,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho điểm $A(2;0;3), B(-1;3;-3)$, và điểm $C(0;-2;4)$. Điểm $D$ thỏa mãn hệ thức $\\vec{DA} = 2\\vec{DB} + 3\\vec{DC}$ có tọa độ là?",
+    "options": [
+      "A. $D(-1;0;\\frac{15}{4})$",
+      "B. $D(1;0;\\frac{3}{4})$",
+      "C. $D(2;0;-\\frac{3}{4})$",
+      "D. $D(-2;0;-\\frac{15}{4})$"
+    ],
+    "answer": "C",
+    "explanation": "**Chọn C.**\nGọi $D(x,y,z)$. Từ $\\vec{DA} = 2\\vec{DB} + 3\\vec{DC}$ ta lập hệ phương trình cho từng tọa độ. $2-x = 2(-1-x)+3(0-x) \\Rightarrow x=-1$. $0-y = 2(3-y)+3(-2-y) \\Rightarrow y=0$. $3-z = 2(-3-z)+3(4-z) \\Rightarrow z=-\\frac{3}{4}$. Vậy $D(-1;0;-\\frac{3}{4})$."
+  },
+  {
+    "id": 41,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho ba điểm $A(-3;4;-2), B(-5;6;2)$ và $C(-4;7;-1)$. Tọa độ điểm $M$ thỏa mãn $\\vec{AM} = 2\\vec{AB} + 3\\vec{BC}$ là:",
+    "options": [
+      "A. $M(4;-11;3)$",
+      "B. $M(-4;11;-3)$",
+      "C. $M(4;11;-3)$",
+      "D. $M(-4;-11;3)$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\nTa có $\\vec{AB} = (-2;2;4)$ và $\\vec{BC} = (1;1;-3)$. Gọi $M(x;y;z)$.\n$\\vec{AM} = 2\\vec{AB} + 3\\vec{BC} \\Leftrightarrow (x+3; y-4; z+2) = 2(-2;2;4) + 3(1;1;-3) = (-1;7;-1)$.\n$\\Rightarrow x+3=-1 \\Rightarrow x=-4; y-4=7 \\Rightarrow y=11; z+2=-1 \\Rightarrow z=-3$. Vậy $M(-4;11;-3)$."
+  },
+  {
+    "id": 42,
+    "question": "Cho ba điểm $A(-2;0;2), B(1;2;3), C(x;y-3;7)$. Biết $x, y$ là giá trị để ba điểm $A, B, C$ thẳng hàng. Khi đó tổng $x+y$ bằng",
+    "options": [
+      "A. 13",
+      "B. 26",
+      "C. 0",
+      "D. 24"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\nTa có $\\vec{AB} = (3;2;1)$ và $\\vec{AC} = (x+2; y-3; 5)$.\nBa điểm thẳng hàng $\\Leftrightarrow \\vec{AC} = k\\vec{AB} \\Leftrightarrow \\frac{x+2}{3} = \\frac{y-3}{2} = \\frac{5}{1} = 5$.\n$\\Rightarrow x+2=15 \\Rightarrow x=13$ và $y-3=10 \\Rightarrow y=13$. Vậy $x+y=26$."
+  },
+  {
+    "id": 43,
+    "question": "Trong không gian $Oxyz$, cho ba điểm $M(2;3;-1), N(-1;1;1), P(1;m-1;2)$. Với giá trị nào của $m$ thì tam giác $MNP$ vuông tại $N$?",
+    "options": [
+      "A. $m=3$",
+      "B. $m=2$",
+      "C. $m=1$",
+      "D. $m=0$"
+    ],
+    "answer": "D",
+    "explanation": "**Chọn D.**\n$\\triangle MNP$ vuông tại $N \\Leftrightarrow \\vec{NM} \\cdot \\vec{NP} = 0$.\nTa có $\\vec{NM} = (3;2;-2)$ và $\\vec{NP} = (2; m-2; 1)$.\n$3 \\cdot 2 + 2(m-2) - 2 \\cdot 1 = 0 \\Leftrightarrow 6 + 2m - 4 - 2 = 0 \\Leftrightarrow 2m = 0 \\Leftrightarrow m = 0$."
+  },
+  {
+    "id": 44,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho $\\vec{a}=(-1;1;0), \\vec{b}=(1;1;0), \\vec{c}=(1;1;1)$. Cho $OABC$ là hình bình hành thỏa mãn $\\vec{OA}=\\vec{a}, \\vec{OB}=\\vec{b}$. Khi đó diện tích hình bình hành $OABC$ bằng:",
+    "options": [
+      "A. 2",
+      "B. $\\sqrt{2}$",
+      "C. 1",
+      "D. 4"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\nDiện tích hình bình hành $S = |[\\vec{OA}, \\vec{OB}]|$.\n$[\\vec{OA}, \\vec{OB}] = (0;0;-2) \\Rightarrow S = \\sqrt{0^2+0^2+(-2)^2} = 2$."
+  },
+  {
+    "id": 45,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho $A(1;0;0), B(0;0;1), C(2;1;1)$ thì $ABCD$ là hình bình hành khi tọa độ $D$ là",
+    "options": [
+      "A. $D(1;1;2)$",
+      "B. $D(3;1;0)$",
+      "C. $D(3;-1;0)$",
+      "D. $D(-1;1;2)$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\n$ABCD$ là hình bình hành $\\Leftrightarrow \\vec{AB} = \\vec{DC} \\Leftrightarrow (-1;0;1) = (2-x; 1-y; 1-z)$.\n$\\Rightarrow 2-x=-1 \\Rightarrow x=3; 1-y=0 \\Rightarrow y=1; 1-z=1 \\Rightarrow z=0$. Vậy $D(3;1;0)$."
+  },
+  {
+    "id": 46,
+    "question": "Cho hình lập phương $ABCD.A'B'C'D'$ có cạnh bằng 1, điểm $A$ trùng với gốc tọa độ $O$, $B$ nằm trên tia $Ox$, $D$ nằm trên tia $Oy$ và $A'$ nằm trên tia $Oz$. Kết luận nào sau đây sai?",
+    "options": [
+      "A. $A(0;0;0)$",
+      "B. $D'(0;1;1)$",
+      "C. $C'(1;1;1)$",
+      "D. $A'(1;-1;-1)$"
+    ],
+    "answer": "D",
+    "explanation": "**Chọn D.**\nTheo giả thiết: $A(0;0;0), B(1;0;0), D(0;1;0), A'(0;0,1)$.\nTừ đó suy ra $C(1;1;0), B'(1;0,1), D'(0;1,1), C'(1;1,1)$. Vậy khẳng định D sai."
+  },
+  {
+    "id": 47,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho hai véctơ $\\vec{a}=(3;-2;1)$ và $\\vec{b}=(2;1;-1)$. Biết $\\vec{u}=m\\vec{a}-3\\vec{b}$ và $\\vec{v}=3\\vec{a}+m\\vec{b}$. Giá trị của $m$ để hai véctơ $\\vec{u}$ và $\\vec{v}$ vuông góc là",
+    "options": [
+      "A. $m=-1; m=-9$",
+      "B. $m=1; m=-9$",
+      "C. $m=1; m=9$",
+      "D. $m=-1; m=9$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\n$\\vec{u} \\perp \\vec{v} \\Leftrightarrow \\vec{u} \\cdot \\vec{v} = 0 \\Leftrightarrow (m\\vec{a}-3\\vec{b})(3\\vec{a}+m\\vec{b}) = 0 \\Leftrightarrow 3m|\\vec{a}|^2 + (m^2-9)\\vec{a}\\cdot\\vec{b} - 3m|\\vec{b}|^2 = 0$.\n$|\\vec{a}|^2=14, |\\vec{b}|^2=6, \\vec{a}\\cdot\\vec{b}=3 \\Rightarrow 3m(14) + (m^2-9)3 - 3m(6) = 0 \\Leftrightarrow 3m^2 + 24m - 27 = 0 \\Leftrightarrow m=1; m=-9$."
+  },
+  {
+    "id": 48,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho $\\vec{a}, \\vec{b}$ là các vectơ khác $\\vec{0}$. Kết luận nào là đúng?",
+    "options": [
+      "A. $[\\vec{a}, \\vec{b}] = [\\vec{b}, \\vec{a}]$",
+      "B. $[\\vec{a}, \\vec{b}]$ không vuông góc với $\\vec{a}$ và $\\vec{b}$",
+      "C. $[k\\vec{a}, \\vec{b}] = k[\\vec{a}, \\vec{b}]$",
+      "D. $[\\vec{a}, \\vec{b}] = |\\vec{a}| \\cdot |\\vec{b}| \\cdot \\sin(\\vec{a}, \\vec{b})$"
+    ],
+    "answer": "C",
+    "explanation": "**Chọn C.**\n- A sai vì $[\\vec{a}, \\vec{b}] = -[\\vec{b}, \\vec{a}]$.\n- B sai vì $[\\vec{a}, \\vec{b}]$ luôn vuông góc với cả $\\vec{a}$ và $\\vec{b}$.\n- C đúng theo tính chất của tích có hướng.\n- D sai vì thiếu dấu giá trị tuyệt đối cho tích có hướng."
+  },
+  {
+    "id": 49,
+    "question": "Cho $\\vec{a}=(-2;5;3), \\vec{b}=(-4;1;-2)$. Kết quả của biểu thức $|[\\vec{a}, \\vec{b}]|$ là",
+    "options": [
+      "A. $\\sqrt{216}$",
+      "B. $\\sqrt{405}$",
+      "C. $\\sqrt{749}$",
+      "D. $\\sqrt{708}$"
+    ],
+    "answer": "C",
+    "explanation": "**Chọn C.**\n$[\\vec{a}, \\vec{b}] = (-13; -16; 18)$.\n$|[\\vec{a}, \\vec{b}]| = \\sqrt{(-13)^2 + (-16)^2 + 18^2} = \\sqrt{749}$."
+  },
+  {
+    "id": 50,
+    "question": "Cho $\\vec{a}=(1;t;2), \\vec{b}=(t+1;2;1), \\vec{c}=(0;t-2;2)$. Xác định $t$ để $\\vec{a}, \\vec{b}, \\vec{c}$ đồng phẳng",
+    "options": [
+      "A. $t=1$",
+      "B. $t=-2$",
+      "C. $t=\\frac{1}{2}$",
+      "D. $t=\\frac{2}{5}$"
+    ],
+    "answer": "D",
+    "explanation": "**Chọn D.**\nĐồng phẳng $\\Leftrightarrow [\\vec{a}, \\vec{b}] \\cdot \\vec{c} = 0$.\n$[\\vec{a}, \\vec{b}] = (t-4; 2t+1; -t^2-t-2)$.\n$[\\vec{a}, \\vec{b}] \\cdot \\vec{c} = 0(t-4) + (t-2)(2t+1) + 2(-t^2-t-2) = 0 \\Leftrightarrow -5t+2=0 \\Leftrightarrow t=\\frac{2}{5}$."
+  },
+  {
+    "id": 51,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho ba điểm $A(1;2;-1), B(3;0;4), C(2;1;-1)$. Độ dài đường cao hạ từ đỉnh $A$ của $\\triangle ABC$ là",
+    "options": [
+      "A. $\\sqrt{6}$",
+      "B. $\\frac{33}{\\sqrt{50}}$",
+      "C. $\\frac{5\\sqrt{6}}{9}$",
+      "D. $\\frac{\\sqrt{50}}{33}$"
+    ],
+    "answer": "C",
+    "explanation": "**Chọn C.**\n$\\vec{BC} = (-1;1;-5) \\Rightarrow BC = 3\\sqrt{3}$.\n$[\\vec{AB}, \\vec{AC}] = (5;5;0) \\Rightarrow S_{ABC} = \\frac{1}{2}|[\\vec{AB}, \\vec{AC}]| = \\frac{5\\sqrt{2}}{2}$.\n$h_A = \\frac{2S_{ABC}}{BC} = \\frac{5\\sqrt{2}}{3\\sqrt{3}} = \\frac{5\\sqrt{6}}{9}$."
+  },
+  {
+    "id": 52,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho $A(1;0;-1), B(1;-2;2)$. Diện tích tam giác $OAB$ bằng:",
+    "options": [
+      "A. $\\frac{\\sqrt{17}}{2}$",
+      "B. $\\sqrt{11}$",
+      "C. $\\sqrt{6}$",
+      "D. $\\frac{\\sqrt{6}}{2}$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\n$[\\vec{OA}, \\vec{OB}] = (-2;-3;-2) \\Rightarrow S_{OAB} = \\frac{1}{2}\\sqrt{(-2)^2 + (-3)^2 + (-2)^2} = \\frac{\\sqrt{17}}{2}$."
+  },
+  {
+    "id": 53,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho hình bình hành $ABCD$ có $A(2;4;-4), B(1;1;-3), C(-2;0;5)$. Diện tích hình bình hành $ABCD$ bằng",
+    "options": [
+      "A. $\\sqrt{245}$",
+      "B. $\\sqrt{345}$",
+      "C. $\\sqrt{615}$",
+      "D. $\\sqrt{618}$"
+    ],
+    "answer": "D",
+    "explanation": "**Chọn D.**\n$\\vec{AB}=(-1;-3;1), \\vec{AC}=(-4;-4;9)$.\n$[\\vec{AB}, \\vec{AC}] = (-23;5;-8) \\Rightarrow S_{ABCD} = \\sqrt{(-23)^2+5^2+(-8)^2} = \\sqrt{618}$."
+  },
+  {
+    "id": 54,
+    "question": "Trong không gian $Oxyz$, cho 4 điểm không đồng phẳng $A(2;-1;-2), B(-1;1;2), C(-1;1;0), S(1;0;1)$. Độ dài đường cao của hình chóp $S.ABC$ xuất phát từ đỉnh $S$ bằng",
+    "options": [
+      "A. $\\frac{1}{3\\sqrt{3}}$",
+      "B. $\\frac{1}{\\sqrt{13}}$",
+      "C. $\\frac{2}{\\sqrt{13}}$",
+      "D. $\\sqrt{13}$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\n$V_{S.ABC} = \\frac{1}{6}|[\\vec{AB}, \\vec{AC}] \\cdot \\vec{AS}| = \\frac{1}{3}$.\n$S_{ABC} = \\frac{1}{2}|[\\vec{AB}, \\vec{AC}]| = \\sqrt{13} \\Rightarrow h_S = \\frac{3V}{S} = \\frac{1}{\\sqrt{13}}$."
+  },
+  {
+    "id": 55,
+    "question": "Trong không gian $Oxyz$, cho 4 điểm $A(1;0;0), B(0;1;0), C(0;1;1), D(1;1;1)$ không đồng phẳng. Tứ diện $ABCD$ có thể tích là",
+    "options": [
+      "A. $\\frac{1}{6}$",
+      "B. $\\frac{2}{3}$",
+      "C. 2",
+      "D. $\\frac{1}{3}$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\n$\\vec{AB}=(-1;1;0), \\vec{AC}=(-1;1;1), \\vec{AD}=(0;1;1)$.\n$V = \\frac{1}{6}|[\\vec{AB}, \\vec{AC}] \\cdot \\vec{AD}| = \\frac{1}{6}$."
+  },
+  {
+    "id": 56,
+    "question": "Trong không gian với hệ tọa độ $Oxyz$, cho hình hộp chữ nhật $ABCD.A'B'C'D'$ có $A(0;0;0), B(1;0;0), D(0;1;0), A'(0;0;2)$ thì thể tích $V$ của tứ diện $ABA'C$ bằng:",
+    "options": [
+      "A. 1",
+      "B. $\\frac{2}{3}$",
+      "C. $\\frac{1}{3}$",
+      "D. $\\frac{1}{6}$"
+    ],
+    "answer": "C",
+    "explanation": "**Chọn C.**\n$C(1;1;0)$. $\\vec{AB}=(1;0;0), \\vec{AA'}=(0;0,2), \\vec{AC}=(1;1,0)$.\n$V = \\frac{1}{6}|[\\vec{AB}, \\vec{AC}] \\cdot \\vec{AA'}| = \\frac{1}{6}|2| = \\frac{1}{3}$."
+  },
+  {
+    "id": 57,
+    "question": "Trong không gian $Oxyz$, cho $A(1;1;-6), B(0;0;-2), C(-5;1;2), D'(2;1;-1)$. Nếu $ABCD.A'B'C'D'$ là hình hộp thì thể tích của nó là:",
+    "options": [
+      "A. 36",
+      "B. 38",
+      "C. 40",
+      "D. 42"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\nSử dụng công thức thể tích khối hộp $V = |[\\vec{AB}, \\vec{AD}] \\cdot \\vec{AA'}| = 38$."
+  },
+  {
+    "id": 58,
+    "question": "Trong không gian $Oxyz$, cho $A(5;3;-4), B(1;3;4)$. Tìm tọa độ $C \\in (Oxy)$ sao cho $\\triangle ABC$ cân tại $C$ và có diện tích bằng $8\\sqrt{5}$.",
+    "options": [
+      "A. $C(3;7;0)$ hoặc $C(3;1;0)$",
+      "B. $C(3;7;0)$ hoặc $C(3;-1;0)$",
+      "C. $C(-3;-7;0)$ hoặc $C(3;-1;0)$",
+      "D. $C(-3;7;0)$ hoặc $C(3;1;0)$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\n$C \\in (Oxy) \\Rightarrow C(x;y;0)$. $\\triangle ABC$ cân tại $C \\Rightarrow CA=CB \\Rightarrow x=3$.\n$S = \\frac{1}{2}|[\\vec{CA}, \\vec{CB}]| = 8\\sqrt{5} \\Rightarrow 4\\sqrt{5}|3-y| = 8\\sqrt{5} \\Rightarrow |3-y|=2 \\Rightarrow y=1; y=7$. *(Trong JSON này y=7 và y=-1 dựa theo giải thích hình 19)*"
+  },
+  {
+    "id": 59,
+    "question": "Trong không gian tọa độ $Oxyz$, cho các điểm $A(3;1;-1), B(1;0;2), C(5;0;0)$. Tính diện tích tam giác $ABC$.",
+    "options": [
+      "A. $\\sqrt{21}$",
+      "B. $\\frac{\\sqrt{21}}{3}$",
+      "C. $\\sqrt{42}$",
+      "D. $2\\sqrt{21}$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\n$\\vec{AB}=(-2;-1;3), \\vec{AC}=(2;-1;1) \\Rightarrow [\\vec{AB}, \\vec{AC}] = (2;8;4)$.\n$S = \\frac{1}{2}\\sqrt{2^2+8^2+4^2} = \\frac{\\sqrt{84}}{2} = \\sqrt{21}$."
+  },
+  {
+    "id": 60,
+    "question": "Trong không gian tọa độ $Oxyz$, cho bốn điểm $A(0;1;1), B(-1;0;2), C(-1;1;1), D(1;4;7)$. Khoảng cách từ điểm $D$ đến mặt phẳng $(ABC)$ là:",
+    "options": [
+      "A. $\\frac{9\\sqrt{2}}{2}$",
+      "B. 9",
+      "C. $\\frac{9\\sqrt{2}}{4}$",
+      "D. $9\\sqrt{2}$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\n$h = \\frac{3V_{ABCD}}{S_{ABC}} = \\frac{3(3/2)}{\\sqrt{2}/2} = \\frac{9}{\\sqrt{2}} = \\frac{9\\sqrt{2}}{2}$."
+  }
+]

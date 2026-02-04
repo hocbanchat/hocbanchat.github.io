@@ -1,1 +1,182 @@
-[]
+[
+  {
+    "id": 1,
+    "question": "Cho $|\\vec{a}|=3, |\\vec{b}|=5$, góc giữa giữa $\\vec{a}$ và $\\vec{b}$ bằng $120^\\circ$. Khi đó tích vô hướng của hai véctơ $\\vec{a}$ và $\\vec{b}$ bằng:",
+    "options": [
+      "A. $\\vec{a} \\cdot \\vec{b} = -\\frac{15}{2}$",
+      "B. $\\vec{a} \\cdot \\vec{b} = \\frac{15}{2}$",
+      "C. $\\vec{a} \\cdot \\vec{b} = \\frac{15\\sqrt{3}}{2}$",
+      "D. $\\vec{a} \\cdot \\vec{b} = 15$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\n$\\vec{a} \\cdot \\vec{b} = |\\vec{a}| \\cdot |\\vec{b}| \\cdot \\cos(\\vec{a}, \\vec{b}) = 3 \\cdot 5 \\cdot \\cos 120^\\circ = 3 \\cdot 5 \\cdot \\left(-\\frac{1}{2}\\right) = -\\frac{15}{2}$."
+  },
+  {
+    "id": 2,
+    "question": "Cho hình lập phương $ABCD.EFGH$. Hãy xác định góc giữa cặp vectơ $\\vec{AB}$ và $\\vec{DH}$?",
+    "options": [
+      "A. $45^\\circ$",
+      "B. $90^\\circ$",
+      "C. $120^\\circ$",
+      "D. $60^\\circ$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\nVì $\\vec{DH} = \\vec{AE}$ (do $ADHE$ là hình vuông) nên $(\\vec{AB}, \\vec{DH}) = (\\vec{AB}, \\vec{AE}) = \\widehat{BAE} = 90^\\circ$ (do $ABFE$ là hình vuông)."
+  },
+  {
+    "id": 3,
+    "question": "Cho hình lập phương $ABCD.EFGH$. Hãy xác định góc giữa cặp vectơ $\\vec{AB}$ và $\\vec{EG}$?",
+    "options": [
+      "A. $90^\\circ$",
+      "B. $60^\\circ$",
+      "C. $45^\\circ$",
+      "D. $120^\\circ$"
+    ],
+    "answer": "C",
+    "explanation": "**Chọn C.**\nVì $\\vec{EG} = \\vec{AC}$ (do $AEGC$ là hình chữ nhật) nên $(\\vec{AB}, \\vec{EG}) = (\\vec{AB}, \\vec{AC}) = \\widehat{BAC} = 45^\\circ$ (do $ABCD$ là hình vuông)."
+  },
+  {
+    "id": 4,
+    "question": "Cho tứ diện đều $ABCD$ có cạnh bằng $a$. Mệnh đề nào sau đây sai?",
+    "options": [
+      "A. $\\vec{AB} \\cdot \\vec{AC} = \\frac{a^2}{2}$",
+      "B. $AB \\perp CD$ hay $\\vec{AB} \\cdot \\vec{CD} = 0$",
+      "C. $\\vec{AB} + \\vec{CD} + \\vec{BC} + \\vec{DA} = \\vec{0}$",
+      "D. $\\vec{AC} \\cdot \\vec{AD} = \\vec{AC} \\cdot \\vec{CD}$"
+    ],
+    "answer": "D",
+    "explanation": "**Chọn D.**\n- Đáp án A đúng: $\\vec{AB} \\cdot \\vec{AC} = a \\cdot a \\cdot \\cos 60^\\circ = \\frac{a^2}{2}$.\n- Đáp án B đúng vì trong tứ diện đều, các cặp cạnh đối diện vuông góc.\n- Đáp án C đúng theo quy tắc cộng vectơ nối tiếp.\n- Đáp án D sai: $\\vec{AC} \\cdot \\vec{AD} = \\frac{a^2}{2}$, trong khi $\\vec{AC} \\cdot \\vec{CD} = \\vec{AC} \\cdot (\\vec{AD} - \\vec{AC}) = \\vec{AC} \\cdot \\vec{AD} - \\vec{AC}^2 = \\frac{a^2}{2} - a^2 = -\\frac{a^2}{2}$."
+  },
+  {
+    "id": 5,
+    "question": "Cho hình lập phương $ABCD.A'B'C'D'$ có cạnh bằng $a$. Mệnh đề nào sau đây sai?",
+    "options": [
+      "A. $|\\vec{AC'}| = a\\sqrt{3}$",
+      "B. $\\vec{AD'} \\cdot \\vec{AB'} = a^2$",
+      "C. $\\vec{AB'} \\cdot \\vec{CD'} = 0$",
+      "D. $2\\vec{AB} + \\vec{B'C'} + \\vec{CD} + \\vec{D'A'} = \\vec{0}$"
+    ],
+    "answer": "D",
+    "explanation": "**Chọn D.**\n- Đáp án A: $|\\vec{AC'}| = \\sqrt{a^2+a^2+a^2} = a\\sqrt{3}$ (Đúng).\n- Đáp án B: $\\vec{AD'} \\cdot \\vec{AB'} = a\\sqrt{2} \\cdot a\\sqrt{2} \\cdot \\cos 60^\\circ = a^2$ (Đúng).\n- Đáp án C: $AB' \\perp CD'$ (Đúng).\n- Đáp án D: $2\\vec{AB} + \\vec{BC} + \\vec{CD} + \\vec{DA} = \\vec{AB} + (\\vec{AB} + \\vec{BC} + \\vec{CD} + \\vec{DA}) = \\vec{AB} + \\vec{0} = \\vec{AB} \\neq \\vec{0}$ (Sai)."
+  },
+  {
+    "id": 6,
+    "question": "Cho hình chóp $S.ABCD$, đáy $ABCD$ là hình bình hành, tam giác $SAB$ là tam giác đều cạnh $a$. Tính tích vô hướng $\\vec{DC} \\cdot \\vec{BS}$.",
+    "options": [
+      "A. $\\frac{1}{2}a^2$",
+      "B. $\\frac{\\sqrt{3}}{2}a^2$",
+      "C. $\\frac{\\sqrt{2}}{2}a^2$",
+      "D. $-\\frac{1}{2}a^2$"
+    ],
+    "answer": "D",
+    "explanation": "**Chọn D.**\nTam giác $SAB$ đều cạnh $a \\Rightarrow \\widehat{SBA} = 60^\\circ$. Vì $\\vec{DC} = \\vec{AB}$ nên $(\\vec{DC}, \\vec{BS}) = (\\vec{AB}, \\vec{BS}) = 180^\\circ - \\widehat{SBA} = 120^\\circ$.\n$\\vec{DC} \\cdot \\vec{BS} = a \\cdot a \\cdot \\cos 120^\\circ = -\\frac{1}{2}a^2$."
+  },
+  {
+    "id": 7,
+    "question": "Cho hình lập phương $ABCD.EFGH$ có cạnh bằng $a$. Tính $\\vec{AB} \\cdot \\vec{EG}$.",
+    "options": [
+      "A. $a^2\\sqrt{3}$",
+      "B. $a^2$",
+      "C. $\\frac{a^2\\sqrt{2}}{2}$",
+      "D. $a^2\\sqrt{2}$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\nTa có $\\vec{EG} = \\vec{AC}$.\n$\\vec{AB} \\cdot \\vec{EG} = \\vec{AB} \\cdot \\vec{AC} = |\\vec{AB}| \\cdot |\\vec{AC}| \\cdot \\cos(\\vec{AB}, \\vec{AC}) = a \\cdot a\\sqrt{2} \\cdot \\cos 45^\\circ = a \\cdot a\\sqrt{2} \\cdot \\frac{\\sqrt{2}}{2} = a^2$."
+  },
+  {
+    "id": 8,
+    "question": "Cho hình lập phương $ABCD.A_1B_1C_1D_1$ có cạnh $a$. Gọi $M$ là trung điểm $AD$. Giá trị $\\vec{B_1M} \\cdot \\vec{BD}$ là:",
+    "options": [
+      "A. $\\frac{1}{2}a^2$",
+      "B. $a^2$",
+      "C. $\\frac{3}{4}a^2$",
+      "D. $a^2\\sqrt{2}$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\nSử dụng phân tích vectơ: $\\vec{B_1M} = \\vec{B_1B} + \\vec{BA} + \\vec{AM}$.\n$\\vec{BD} = \\vec{BA} + \\vec{AD}$.\nSau khi tính toán tích vô hướng các thành phần, ta được kết quả $\\frac{a^2}{2}$."
+  },
+  {
+    "id": 9,
+    "question": "Cho tứ diện đều $ABCD$. Số đo góc giữa hai đường thẳng $AB$ và $CD$ bằng:",
+    "options": [
+      "A. $60^\\circ$",
+      "B. $30^\\circ$",
+      "C. $90^\\circ$",
+      "D. $45^\\circ$"
+    ],
+    "answer": "C",
+    "explanation": "**Chọn C.**\nGọi $M$ là trung điểm $CD$. Trong tứ diện đều, $AM \\perp CD$ và $BM \\perp CD$. Suy ra $CD \\perp (ABM) \\Rightarrow CD \\perp AB$. Góc bằng $90^\\circ$."
+  },
+  {
+    "id": 10,
+    "question": "Cho hình lập phương $ABCD.A'B'C'D'$ có cạnh $a$. Tính góc giữa hai vectơ $\\vec{AC}$ và $\\vec{DA'}$.",
+    "options": [
+      "A. $60^\\circ$",
+      "B. $45^\\circ$",
+      "C. $120^\\circ$",
+      "D. $90^\\circ$"
+    ],
+    "answer": "C",
+    "explanation": "**Chọn C.**\n$\\vec{AC} \\cdot \\vec{DA'} = (\\vec{AB} + \\vec{AD})(\\vec{AA'} - \\vec{AD}) = \\vec{AB} \\cdot \\vec{AA'} - \\vec{AB} \\cdot \\vec{AD} + \\vec{AD} \\cdot \\vec{AA'} - \\vec{AD}^2 = 0 - 0 + 0 - a^2 = -a^2$.\nMặt khác $\\vec{AC} \\cdot \\vec{DA'} = a\\sqrt{2} \\cdot a\\sqrt{2} \\cdot \\cos(\\vec{AC}, \\vec{DA'})$.\n$\\Rightarrow \\cos(\\vec{AC}, \\vec{DA'}) = \\frac{-a^2}{2a^2} = -\\frac{1}{2} \\Rightarrow$ Góc bằng $120^\\circ$."
+  },
+  {
+    "id": 11,
+    "question": "Cho tứ diện đều $ABCD$, $M$ là trung điểm của cạnh $BC$. Khi đó $\\cos(\\vec{AB}, \\vec{DM})$ bằng:",
+    "options": [
+      "A. $\\frac{\\sqrt{2}}{2}$",
+      "B. $\\frac{\\sqrt{3}}{6}$",
+      "C. $\\frac{1}{2}$",
+      "D. $\\frac{\\sqrt{3}}{2}$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\nGiả sử cạnh là $a$. $DM = AM = \\frac{a\\sqrt{3}}{2}$.\n$\\vec{AB} \\cdot \\vec{DM} = \\vec{AB} \\cdot (\\vec{AM} - \\vec{AD}) = \\vec{AB} \\cdot \\vec{AM} - \\vec{AB} \\cdot \\vec{AD} = a \\cdot \\frac{a\\sqrt{3}}{2} \\cdot \\cos 30^\\circ - a \\cdot a \\cdot \\cos 60^\\circ = \\frac{3a^2}{4} - \\frac{a^2}{2} = \\frac{a^2}{4}$.\n$\\cos(\\vec{AB}, \\vec{DM}) = \\frac{a^2/4}{a \\cdot a\\sqrt{3}/2} = \\frac{\\sqrt{3}}{6}$."
+  },
+  {
+    "id": 12,
+    "question": "Cho tứ diện $ABCD$ có $AB=AC=AD$ và $\\widehat{BAC}=\\widehat{BAD}=60^\\circ$. Hãy xác định góc giữa cặp vectơ $\\vec{AB}$ và $\\vec{CD}$.",
+    "options": [
+      "A. $60^\\circ$",
+      "B. $45^\\circ$",
+      "C. $120^\\circ$",
+      "D. $90^\\circ$"
+    ],
+    "answer": "D",
+    "explanation": "**Chọn D.**\n$\\vec{AB} \\cdot \\vec{CD} = \\vec{AB}(\\vec{AD} - \\vec{AC}) = \\vec{AB} \\cdot \\vec{AD} - \\vec{AB} \\cdot \\vec{AC} = AB \\cdot AD \\cdot \\cos 60^\\circ - AB \\cdot AC \\cdot \\cos 60^\\circ = 0$ (vì $AC=AD$).\nVậy góc bằng $90^\\circ$."
+  },
+  {
+    "id": 13,
+    "question": "Cho hình chóp $S.ABC$ có $SA=SB=SC$ và $\\widehat{ASB}=\\widehat{BSC}=\\widehat{CSA}$. Hãy xác định góc giữa cặp vectơ $\\vec{SC}$ và $\\vec{AB}$.",
+    "options": [
+      "A. $120^\\circ$",
+      "B. $45^\\circ$",
+      "C. $60^\\circ$",
+      "D. $90^\\circ$"
+    ],
+    "answer": "D",
+    "explanation": "**Chọn D.**\n$\\vec{SC} \\cdot \\vec{AB} = \\vec{SC}(\\vec{SB} - \\vec{SA}) = \\vec{SC} \\cdot \\vec{SB} - \\vec{SC} \\cdot \\vec{SA} = SC \\cdot SB \\cdot \\cos \\widehat{BSC} - SC \\cdot SA \\cdot \\cos \\widehat{ASC} = 0$.\nVậy góc bằng $90^\\circ$."
+  },
+  {
+    "id": 14,
+    "question": "Cho hình chóp $S.ABC$ có $SA=SB$ và $CA=CB$. Tính số đo của góc giữa hai đường thẳng chéo nhau $SC$ và $AB$.",
+    "options": [
+      "A. $30^\\circ$",
+      "B. $45^\\circ$",
+      "C. $60^\\circ$",
+      "D. $90^\\circ$"
+    ],
+    "answer": "D",
+    "explanation": "**Chọn D.**\nSử dụng công thức tính tích vô hướng dựa trên độ dài các cạnh, ta chứng minh được $\\vec{SC} \\cdot \\vec{AB} = 0$, suy ra $SC \\perp AB$."
+  },
+  {
+    "id": 15,
+    "question": "Cho hình chóp $S.ABC$ có $AB=AC$ và $\\widehat{SAC}=\\widehat{SAB}$. Tính số đo của góc giữa hai đường thẳng chéo nhau $SA$ và $BC$.",
+    "options": [
+      "A. $30^\\circ$",
+      "B. $45^\\circ$",
+      "C. $60^\\circ$",
+      "D. $90^\\circ$"
+    ],
+    "answer": "D",
+    "explanation": "**Chọn D.**\n$\\vec{SA} \\cdot \\vec{BC} = \\vec{SA}(\\vec{SC} - \\vec{SB}) = \\vec{SA} \\cdot \\vec{SC} - \\vec{SA} \\cdot \\vec{SB} = SA \\cdot SC \\cdot \\cos \\widehat{ASC} - SA \\cdot SB \\cdot \\cos \\widehat{ASB}$.\nXét hai tam giác $\\triangle SAB$ và $\\triangle SAC$ có $SA$ chung, $AB=AC$, $\\widehat{SAB}=\\widehat{SAC} \\Rightarrow \\triangle SAB = \\triangle SAC \\Rightarrow SB=SC$ và $\\widehat{ASB}=\\widehat{ASC}$.\nVậy tích vô hướng bằng 0, góc bằng $90^\\circ$."
+  }
+]

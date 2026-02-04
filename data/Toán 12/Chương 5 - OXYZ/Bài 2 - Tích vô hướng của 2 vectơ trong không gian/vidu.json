@@ -1,1 +1,62 @@
-[]
+[
+  {
+    "id": 1,
+    "question": "Trong không gian, cho hai vectơ $\\vec{a}$ và $\\vec{b}$ cùng có độ dài bằng 1. Biết rằng góc giữa hai vectơ đó là $45^\\circ$, hãy tính:\na. $\\vec{a} \\cdot \\vec{b}$\nb. $(\\vec{a} + 3\\vec{b}) \\cdot (\\vec{a} - 2\\vec{b})$\nc. $(\\vec{a} + \\vec{b})^2$",
+    "explanation": "**a.** Áp dụng công thức tích vô hướng: $\\vec{a} \\cdot \\vec{b} = |\\vec{a}| \\cdot |\\vec{b}| \\cdot \\cos(\\vec{a}, \\vec{b}) = 1 \\cdot 1 \\cdot \\cos 45^\\circ = \\frac{\\sqrt{2}}{2}$.\n**b.** Khai triển tích: $(\\vec{a} + 3\\vec{b}) \\cdot (\\vec{a} - 2\\vec{b}) = \\vec{a}^2 - 2\\vec{a} \\cdot \\vec{b} + 3\\vec{b} \\cdot \\vec{a} - 6\\vec{b}^2 = |\\vec{a}|^2 + \\vec{a} \\cdot \\vec{b} - 6|\\vec{b}|^2$.\nThay các giá trị đã biết vào: $1^2 + \\frac{\\sqrt{2}}{2} - 6(1)^2 = 1 + \\frac{\\sqrt{2}}{2} - 6 = \\frac{\\sqrt{2}}{2} - 5$.\n**c.** Khai triển bình phương: $(\\vec{a} + \\vec{b})^2 = |\\vec{a}|^2 + 2\\vec{a} \\cdot \\vec{b} + |\\vec{b}|^2$.\nThay số: $1 + 2 \\cdot \\frac{\\sqrt{2}}{2} + 1 = 2 + \\sqrt{2}$."
+  },
+  {
+    "id": 2,
+    "question": "Cho tứ diện $ABCD$. Chứng minh rằng:\na. $\\vec{AB} \\cdot \\vec{CD} = \\vec{AC} \\cdot \\vec{CD} + \\vec{BC} \\cdot \\vec{DC}$\nb. $\\vec{AB} \\cdot \\vec{CD} + \\vec{AC} \\cdot \\vec{DB} + \\vec{AD} \\cdot \\vec{BC} = 0$",
+    "explanation": "**a.** Ta biến đổi vế phải (VP):\n$VP = \\vec{AC} \\cdot \\vec{CD} + \\vec{BC} \\cdot \\vec{DC} = \\vec{AC} \\cdot \\vec{CD} - \\vec{BC} \\cdot \\vec{CD} = (\\vec{AC} - \\vec{BC}) \\cdot \\vec{CD}$.\nTheo quy tắc hiệu vectơ: $\\vec{AC} - \\vec{BC} = \\vec{AB}$.\nVậy $VP = \\vec{AB} \\cdot \\vec{CD} = VT$ (điều phải chứng minh).\n**b.** Biến đổi vế trái (VT) bằng cách chèn điểm $A$:\n$VT = \\vec{AB} \\cdot \\vec{CD} + \\vec{AC} \\cdot (\\vec{AB} - \\vec{AD}) + \\vec{AD} \\cdot (\\vec{AC} - \\vec{AB})$\n$= \\vec{AB} \\cdot \\vec{CD} + \\vec{AC} \\cdot \\vec{AB} - \\vec{AC} \\cdot \\vec{AD} + \\vec{AD} \\cdot \\vec{AC} - \\vec{AD} \\cdot \\vec{AB}$\n$= \\vec{AB} \\cdot (\\vec{CD} + \\vec{AC} - \\vec{AD}) = \\vec{AB} \\cdot (\\vec{AD} - \\vec{AD}) = \\vec{AB} \\cdot \\vec{0} = 0$ (điều phải chứng minh)."
+  },
+  {
+    "id": 3,
+    "question": "Cho tứ diện đều $ABCD$ cạnh $a$. Tính tích vô hướng $\\vec{AB} \\cdot \\vec{AC}$ và $\\vec{AB} \\cdot \\vec{CD}$ theo $a$.",
+    "explanation": "Tứ diện $ABCD$ là tứ diện đều cạnh $a$ nên tất cả các mặt là các tam giác đều cạnh $a$.\n- Tính $\\vec{AB} \\cdot \\vec{AC}$: $\\vec{AB} \\cdot \\vec{AC} = |\\vec{AB}| \\cdot |\\vec{AC}| \\cdot \\cos(\\vec{AB}, \\vec{AC}) = a \\cdot a \\cdot \\cos 60^\\circ = a^2 \\cdot \\frac{1}{2} = \\frac{1}{2}a^2$.\n- Tính $\\vec{AB} \\cdot \\vec{CD}$: Ta có $\\vec{CD} = \\vec{AD} - \\vec{AC}$.\nKhi đó $\\vec{AB} \\cdot \\vec{CD} = \\vec{AB} \\cdot (\\vec{AD} - \\vec{AC}) = \\vec{AB} \\cdot \\vec{AD} - \\vec{AB} \\cdot \\vec{AC}$.\nVì các góc $\\widehat{BAD}$ và $\\widehat{BAC}$ đều bằng $60^\\circ$ nên:\n$\\vec{AB} \\cdot \\vec{CD} = a^2 \\cos 60^\\circ - a^2 \\cos 60^\\circ = \\frac{1}{2}a^2 - \\frac{1}{2}a^2 = 0$."
+  },
+  {
+    "id": 4,
+    "question": "Cho hình lập phương $ABCD.A'B'C'D'$ cạnh $a$. Tính $\\vec{AB} \\cdot \\vec{A'D}$ và $\\vec{AC} \\cdot \\vec{A'B}$.",
+    "explanation": "- Tính $\\vec{AB} \\cdot \\vec{A'D}$: Ta có $\\vec{A'D} = \\vec{A'A} + \\vec{AD} = -\\vec{AA'} + \\vec{AD}$.\nVì $ABCD.A'B'C'D'$ là hình lập phương nên $\\vec{AB} \\perp \\vec{AA'}$ và $\\vec{AB} \\perp \\vec{AD}$, suy ra $\\vec{AB} \\cdot \\vec{AA'} = 0$ và $\\vec{AB} \\cdot \\vec{AD} = 0$.\nVậy $\\vec{AB} \\cdot \\vec{A'D} = \\vec{AB} \\cdot (-\\vec{AA'} + \\vec{AD}) = 0 + 0 = 0$.\n- Tính $\\vec{AC} \\cdot \\vec{A'B}$: Ta có $\\vec{AC} = \\vec{AB} + \\vec{AD}$ và $\\vec{A'B} = \\vec{A'A} + \\vec{AB} = -\\vec{AA'} + \\vec{AB}$.\n$\\vec{AC} \\cdot \\vec{A'B} = (\\vec{AB} + \\vec{AD}) \\cdot (-\\vec{AA'} + \\vec{AB}) = -\\vec{AB} \\cdot \\vec{AA'} + \\vec{AB}^2 - \\vec{AD} \\cdot \\vec{AA'} + \\vec{AD} \\cdot \\vec{AB}$.\nDo các cạnh hình lập phương vuông góc từng đôi một nên các tích vô hướng của hai vectơ vuông góc đều bằng 0.\nSuy ra $\\vec{AC} \\cdot \\vec{A'B} = 0 + a^2 - 0 + 0 = a^2$."
+  },
+  {
+    "id": 5,
+    "question": "Cho hình chóp $S.ABCD$ có tất cả các cạnh bên và cạnh đáy đều bằng $a$ và $ABCD$ là hình vuông. Gọi $M$ là trung điểm của $CD$. Tính $\\vec{MS} \\cdot \\vec{CB}$.",
+    "explanation": "Do tất cả các cạnh đều bằng $a$ nên $S.ABCD$ là hình chóp đều, gọi $O$ là tâm đáy thì $SO \\perp (ABCD)$.\nTa có các vectơ $\\vec{OC}, \\vec{OD}, \\vec{OS}$ đôi một vuông góc.\nBiểu diễn qua các vectơ gốc $O$: $\\vec{MS} = \\vec{OS} - \\vec{OM} = \\vec{OS} - \\frac{1}{2}(\\vec{OC} + \\vec{OD})$.\n$\\vec{CB} = \\vec{OB} - \\vec{OC} = -\\vec{OD} - \\vec{OC}$ (vì $O$ là trung điểm $BD$ nên $\\vec{OB} = -\\vec{OD}$).\nTính tích vô hướng: $\\vec{MS} \\cdot \\vec{CB} = [\\vec{OS} - \\frac{1}{2}(\\vec{OC} + \\vec{OD})] \\cdot [-(\\vec{OC} + \\vec{OD})]$.\n$= -\\vec{OS}(\\vec{OC} + \\vec{OD}) + \\frac{1}{2}(\\vec{OC} + \\vec{OD})^2 = 0 + \\frac{1}{2}(OC^2 + OD^2 + 2\\vec{OC}\\vec{OD})$.\nVì $OC \\perp OD$ nên $\\vec{OC}\\vec{OD} = 0$. Độ dài $OC = OD = \\frac{a\\sqrt{2}}{2} \\Rightarrow OC^2 = OD^2 = \\frac{a^2}{2}$.\nVậy $\\vec{MS} \\cdot \\vec{CB} = \\frac{1}{2}(\\frac{a^2}{2} + \\frac{a^2}{2}) = \\frac{a^2}{2}$."
+  },
+  {
+    "id": 6,
+    "question": "Cho hình lập phương $ABCD.A'B'C'D'$, biết $\\vec{AN} = -4\\vec{AB} + k\\vec{AA'} - 2\\vec{AD}$ với $k \\in \\mathbb{R}$ và $\\vec{AM} = 2\\vec{AB} + \\vec{AA'} - 3\\vec{AD}$. Tìm $k$ để $AN \\perp AM$.",
+    "explanation": "Để $AN \\perp AM$ thì tích vô hướng $\\vec{AN} \\cdot \\vec{AM} = 0$.\nTa có: $\\vec{AN} \\cdot \\vec{AM} = (-4\\vec{AB} + k\\vec{AA'} - 2\\vec{AD}) \\cdot (2\\vec{AB} + \\vec{AA'} - 3\\vec{AD})$.\nKhai triển tích, do các vectơ $\\vec{AB}, \\vec{AA'}, \\vec{AD}$ đôi một vuông góc nên các tích chéo đều bằng 0:\n$\\vec{AN} \\cdot \\vec{AM} = -8\\vec{AB}^2 + k\\vec{AA'}^2 + 6\\vec{AD}^2 = -8a^2 + ka^2 + 6a^2 = (k - 2)a^2$.\nĐể tích này bằng 0 thì $k - 2 = 0 \\Leftrightarrow k = 2$."
+  },
+  {
+    "id": 7,
+    "question": "Cho hình lập phương $ABCD.A'B'C'D'$. Tính góc giữa hai vectơ:\na) $\\vec{B'D'}$ và $\\vec{CD}$\nb) $\\vec{B'D'}$ và $\\vec{AB}$\nc) $\\vec{BD}$ và $\\vec{B'C}$",
+    "explanation": "**a.** Ta có $\\vec{CD} = \\vec{B'A'}$. Khi đó $(\\vec{B'D'}, \\vec{CD}) = (\\vec{B'D'}, \\vec{B'A'}) = \\widehat{A'B'D'} = 45^\\circ$.\n**b.** Ta có $\\vec{AB} = \\vec{A'B'}$. Khi đó $(\\vec{B'D'}, \\vec{AB}) = (\\vec{B'D'}, \\vec{A'B'}) = 180^\\circ - \\widehat{A'B'D'} = 180^\\circ - 45^\\circ = 135^\\circ$.\n**c.** Ta có $\\vec{BD} = \\vec{B'D'}$. Khi đó $(\\vec{BD}, \\vec{B'C}) = (\\vec{B'D'}, \\vec{B'C}) = \\widehat{CB'D'}$.\nXét tam giác $CB'D'$ có các cạnh $CB', B'D', D'C$ đều là các đường chéo của các mặt hình lập phương nên tam giác $CB'D'$ đều.\nSuy ra $\\widehat{CB'D'} = 60^\\circ$. Vậy $(\\vec{BD}, \\vec{B'C}) = 60^\\circ$."
+  },
+  {
+    "id": 8,
+    "question": "Cho tứ diện đều $ABCD$. Tính góc giữa vectơ $\\vec{DA}$ và $\\vec{BC}$.",
+    "explanation": "Ta tính tích vô hướng $\\vec{DA} \\cdot \\vec{BC} = \\vec{DA} \\cdot (\\vec{AC} - \\vec{AB}) = \\vec{DA} \\cdot \\vec{AC} - \\vec{DA} \\cdot \\vec{AB}$.\nGọi $a$ là cạnh của tứ diện đều. Khi đó các góc giữa các cặp cạnh tại một đỉnh đều bằng $60^\\circ$.\n$(\\vec{DA}, \\vec{AC}) = 180^\\circ - 60^\\circ = 120^\\circ$ và $(\\vec{DA}, \\vec{AB}) = 120^\\circ$.\n$\\vec{DA} \\cdot \\vec{BC} = a \\cdot a \\cdot \\cos 120^\\circ - a \\cdot a \\cdot \\cos 120^\\circ = 0$.\nVì tích vô hướng bằng 0 nên $\\vec{DA} \\perp \\vec{BC}$.\nVậy góc giữa chúng là $90^\\circ$."
+  },
+  {
+    "id": 9,
+    "question": "Cho tứ diện $ABCD$ có $AB=AC=AD$ và $\\widehat{BAC} = \\widehat{BAD} = 60^\\circ, \\widehat{CAD} = 90^\\circ$. Gọi $I, J$ lần lượt là trung điểm của $AB$ và $CD$. Xác định góc giữa cặp vectơ $\\vec{AB}$ và $\\vec{IJ}$.",
+    "explanation": "Ta có $\\vec{IJ} = \\vec{AJ} - \\vec{AI} = \\frac{1}{2}(\\vec{AC} + \\vec{AD}) - \\frac{1}{2}\\vec{AB}$.\nTính tích vô hướng: $\\vec{IJ} \\cdot \\vec{AB} = [\\frac{1}{2}(\\vec{AC} + \\vec{AD}) - \\frac{1}{2}\\vec{AB}] \\cdot \\vec{AB} = \\frac{1}{2}\\vec{AC} \\cdot \\vec{AB} + \\frac{1}{2}\\vec{AD} \\cdot \\vec{AB} - \\frac{1}{2}\\vec{AB}^2$.\nĐặt $AB=AC=AD=a$. Ta có:\n$\\vec{AC} \\cdot \\vec{AB} = a \\cdot a \\cdot \\cos 60^\\circ = \\frac{1}{2}a^2$.\n$\\vec{AD} \\cdot \\vec{AB} = a \\cdot a \\cdot \\cos 60^\\circ = \\frac{1}{2}a^2$.\n$\\vec{AB}^2 = a^2$.\nThay vào: $\\vec{IJ} \\cdot \\vec{AB} = \\frac{1}{2}(\\frac{1}{2}a^2) + \\frac{1}{2}(\\frac{1}{2}a^2) - \\frac{1}{2}a^2 = \\frac{1}{4}a^2 + \\frac{1}{4}a^2 - \\frac{1}{2}a^2 = 0$.\nVì tích vô hướng bằng 0 nên $\\vec{IJ} \\perp \\vec{AB}$. Góc giữa chúng là $90^\\circ$."
+  },
+  {
+    "id": 10,
+    "question": "Cho hình chóp $S.ABC$ có $BC = \\sqrt{2}$, các cạnh còn lại bằng 1. Tính góc giữa hai đường thẳng $SB$ và $AC$.",
+    "explanation": "Xét tam giác $ABC$ có $AB=AC=1, BC=\\sqrt{2} \\Rightarrow AB^2+AC^2=BC^2$, vậy tam giác $ABC$ vuông cân tại $A$.\nTương tự, tam giác $SBC$ vuông cân tại $S$ ($SB^2+SC^2=BC^2=2$).\nTa tính tích vô hướng $\\vec{SB} \\cdot \\vec{AC} = \\vec{SB} \\cdot (\\vec{SC} - \\vec{SA}) = \\vec{SB} \\cdot \\vec{SC} - \\vec{SB} \\cdot \\vec{SA}$.\nVì $\\vec{SB} \\perp \\vec{SC}$ nên $\\vec{SB} \\cdot \\vec{SC} = 0$.\nTam giác $SAB$ đều ($SA=SB=AB=1$) nên $\\vec{SB} \\cdot \\vec{SA} = 1 \\cdot 1 \\cdot \\cos 60^\\circ = \\frac{1}{2}$.\nVậy $\\vec{SB} \\cdot \\vec{AC} = 0 - \\frac{1}{2} = -\\frac{1}{2}$.\nCosin góc giữa hai đường thẳng: $\\cos(SB, AC) = \\frac{|\\vec{SB} \\cdot \\vec{AC}|}{SB \\cdot AC} = \\frac{1/2}{1 \\cdot 1} = \\frac{1}{2}$.\nVậy góc giữa $SB$ và $AC$ là $60^\\circ$."
+  },
+  {
+    "id": 11,
+    "question": "Cho tứ diện $ABCD$ với $AC = \\frac{3}{2}AD, \\widehat{CAB} = \\widehat{DAB} = 60^\\circ, CD = AD$. Gọi $\\alpha$ là góc giữa hai đường thẳng $AB$ và $CD$. Tính $\\cos \\alpha$.",
+    "explanation": "Tính tích vô hướng $\\vec{AB} \\cdot \\vec{CD} = \\vec{AB} \\cdot (\\vec{AD} - \\vec{AC}) = \\vec{AB} \\cdot \\vec{AD} - \\vec{AB} \\cdot \\vec{AC}$.\nĐặt $AD = a \\Rightarrow AC = \\frac{3}{2}a$ và $CD = a$.\n$\\vec{AB} \\cdot \\vec{AD} = AB \\cdot a \\cdot \\cos 60^\\circ = \\frac{1}{2} AB \\cdot a$.\n$\\vec{AB} \\cdot \\vec{AC} = AB \\cdot \\frac{3}{2}a \\cdot \\cos 60^\\circ = \\frac{3}{4} AB \\cdot a$.\n$\\vec{AB} \\cdot \\vec{CD} = \\frac{1}{2} AB \\cdot a - \\frac{3}{4} AB \\cdot a = -\\frac{1}{4} AB \\cdot a$.\nÁp dụng công thức: $\\cos \\alpha = \\frac{|\\vec{AB} \\cdot \\vec{CD}|}{AB \\cdot CD} = \\frac{\\frac{1}{4} AB \\cdot a}{AB \\cdot a} = \\frac{1}{4}$."
+  },
+  {
+    "id": 12,
+    "question": "Cho hình chóp $S.ABC$ có đáy $ABC$ là tam giác đều cạnh bằng $2a, SA = a\\sqrt{3}$. Gọi $I$ là trung điểm của đoạn thẳng $AC$. Tính côsin góc giữa hai đường thẳng $SA$ và $BC$, biết $SI$ vuông góc với cả hai đường thẳng $AC$ và $BI$.",
+    "explanation": "Ta có $I$ là trung điểm $AC$ trong tam giác đều $ABC$ nên $BI \\perp AC$. Mà $SI \\perp AC$ nên $AC \\perp (SBI)$.\nTính tích vô hướng $\\vec{SA} \\cdot \\vec{BC} = (\\vec{IA} - \\vec{IS}) \\cdot (\\vec{IC} - \\vec{IB}) = \\vec{IA} \\cdot \\vec{IC} - \\vec{IA} \\cdot \\vec{IB} - \\vec{IS} \\cdot \\vec{IC} + \\vec{IS} \\cdot \\vec{IB}$.\nDo $I$ là trung điểm $AC$ nên $\\vec{IA} \\cdot \\vec{IC} = a \\cdot a \\cdot \\cos 180^\\circ = -a^2$.\nVì $AC \\perp BI$ nên $\\vec{IA} \\cdot \\vec{IB} = 0$. Vì $SI \\perp AC$ nên $\\vec{IS} \\cdot \\vec{IC} = 0$. Vì $SI \\perp BI$ nên $\\vec{IS} \\cdot \\vec{IB} = 0$.\nVậy $\\vec{SA} \\cdot \\vec{BC} = -a^2$.\n$\\cos(SA, BC) = \\frac{|\\vec{SA} \\cdot \\vec{BC}|}{SA \\cdot BC} = \\frac{a^2}{a\\sqrt{3} \\cdot 2a} = \\frac{1}{2\\sqrt{3}} = \\frac{\\sqrt{3}}{6}$."
+  }
+]
