@@ -428,6 +428,12 @@
                     // Chọn ảnh dựa trên index để cố định ảnh cho mỗi khóa học (tránh load lại đổi ảnh)
                     const randomImage = randomImages[index % randomImages.length];
 
+                    const extras = courseExtras[course.id] || {
+                        image: randomImage,
+                        label: 'Khóa học',
+                        labelColor: 'bg-slate-600'
+                    };
+
                     // Chọn ảnh: Ưu tiên ảnh từ Admin Tool -> Ảnh từ extras -> Ảnh ngẫu nhiên
                     let courseImage = course.thumbnail;
 

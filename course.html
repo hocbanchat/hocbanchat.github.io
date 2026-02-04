@@ -289,6 +289,12 @@
                 // Chọn ảnh dựa trên index
                 const randomImage = randomImages[index % randomImages.length];
 
+                const extras = courseExtras[course.id] || {
+                    image: randomImage,
+                    label: 'Khóa học',
+                    labelColor: 'bg-slate-600'
+                };
+
                 // Chọn ảnh: Ưu tiên ảnh từ Admin Tool -> Ảnh từ extras -> Ảnh ngẫu nhiên
                 let courseImage = course.thumbnail;
 
