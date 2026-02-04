@@ -423,7 +423,7 @@
         }
 
         // Submit quiz
-        function submitQuiz() {
+        async function submitQuiz() {
             const unanswered = questions.length - Object.keys(answers).length;
 
             if (unanswered > 0) {
@@ -462,24 +462,28 @@
 
             // [NEW] Lưu kết quả lên Firestore nếu đã đăng nhập
             const user = firebase.auth().currentUser;
-            if (user && window.DB) {
-                // Hiển thị loading hoặc thông báo nhỏ?
-                // Ở đây mình chạy ngầm (await nhưng không block UI quá lâu vì chuyển trang ngay)
-                // Tuy nhiên để chắc chắn lưu thành công, nên chờ một chút hoặc xử lý ở Result page.
-                // Để đơn giản và nhanh, ta sẽ gọi DB lưu và chuyển trang luôn.
-                // Việc lưu Firestore mạng nhanh sẽ rất nhanh.
+            console.log("Quiz: User đăng nhập?", user ? user.uid : "Chưa đăng nhập");
+            console.log("Quiz: window.DB có?", !!window.DB);
 
+            if (user && window.DB) {
                 // Cập nhật text nút để user biết đang xử lý
                 const submitBtn = document.getElementById('submit-btn');
                 submitBtn.innerHTML = '<span class="material-symbols-outlined animate-spin">progress_activity</span> Đang lưu...';
 
-                window.DB.saveQuizResult(user.uid, result).then(() => {
+                try {
+                    console.log("Quiz: Đang lưu kết quả vào Firestore...");
+                    const savedId = await window.DB.saveQuizResult(user.uid, result);
+                    console.log("Quiz: Đã lưu với ID:", savedId);
+
+                    // Chuyển đến result.html (dùng localStorage vì vừa lưu xong)
                     window.location.href = `result.html`;
-                }).catch(() => {
+                } catch (error) {
+                    console.error("Quiz: Lỗi khi lưu:", error);
                     // Fallback nếu lỗi mạng vẫn cho xem kết quả local
                     window.location.href = `result.html`;
-                });
+                }
             } else {
+                console.log("Quiz: Không đăng nhập hoặc không có DB, chuyển trang luôn");
                 window.location.href = `result.html`;
             }
         }
