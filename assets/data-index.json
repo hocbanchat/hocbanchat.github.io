@@ -8,7 +8,9 @@
             "chapters": [
                 "Chương 1 - Hàm số",
                 "Chương 2 - Mẫu số liệu ghép nhóm",
-                "Chương 3 - Nguyên hàm tích phân"
+                "Chương 3 - Nguyên hàm tích phân",
+                "Chương 4 - Xác suất",
+                "Chương 5 - OXYZ"
             ],
             "lessons": [
                 {
@@ -30,6 +32,31 @@
                     "path": "Chương 3 - Nguyên hàm tích phân/Bài 3 - Tìm nguyên hàm bằng phương pháp Đổi biến - Đặt ẩn",
                     "lecturePdf": "data/Toán 12/Chương 3 - Nguyên hàm tích phân/Bài 3 - Tìm nguyên hàm bằng phương pháp Đổi biến - Đặt ẩn/tailieu/S1 Toán học 12 - Đại - Bài 3. Phương pháp đổi biến tìm nguyên hàm - File học - Đáp án (1).pdf",
                     "homeworkPdf": "data/Toán 12/Chương 3 - Nguyên hàm tích phân/Bài 3 - Tìm nguyên hàm bằng phương pháp Đổi biến - Đặt ẩn/tailieu/S1 Toán học 12 - Đại - Bài 3. Phương pháp đổi biến tìm nguyên hàm - BTVN - Đáp án.pdf"
+                },
+                {
+                    "path": "Chương 3 - Nguyên hàm tích phân/Bài 4 - Tích phân cơ bản",
+                    "lecturePdf": "data/Toán 12/Chương 3 - Nguyên hàm tích phân/Bài 4 - Tích phân cơ bản/tailieu/S1 Toán học 12 - Đại - Bài 4. Tích phân cơ bản và tích phân hữu tỉ - File học - Đáp án.pdf",
+                    "homeworkPdf": "data/Toán 12/Chương 3 - Nguyên hàm tích phân/Bài 4 - Tích phân cơ bản/tailieu/S1 Toán học 12 - Đại - Bài 4. Tích phân cơ bản và tích phân hữu tỉ - BTVN - Đáp án.pdf"
+                },
+                {
+                    "path": "Chương 3 - Nguyên hàm tích phân/Bài 5 - Tìm tích phân bằng phương pháp Đổi biến",
+                    "lecturePdf": "data/Toán 12/Chương 3 - Nguyên hàm tích phân/Bài 5 - Tìm tích phân bằng phương pháp Đổi biến/tailieu/S1 Toán học 12 - Đại - Bài 5. Phương pháp đổi biến tính tích phân - File học - Đáp án.pdf",
+                    "homeworkPdf": "data/Toán 12/Chương 3 - Nguyên hàm tích phân/Bài 5 - Tìm tích phân bằng phương pháp Đổi biến/tailieu/S1 Toán học 12 - Đại - Bài 5. Phương pháp đổi biến tính tích phân - BTVN - Đáp án.pdf"
+                },
+                {
+                    "path": "Chương 5 - OXYZ/Bài 1 - Vectơ cơ bản",
+                    "lecturePdf": "",
+                    "homeworkPdf": ""
+                },
+                {
+                    "path": "Chương 5 - OXYZ/Bài 1.1 - Vectơ trong không gian",
+                    "lecturePdf": "data/Toán 12/Chương 5 - OXYZ/Bài 1.1 - Vectơ trong không gian/tailieu/SSLIVE Toán 12 - Hình - Bài 1 - File học - Đáp án.pdf",
+                    "homeworkPdf": "data/Toán 12/Chương 5 - OXYZ/Bài 1.1 - Vectơ trong không gian/tailieu/SSLIVE Toán 12 - Hình - Bài 1 - BTVN - Đáp án.pdf"
+                },
+                {
+                    "path": "Chương 5 - OXYZ/Bài 2 - Tích vô hướng của 2 vectơ trong không gian",
+                    "lecturePdf": "data/Toán 12/Chương 5 - OXYZ/Bài 2 - Tích vô hướng của 2 vectơ trong không gian/tailieu/SSLIVE Toán 12 - Hình - Bài 2 - File học - Đáp án.pdf",
+                    "homeworkPdf": "data/Toán 12/Chương 5 - OXYZ/Bài 2 - Tích vô hướng của 2 vectơ trong không gian/tailieu/SSLIVE Toán 12 - Hình - Bài 2 - BTVN - Đáp án.pdf"
                 }
             ]
         }

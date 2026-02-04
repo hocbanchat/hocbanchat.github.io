@@ -1,0 +1,3 @@
+# Bài 2 - Tích vô hướng của 2 vectơ trong không gian
+
+Nội dung lý thuyết...

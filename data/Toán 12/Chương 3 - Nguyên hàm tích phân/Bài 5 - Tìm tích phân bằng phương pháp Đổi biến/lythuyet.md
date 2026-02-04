@@ -1,0 +1,3 @@
+# Bài 5 - Tìm tích phân bằng phương pháp Đổi biến
+
+Nội dung lý thuyết...
