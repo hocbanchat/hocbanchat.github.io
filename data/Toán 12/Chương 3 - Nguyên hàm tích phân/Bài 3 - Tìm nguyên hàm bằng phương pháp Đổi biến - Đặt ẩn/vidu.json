@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "question": "Xét $I = \\int x^3(4x^4 - 3)^5 dx$. Bằng cách đặt $u = 4x^4 - 3$, hỏi khẳng định nào đúng?\\n**A.** $I = \\frac{1}{4}\\int u^5 du$.\\n**B.** $I = \\frac{1}{21}\\int u^5 du$.\\n**C.** $I = \\frac{1}{16}\\int u^5 du$.\\n**D.** $I = \\int u^5 du$.",
+    "explanation": "**Chọn C.**\\nTa có $\\begin{cases} I = \\int x^3(4x^4 - 3)^5 dx \\\\ u = 4x^4 - 3 \\end{cases} \\Rightarrow du = 16x^3 dx \\Rightarrow x^3 dx = \\frac{1}{16} du$.\\nKhi đó: $I = \\int u^5 \\left( \\frac{1}{16} du \\right) = \\frac{1}{16} \\int u^5 du$."
+  },
+  {
+    "id": 2,
+    "question": "Cho $I = \\int x(1-x^2)^{10} dx$. Đặt $u = 1-x^2$, hỏi khẳng định nào đúng?\\n**A.** $I = \\int 2u^{10} du$.\\n**B.** $I = -\\int 2u^{10} du$.\\n**C.** $I = -\\frac{1}{2}\\int u^{10} du$.\\n**D.** $I = \\frac{1}{2}\\int u^{10} du$.",
+    "explanation": "**Chọn C.**\\nTa có $\\begin{cases} I = \\int x(1-x^2)^{10} dx \\\\ u = 1-x^2 \\end{cases} \\Rightarrow du = -2x dx \\Rightarrow x dx = -\\frac{1}{2} du$.\\nKhi đó: $I = \\int u^{10} \\left( -\\frac{1}{2} du \\right) = -\\frac{1}{2} \\int u^{10} du$."
+  },
+  {
+    "id": 3,
+    "question": "Tìm nguyên hàm của hàm số $f(x) = x\\sqrt{1+x^2}$.\\n**A.** $\\frac{1}{2}x^2\\sqrt{1+x^2} + C$.\\n**B.** $\\frac{1}{3}(x^2\\sqrt{1+x^2})^3 + C$.\\n**C.** $\\frac{1}{3}(\\sqrt{1+x^2})^3 + C$.\\n**D.** $\\frac{1}{3}x^2\\sqrt{1+x^2} + C$.",
+    "explanation": "**Chọn C.**\\nĐặt $u = 1+x^2 \\Rightarrow du = 2x dx \\Rightarrow x dx = \\frac{1}{2} du$.\\nNguyên hàm trở thành: $\\int \\sqrt{u} \\left( \\frac{1}{2} du \\right) = \\frac{1}{2} \\int u^{\\frac{1}{2}} du = \\frac{1}{2} \\cdot \\frac{u^{\\frac{3}{2}}}{\\frac{3}{2}} + C = \\frac{1}{3} u^{\\frac{3}{2}} + C$.\\nTrả về biến $x$: $\\frac{1}{3} (1+x^2)^{\\frac{3}{2}} + C = \\frac{1}{3} \\sqrt{(1+x^2)^3} + C = \\frac{1}{3} (\\sqrt{1+x^2})^3 + C$."
+  },
+  {
+    "id": 4,
+    "question": "Tìm nguyên hàm của hàm số $f(x) = \\sqrt{2x-1}$.\\n**A.** $\\int f(x)dx = \\frac{2}{3}(2x-1)\\sqrt{2x-1} + C$.\\n**B.** $\\int f(x)dx = \\frac{1}{3}(2x-1)\\sqrt{2x-1} + C$.\\n**C.** $\\int f(x)dx = -\\frac{1}{3}\\sqrt{2x-1} + C$.\\n**D.** $\\int f(x)dx = \\frac{1}{2}\\sqrt{2x-1} + C$.",
+    "explanation": "**Chọn B.**\\nĐặt $u = 2x-1 \\Rightarrow du = 2dx \\Rightarrow dx = \\frac{1}{2} du$.\\nKhi đó: $\\int \\sqrt{u} \\left( \\frac{1}{2} du \\right) = \\frac{1}{2} \\int u^{\\frac{1}{2}} du = \\frac{1}{2} \\cdot \\frac{u^{\\frac{3}{2}}}{\\frac{3}{2}} + C = \\frac{1}{3} u^{\\frac{3}{2}} + C$.\\nTrả về biến $x$: $\\frac{1}{3} (2x-1)^{\\frac{3}{2}} + C = \\frac{1}{3} (2x-1)\\sqrt{2x-1} + C$."
+  },
+  {
+    "id": 5,
+    "question": "Họ nguyên hàm của hàm số $f(x) = 2x\\sqrt{1-x^2}$ là\\n**A.** $\\frac{1}{3}\\sqrt{(1-x^2)^3} + C$.\\n**B.** $-\\sqrt{(1-x^2)^3} + C$.\\n**C.** $2\\sqrt{(1-x^2)^3} + C$.\\n**D.** $-\\frac{2}{3}\\sqrt{(1-x^2)^3} + C$.",
+    "explanation": "**Chọn D.**\\nĐặt $u = 1-x^2 \\Rightarrow du = -2x dx \\Rightarrow 2x dx = -du$.\\nKhi đó: $\\int \\sqrt{u} (-du) = -\\int u^{\\frac{1}{2}} du = -\\frac{u^{\\frac{3}{2}}}{\\frac{3}{2}} + C = -\\frac{2}{3} u^{\\frac{3}{2}} + C$.\\nTrả về biến $x$: $-\\frac{2}{3} (1-x^2)^{\\frac{3}{2}} + C = -\\frac{2}{3} \\sqrt{(1-x^2)^3} + C$."
+  },
+  {
+    "id": 6,
+    "question": "Tìm nguyên hàm của hàm số $I = \\int \\sqrt{x^{2019} + 1} \\cdot x^{2018} dx$.\\n**A.** $\\frac{2}{6057} \\left( \\sqrt{x^{2019}+1} \\right)^3 + C$.\\n**B.** $\\left( \\sqrt{x^{2019}+1} \\right)^3 + C$.\\n**C.** $\\frac{2}{6057} \\sqrt{x^{2019}+1} + C$.\\n**D.** $\\frac{1}{6057} \\left( \\sqrt{x^{2019}+1} \\right)^3 + C$.",
+    "explanation": "**Chọn A.**\\nĐặt $u = x^{2019} + 1 \\Rightarrow du = 2019x^{2018} dx \\Rightarrow x^{2018} dx = \\frac{1}{2019} du$.\\nKhi đó: $I = \\int \\sqrt{u} \\cdot \\frac{1}{2019} du = \\frac{1}{2019} \\int u^{\\frac{1}{2}} du = \\frac{1}{2019} \\cdot \\frac{u^{\\frac{3}{2}}}{\\frac{3}{2}} + C = \\frac{2}{6057} u^{\\frac{3}{2}} + C$.\\nTrả về biến $x$: $\\frac{2}{6057} (x^{2019} + 1)^{\\frac{3}{2}} + C = \\frac{2}{6057} \\sqrt{(x^{2019}+1)^3} + C$."
+  },
+  {
+    "id": 7,
+    "question": "Tìm họ nguyên hàm của hàm số $f(x) = \\frac{1}{2\\sqrt{2x+1}}$.\\n**A.** $\\int f(x)dx = \\frac{1}{2}\\sqrt{2x+1} + C$.\\n**B.** $\\int f(x)dx = \\sqrt{2x+1} + C$.\\n**C.** $\\int f(x)dx = 2\\sqrt{2x+1} + C$.\\n**D.** $\\int f(x)dx = \\frac{1}{(2x+1)\\sqrt{2x+1}} + C$.",
+    "explanation": "**Chọn A.**\\nĐặt $u = 2x+1 \\Rightarrow du = 2 dx \\Rightarrow dx = \\frac{1}{2} du$.\\nKhi đó: $\\int \\frac{1}{2\\sqrt{u}} \\cdot \\frac{1}{2} du = \\frac{1}{4} \\int u^{-\\frac{1}{2}} du = \\frac{1}{4} \\cdot \\frac{u^{\\frac{1}{2}}}{\\frac{1}{2}} + C = \\frac{1}{2} \\sqrt{u} + C$.\\nTrả về biến $x$: $\\frac{1}{2} \\sqrt{2x+1} + C$."
+  },
+  {
+    "id": 8,
+    "question": "Hàm số $f(x) = \\frac{x^2}{\\sqrt{x^3+1}}$ có một nguyên hàm là $F(x)$ thỏa mãn $F(0) = \\frac{2}{3}$. Tính $F(1)$.\\n**A.** $F(1) = \\frac{3\\sqrt{2}}{2}$.\\n**B.** $F(1) = \\frac{3}{2}$.\\n**C.** $F(1) = \\frac{2\\sqrt{2}}{3}$.\\n**D.** $F(1) = \\frac{2}{3}$.",
+    "explanation": "**Chọn C.**\\nĐặt $u = x^3+1 \\Rightarrow du = 3x^2 dx \\Rightarrow x^2 dx = \\frac{1}{3} du$.\\n$F(x) = \\int \\frac{1}{\\sqrt{u}} \\cdot \\frac{1}{3} du = \\frac{1}{3} \\int u^{-\\frac{1}{2}} du = \\frac{1}{3} \\cdot 2\\sqrt{u} + C = \\frac{2}{3}\\sqrt{x^3+1} + C$.\\n$F(0) = \\frac{2}{3} \\Rightarrow \\frac{2}{3}\\sqrt{0^3+1} + C = \\frac{2}{3} \\Rightarrow C = 0$.\\nVậy $F(x) = \\frac{2}{3}\\sqrt{x^3+1} \\Rightarrow F(1) = \\frac{2}{3}\\sqrt{1^3+1} = \\frac{2\\sqrt{2}}{3}$."
+  },
+  {
+    "id": 9,
+    "question": "Tìm nguyên hàm $I = \\int \\frac{2x}{\\sqrt{x-2}} dx$.\\n**A.** $I = \\frac{4}{3}(x+4)\\sqrt{x-2} + C$.\\n**B.** $I = \\frac{2}{3}(x+2)\\sqrt{x-2} + C$.\\n**C.** $I = \\frac{2}{3}(x+4)\\sqrt{x-2} + C$.\\n**D.** $I = \\frac{4}{3}(x+2)\\sqrt{x-2} + C$.",
+    "explanation": "**Chọn A.**\\nĐặt $u = \\sqrt{x-2} \\Rightarrow x = u^2+2 \\Rightarrow dx = 2u du$.\\n$I = \\int \\frac{2(u^2+2)}{u} \\cdot 2u du = 4 \\int (u^2+2) du = 4 \\left( \\frac{u^3}{3} + 2u \\right) + C = \\frac{4}{3}u(u^2+6) + C$.\\nTrả về biến $x$: $I = \\frac{4}{3}\\sqrt{x-2}(x-2+6) + C = \\frac{4}{3}(x+4)\\sqrt{x-2} + C$."
+  },
+  {
+    "id": 10,
+    "question": "Tìm nguyên hàm $I = \\int \\frac{x}{1+\\sqrt{x+1}} dx$.\\n**A.** $I = \\frac{2}{3}\\sqrt{(x+1)^3} - x + C$.\\n**B.** $I = \\frac{2}{3}\\sqrt{(x+1)^3} - 2x - 1 + C$.\\n**C.** $I = \\frac{3}{2}\\sqrt{(x+1)^3} - x - 1 + C$.\\n**D.** $I = \\frac{1}{3}\\sqrt{(x+1)^3} - x - 1 + C$.",
+    "explanation": "**Chọn A.**\\nĐặt $u = \\sqrt{x+1} \\Rightarrow x = u^2-1 \\Rightarrow dx = 2u du$.\\n$I = \\int \\frac{u^2-1}{1+u} \\cdot 2u du = \\int \\frac{(u-1)(u+1)}{u+1} \\cdot 2u du = \\int 2u(u-1) du = \\int (2u^2 - 2u) du$.\\n$I = \\frac{2}{3}u^3 - u^2 + C = \\frac{2}{3}(\\sqrt{x+1})^3 - (x+1) + C = \\frac{2}{3}\\sqrt{(x+1)^3} - x + C'$."
+  },
+  {
+    "id": 11,
+    "question": "Tìm nguyên hàm $I = \\int x\\sqrt{x+1} dx$.\\n**A.** $I = \\frac{2}{3}(x+1)(3x+2)\\sqrt{x+1} + C$.\\n**B.** $I = \\frac{2(x+1)(3x-2)\\sqrt{x+1}}{15} + C$.\\n**C.** $I = \\frac{2(x+1)^2\\sqrt{x+1}}{15} + C$.\\n**D.** $I = \\frac{3(x+1)(3x-2)\\sqrt{x+1}}{5} + C$.",
+    "explanation": "**Chọn B.**\\nĐặt $u = \\sqrt{x+1} \\Rightarrow x = u^2-1 \\Rightarrow dx = 2u du$.\\n$I = \\int (u^2-1) \\cdot u \\cdot 2u du = \\int (2u^4 - 2u^2) du = \\frac{2}{5}u^5 - \\frac{2}{3}u^3 + C$.\\n$I = \\frac{2}{15}u^3(3u^2-5) + C = \\frac{2}{15}(\\sqrt{x+1})^3(3(x+1)-5) + C = \\frac{2(x+1)(3x-2)\\sqrt{x+1}}{15} + C$."
+  },
+  {
+    "id": 12,
+    "question": "Tìm một nguyên hàm $F(x)$ của hàm số $f(x) = \\frac{2x}{x + \\sqrt{x^2-1}}$.\\n**A.** $F(x) = \\frac{2}{3}x^3 - \\frac{2}{3}(x^2-1)\\sqrt{x^2-1} - 1$.\\n**B.** $F(x) = \\frac{2}{3}x^3 + \\frac{2}{3}(x^2-1)\\sqrt{x^2-1} - 1$.\\n**C.** $F(x) = \\frac{2}{3}x^3 - \\frac{2}{3}(x^2+1)\\sqrt{x^2-1} - 1$.\\n**D.** $F(x) = \\frac{2}{3}x^3 + \\frac{2}{3}(x^2+1)\\sqrt{x^2-1} - 1$.",
+    "explanation": "**Chọn A.**\\nTa trục căn thức mẫu số: $f(x) = \\frac{2x(x - \\sqrt{x^2-1})}{x^2 - (x^2-1)} = 2x^2 - 2x\\sqrt{x^2-1}$.\\n$F(x) = \\int (2x^2 - 2x\\sqrt{x^2-1}) dx = \\frac{2x^3}{3} - \\int \\sqrt{x^2-1} d(x^2-1) = \\frac{2x^3}{3} - \\frac{2}{3}\\sqrt{(x^2-1)^3} + C$.\\n$F(x) = \\frac{2}{3}x^3 - \\frac{2}{3}(x^2-1)\\sqrt{x^2-1} + C$."
+  },
+  {
+    "id": 13,
+    "question": "Tìm nguyên hàm của hàm số $f(x) = \\cos^5 x \\cdot \\sin x$.\\n**A.** $-\\frac{1}{6}\\cos^6 x + C$.\\n**B.** $-\\frac{1}{6}\\sin^6 x + C$.\\n**C.** $\\frac{1}{6}\\cos^6 x + C$.\\n**D.** $-\\frac{1}{4}\\cos^4 x + C$.",
+    "explanation": "**Chọn A.**\\nĐặt $u = \\cos x \\Rightarrow du = -\\sin x dx$.\\n$\\int \\cos^5 x \\cdot \\sin x dx = -\\int u^5 du = -\\frac{u^6}{6} + C = -\\frac{1}{6}\\cos^6 x + C$."
+  },
+  {
+    "id": 14,
+    "question": "Cho $F(x)$ là một nguyên hàm của hàm số $f(x) = \\frac{\\ln x}{x}$. Tính $I = F(e) - F(1)$.\\n**A.** $I = \\frac{1}{2}$.\\n**B.** $I = \\frac{1}{e}$.\\n**C.** $I = 1$.\\n**D.** $I = e$.",
+    "explanation": "**Chọn A.**\\nĐặt $u = \\ln x \\Rightarrow du = \\frac{1}{x} dx$.\\n$I = \\int_1^e \\frac{\\ln x}{x} dx = \\int_0^1 u du = \\frac{u^2}{2} \\Big|_0^1 = \\frac{1}{2}$."
+  },
+  {
+    "id": 15,
+    "question": "Tìm họ nguyên hàm của hàm số $f(x) = x^2 e^{x^3+1}$.\\n**A.** $\\int f(x)dx = e^{x^3+1} + C$.\\n**B.** $\\int f(x)dx = 3e^{x^3+1} + C$.\\n**C.** $\\int f(x)dx = \\frac{1}{3}e^{x^3+1} + C$.\\n**D.** $\\int f(x)dx = \\frac{x^3}{3}e^{x^3+1} + C$.",
+    "explanation": "**Chọn C.**\\nĐặt $u = x^3+1 \\Rightarrow du = 3x^2 dx \\Rightarrow x^2 dx = \\frac{1}{3} du$.\\n$\\int x^2 e^{x^3+1} dx = \\int e^u \\cdot \\frac{1}{3} du = \\frac{1}{3}e^u + C = \\frac{1}{3}e^{x^3+1} + C$."
+  },
+  {
+    "id": 16,
+    "question": "$F(x)$ là một nguyên hàm của hàm số $y = e^{\\sin x} \\cos x$. Nếu $F(\\pi) = 5$ thì $F(x)$ bằng\\n**A.** $F(x) = e^{\\sin x} + 4$.\\n**B.** $F(x) = e^{\\sin x} + C$.\\n**C.** $F(x) = e^{\\cos x} + 4$.\\n**D.** $F(x) = e^{\\cos x} + C$.",
+    "explanation": "**Chọn A.**\\n$F(x) = \\int e^{\\sin x} \\cos x dx = \\int e^{\\sin x} d(\\sin x) = e^{\\sin x} + C$.\\n$F(\\pi) = 5 \\Rightarrow e^{\\sin \\pi} + C = 5 \\Rightarrow e^0 + C = 5 \\Rightarrow 1 + C = 5 \\Rightarrow C = 4$.\\nVậy $F(x) = e^{\\sin x} + 4$."
+  },
+  {
+    "id": 17,
+    "question": "Tìm nguyên hàm $I = \\int \\frac{dx}{e^x + 1}$.\\n**A.** $I = \\ln \\frac{e^x}{e^x+1} + C$.\\n**B.** $I = \\ln \\frac{e^x+1}{e^x} + C$.\\n**C.** $I = \\ln \\frac{e^{2x}}{e^x+1} + C$.\\n**D.** $I = 2\\ln | \\frac{e^x}{e^x+1} | + C$.",
+    "explanation": "**Chọn A.**\\n$I = \\int \\frac{1}{e^x+1} dx = \\int \\frac{e^x+1-e^x}{e^x+1} dx = \\int (1 - \\frac{e^x}{e^x+1}) dx = x - \\ln(e^x+1) + C$.\\n$I = \\ln e^x - \\ln(e^x+1) + C = \\ln \\frac{e^x}{e^x+1} + C$."
+  },
+  {
+    "id": 18,
+    "question": "Tìm một nguyên hàm $F(x)$ của hàm số $f(x) = \\frac{e^x}{\\sqrt{e^x+2}}$ thỏa mãn $F(0) = \\sqrt{27}$.\\n**A.** $F(x) = 2\\sqrt{e^x+2} - \\sqrt{3}$.\\n**B.** $F(x) = \\sqrt{e^x+2} - \\sqrt{3}$.\\n**C.** $F(x) = 2\\sqrt{e^x+2} + \\sqrt{3}$.\\n**D.** $F(x) = \\sqrt{e^x+2} + \\sqrt{3}$.",
+    "explanation": "**Chọn C.**\\nĐặt $u = e^x+2 \\Rightarrow du = e^x dx$.\\n$F(x) = \\int \\frac{du}{\\sqrt{u}} = 2\\sqrt{u} + C = 2\\sqrt{e^x+2} + C$.\\n$F(0) = \\sqrt{27} \\Rightarrow 2\\sqrt{e^0+2} + C = \\sqrt{27} \\Rightarrow 2\\sqrt{3} + C = 3\\sqrt{3} \\Rightarrow C = \\sqrt{3}$.\\nVậy $F(x) = 2\\sqrt{e^x+2} + \\sqrt{3}$."
+  },
+  {
+    "id": 19,
+    "question": "Biết $F(x)$ là một nguyên hàm của hàm số $f(x) = \\frac{\\ln x}{x} \\sqrt{\\ln^2 x + 1}$ thỏa mãn $F(1) = \\frac{1}{3}$. Tính $[F(e)]^2$.\\n**A.** $[F(e)]^2 = \\frac{8}{3}$.\\n**B.** $[F(e)]^2 = \\frac{8}{9}$.\\n**C.** $[F(e)]^2 = \\frac{1}{3}$.\\n**D.** $[F(e)]^2 = \\frac{1}{9}$.",
+    "explanation": "**Chọn B.**\\nĐặt $u = \\ln^2 x + 1 \\Rightarrow du = \\frac{2\\ln x}{x} dx$.\\n$F(x) = \\int \\sqrt{u} \\cdot \\frac{1}{2} du = \\frac{1}{2} \\cdot \\frac{u^{3/2}}{3/2} + C = \\frac{1}{3}\\sqrt{(\\ln^2 x + 1)^3} + C$.\\n$F(1) = \\frac{1}{3} \\Rightarrow \\frac{1}{3}\\sqrt{0+1}^3 + C = \\frac{1}{3} \\Rightarrow C = 0$.\\n$F(e) = \\frac{1}{3}\\sqrt{\\ln^2 e + 1}^3 = \\frac{1}{3}\\sqrt{2}^3 = \\frac{2\\sqrt{2}}{3} \\Rightarrow [F(e)]^2 = \\frac{8}{9}$."
+  },
+  {
+    "id": 20,
+    "question": "Tìm nguyên hàm của hàm số $f(x) = \\frac{\\ln x}{x(2 + \\ln x)^2}$.\\n**A.** $\\frac{-1}{\\ln x + 2} - 2\\ln|\\ln x + 2| + C$.\\n**B.** $\\ln|\\ln x + 2| + \\frac{2}{\\ln x + 2} + C$.\\n**C.** $|\\ln x + 2| + \\frac{2}{\\ln x + 2} + C$.\\n**D.** $\\frac{1}{\\ln x + 2} + 2\\ln|\\ln x + 2| + C$.",
+    "explanation": "**Chọn B.**\\nĐặt $u = 2 + \\ln x \\Rightarrow du = \\frac{1}{x} dx, \\ln x = u-2$.\\n$\\int \\frac{u-2}{u^2} du = \\int (\\frac{1}{u} - \\frac{2}{u^2}) du = \\ln|u| + \\frac{2}{u} + C$.\\nThay $u = 2 + \\ln x$: $\\ln|2 + \\ln x| + \\frac{2}{2 + \\ln x} + C$."
+  },
+  {
+    "id": 21,
+    "question": "Tìm nguyên hàm $\\int \\frac{\\sin 2x}{\\sqrt{1 + \\sin^2 x}} dx$.\\n**A.** $\\frac{\\sqrt{1 + \\sin^2 x}}{2} + C$.\\n**B.** $\\sqrt{1 + \\sin^2 x} + C$.\\n**C.** $-\\sqrt{1 + \\sin^2 x} + C$.\\n**D.** $2\\sqrt{1 + \\sin^2 x} + C$.",
+    "explanation": "**Chọn D.**\\nTa có $\\sin 2x = 2\\sin x \\cos x$.\\nĐặt $u = 1 + \\sin^2 x \\Rightarrow du = 2\\sin x \\cos x dx = \\sin 2x dx$.\\n$\\int \\frac{1}{\\sqrt{u}} du = 2\\sqrt{u} + C = 2\\sqrt{1 + \\sin^2 x} + C$."
+  }
+]
