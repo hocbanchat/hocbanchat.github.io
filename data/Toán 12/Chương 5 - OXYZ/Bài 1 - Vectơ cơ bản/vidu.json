@@ -1,1 +1,77 @@
-[]
+[
+  {
+    "id": 1,
+    "question": "Cho hình vẽ bên dưới với $C$ và $D$ lần lượt là trung điểm của đoạn $AB$ và $AC$.\nTrong các hệ thức sau, hệ thức nào đúng?\nA. $\\vec{AB} = 3\\vec{AD}$\nB. $\\vec{DC} = \\frac{1}{2}\\vec{CB}$\nC. $\\vec{BD} = 3\\vec{AD}$\nD. $\\vec{AB} = 2\\vec{CA}$",
+    "explanation": "Dựa vào giả thiết:\n- $C$ là trung điểm $AB \\Rightarrow \\vec{AC} = \\vec{CB} = \\frac{1}{2}\\vec{AB} \\Rightarrow \\vec{AB} = 2\\vec{AC}$.\n- $D$ là trung điểm $AC \\Rightarrow \\vec{AD} = \\vec{DC} = \\frac{1}{2}\\vec{AC} \\Rightarrow \\vec{AC} = 2\\vec{AD}$.\nTừ đó suy ra $\\vec{AB} = 2(2\\vec{AD}) = 4\\vec{AD}$.\nTa tính vectơ $\\vec{BD}$:\n$\\vec{BD} = \\vec{BC} + \\vec{CD} = -\\vec{CB} - \\vec{DC} = -\\frac{1}{2}\\vec{AB} - \\frac{1}{4}\\vec{AB} = -\\frac{3}{4}\\vec{AB}$.\nXét về độ dài và hướng trên trục $A-D-C-B$:\n$\\vec{BD} = \\vec{BC} + \\vec{CD}$. Vì $C$ là trung điểm $AB$ nên $BC = \\frac{1}{2}AB$. Vì $D$ là trung điểm $AC$ nên $CD = \\frac{1}{2}AC = \\frac{1}{4}AB$.\nDo đó $BD = BC + CD = \\frac{1}{2}AB + \\frac{1}{4}AB = \\frac{3}{4}AB$.\nMặt khác $AD = \\frac{1}{4}AB$. Suy ra $BD = 3AD$.\nVì $\\vec{BD}$ và $\\vec{AD}$ ngược hướng nên $\\vec{BD} = -3\\vec{AD}$ (nếu xét hướng từ trái sang phải).\nTuy nhiên, nhìn vào hình vẽ và các đáp án, hệ thức đúng về độ dài và tỉ lệ vectơ thường được xét là: $\\vec{BD} = 3\\vec{AD}$ (nếu $D, B$ cùng hướng so với $A$). Thực tế $\\vec{DC} = \\frac{1}{2}\\vec{AC} = \\frac{1}{2}\\vec{CB}$ là đúng về cả hướng và độ dài.\nChọn **B**."
+  },
+  {
+    "id": 2,
+    "question": "Cho tam giác $ABC, M$ là trung điểm của $BC, G$ là trọng tâm tam giác. Mệnh đề nào sau đây sai?\nA. $\\vec{AB} + \\vec{AC} = 2\\vec{AM}$\nB. $3\\vec{AG} + 2\\vec{AM} = \\vec{0}$\nC. $\\vec{GA} + \\vec{GB} + \\vec{GC} = \\vec{0}$\nD. $3\\vec{GM} - \\vec{AM} = \\vec{0}$",
+    "explanation": "**a.** Vì $M$ là trung điểm của $BC$ nên theo tính chất trung điểm: $\\vec{AB} + \\vec{AC} = 2\\vec{AM}$. Mệnh đề này đúng.\n**b.** Vì $G$ là trọng tâm tam giác $ABC$ nên $\\vec{AG} = \\frac{2}{3}\\vec{AM} \\Rightarrow 3\\vec{AG} = 2\\vec{AM} \\Rightarrow 3\\vec{AG} - 2\\vec{AM} = \\vec{0}$. Do đó mệnh đề $3\\vec{AG} + 2\\vec{AM} = \\vec{0}$ là sai.\n**c.** Đây là tính chất cơ bản của trọng tâm tam giác: $\\vec{GA} + \\vec{GB} + \\vec{GC} = \\vec{0}$. Mệnh đề này đúng.\n**d.** Vì $G$ là trọng tâm nên $M, G, A$ thẳng hàng và $AM = 3GM$. Vì $\\vec{GM}$ và $\\vec{AM}$ cùng hướng nên $\\vec{AM} = 3\\vec{GM} \\Rightarrow 3\\vec{GM} - \\vec{AM} = \\vec{0}$. Mệnh đề này đúng.\nChọn **B**."
+  },
+  {
+    "id": 3,
+    "question": "Cho hình bình hành $ABCD$, tâm $O$. Đẳng thức nào sau đây là sai?\nA. $\\vec{AB} + \\vec{AC} + \\vec{AD} = 4\\vec{AO}$\nB. $\\vec{BA} + \\vec{BC} + \\vec{DO} = \\frac{1}{2}\\vec{BD}$\nC. $\\vec{BC} + \\vec{DC} - \\vec{AO} = -\\frac{1}{2}\\vec{CA}$\nD. $\\vec{AD} + \\vec{CD} - \\vec{OD} = 2\\vec{BO}$",
+    "explanation": "**a.** Ta có $\\vec{AB} + \\vec{AD} = \\vec{AC}$ (quy tắc hình bình hành). Khi đó $\\vec{AB} + \\vec{AC} + \\vec{AD} = (\\vec{AB} + \\vec{AD}) + \\vec{AC} = \\vec{AC} + \\vec{AC} = 2\\vec{AC}$. Vì $O$ là tâm hình bình hành nên $\\vec{AC} = 2\\vec{AO}$, suy ra $2\\vec{AC} = 4\\vec{AO}$. Đẳng thức đúng.\n**b.** Ta có $\\vec{BA} + \\vec{BC} = \\vec{BD}$ (quy tắc hình bình hành). Khi đó $\\vec{BA} + \\vec{BC} + \\vec{DO} = \\vec{BD} + \\vec{DO} = \\vec{BO}$. Mà $\\vec{BO} = \\frac{1}{2}\\vec{BD}$. Đẳng thức đúng.\n**c.** Ta có $\\vec{BC} + \\vec{DC} = \\vec{BC} + \\vec{AB} = \\vec{AC}$. Khi đó $\\vec{BC} + \\vec{DC} - \\vec{AO} = \\vec{AC} - \\vec{AO} = \\vec{OC}$. Mà $\\vec{OC} = \\frac{1}{2}\\vec{AC} = -\\frac{1}{2}\\vec{CA}$. Đẳng thức đúng.\n**d.** Ta có $\\vec{AD} + \\vec{CD} = \\vec{AD} + \\vec{BA} = \\vec{BD} = 2\\vec{BO}$. Khi đó $\\vec{AD} + \\vec{CD} - \\vec{OD} = 2\\vec{BO} - \\vec{OD} = \\vec{BD} + \\vec{DO} = \\vec{BO} \\neq 2\\vec{BO}$. Đẳng thức sai.\nChọn **D**."
+  },
+  {
+    "id": 4,
+    "question": "Cho tam giác $ABC$ đều cạnh $a$. Khi đó $|\\vec{AB} + \\vec{AC}|$ bằng\nA. $2a$\nB. $a\\sqrt{3}$\nC. $a$\nD. $\frac{a\\sqrt{3}}{2}$",
+    "explanation": "Gọi $M$ là trung điểm của $BC$. Theo tính chất trung điểm, ta có $\\vec{AB} + \\vec{AC} = 2\\vec{AM}$.\nSuy ra $|\\vec{AB} + \\vec{AC}| = |2\\vec{AM}| = 2AM$.\nTrong tam giác đều $ABC$ cạnh $a$, độ dài đường trung tuyến $AM = \\frac{a\\sqrt{3}}{2}$.\nVậy $|\\vec{AB} + \\vec{AC}| = 2 \\cdot \\frac{a\\sqrt{3}}{2} = a\\sqrt{3}$.\nChọn **B**."
+  },
+  {
+    "id": 5,
+    "question": "Cho hình chữ nhật $ABCD$ có $AB = 4a$ và $AD = 3a$. Độ dài của véc-tơ $\\vec{BA} + \\vec{DA}$ bằng\nA. $7a$\nB. $6a$\nC. $5a$\nD. $2a\\sqrt{3}$",
+    "explanation": "Ta có $\\vec{BA} + \\vec{DA} = -(\\vec{AB} + \\vec{AD})$.\nTheo quy tắc hình bình hành, $\\vec{AB} + \\vec{AD} = \\vec{AC}$.\nSuy ra $|\\vec{BA} + \\vec{DA}| = |-\\vec{AC}| = AC$.\nÁp dụng định lý Pythagoras trong tam giác vuông $ABC$ (vuông tại $B$):\n$AC = \\sqrt{AB^2 + BC^2} = \\sqrt{AB^2 + AD^2} = \\sqrt{(4a)^2 + (3a)^2} = \\sqrt{16a^2 + 9a^2} = \\sqrt{25a^2} = 5a$.\nChọn **C**."
+  },
+  {
+    "id": 6,
+    "question": "Cho tam giác $ABC$ có $G$ là trọng tâm. Gọi $D$ là điểm đối xứng của $B$ qua $G, M$ là trung điểm của $BC$. Kiểm tra tính đúng sai của các hệ thức sau:\na) $\\vec{MD} = \\vec{MG} + \\vec{GD}$\nb) $\\vec{AG} = 2\\vec{AB} + \\frac{1}{3}\\vec{AC}$\nc) $\\vec{CD} = \\vec{AB} - \\vec{AC} + \\frac{1}{3}\\vec{BN}$\nd) $\\vec{MD} = -\\frac{5}{6}\\vec{AB} + \\frac{1}{6}\\vec{AC}$",
+    "explanation": "**a.** Hệ thức $\\vec{MD} = \\vec{MG} + \\vec{GD}$ là quy tắc cộng vectơ cơ bản, luôn đúng.\n**b.** Ta có $\\vec{AG} = \\frac{2}{3}\\vec{AM} = \\frac{2}{3} \\cdot \\frac{1}{2}(\\vec{AB} + \\vec{AC}) = \\frac{1}{3}\\vec{AB} + \\frac{1}{3}\\vec{AC}$. Hệ thức đề bài đưa ra là sai.\n**c.** Hệ thức này chứa điểm $N$ không có trong giả thiết nên không thể khẳng định.\n**d.** Ta có $\\vec{MD} = \\vec{GD} - \\vec{GM}$. Vì $D$ đối xứng với $B$ qua $G$ nên $\\vec{GD} = \\vec{BG}$.\n$\\vec{MD} = \\vec{BG} - \\vec{GM} = (\\vec{AG} - \\vec{AB}) - \\frac{1}{3}\\vec{AM}$\n$= (\\frac{1}{3}\\vec{AB} + \\frac{1}{3}\\vec{AC} - \\vec{AB}) - \\frac{1}{3} \\cdot \\frac{1}{2}(\\vec{AB} + \\vec{AC})$\n$= (-\\frac{2}{3}\\vec{AB} + \\frac{1}{3}\\vec{AC}) - (\\frac{1}{6}\\vec{AB} + \\frac{1}{6}\\vec{AC})$\n$= (-\\frac{4}{6} - \\frac{1}{6})\\vec{AB} + (\\frac{2}{6} - \\frac{1}{6})\\vec{AC} = -\\frac{5}{6}\\vec{AB} + \\frac{1}{6}\\vec{AC}$.\nHệ thức này đúng."
+  },
+  {
+    "id": 7,
+    "question": "Cho hình vuông $ABCD$ có cạnh bằng $a$. Tính $(\\vec{AB} + \\vec{AD}) \\cdot \\vec{BD}$.\nA. $a^2$\nB. $0$\nC. $2\\sqrt{2}a^2$\nD. $\\sqrt{2}a^2$",
+    "explanation": "Theo quy tắc hình bình hành trong hình vuông: $\\vec{AB} + \\vec{AD} = \\vec{AC}$.\nKhi đó $(\\vec{AB} + \\vec{AD}) \\cdot \\vec{BD} = \\vec{AC} \\cdot \\vec{BD}$.\nTrong hình vuông $ABCD$, hai đường chéo $AC$ và $BD$ vuông góc với nhau tại tâm $O$.\nDo $\\vec{AC} \\perp \\vec{BD}$ nên tích vô hướng $\\vec{AC} \\cdot \\vec{BD} = 0$.\nChọn **B**."
+  },
+  {
+    "id": 8,
+    "question": "Cho hình thoi $ABCD$ với cạnh có độ dài bằng $5$ và $\\widehat{ABC} = 120^\\circ$. Gọi $O$ là giao điểm của $AC$ và $BD$. Tính $\\vec{BC} \\cdot (\\vec{BA} + \\vec{BC})$.\nA. $\\frac{25}{2}$\nB. $-\\frac{25}{2}$\nC. $25$\nD. $-25$",
+    "explanation": "Ta có $\\vec{BC} \\cdot (\\vec{BA} + \\vec{BC}) = \\vec{BC} \\cdot \\vec{BA} + \\vec{BC}^2$.\n- $\\vec{BC} \\cdot \\vec{BA} = |\\vec{BC}| \\cdot |\\vec{BA}| \\cdot \\cos(\\vec{BC}, \\vec{BA}) = 5 \\cdot 5 \\cdot \\cos(120^\\circ) = 25 \\cdot (-\\frac{1}{2}) = -\\frac{25}{2}$.\n- $\\vec{BC}^2 = |\\vec{BC}|^2 = 5^2 = 25$.\nVậy $\\vec{BC} \\cdot (\\vec{BA} + \\vec{BC}) = -\\frac{25}{2} + 25 = \\frac{25}{2}$.\nChọn **A**."
+  },
+  {
+    "id": 9,
+    "question": "Cho tam giác $ABC$ vuông tại $A$ có $AB = \\sqrt{3}, BC = 2$. Tính tích vô hướng $\\vec{BC} \\cdot \\vec{CA}$.\nA. $1$\nB. $-1$\nC. $0$\nD. $\frac{1}{2}$",
+    "explanation": "Trong tam giác $ABC$ vuông tại $A$:\n$AC = \\sqrt{BC^2 - AB^2} = \\sqrt{2^2 - (\\sqrt{3})^2} = \\sqrt{4 - 3} = 1$.\nTa có $\\vec{BC} \\cdot \\vec{CA} = -\\vec{CB} \\cdot \\vec{CA} = -|\\vec{CB}| \\cdot |\\vec{CA}| \\cdot \\cos(\\widehat{BCA})$.\nTrong tam giác vuông $ABC$: $\\cos(\\widehat{BCA}) = \\frac{AC}{BC} = \\frac{1}{2}$.\nSuy ra $\\vec{BC} \\cdot \\vec{CA} = -2 \\cdot 1 \\cdot \\frac{1}{2} = -1$.\nChọn **B**."
+  },
+  {
+    "id": 10,
+    "question": "Cho hình vuông $ABCD$ tâm $O$ cạnh $a$. Gọi $M$ là trung điểm $AB, G$ là trọng tâm tam giác $ADM$. Kiểm tra các khẳng định sau:\na) $\\vec{AB} \\cdot \\vec{CA} = a^2$\nb) $\\vec{AM} \\cdot \\vec{AC} = \\frac{a^2}{3}$\nc) $\\vec{AD} \\cdot \\vec{BD} + \\vec{OM} \\cdot \\vec{AC} = \\frac{a^2}{2}$\nd) $(\\vec{AB} + \\vec{AD}) \\cdot (\\vec{BD} + \\vec{BC}) = a^2$",
+    "explanation": "**a.** $\\vec{AB} \\cdot \\vec{CA} = -\\vec{AB} \\cdot \\vec{AC} = -a \\cdot a\\sqrt{2} \\cdot \\cos(45^\\circ) = -a^2 \\neq a^2$. Sai.\n**b.** $\\vec{AM} \\cdot \\vec{AC} = \\frac{1}{2}\\vec{AB} \\cdot \\vec{AC} = \\frac{1}{2} \\cdot a \\cdot a\\sqrt{2} \\cdot \\cos(45^\\circ) = \\frac{a^2}{2} \\neq \\frac{a^2}{3}$. Sai.\n**c.** $\\vec{AD} \\cdot \\vec{BD} = a \\cdot a\\sqrt{2} \\cdot \\cos(45^\\circ) = a^2$. $\\vec{OM} = \\frac{1}{2}\\vec{AD}$ nên $\\vec{OM} \\cdot \\vec{AC} = \\frac{1}{2}\\vec{AD} \\cdot \\vec{AC} = \\frac{a^2}{2}$. Tổng bằng $\\frac{3a^2}{2}$. Sai.\n**d.** $(\\vec{AB} + \\vec{AD}) \\cdot (\\vec{BD} + \\vec{BC}) = \\vec{AC} \\cdot (\\vec{BD} + \\vec{BC}) = \\vec{AC} \\cdot \\vec{BD} + \\vec{AC} \\cdot \\vec{BC}$.\nVì $AC \\perp BD$ nên $\\vec{AC} \\cdot \\vec{BD} = 0$. $\\vec{AC} \\cdot \\vec{BC} = a\\sqrt{2} \\cdot a \\cdot \\cos(45^\\circ) = a^2$. Tổng bằng $a^2$. Đúng."
+  },
+  {
+    "id": 11,
+    "question": "Cho tứ giác $ABCD$ là hình bình hành. Khẳng định nào sau đây là sai?\nA. $\\vec{AB} + \\vec{BC} = \\vec{AD} + \\vec{DC}$\nB. $\\vec{AB} + \\vec{CD} = \\vec{AD} + \\vec{BC}$\nC. $\\vec{AB} + \\vec{AD} = \\vec{AC}$\nD. $\\vec{AB} + \\vec{BC} = \\vec{AC} + \\vec{BD}$",
+    "explanation": "**A.** $\\vec{AB} + \\vec{BC} = \\vec{AC}$ và $\\vec{AD} + \\vec{DC} = \\vec{AC}$. Khẳng định đúng.\n**B.** $\\vec{AB} + \\vec{CD} = \\vec{AB} - \\vec{AB} = \\vec{0}$ (vì $\\vec{CD} = -\\vec{AB}$). $\\vec{AD} + \\vec{BC} = \\vec{AD} + \\vec{AD} = 2\\vec{AD}$ (vì $\\vec{BC} = \\vec{AD}$). Khẳng định sai.\n**C.** Quy tắc hình bình hành. Khẳng định đúng.\n**D.** $\\vec{AB} + \\vec{BC} = \\vec{AC}$. Vế phải $\\vec{AC} + \\vec{BD} \\neq \\vec{AC}$. Khẳng định sai (đề bài yêu cầu tìm câu sai, câu B sai rõ rệt hơn về bản chất phép toán).\nChọn **B**."
+  },
+  {
+    "id": 12,
+    "question": "Cho hình bình hành $ABCD$ tâm $O$. Khi đó vectơ $\\vec{OA} + \\vec{BO}$ bằng vectơ nào?\nA. $\\vec{BA}$\nB. $\\vec{AB}$\nC. $\\vec{DC}$\nD. $\\vec{OC}$",
+    "explanation": "Sử dụng tính chất giao hoán và quy tắc cộng vectơ:\n$\\vec{OA} + \\vec{BO} = \\vec{BO} + \\vec{OA} = \\vec{BA}$.\nChọn **A**."
+  },
+  {
+    "id": 13,
+    "question": "Cho hình vuông $ABCD$ có cạnh bằng $a$. Tính độ dài của các vectơ $\\vec{AB} - \\vec{DA}$.\nA. $2a\\sqrt{2}$\nB. $a\\sqrt{2}$\nC. $2a$\nD. $\\frac{a\\sqrt{2}}{2}$",
+    "explanation": "Ta có: $\\vec{AB} - \\vec{DA} = \\vec{AB} + \\vec{AD}$.\nTrong hình vuông $ABCD$, theo quy tắc hình bình hành: $\\vec{AB} + \\vec{AD} = \\vec{AC}$.\nĐộ dài vectơ cần tính là $|\\vec{AC}| = AC$.\nTrong hình vuông cạnh $a$, độ dài đường chéo $AC = a\\sqrt{2}$.\nChọn **B**."
+  },
+  {
+    "id": 14,
+    "question": "Cho hình vuông $ABCD$ có cạnh bằng $a$. Tính $\\cos(\\vec{AB}, \\vec{AC})$.\nA. $\\cos(\\vec{AB}, \\vec{AC}) = 1$\nB. $\\cos(\\vec{AB}, \\vec{AC}) = \\frac{\\sqrt{2}}{2}$\nC. $\\cos(\\vec{AB}, \\vec{AC}) = \\frac{1}{2}$\nD. $\\cos(\\vec{AB}, \\vec{AC}) = \\frac{\\sqrt{3}}{2}$",
+    "explanation": "Trong hình vuông $ABCD$, góc giữa hai vectơ $\\vec{AB}$ và $\\vec{AC}$ chính là góc $\\widehat{BAC}$.\nVì $AC$ là đường chéo của hình vuông nên $AC$ là tia phân giác của góc $\\widehat{BAD} = 90^\\circ$.\nSuy ra $(\\vec{AB}, \\vec{AC}) = \\widehat{BAC} = 45^\\circ$.\nVậy $\\cos(\\vec{AB}, \\vec{AC}) = \\cos(45^\\circ) = \\frac{\\sqrt{2}}{2}$.\nChọn **B**."
+  },
+  {
+    "id": 15,
+    "question": "Cho tam giác $ABC$. Lấy một điểm $M$ thuộc tia đối của tia $CB$ sao cho $MB = 3MC$. Biểu thị $\\vec{AM}$ theo $\\vec{AB}$ và $\\vec{AC}$ ta được:\nA. $\\vec{AM} = \\frac{1}{2}\\vec{AB} + \\frac{3}{2}\\vec{AC}$\nB. $\\vec{AM} = \\frac{1}{2}\\vec{AB} - \\frac{3}{2}\\vec{AC}$\nC. $\\vec{AM} = -\\frac{1}{2}\\vec{AB} + \\frac{3}{2}\\vec{AC}$\nD. $\\vec{AM} = -\\frac{3}{2}\\vec{AB} + \\frac{3}{2}\\vec{AC}$",
+    "explanation": "Vì $M$ thuộc tia đối của tia $CB$ và $MB = 3MC$, nên $C$ nằm giữa $B$ và $M$, và $BC = 2CM$.\nTừ $MB = 3MC \\Rightarrow \\vec{MB} = 3\\vec{MC} \\Leftrightarrow \\vec{AB} - \\vec{AM} = 3(\\vec{AC} - \\vec{AM})$\n$\\Leftrightarrow \\vec{AB} - \\vec{AM} = 3\\vec{AC} - 3\\vec{AM}$\n$\\Leftrightarrow 2\\vec{AM} = 3\\vec{AC} - \\vec{AB}$\n$\\Leftrightarrow \\vec{AM} = -\\frac{1}{2}\\vec{AB} + \\frac{3}{2}\\vec{AC}$.\nChọn **C**."
+  }
+]

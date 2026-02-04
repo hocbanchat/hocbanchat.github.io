@@ -1,1 +1,662 @@
-[]
+[
+  {
+    "id": 1,
+    "question": "Cho hình vẽ bên dưới với $C$ và $D$ lần lượt là trung điểm của đoạn $AB$ và $AC$. Trong các hệ thức sau, hệ thức nào đúng?",
+    "options": [
+      "A. $\\vec{AB} = 3\\vec{AD}$",
+      "B. $\\vec{DC} = \\frac{1}{2}\\vec{CB}$",
+      "C. $\\vec{BD} = 3\\vec{AD}$",
+      "D. $\\vec{AB} = 2\\vec{CA}$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\nVì $C$ là trung điểm $AB$ nên $\\vec{AC} = \\vec{CB} = \\frac{1}{2}\\vec{AB}$.\nVì $D$ là trung điểm $AC$ nên $\\vec{AD} = \\vec{DC} = \\frac{1}{2}\\vec{AC} = \\frac{1}{4}\\vec{AB}$.\nTa có $\\vec{DC} = \\frac{1}{4}\\vec{AB}$ và $\\vec{CB} = \\frac{1}{2}\\vec{AB}$, suy ra $\\vec{DC} = \\frac{1}{2}\\vec{CB}$."
+  },
+  {
+    "id": 2,
+    "question": "Cho tam giác $ABC$, $M$ là trung điểm của $BC$, $G$ là trọng tâm tam giác. Mệnh đề nào sau đây sai?",
+    "options": [
+      "A. $\\vec{AB} + \\vec{AC} = 2\\vec{AM}$",
+      "B. $3\\vec{AG} + 2\\vec{AM} = \\vec{0}$",
+      "C. $\\vec{GA} + \\vec{GB} + \\vec{GC} = \\vec{0}$",
+      "D. $3\\vec{GM} - \\vec{AM} = \\vec{0}$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\nTheo tính chất trọng tâm và trung tuyến: $\\vec{AG} = \\frac{2}{3}\\vec{AM} \\Rightarrow 3\\vec{AG} = 2\\vec{AM} \\Rightarrow 3\\vec{AG} - 2\\vec{AM} = \\vec{0}$. Do đó mệnh đề $3\\vec{AG} + 2\\vec{AM} = \\vec{0}$ là sai."
+  },
+  {
+    "id": 3,
+    "question": "Cho hình bình hành $ABCD$, tâm $O$. Đẳng thức nào sau đây là sai?",
+    "options": [
+      "A. $\\vec{AB} + \\vec{AC} + \\vec{AD} = 4\\vec{AO}$",
+      "B. $\\vec{BA} + \\vec{BC} + \\vec{DO} = \\frac{1}{2}\\vec{BD}$",
+      "C. $\\vec{BC} + \\vec{DC} - \\vec{AO} = -\\frac{1}{2}\\vec{CA}$",
+      "D. $\\vec{AD} + \\vec{CD} - \\vec{OD} = 2\\vec{BO}$"
+    ],
+    "answer": "D",
+    "explanation": "**Chọn D.**\nTa có $\\vec{AD} + \\vec{CD} = \\vec{BC} + \\vec{BA} = \\vec{BD}$.\n$\\vec{BD} - \\vec{OD} = \\vec{BO}$.\nĐẳng thức ở phương án D trở thành $\\vec{BO} = 2\\vec{BO}$, đây là mệnh đề sai."
+  },
+  {
+    "id": 4,
+    "question": "Cho tam giác $ABC$ đều cạnh $a$. Khi đó $|\\vec{AB} + \\vec{AC}|$ bằng",
+    "options": [
+      "A. $2a$",
+      "B. $a\\sqrt{3}$",
+      "C. $a$",
+      "D. $\\frac{a\\sqrt{3}}{2}$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\nGọi $M$ là trung điểm của $BC$, ta có $\\vec{AB} + \\vec{AC} = 2\\vec{AM}$.\nTrong tam giác đều cạnh $a$, đường trung tuyến $AM = \\frac{a\\sqrt{3}}{2}$.\nVậy $|\\vec{AB} + \\vec{AC}| = 2 \\cdot \\frac{a\\sqrt{3}}{2} = a\\sqrt{3}$."
+  },
+  {
+    "id": 5,
+    "question": "Cho hình chữ nhật $ABCD$ có $AB = 4a$ và $AD = 3a$. Độ dài của véc-tơ $\\vec{BA} + \\vec{DA}$ bằng",
+    "options": [
+      "A. $7a$",
+      "B. $6a$",
+      "C. $5a$",
+      "D. $2a\\sqrt{3}$"
+    ],
+    "answer": "C",
+    "explanation": "**Chọn C.**\nTa có $\\vec{BA} + \\vec{DA} = -(\\vec{AB} + \\vec{AD}) = -\\vec{AC}$.\nĐộ dài $|\\vec{BA} + \\vec{DA}| = AC = \\sqrt{AB^2 + AD^2} = \\sqrt{(4a)^2 + (3a)^2} = 5a$."
+  },
+  {
+    "id": 6,
+    "question": "Cho tam giác $ABC$ có $G$ là trọng tâm. Gọi $D$ là điểm đối xứng của $B$ qua $G$, $M$ là trung điểm của $BC$. Mệnh đề nào sau đây sai?",
+    "options": [
+      "A. $\\vec{MD} = \\vec{MG} + \\vec{GD}$",
+      "B. $\\vec{AG} = 2\\vec{AB} + \\frac{1}{3}\\vec{AC}$",
+      "C. $\\vec{CD} = \\vec{AB} - \\vec{AC} + \\frac{1}{3}\\vec{BN}$",
+      "D. $\\vec{MD} = -\\frac{5}{6}\\vec{AB} + \\frac{1}{6}\\vec{AC}$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\nTa có $\\vec{AG} = \\frac{2}{3}\\vec{AM} = \\frac{2}{3} \\cdot \\frac{1}{2}(\\vec{AB} + \\vec{AC}) = \\frac{1}{3}\\vec{AB} + \\frac{1}{3}\\vec{AC}$.\nSo sánh với phương án B, ta thấy phương án B là sai."
+  },
+  {
+    "id": 7,
+    "question": "Cho hình vuông $ABCD$ có cạnh bằng $a$. Tính $(\\vec{AB} + \\vec{AD}) \\cdot \\vec{BD}$.",
+    "options": [
+      "A. $a^2$",
+      "B. $0$",
+      "C. $2\\sqrt{2}a^2$",
+      "D. $2a^2$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\nTa có $\\vec{AB} + \\vec{AD} = \\vec{AC}$.\nKhi đó $(\\vec{AB} + \\vec{AD}) \\cdot \\vec{BD} = \\vec{AC} \\cdot \\vec{BD}$.\nVì $ABCD$ là hình vuông nên hai đường chéo vuông góc với nhau $\\Rightarrow \\vec{AC} \\perp \\vec{BD} \\Rightarrow \\vec{AC} \\cdot \\vec{BD} = 0$."
+  },
+  {
+    "id": 8,
+    "question": "Cho hình thoi $ABCD$ với cạnh có độ dài bằng $5$ và $\\widehat{ABC} = 120^\\circ$. Gọi $O$ là giao điểm của $AC$ và $BD$. Tính $\\vec{BC} \\cdot (\\vec{BA} + \\vec{BC})$.",
+    "options": [
+      "A. $\\frac{25}{2}$",
+      "B. $-\\frac{25}{2}$",
+      "C. $25$",
+      "D. $-25$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\n$\\vec{BC} \\cdot (\\vec{BA} + \\vec{BC}) = \\vec{BC} \\cdot \\vec{BA} + \\vec{BC}^2$.\nVì $ABCD$ là hình thoi nên $BC = BA = 5$. Góc $(\\vec{BC}, \\vec{BA}) = 120^\\circ$.\n$\\vec{BC} \\cdot \\vec{BA} = 5 \\cdot 5 \\cdot \\cos(120^\\circ) = 25 \\cdot (-1/2) = -12.5$.\n$\\vec{BC}^2 = 5^2 = 25$.\nVậy kết quả bằng $-12.5 + 25 = 12.5 = 25/2$."
+  },
+  {
+    "id": 9,
+    "question": "Cho tam giác $ABC$ vuông tại $A$ có $AB = \\sqrt{3}, BC = 2$. Tính tích vô hướng $\\vec{BC} \\cdot \\vec{CA}$.",
+    "options": [
+      "A. $1$",
+      "B. $-1$",
+      "C. $0$",
+      "D. $\\frac{1}{2}$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\nTa có $AC = \\sqrt{BC^2 - AB^2} = \\sqrt{2^2 - (\\sqrt{3})^2} = 1$.\n$\\vec{BC} \\cdot \\vec{CA} = -\\vec{CB} \\cdot \\vec{CA} = -|\\vec{CB}| \\cdot |\\vec{CA}| \\cdot \\cos(\\widehat{BCA})$.\nTrong tam giác vuông $ABC$, $\\cos(\\widehat{BCA}) = \\frac{AC}{BC} = \\frac{1}{2}$.\nVậy $\\vec{BC} \\cdot \\vec{CA} = -2 \\cdot 1 \\cdot (1/2) = -1$."
+  },
+  {
+    "id": 10,
+    "question": "Cho tứ giác $ABCD$ là hình bình hành. Khẳng định nào sau đây là sai?",
+    "options": [
+      "A. $\\vec{AB} + \\vec{BC} = \\vec{AD} + \\vec{DC}$",
+      "B. $\\vec{AB} + \\vec{CD} = \\vec{AD} + \\vec{BC}$",
+      "C. $\\vec{AB} + \\vec{AD} = \\vec{AC}$",
+      "D. $\\vec{AB} + \\vec{BC} = \\vec{AC} + \\vec{BD}$"
+    ],
+    "answer": "D",
+    "explanation": "**Chọn D.**\nTrong hình bình hành $ABCD$: \n- A đúng vì cả hai vế đều bằng $\\vec{AC}$.\n- B đúng vì $\\vec{AB} + \\vec{CD} = \\vec{0}$ và $\\vec{AD} + \\vec{BC} = \\vec{0}$.\n- C đúng theo quy tắc hình bình hành.\n- D sai vì $\\vec{AB} + \\vec{BC} = \\vec{AC} \\neq \\vec{AC} + \\vec{BD}$ (do $\\vec{BD} \\neq \\vec{0}$)."
+  },
+  {
+    "id": 11,
+    "question": "Cho hình bình hành $ABCD$ tâm $O$. Khi đó vectơ $\\vec{OA} + \\vec{BO}$ bằng vectơ nào?",
+    "options": [
+      "A. $\\vec{BA}$",
+      "B. $\\vec{AB}$",
+      "C. $\\vec{DC}$",
+      "D. $\\vec{OC}$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\nTa có $\\vec{OA} + \\vec{BO} = \\vec{BO} + \\vec{OA} = \\vec{BA}$ (theo quy tắc cộng nối tiếp)."
+  },
+  {
+    "id": 12,
+    "question": "Cho hình vuông $ABCD$ có cạnh bằng $a$. Tính độ dài của các vectơ $\\vec{AB} - \\vec{DA}$.",
+    "options": [
+      "A. $2a\\sqrt{2}$",
+      "B. $a\\sqrt{2}$",
+      "C. $2a$",
+      "D. $\\frac{a\\sqrt{2}}{2}$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\nTa có $\\vec{AB} - \\vec{DA} = \\vec{AB} + \\vec{AD} = \\vec{AC}$.\nĐộ dài $|\\vec{AB} - \\vec{DA}| = AC = a\\sqrt{2}$ (đường chéo hình vuông cạnh $a$)."
+  },
+  {
+    "id": 13,
+    "question": "Cho hình vuông $ABCD$ có cạnh bằng $a$. Tính $\\cos(\\vec{AB}, \\vec{AC})$.",
+    "options": [
+      "A. $1$",
+      "B. $\\frac{\\sqrt{2}}{2}$",
+      "C. $\\frac{1}{2}$",
+      "D. $\\frac{\\sqrt{3}}{2}$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\nTrong hình vuông $ABCD$, đường chéo $AC$ là tia phân giác của góc $A$.\nDo đó góc $(\\vec{AB}, \\vec{AC}) = 45^\\circ$.\n$\\cos(45^\\circ) = \\frac{\\sqrt{2}}{2}$."
+  },
+  {
+    "id": 14,
+    "question": "Cho tam giác $ABC$. Lấy một điểm $M$ thuộc tia đối của tia $CB$ sao cho $MB = 3MC$. Biểu thị $\\vec{AM}$ theo $\\vec{AB}$ và $\\vec{AC}$ ta được",
+    "options": [
+      "A. $\\vec{AM} = \\frac{1}{2}\\vec{AB} + \\frac{3}{2}\\vec{AC}$",
+      "B. $\\vec{AM} = -\\frac{1}{2}\\vec{AB} - \\frac{3}{2}\\vec{AC}$",
+      "C. $\\vec{AM} = -\\frac{1}{2}\\vec{AB} + \\frac{3}{2}\\vec{AC}$",
+      "D. $\\vec{AM} = -\\frac{3}{2}\\vec{AB} + \\frac{3}{2}\\vec{AC}$"
+    ],
+    "answer": "C",
+    "explanation": "**Chọn C.**\n$M$ thuộc tia đối của $CB$ và $MB = 3MC \\Rightarrow \\vec{MB} = 3\\vec{MC} \\Leftrightarrow \\vec{AB} - \\vec{AM} = 3(\\vec{AC} - \\vec{AM})$.\n$\\Leftrightarrow 2\\vec{AM} = 3\\vec{AC} - \\vec{AB} \\Leftrightarrow \\vec{AM} = -\\frac{1}{2}\\vec{AB} + \\frac{3}{2}\\vec{AC}$."
+  },
+  {
+    "id": 15,
+    "question": "Cho hình bình hành $ABCD$. Gọi $M$ là trung điểm của cạnh $BC$. Biểu thị $\\vec{AM}$ theo hai vectơ $\\vec{AB}$ và $\\vec{AD}$.",
+    "options": [
+      "A. $\\vec{AM} = \\vec{AB} + \\frac{3}{2}\\vec{AD}$",
+      "B. $\\vec{AM} = \\vec{AB} - \\frac{3}{2}\\vec{AD}$",
+      "C. $\\vec{AM} = \\vec{AB} - \\frac{1}{2}\\vec{AD}$",
+      "D. $\\vec{AM} = \\vec{AB} + \\frac{1}{2}\\vec{AD}$"
+    ],
+    "answer": "D",
+    "explanation": "**Chọn D.**\nTa có $\\vec{AM} = \\vec{AB} + \\vec{BM}$.\nVì $M$ là trung điểm $BC$ nên $\\vec{BM} = \\frac{1}{2}\\vec{BC}$.\nMặt khác, trong hình bình hành $ABCD$ thì $\\vec{BC} = \\vec{AD}$.\nSuy ra $\\vec{AM} = \\vec{AB} + \\frac{1}{2}\\vec{AD}$."
+  },
+  {
+    "id": 16,
+    "question": "Cho tam giác đều $ABC$ có cạnh bằng $a$. Tính tích vô hướng $\\vec{AB} \\cdot \\vec{AC}$.",
+    "options": [
+      "A. $2a^2$",
+      "B. $\\frac{a^2}{2}$",
+      "C. $-\\frac{a^2}{2}$",
+      "D. $-\\frac{a^2\\sqrt{3}}{2}$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\n$\\vec{AB} \\cdot \\vec{AC} = |\\vec{AB}| \\cdot |\\vec{AC}| \\cdot \\cos(\\widehat{BAC})$.\nVì tam giác $ABC$ đều nên $\\widehat{BAC} = 60^\\circ$.\n$\\vec{AB} \\cdot \\vec{AC} = a \\cdot a \\cdot \\cos(60^\\circ) = a^2 \\cdot \\frac{1}{2} = \\frac{a^2}{2}$."
+  },
+  {
+    "id": 17,
+    "question": "Cho hình vuông $ABCD$ cạnh $a$. Đẳng thức nào sau đây đúng?",
+    "options": [
+      "A. $\\vec{AB} \\cdot \\vec{CA} = -a^2$",
+      "B. $\\vec{AB} \\cdot \\vec{CA} = -2a^2$",
+      "C. $\\vec{AB} \\cdot \\vec{CA} = -\\frac{a^2\\sqrt{2}}{2}$",
+      "D. $\\vec{AB} \\cdot \\vec{CA} = -\\frac{1}{2}a^2$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\n$\\vec{AB} \\cdot \\vec{CA} = -\\vec{AB} \\cdot \\vec{AC} = -|\\vec{AB}| \\cdot |\\vec{AC}| \\cdot \\cos(45^\\circ)$.\n$= -a \\cdot a\\sqrt{2} \\cdot \\frac{\\sqrt{2}}{2} = -a^2$."
+  },
+  {
+    "id": 18,
+    "question": "Cho tam giác $ABC$ đều có cạnh bằng $a$, có $M$ là trung điểm $AC$. Tính $\\vec{AC} \\cdot \\vec{AM}$.",
+    "options": [
+      "A. $\\frac{3a^2}{2}$",
+      "B. $\\frac{3a^2}{4}$",
+      "C. $a^2$",
+      "D. $\\frac{a^2}{2}$"
+    ],
+    "answer": "D",
+    "explanation": "**Chọn D.**\nVì $M$ là trung điểm $AC$ nên $\\vec{AM} = \\frac{1}{2}\\vec{AC}$.\n$\\vec{AC} \\cdot \\vec{AM} = \\vec{AC} \\cdot \\frac{1}{2}\\vec{AC} = \\frac{1}{2} AC^2 = \\frac{1}{2}a^2$."
+  },
+  {
+    "id": 19,
+    "question": "Cho hình vuông $ABCD$ tâm $O$ có cạnh $a$. Tính $(\\vec{AB} + \\vec{BD}) \\cdot \\vec{AC}$.",
+    "options": [
+      "A. $a^2\\sqrt{2}$",
+      "B. $\\frac{a^2\\sqrt{2}}{2}$",
+      "C. $a^2$",
+      "D. $\\frac{a^2}{2}$"
+    ],
+    "answer": "C",
+    "explanation": "**Chọn C.**\nTa có $\\vec{AB} + \\vec{BD} = \\vec{AD}$.\nKhi đó $(\\vec{AB} + \\vec{BD}) \\cdot \\vec{AC} = \\vec{AD} \\cdot \\vec{AC} = |\\vec{AD}| \\cdot |\\vec{AC}| \\cdot \\cos(45^\\circ)$.\n$= a \\cdot a\\sqrt{2} \\cdot \\frac{\\sqrt{2}}{2} = a^2$."
+  },
+  {
+    "id": 20,
+    "question": "Cho hình thang cân $ABCD$ có hai đáy là $AB$ và $CD$. Biết $\\widehat{CDA} = 60^\\circ, CD = 2AB = 2a$. Khi đó $\\vec{DC} \\cdot (2\\vec{DA} - 3\\vec{AB})$ bằng",
+    "options": [
+      "A. $a^2$",
+      "B. $-a^2$",
+      "C. $4a^2$",
+      "D. $-4a^2$"
+    ],
+    "answer": "D",
+    "explanation": "**Chọn D.**\nTa có $\\vec{DC} \\cdot (2\\vec{DA} - 3\\vec{AB}) = 2\\vec{DC} \\cdot \\vec{DA} - 3\\vec{DC} \\cdot \\vec{AB}$.\n- $2\\vec{DC} \\cdot \\vec{DA} = 2 \\cdot 2a \\cdot a \\cdot \\cos(60^\\circ) = 2a^2$.\n- Vì $\\vec{DC}$ và $\\vec{AB}$ cùng hướng nên $\\vec{DC} \\cdot \\vec{AB} = 2a \\cdot a = 2a^2$.\nVậy kết quả là $2a^2 - 3(2a^2) = -4a^2$."
+  },
+  {
+    "id": 21,
+    "question": "Cho hình vuông $ABCD$ tâm $O$ cạnh $a$. Tính tích vô hướng $\\vec{AB} \\cdot \\vec{CA}$.",
+    "options": [
+      "A. $\\vec{AB} \\cdot \\vec{CA} = a^2$",
+      "B. $\\vec{AB} \\cdot \\vec{CA} = -a^2$",
+      "C. $\\vec{AB} \\cdot \\vec{CA} = \\frac{a^2}{2}$",
+      "D. $\\vec{AB} \\cdot \\vec{CA} = 0$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\n$\\vec{AB} \\cdot \\vec{CA} = -\\vec{AB} \\cdot \\vec{AC} = -|\\vec{AB}| \\cdot |\\vec{AC}| \\cdot \\cos(45^\\circ) = -a \\cdot a\\sqrt{2} \\cdot \\frac{\\sqrt{2}}{2} = -a^2$."
+  },
+  {
+    "id": 22,
+    "question": "Cho hình vuông $ABCD$ cạnh $a$, $M$ là trung điểm $AB$. Tính tích vô hướng $\\vec{AM} \\cdot \\vec{AC}$.",
+    "options": [
+      "A. $\\vec{AM} \\cdot \\vec{AC} = a^2$",
+      "B. $\\vec{AM} \\cdot \\vec{AC} = \\frac{a^2}{3}$",
+      "C. $\\vec{AM} \\cdot \\vec{AC} = \\frac{a^2}{2}$",
+      "D. $\\vec{AM} \\cdot \\vec{AC} = \\frac{a^2\\sqrt{2}}{2}$"
+    ],
+    "answer": "C",
+    "explanation": "**Chọn C.**\n$\\vec{AM} \\cdot \\vec{AC} = |\\vec{AM}| \\cdot |\\vec{AC}| \\cdot \\cos(45^\\circ) = \\frac{a}{2} \\cdot a\\sqrt{2} \\cdot \\frac{\\sqrt{2}}{2} = \\frac{a^2}{2}$."
+  },
+  {
+    "id": 23,
+    "question": "Cho hình vuông $ABCD$ tâm $O$ cạnh $a$, $M$ là trung điểm $AB$. Tính giá trị biểu thức $T = \\vec{AD} \\cdot \\vec{BD} + \\vec{OM} \\cdot \\vec{AC}$.",
+    "options": [
+      "A. $T = a^2$",
+      "B. $T = \\frac{a^2}{2}$",
+      "C. $T = \\frac{3a^2}{2}$",
+      "D. $T = 0$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\n$\\vec{AD} \\cdot \\vec{BD} = |\\vec{AD}| \\cdot |\\vec{BD}| \\cdot \\cos(45^\\circ) = a \\cdot a\\sqrt{2} \\cdot \\frac{\\sqrt{2}}{2} = a^2$.\n$\\vec{OM} \\cdot \\vec{AC} = -\\vec{MO} \\cdot \\vec{AC} = -\\frac{a}{2} \\cdot a\\sqrt{2} \\cdot \\cos(45^\\circ) = -\\frac{a^2}{2}$.\nVậy $T = a^2 - \\frac{a^2}{2} = \\frac{a^2}{2}$."
+  },
+  {
+    "id": 24,
+    "question": "Cho hình vuông $ABCD$ cạnh $a$. Tính tích vô hướng $P = (\\vec{AB} + \\vec{AD}) \\cdot (\\vec{BD} + \\vec{BC})$.",
+    "options": [
+      "A. $P = a^2$",
+      "B. $P = 2a^2$",
+      "C. $P = 0$",
+      "D. $P = a^2\\sqrt{2}$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\n$(\\vec{AB} + \\vec{AD}) \\cdot (\\vec{BD} + \\vec{BC}) = \\vec{AC} \\cdot (\\vec{BD} + \\vec{AD}) = \\vec{AC} \\cdot \\vec{BD} + \\vec{AC} \\cdot \\vec{AD} = 0 + a\\sqrt{2} \\cdot a \\cdot \\cos(45^\\circ) = a^2$."
+  },
+  {
+    "id": 25,
+    "question": "Cho tam giác $ABC$ có $M, N, P$ lần lượt là trung điểm của $BC, CA, AB$. $G$ là giao điểm của $AM$ và $BN$. Khẳng định nào sau đây là SAI?",
+    "options": [
+      "A. $\\vec{MB} + \\vec{MC} = \\vec{0}$",
+      "B. $\\vec{GA} + \\vec{GB} + \\vec{GC} = \\vec{0}$",
+      "C. $\\vec{AG} = 3\\vec{MG}$",
+      "D. $\\vec{AP} + \\vec{BC} = \\vec{NA}$"
+    ],
+    "answer": "C",
+    "explanation": "**Chọn C.**\nVì $G$ là trọng tâm nên $\\vec{AG} = 2\\vec{GM} \\Rightarrow \\vec{AG} = -2\\vec{MG}$. Khẳng định $\\vec{AG} = 3\\vec{MG}$ là sai."
+  },
+  {
+    "id": 26,
+    "question": "Cho tam giác $ABC$ có $M, N, P$ lần lượt là trung điểm của $BC, CA, AB$. Khi đó véc-tơ $\\vec{AP} + \\vec{BM} + \\vec{CN}$ bằng:",
+    "options": [
+      "A. $\\vec{0}$",
+      "B. $\\vec{AC}$",
+      "C. $\\vec{AM}$",
+      "D. $\\vec{PB}$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\n$\\vec{AP} + \\vec{BM} + \\vec{CN} = \\frac{1}{2}\\vec{AB} + \\frac{1}{2}(\\vec{BA} + \\vec{BC}) + \\frac{1}{2}\\vec{CA} = \\frac{1}{2}(\\vec{AB} + \\vec{BA}) + \\frac{1}{2}(\\vec{BC} + \\vec{CA}) = \\vec{0} + \\frac{1}{2}\\vec{BA} + \\frac{1}{2}\\vec{AB} = \\vec{0}$."
+  },
+  {
+    "id": 27,
+    "question": "Cho tam giác $ABC$ có $M, N$ là trung điểm $BC$ và $AC$. $G$ là trọng tâm. Tính $\\vec{AM} + \\vec{BN} + \\vec{CP}$ (với $P$ là trung điểm $AB$).",
+    "options": [
+      "A. $\\vec{AM} + \\vec{BN} + \\vec{CP} = \\vec{0}$",
+      "B. $\\vec{AM} + \\vec{BN} + \\vec{CP} = \\vec{AB}$",
+      "C. $\\vec{AM} + \\vec{BN} + \\vec{CP} = 3\\vec{GG'}$",
+      "D. $\\vec{AM} + \\vec{BN} + \\vec{CP} = \\vec{AC}$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\nTổng các véc-tơ trung tuyến của một tam giác luôn bằng véc-tơ không: $\\vec{AM} + \\vec{BN} + \\vec{CP} = \\vec{0}$."
+  },
+  {
+    "id": 28,
+    "question": "Cho tam giác $ABC$, $M$ là trung điểm $BC$, $P$ là trung điểm $AB$. Khẳng định nào sau đây đúng?",
+    "options": [
+      "A. $\\vec{AP} + \\vec{BC} = \\vec{NA}$",
+      "B. $\\vec{AP} + \\vec{BC} + \\vec{NA} = \\vec{0}$",
+      "C. $\\vec{MA} + \\vec{MB} + \\vec{MC} = \\vec{0}$",
+      "D. $\\vec{GA} = 2\\vec{GM}$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\nSử dụng quy tắc trung điểm và phân tích véc-tơ, ta có tổng $\\vec{AP} + \\vec{BC} + \\vec{NA} = \\vec{0}$."
+  },
+  {
+    "id": 29,
+    "question": "Cho tam giác $ABC$ có các điểm $M, N, P$ lần lượt thuộc các cạnh $AB, AC, BC$ sao cho $\\vec{AM} = \\frac{1}{2}\\vec{MB}, \\vec{AN} = \\vec{NC}, \\vec{BP} = -2\\vec{PC}$. Khẳng định nào sau đây đúng về điểm $N$?",
+    "options": [
+      "A. $N$ là trung điểm của $AC$",
+      "B. $N$ nằm trên tia đối của $AC$",
+      "C. $\\vec{AN} = 2\\vec{NC}$",
+      "D. $N$ trùng với $A$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\nTừ giả thiết $\\vec{AN} = \\vec{NC}$, suy ra $N$ là trung điểm của đoạn thẳng $AC$."
+  },
+  {
+    "id": 30,
+    "question": "Cho tam giác $ABC$, điểm $M$ trên $AB$ sao cho $\\vec{AM} = \\frac{1}{2}\\vec{MB}$. Phân tích $\\vec{AM}$ theo $\\vec{AB}$.",
+    "options": [
+      "A. $\\vec{AM} = \\frac{1}{2}\\vec{AB}$",
+      "B. $\\vec{AM} = \\frac{1}{3}\\vec{AB}$",
+      "C. $\\vec{AM} = \\frac{2}{3}\\vec{AB}$",
+      "D. $\\vec{AM} = 3\\vec{AB}$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\n$\\vec{AM} = \\frac{1}{2}\\vec{MB} \\Rightarrow M$ nằm giữa $A, B$ và $MB = 2AM$. Do đó $AB = AM + MB = 3AM \\Rightarrow \\vec{AM} = \\frac{1}{3}\\vec{AB}$."
+  },
+  {
+    "id": 31,
+    "question": "Cho tam giác $ABC$, $N$ là trung điểm $AC$, $M$ trên $AB$ sao cho $\\vec{AM} = \\frac{1}{3}\\vec{AB}$. Biểu diễn $\\vec{MN}$ theo $\\vec{AB}$ và $\\vec{AC}$.",
+    "options": [
+      "A. $\\vec{MN} = \\frac{1}{2}\\vec{AC} - \\frac{1}{3}\\vec{AB}$",
+      "B. $\\vec{MN} = \\frac{1}{2}\\vec{AC} + \\frac{1}{3}\\vec{AB}$",
+      "C. $\\vec{MN} = \\vec{AC} - \\vec{AB}$",
+      "D. $\\vec{MN} = \\frac{1}{3}\\vec{AC} - \\frac{1}{2}\\vec{AB}$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\n$\\vec{MN} = \\vec{AN} - \\vec{AM} = \\frac{1}{2}\\vec{AC} - \\frac{1}{3}\\vec{AB}$."
+  },
+  {
+    "id": 32,
+    "question": "Cho tam giác $ABC$ có $\\vec{AM} = \\frac{1}{3}\\vec{AB}, \\vec{AN} = \\frac{1}{2}\\vec{AC}, \\vec{BP} = \\frac{2}{3}\\vec{BC}$. Khẳng định nào sau đây đúng?",
+    "options": [
+      "A. $M, N, P$ thẳng hàng",
+      "B. $M, N, P$ tạo thành tam giác đều",
+      "C. $\\vec{MN} \\perp \\vec{NP}$",
+      "D. $M, N, P$ không thẳng hàng"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\nBằng cách biểu diễn $\\vec{MN}$ và $\\vec{MP}$ theo $\\vec{AB}$ và $\\vec{AC}$, ta thấy chúng tỉ lệ với nhau, suy ra $M, N, P$ thẳng hàng."
+  },
+  {
+    "id": 33,
+    "question": "Cho hình vuông $ABCD$ cạnh $a$, $G$ là trọng tâm tam giác $ABC$. Tính tích vô hướng $\\vec{AC} \\cdot \\vec{BD}$.",
+    "options": [
+      "A. $\\vec{AC} \\cdot \\vec{BD} = a^2$",
+      "B. $\\vec{AC} \\cdot \\vec{BD} = 0$",
+      "C. $\\vec{AC} \\cdot \\vec{BD} = 2a^2$",
+      "D. $\\vec{AC} \\cdot \\vec{BD} = a^2\\sqrt{2}$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\nTrong hình vuông, hai đường chéo vuông góc với nhau nên tích vô hướng bằng 0."
+  },
+  {
+    "id": 34,
+    "question": "Cho hình vuông $ABCD$ cạnh $a$. Tính độ dài đoạn thẳng $AC$.",
+    "options": [
+      "A. $AC = a$",
+      "B. $AC = 2a$",
+      "C. $AC = a\\sqrt{2}$",
+      "D. $AC = a\\sqrt{3}$"
+    ],
+    "answer": "C",
+    "explanation": "**Chọn C.**\nTheo định lý Pytago trong tam giác vuông $ABC$: $AC = \\sqrt{a^2 + a^2} = a\\sqrt{2}$."
+  },
+  {
+    "id": 35,
+    "question": "Cho hình vuông $ABCD$ cạnh $a$. Tính tích vô hướng $\\vec{AC} \\cdot \\vec{DC}$.",
+    "options": [
+      "A. $\\vec{AC} \\cdot \\vec{DC} = a^2$",
+      "B. $\\vec{AC} \\cdot \\vec{DC} = -a^2$",
+      "C. $\\vec{AC} \\cdot \\vec{DC} = 0$",
+      "D. $\\vec{AC} \\cdot \\vec{DC} = a^2\\sqrt{2}$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\n$\\vec{AC} \\cdot \\vec{DC} = \\vec{CA} \\cdot \\vec{CD} = |\\vec{CA}| \\cdot |\\vec{CD}| \\cdot \\cos(45^\\circ) = a\\sqrt{2} \\cdot a \\cdot \\frac{\\sqrt{2}}{2} = a^2$."
+  },
+  {
+    "id": 36,
+    "question": "Cho hình vuông $ABCD$ cạnh $a$, $G$ là trọng tâm tam giác $ABC$. Tính tích vô hướng $P = \\vec{AG} \\cdot \\vec{AD}$.",
+    "options": [
+      "A. $P = a^2$",
+      "B. $P = \\frac{a^2}{2}$",
+      "C. $P = \\frac{a^2}{3}$",
+      "D. $P = \\frac{2a^2}{3}$"
+    ],
+    "answer": "C",
+    "explanation": "**Chọn C.**\n$\\vec{AG} = \\frac{1}{3}(\\vec{AA} + \\vec{AB} + \\vec{AC}) = \\frac{1}{3}(\\vec{AB} + \\vec{AC})$.\n$\\vec{AG} \\cdot \\vec{AD} = \\frac{1}{3}(\\vec{AB} \\cdot \\vec{AD} + \\vec{AC} \\cdot \\vec{AD}) = \\frac{1}{3}(0 + a\\sqrt{2} \\cdot a \\cdot \\frac{\\sqrt{2}}{2}) = \\frac{a^2}{3}$."
+  },
+  {
+    "id": 37,
+    "question": "Cho tam giác $ABC$ có $AC = 4\\sqrt{2}, AB = 6, \\widehat{BAC} = 45^\\circ$. Tính tích vô hướng $\\vec{AB} \\cdot \\vec{AC}$.",
+    "options": [
+      "A. $\\vec{AB} \\cdot \\vec{AC} = 20$",
+      "B. $\\vec{AB} \\cdot \\vec{AC} = 24$",
+      "C. $\\vec{AB} \\cdot \\vec{AC} = 24\\sqrt{2}$",
+      "D. $\\vec{AB} \\cdot \\vec{AC} = 12\\sqrt{2}$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\n$\\vec{AB} \\cdot \\vec{AC} = AB \\cdot AC \\cdot \\cos(45^\\circ) = 6 \\cdot 4\\sqrt{2} \\cdot \\frac{\\sqrt{2}}{2} = 24$."
+  },
+  {
+    "id": 38,
+    "question": "Cho tam giác $ABC$ có $D$ là trung điểm $BC$. Khẳng định nào sau đây đúng?",
+    "options": [
+      "A. $\\vec{AD} = \\vec{AB} + \\vec{AC}$",
+      "B. $\\vec{AD} = \\frac{1}{2}\\vec{AB} + \\frac{1}{2}\\vec{AC}$",
+      "C. $\\vec{AD} = \\vec{AB} - \\vec{AC}$",
+      "D. $\\vec{AD} = 2\\vec{AB} + 2\\vec{AC}$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\nTheo quy tắc trung điểm: $2\\vec{AD} = \\vec{AB} + \\vec{AC} \\Rightarrow \\vec{AD} = \\frac{1}{2}\\vec{AB} + \\frac{1}{2}\\vec{AC}$."
+  },
+  {
+    "id": 39,
+    "question": "Cho tam giác $ABC$ có $AC = 4\\sqrt{2}, AB = 6, \\widehat{BAC} = 45^\\circ$. Tính độ dài cạnh $BC$.",
+    "options": [
+      "A. $BC = 3\\sqrt{5}$",
+      "B. $BC = \\sqrt{20}$",
+      "C. $BC = 2\\sqrt{5}$",
+      "D. $BC = 5\\sqrt{3}$"
+    ],
+    "answer": "C",
+    "explanation": "**Chọn C.**\n$BC^2 = AB^2 + AC^2 - 2AB \\cdot AC \\cdot \\cos(45^\\circ) = 6^2 + (4\\sqrt{2})^2 - 2 \\cdot 24 = 36 + 32 - 48 = 20 \\Rightarrow BC = 2\\sqrt{5}$."
+  },
+  {
+    "id": 40,
+    "question": "Cho tam giác $ABC$ có $AC = 4\\sqrt{2}, AB = 6, \\widehat{BAC} = 45^\\circ$. Gọi $D$ là trung điểm $BC$, $E$ thỏa mãn $\\vec{AE} = k\\vec{AB}$. Tìm $k$ để $AD \\perp CE$.",
+    "options": [
+      "A. $k = \\frac{14}{15}$",
+      "B. $k = \\frac{5}{6}$",
+      "C. $k = \\frac{1}{2}$",
+      "D. $k = \\frac{2}{3}$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\n$AD \\perp CE \\Leftrightarrow \\vec{AD} \\cdot \\vec{CE} = 0 \\Leftrightarrow \\frac{1}{2}(\\vec{AB} + \\vec{AC}) \\cdot (\\vec{AE} - \\vec{AC}) = 0$.\nThay các giá trị tích vô hướng đã tính vào, ta giải được $k = \\frac{14}{15}$."
+  },
+  {
+    "id": 41,
+    "question": "Cho tam giác $ABC$ có $G$ là trọng tâm. Gọi $D$ là điểm đối xứng của $B$ qua $G$. Khẳng định nào sau đây đúng về véc-tơ $\\vec{MD}$ (với $M$ là trung điểm $BC$)?",
+    "options": [
+      "A. $\\vec{MD} = \\vec{MG} + \\vec{GD}$",
+      "B. $\\vec{MD} = -\\frac{5}{6}\\vec{AB} + \\frac{1}{6}\\vec{AC}$",
+      "C. $\\vec{MD} = \\vec{AB} + \\vec{AC}$",
+      "D. $\\vec{MD} = \\frac{1}{2}\\vec{AB} - \\frac{1}{2}\\vec{AC}$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\nSử dụng quy tắc cộng và phân tích véc-tơ qua trung điểm và trọng tâm: $\\vec{MD} = \\vec{GD} - \\vec{GM} = \\vec{BG} - \\vec{GM}$. Qua các bước biến đổi trung gian, ta thu được $\\vec{MD} = -\\frac{5}{6}\\vec{AB} + \\frac{1}{6}\\vec{AC}$."
+  },
+  {
+    "id": 42,
+    "question": "Ví dụ 7: Cho hình vuông $ABCD$ có cạnh bằng $a$. Tính tích vô hướng $(\\vec{AB} + \\vec{AD}) \\cdot \\vec{BD}$.",
+    "options": [
+      "A. $a^2$",
+      "B. $0$",
+      "C. $2a^2$",
+      "D. $a^2\\sqrt{2}$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\n$\\vec{AB} + \\vec{AD} = \\vec{AC}$ (quy tắc hình bình hành). Mà $\\vec{AC} \\perp \\vec{BD}$ (tính chất hình vuông) nên tích vô hướng bằng 0."
+  },
+  {
+    "id": 43,
+    "question": "Ví dụ 8: Cho hình thoi $ABCD$ cạnh $5$, $\\widehat{ABC} = 120^\\circ$. Tính $\\vec{BC} \\cdot (\\vec{BA} + \\vec{BC})$.",
+    "options": [
+      "A. $\\frac{25}{2}$",
+      "B. $-\\frac{25}{2}$",
+      "C. $25$",
+      "D. $-25$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\n$\\vec{BC} \\cdot \\vec{BA} + \\vec{BC}^2 = 5 \\cdot 5 \\cdot \\cos(120^\\circ) + 5^2 = 25 \\cdot (-1/2) + 25 = 12.5 = 25/2$."
+  },
+  {
+    "id": 44,
+    "question": "Ví dụ 9: Cho tam giác $ABC$ vuông tại $A$ có $AB = \\sqrt{3}, BC = 2$. Tính tích vô hướng $\\vec{BC} \\cdot \\vec{CA}$.",
+    "options": [
+      "A. $1$",
+      "B. $-1$",
+      "C. $0$",
+      "D. $\\frac{1}{2}$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\n$AC = \\sqrt{BC^2 - AB^2} = 1$. $\\vec{BC} \\cdot \\vec{CA} = -\\vec{CB} \\cdot \\vec{CA} = -2 \\cdot 1 \\cdot \\cos(\\widehat{BCA}) = -2 \\cdot 1 \\cdot (1/2) = -1$."
+  },
+  {
+    "id": 45,
+    "question": "Câu 1 (BTVN): Cho tứ giác $ABCD$ là hình bình hành. Khẳng định nào sau đây là SAI?",
+    "options": [
+      "A. $\\vec{AB} + \\vec{BC} = \\vec{AD} + \\vec{DC}$",
+      "B. $\\vec{AB} + \\vec{CD} = \\vec{AD} + \\vec{BC}$",
+      "C. $\\vec{AB} + \\vec{AD} = \\vec{AC}$",
+      "D. $\\vec{AB} + \\vec{BC} = \\vec{AC} + \\vec{BD}$"
+    ],
+    "answer": "D",
+    "explanation": "**Chọn D.**\n$\\vec{AB} + \\vec{BC} = \\vec{AC}$. Vế phải là $\\vec{AC} + \\vec{BD}$ nên khẳng định D sai."
+  },
+  {
+    "id": 46,
+    "question": "Câu 2 (BTVN): Cho hình bình hành $ABCD$ tâm $O$. Khi đó vectơ $\\vec{OA} + \\vec{BO}$ bằng vectơ nào?",
+    "options": [
+      "A. $\\vec{BA}$",
+      "B. $\\vec{AB}$",
+      "C. $\\vec{DC}$",
+      "D. $\\vec{OC}$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\n$\\vec{OA} + \\vec{BO} = \\vec{BO} + \\vec{OA} = \\vec{BA}$."
+  },
+  {
+    "id": 47,
+    "question": "Câu 3 (BTVN): Cho hình vuông $ABCD$ cạnh $a$. Tính độ dài của véc-tơ $\\vec{AB} - \\vec{DA}$.",
+    "options": [
+      "A. $2a\\sqrt{2}$",
+      "B. $a\\sqrt{2}$",
+      "C. $2a$",
+      "D. $\\frac{a\\sqrt{2}}{2}$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\n$\\vec{AB} - \\vec{DA} = \\vec{AB} + \\vec{AD} = \\vec{AC}$. Độ dài $|\\vec{AC}| = a\\sqrt{2}$."
+  },
+  {
+    "id": 48,
+    "question": "Câu 4 (BTVN): Cho hình vuông $ABCD$ cạnh $a$. Tính $\\cos(\\vec{AB}, \\vec{AC})$.",
+    "options": [
+      "A. $1$",
+      "B. $\\frac{\\sqrt{2}}{2}$",
+      "C. $\\frac{1}{2}$",
+      "D. $\\frac{\\sqrt{3}}{2}$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\nGóc giữa cạnh và đường chéo hình vuông là $45^\\circ$, $\\cos 45^\\circ = \\frac{\\sqrt{2}}{2}$."
+  },
+  {
+    "id": 49,
+    "question": "Câu 5 (BTVN): Cho tam giác $ABC$. Lấy điểm $M$ thuộc tia đối của tia $CB$ sao cho $MB = 3MC$. Biểu thị $\\vec{AM}$ theo $\\vec{AB}$ và $\\vec{AC}$.",
+    "options": [
+      "A. $\\vec{AM} = \\frac{1}{2}\\vec{AB} + \\frac{3}{2}\\vec{AC}$",
+      "B. $\\vec{AM} = -\\frac{1}{2}\\vec{AB} - \\frac{3}{2}\\vec{AC}$",
+      "C. $\\vec{AM} = -\\frac{1}{2}\\vec{AB} + \\frac{3}{2}\\vec{AC}$",
+      "D. $\\vec{AM} = -\\frac{3}{2}\\vec{AB} + \\frac{3}{2}\\vec{AC}$"
+    ],
+    "answer": "C",
+    "explanation": "**Chọn C.**\nTừ $MB=3MC$ và $M$ thuộc tia đối $CB \\Rightarrow \\vec{BM} = \\frac{3}{2}\\vec{BC}$.\n$\\vec{AM} = \\vec{AB} + \\vec{BM} = \\vec{AB} + \\frac{3}{2}(\\vec{AC} - \\vec{AB}) = -\\frac{1}{2}\\vec{AB} + \\frac{3}{2}\\vec{AC}$."
+  },
+  {
+    "id": 50,
+    "question": "Câu 6 (BTVN): Cho hình bình hành $ABCD$, $M$ là trung điểm $BC$. Biểu thị $\\vec{AM}$ theo $\\vec{AB}$ và $\\vec{AD}$.",
+    "options": [
+      "A. $\\vec{AM} = \\vec{AB} + \\frac{3}{2}\\vec{AD}$",
+      "B. $\\vec{AM} = \\vec{AB} - \\frac{3}{2}\\vec{AD}$",
+      "C. $\\vec{AM} = \\vec{AB} - \\frac{1}{2}\\vec{AD}$",
+      "D. $\\vec{AM} = \\vec{AB} + \\frac{1}{2}\\vec{AD}$"
+    ],
+    "answer": "D",
+    "explanation": "**Chọn D.**\n$\\vec{AM} = \\vec{AB} + \\vec{BM} = \\vec{AB} + \\frac{1}{2}\\vec{BC} = \\vec{AB} + \\frac{1}{2}\\vec{AD}$."
+  },
+  {
+    "id": 51,
+    "question": "Câu 7 (BTVN): Cho tam giác đều $ABC$ cạnh $a$. Tính tích vô hướng $\\vec{AB} \\cdot \\vec{AC}$.",
+    "options": [
+      "A. $2a^2$",
+      "B. $\\frac{a^2}{2}$",
+      "C. $-\\frac{a^2}{2}$",
+      "D. $-\\frac{a^2\\sqrt{3}}{2}$"
+    ],
+    "answer": "B",
+    "explanation": "**Chọn B.**\n$\\vec{AB} \\cdot \\vec{AC} = a \\cdot a \\cdot \\cos 60^\\circ = \\frac{a^2}{2}$."
+  },
+  {
+    "id": 52,
+    "question": "Câu 8 (BTVN): Cho hình vuông $ABCD$ cạnh $a$. Đẳng thức nào sau đây đúng?",
+    "options": [
+      "A. $\\vec{AB} \\cdot \\vec{CA} = -a^2$",
+      "B. $\\vec{AB} \\cdot \\vec{CA} = -2a^2$",
+      "C. $\\vec{AB} \\cdot \\vec{CA} = -\\frac{a^2\\sqrt{2}}{2}$",
+      "D. $\\vec{AB} \\cdot \\vec{CA} = -\\frac{1}{2}a^2$"
+    ],
+    "answer": "A",
+    "explanation": "**Chọn A.**\n$\\vec{AB} \\cdot \\vec{CA} = -\\vec{AB} \\cdot \\vec{AC} = -(a \\cdot a\\sqrt{2} \\cdot \\cos 45^\\circ) = -a^2$."
+  },
+  {
+    "id": 53,
+    "question": "Câu 9 (BTVN): Cho tam giác $ABC$ đều cạnh $a$, $M$ là trung điểm $AC$. Tính $\\vec{AC} \\cdot \\vec{AM}$.",
+    "options": [
+      "A. $\\frac{3a^2}{2}$",
+      "B. $\\frac{3a^2}{4}$",
+      "C. $a^2$",
+      "D. $\\frac{a^2}{2}$"
+    ],
+    "answer": "D",
+    "explanation": "**Chọn D.**\n$\\vec{AC} \\cdot \\vec{AM} = AC \\cdot AM = a \\cdot (a/2) = a^2/2$ (vì hai véc-tơ cùng hướng)."
+  },
+  {
+    "id": 54,
+    "question": "Câu 10 (BTVN): Cho hình vuông $ABCD$ tâm $O$ cạnh $a$. Tính $(\\vec{AB} + \\vec{BD}) \\cdot \\vec{AC}$.",
+    "options": [
+      "A. $\\sqrt{2}a^2$",
+      "B. $\\frac{\\sqrt{2}}{2}a^2$",
+      "C. $a^2$",
+      "D. $\\frac{a^2}{2}$"
+    ],
+    "answer": "C",
+    "explanation": "**Chọn C.**\n$(\\vec{AB} + \\vec{BD}) \\cdot \\vec{AC} = \\vec{AD} \\cdot \\vec{AC} = a \\cdot a\\sqrt{2} \\cdot \\cos 45^\\circ = a^2$."
+  },
+  {
+    "id": 55,
+    "question": "Câu 11 (BTVN): Cho hình thang cân $ABCD$ có đáy $AB, CD$. Biết $\\widehat{CDA}=60^\\circ, CD=2AB=2a$. Tính $\\vec{DC} \\cdot (2\\vec{DA} - 3\\vec{AB})$.",
+    "options": [
+      "A. $a^2$",
+      "B. $-a^2$",
+      "C. $4a^2$",
+      "D. $-4a^2$"
+    ],
+    "answer": "D",
+    "explanation": "**Chọn D.**\n$2\\vec{DC} \\cdot \\vec{DA} - 3\\vec{DC} \\cdot \\vec{AB} = 2(2a \\cdot a \\cdot \\cos 60^\\circ) - 3(2a \\cdot a) = 2a^2 - 6a^2 = -4a^2$."
+  }
+]
