@@ -17,6 +17,14 @@
             "lessons": []
         },
         {
+            "id": "3-nguyen-ham-tich-phan",
+            "title": "3.Nguyên hàm tích phân",
+            "description": "Chương trình Nguyên hàm tích phân",
+            "thumbnail": "",
+            "chapters": [],
+            "lessons": []
+        },
+        {
             "id": "4-xac-suat-thong-ke",
             "title": "4. Xác suất thống kê",
             "description": "Chương trình 4. Xác suất thống kê - Bộ sách mới",
@@ -73,14 +81,6 @@
                 "Chương 1",
                 "Chương 2"
             ],
-            "lessons": []
-        },
-        {
-            "id": "nguyen-ham-tich-phan",
-            "title": "3.Nguyên hàm tích phân",
-            "description": "Chương trình Nguyên hàm tích phân",
-            "thumbnail": "",
-            "chapters": [],
             "lessons": []
         },
         {

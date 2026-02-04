@@ -385,6 +385,12 @@
                 const data = await response.json();
                 const container = document.getElementById('courses-container');
 
+                if (!data || !data.courses) {
+                    throw new Error('Dữ liệu khóa học không hợp lệ');
+                }
+
+                // alert('Đã tải được ' + data.courses.length + ' khóa học'); // Debug info
+
                 // Định nghĩa thông tin bổ sung cho mỗi khóa học
                 const courseExtras = {
                     'toan-12': {
@@ -472,6 +478,7 @@
                 }).join('');
             } catch (error) {
                 console.error('Lỗi khi load danh sách khóa học:', error);
+                alert('Có lỗi xảy ra khi tải khóa học: ' + error.message);
             }
         }
 
