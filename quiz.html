@@ -497,6 +497,40 @@
 
         document.getElementById('submit-btn').addEventListener('click', submitQuiz);
 
+        // Mobile Sidebar Toggle
+        const sidebarToggle = document.getElementById('sidebar-toggle');
+        const sidebar = document.querySelector('aside');
+
+        // Tạo overlay cho mobile
+        const overlay = document.createElement('div');
+        overlay.className = 'fixed inset-0 bg-black/50 z-40 hidden lg:hidden backdrop-blur-sm transition-opacity';
+        document.body.appendChild(overlay);
+
+        function toggleSidebar() {
+            const isHidden = sidebar.classList.contains('hidden');
+            if (isHidden) {
+                // Show Sidebar
+                sidebar.classList.remove('hidden');
+                sidebar.classList.add('fixed', 'inset-y-0', 'right-0', 'z-50', 'w-80');
+                overlay.classList.remove('hidden');
+            } else {
+                // Hide Sidebar
+                sidebar.classList.add('hidden');
+                sidebar.classList.remove('fixed', 'inset-y-0', 'right-0', 'z-50');
+                overlay.classList.add('hidden');
+            }
+        }
+
+        if (sidebarToggle) {
+            sidebarToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                toggleSidebar();
+            });
+        }
+
+        // Click overlay to close
+        overlay.addEventListener('click', toggleSidebar);
+
         // Load khi trang load
         document.addEventListener('DOMContentLoaded', loadQuiz);
     </script>
