@@ -8,12 +8,19 @@ let db = null;
 
 // Khởi tạo Firestore
 function initializeFirestore() {
-    if (typeof firebase === 'undefined' || !firebase.apps.length) return;
+    if (typeof firebase === 'undefined' || !firebase.apps || !firebase.apps.length) return false;
 
     if (!db) {
         db = firebase.firestore();
         console.log("Firestore initialized");
     }
+    return true;
+}
+
+// Đảm bảo Firestore đã khởi tạo trước khi dùng
+function ensureFirestore() {
+    if (db) return true;
+    return initializeFirestore();
 }
 
 const Database = {
@@ -73,6 +80,7 @@ const Database = {
      * Lưu kết quả bài kiểm tra (bao gồm cả câu hỏi và đáp án để xem lại)
      */
     async saveQuizResult(uid, result) {
+        ensureFirestore();
         if (!db) return null;
 
         try {
@@ -119,10 +127,19 @@ const Database = {
      */
     async getQuizResultById(resultId) {
         console.log("DB: getQuizResultById được gọi với ID:", resultId);
+
+        // Đảm bảo Firestore đã init
+        ensureFirestore();
+
         if (!db) {
-            console.error("DB: Firestore chưa khởi tạo");
-            return null;
+            console.error("DB: Firestore chưa khởi tạo sau khi ensureFirestore");
+            // Thử init lại lần nữa nếu cần hoặc chờ
+            if (!initializeFirestore()) {
+                console.error("DB: Không thể khởi tạo Firestore (thiếu firebase sdk?)");
+                return null;
+            }
         }
+
         if (!resultId) {
             console.error("DB: Không có resultId");
             return null;
@@ -151,6 +168,7 @@ const Database = {
      * Lấy lịch sử hoạt động gần đây
      */
     async getRecentActivity(uid, limit = 5) {
+        ensureFirestore();
         if (!db) {
             console.log("DB: Firestore chưa khởi tạo");
             return [];
